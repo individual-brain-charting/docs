@@ -19,7 +19,7 @@ d = {"tasks": {}}
 
 # %%
 # Add descriptions for all tasks
-df_tasks = pd.read_csv("ibc_data/ibc_tasks.tsv", delimiter="\t")
+df_tasks = pd.read_csv("ibc_tasks.tsv", delimiter="\t")
 
 for _, row in df_tasks.iterrows():
     d["tasks"][row["task"]] = {
@@ -30,7 +30,7 @@ for _, row in df_tasks.iterrows():
 
 # %%
 # Add descriptions for all conditions
-df_conditions = pd.read_csv("ibc_data/ibc_conditions.tsv", delimiter="\t", na_filter=False)
+df_conditions = pd.read_csv("ibc_conditions.tsv", delimiter="\t", na_filter=False)
 
 missing_task = []
 for _, row in df_conditions.iterrows():
@@ -54,7 +54,7 @@ warnings.warn(
 # Add descriptions for all constrasts.
 # This includes contrast string description
 # but also a list of all conditions used to compute this contrast
-df_all_contrasts = pd.read_csv("ibc_data/all_contrasts.tsv", delimiter="\t", na_filter=False)
+df_all_contrasts = pd.read_csv("all_contrasts.tsv", delimiter="\t", na_filter=False)
 
 missing_contrasts = []
 
@@ -99,6 +99,10 @@ for task in d["tasks"].keys():
                     ] = weight
 
     else:
+        warnings.warn(
+            "The contrast matrix files have not been fetched.\n\n"
+            "The algebraic information for the contrasts is hence missing."
+        )
         df_contrasts = df_all_contrasts[df_all_contrasts["task"] == task]
         for index, row in df_contrasts.iterrows():
             contrast = row.contrast
