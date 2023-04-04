@@ -6,7 +6,6 @@
 # of the repo.
 
 # %%
-import json
 import warnings
 
 from pathlib import Path
@@ -20,7 +19,7 @@ d = {"tasks": {}}
 
 # %%
 # Add descriptions for all tasks
-df_tasks = pd.read_csv("../../public_analysis_code/ibc_data/ibc_tasks1.tsv", delimiter="\t")
+df_tasks = pd.read_csv("../public_analysis_code/ibc_data/ibc_tasks.tsv", delimiter="\t")
 
 for _, row in df_tasks.iterrows():
     d["tasks"][row["task"]] = {
@@ -31,7 +30,7 @@ for _, row in df_tasks.iterrows():
 
 # %%
 # Add descriptions for all conditions
-df_conditions = pd.read_csv("../../public_analysis_code/ibc_data/ibc_conditions.tsv", delimiter="\t", na_filter=False)
+df_conditions = pd.read_csv("../public_analysis_code/ibc_data/ibc_conditions.tsv", delimiter="\t", na_filter=False)
 
 missing_task = []
 for _, row in df_conditions.iterrows():
@@ -55,12 +54,12 @@ warnings.warn(
 # Add descriptions for all constrasts.
 # This includes contrast string description
 # but also a list of all conditions used to compute this contrast
-df_all_contrasts = pd.read_csv("../../public_analysis_code/ibc_data/all_contrasts.tsv", delimiter="\t", na_filter=False)
+df_all_contrasts = pd.read_csv("../public_analysis_code/ibc_data/all_contrasts.tsv", delimiter="\t", na_filter=False)
 
 missing_contrasts = []
 
 for task in d["tasks"].keys():
-    task_contrasts_filename = Path(f"../../public_analysis_code/ibc_data/contrasts/{task}.csv")
+    task_contrasts_filename = Path(f"../public_analysis_code/ibc_data/contrasts/{task}.csv")
     if task_contrasts_filename.exists():
         df_contrasts = pd.read_csv(
             task_contrasts_filename, delimiter=",", index_col="condition"
