@@ -1,5 +1,5 @@
 name: Docs
-on: [push, pull_request, workflow_dispatch]
+on: [push, pull_request, workflow_dispatch, repository_dispatch]
 permissions:
     contents: write
 jobs:
@@ -11,6 +11,11 @@ jobs:
       - name: Install dependencies
         run: |
           pip install sphinx sphinx_rtd_theme furo numpy pandas
+      - name: Get files
+        env:
+          TOKEN: ${{ secrets.FILE_UPDATE }}
+        run: |
+          curl -H "Authorization: token ${TOKEN}" https://raw.githubusercontent.com/individual-brain-charting/public_analysis_code/master/ibc_data
       - name: Build tasks.rst
         run: |
           python create_tasks_rst.py
