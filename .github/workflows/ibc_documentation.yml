@@ -10,7 +10,7 @@ jobs:
       - uses: actions/setup-python@v3
       - name: Install dependencies
         run: |
-          pip install sphinx sphinx_rtd_theme furo
+          pip install sphinx sphinx_rtd_theme furo numpy pandas
       - name: Build tasks.rst
         run: |
           python create_tasks_rst.py
