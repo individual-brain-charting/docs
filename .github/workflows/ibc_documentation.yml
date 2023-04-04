@@ -15,7 +15,10 @@ jobs:
         env:
           TOKEN: ${{ secrets.FILE_UPDATE }}
         run: |
-          curl -H "Authorization: token ${TOKEN}" https://raw.githubusercontent.com/individual-brain-charting/public_analysis_code/master/ibc_data
+          curl -H 'Authorization: token ${TOKEN}' \
+          -H 'Accept: application/vnd.github.v3.raw' \
+          -O \
+          -L https://api.github.com/repos/owner/individual-brain-charting/public_analysis_code/main/ibc_data
       - name: Build tasks.rst
         run: |
           python create_tasks_rst.py
