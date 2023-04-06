@@ -166,6 +166,9 @@ def write_section(rst, name, description, conditions, contrasts, table_count):
     rst.write("\n")
 
 with open('docs/source/tasks.rst', 'w') as rst:
+    rst.write(".. role:: raw-html(raw)\n")
+    rst.write("    :format: html\n\n")
+
     rst.write("Tasks\n")
     rst.write("=" * 5 + "\n\n")
     table_count = 1
