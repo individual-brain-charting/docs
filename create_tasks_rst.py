@@ -144,47 +144,48 @@ for _, row in df_tasks.iterrows():
     sd["tasks"][row["task"]] = { 
         "software": str(row["software"]),
         "screen_res": str(row["screen_res"]),
+        "youtube": str(row["youtube"])
         }
     
 # %%
 # Create a tasks.rst from the dictionary
-def write_section(rst, name, description, software, screen_res, conditions, contrasts, table_count):
+def write_section(rst, name, description, software, screen_res, youtube, conditions, contrasts):
     """
     Helper function to write a section to the RST file
     """
+    description = description.replace(":raw-html:`<br />` ", "\n")
     rst.write(f"{name}\n")
     rst.write("-" * len(name) + "\n\n")
-    rst.write(".. note:: ")
+    rst.write(".. admonition:: Technical Info\n\n")
     rst.write(f"   - Software: {software}\n")
-    rst.write(f"   - Screen resolution: {screen_res}\n")
+    rst.write(f"   - Screen resolution: {screen_res}\n\n")
     rst.write(f"{description}\n\n")
     rst.write(f"The conditions for this task are described in `this table <cond{name}_>`__ and the main contrasts derived from those conditions are described in `this table <cont{name}_>`__.\n\n")
-    rst.write(f".. _cond{name}:\n\n")
-    rst.write(f".. list-table:: Conditions for {name}\n")
-    rst.write("   :header-rows: 1\n")
-    rst.write("   :widths: 25 75\n\n")
-    rst.write("   * - Condition\n")
-    rst.write("     - Description\n")
+    rst.write(f".. dropdown:: Conditions for {name}\n")
+    rst.write(f"   :name: cond{name}\n\n")
+    rst.write(f"   .. list-table::\n")
+    rst.write("      :header-rows: 1\n")
+    rst.write("      :widths: 25 75\n\n")
+    rst.write("      * - Condition\n")
+    rst.write("        - Description\n")
     for key, value in conditions.items():
-        rst.write(f"   * - {key}\n")
-        rst.write(f"     - {value['description']}\n")
+        rst.write(f"      * - {key}\n")
+        rst.write(f"        - {value['description']}\n")
     rst.write("\n")
-    rst.write(f".. _cont{name}:\n\n")
-    rst.write(f".. list-table:: Contrasts for {name}\n")
-    rst.write("   :header-rows: 1\n")
-    rst.write("   :widths: 25 75\n\n")
-    rst.write("   * - Contrast\n")
-    rst.write("     - Description\n")
+    rst.write(f".. dropdown:: Contrasts for {name}\n")
+    rst.write(f"   :name: cont{name}\n\n")
+    rst.write(f"   .. list-table::\n")
+    rst.write("      :header-rows: 1\n")
+    rst.write("      :widths: 25 75\n\n")
+    rst.write("      * - Contrast\n")
+    rst.write("        - Description\n")
     for key, value in contrasts.items():
-        rst.write(f"   * - {key}\n")
-        rst.write(f"     - {value['description']}\n")
+        rst.write(f"      * - {key}\n")
+        rst.write(f"        - {value['description']}\n")
     rst.write("\n")
 
 
 with open('docs/source/tasks.rst', 'w') as rst:
-    rst.write(".. role:: raw-html(raw)\n")
-    rst.write("    :format: html\n\n")
-
     rst.write("Tasks\n")
     rst.write("=" * 5 + "\n\n")
     table_count = 1
@@ -193,7 +194,6 @@ with open('docs/source/tasks.rst', 'w') as rst:
                       d["tasks"][task]['description'], 
                       sd["tasks"][task]['software'], 
                       sd["tasks"][task]['screen_res'],
+                      sd["tasks"][task]['youtube'],
                       d["tasks"][task]['conditions'], 
-                      d["tasks"][task]['contrasts'], 
-                      table_count)
-        table_count += 2
+                      d["tasks"][task]['contrasts'])

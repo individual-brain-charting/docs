@@ -108,11 +108,11 @@ every task.
    *Series*                  Interleaved
    ========================= =================
 
-The only exception to these parameters specifications was the :ref:`Multi-modal` task, `this table <multimodalparam_>`__ contains the details of the parameters that were changed.
+The only exception to these parameters specifications was the :ref:`MultiModal` task, `this table <multimodalparam_>`__ contains the details of the parameters that were changed.
 
 .. _multimodalparam:
 
-.. table:: Acquisition parameters for :ref:`Multi-modal` tasks' BOLD-contrast images.
+.. table:: Acquisition parameters for :ref:`MultiModal` tasks' BOLD-contrast images.
 
    ========================= =================
    Parameter                 Value
