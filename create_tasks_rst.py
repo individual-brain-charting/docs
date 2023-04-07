@@ -19,7 +19,7 @@ d = {"tasks": {}}
 
 # %%
 # Add descriptions for all tasks
-df_tasks = pd.read_csv("../public_analysis_code/ibc_data/ibc_tasks.tsv", delimiter="\t")
+df_tasks = pd.read_csv("ibc_tasks.tsv", delimiter="\t")
 
 for _, row in df_tasks.iterrows():
     d["tasks"][row["task"]] = {
