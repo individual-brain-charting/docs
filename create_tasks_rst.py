@@ -157,9 +157,9 @@ def write_section(rst, name, description, software, conditions, contrasts, table
     rst.write(f"{name}\n")
     rst.write("-" * len(name) + "\n\n")
 
-    #rst.write(".. admonition:: Complex content")
-    
-    #rst.write(f"   Software: {software}\n")
+    rst.write(".. note:: ")
+    rst.write(f"   - Software: {software}\n")
+    rst.write(f"   - Software: {software}\n")
 
 
     rst.write(f"{description}\n\n")
@@ -184,9 +184,6 @@ def write_section(rst, name, description, software, conditions, contrasts, table
         rst.write(f"   * - {key}\n")
         rst.write(f"     - {value['description']}\n")
     rst.write("\n")
-
-    rst.write(".. admonition:: Complex content")
-    rst.write("   This is the admonition with complex body containing\n\n")
 
 
 with open('docs/source/tasks.rst', 'w') as rst:
