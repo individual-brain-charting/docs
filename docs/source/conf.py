@@ -60,4 +60,4 @@ html_favicon = 'logos/ibc/ibc3.png'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-html_css_files = ["styles.css"]
+html_css_files = ["custom.css"]
