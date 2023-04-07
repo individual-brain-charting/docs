@@ -157,8 +157,9 @@ def write_section(rst, name, description, software, conditions, contrasts, table
     rst.write(f"{name}\n")
     rst.write("-" * len(name) + "\n\n")
 
-    rst.write(".. admonition:: And, by the way...")
-    rst.write("   Software: {software}\n")
+    rst.write(".. admonition:: Complex content")
+    rst.write("   This is the admonition with complex body containing")
+    #rst.write("   Software: {software}\n")
 
 
     rst.write(f"{description}\n\n")
