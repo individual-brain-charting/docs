@@ -19,7 +19,7 @@ d = {"tasks": {}}
 
 # %%
 # Add descriptions for all tasks
-df_tasks = pd.read_csv("ibc_tasks.tsv", delimiter="\t")
+df_tasks = pd.read_csv("../public_analysis_code/ibc_data/ibc_tasks.tsv", delimiter="\t")
 
 for _, row in df_tasks.iterrows():
     d["tasks"][row["task"]] = {
@@ -140,28 +140,23 @@ warnings.warn(
 # !! Unsure if adding this to the yaml file is a better idea
 
 sd = {"tasks": {}}
-
-# df_tasks = pd.read_csv("ibc_tasks.tsv", delimiter="\t")
 for _, row in df_tasks.iterrows():
     sd["tasks"][row["task"]] = { 
-        "software": str(row["software"])
+        "software": str(row["software"]),
+        "screen_res": str(row["screen_res"]),
         }
-
-
+    
 # %%
 # Create a tasks.rst from the dictionary
-def write_section(rst, name, description, software, conditions, contrasts, table_count):
+def write_section(rst, name, description, software, screen_res, conditions, contrasts, table_count):
     """
     Helper function to write a section to the RST file
     """
     rst.write(f"{name}\n")
     rst.write("-" * len(name) + "\n\n")
-
     rst.write(".. note:: ")
     rst.write(f"   - Software: {software}\n")
-    rst.write(f"   - Software: {software}\n")
-
-
+    rst.write(f"   - Screen resolution: {screen_res}\n")
     rst.write(f"{description}\n\n")
     rst.write(f"The conditions for this task are described in `this table <cond{name}_>`__ and the main contrasts derived from those conditions are described in `this table <cont{name}_>`__.\n\n")
     rst.write(f".. _cond{name}:\n\n")
@@ -197,6 +192,7 @@ with open('docs/source/tasks.rst', 'w') as rst:
         write_section(rst, task, 
                       d["tasks"][task]['description'], 
                       sd["tasks"][task]['software'], 
+                      sd["tasks"][task]['screen_res'],
                       d["tasks"][task]['conditions'], 
                       d["tasks"][task]['contrasts'], 
                       table_count)
