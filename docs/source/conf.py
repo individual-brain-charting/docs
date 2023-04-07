@@ -18,8 +18,8 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Individual Brain Charting'
-copyright = '2023, Bertrand Thirion'
-author = 'Bertrand Thirion'
+copyright = '2023, The IBC team'
+author = 'The IBC team'
 
 # The full version, including alpha/beta/rc tags
 release = ''
