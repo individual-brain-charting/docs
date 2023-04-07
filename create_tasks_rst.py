@@ -157,7 +157,7 @@ def write_section(rst, name, description, software, conditions, contrasts, table
     rst.write(f"{name}\n")
     rst.write("-" * len(name) + "\n\n")
 
-    rst.write(".. admonition:: Quick implementation info: ")
+    rst.write(".. note:: ")
     rst.write(f"   Software: {software}\n\n")
 
 
