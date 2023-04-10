@@ -1,3 +1,7 @@
 div.main {
     text-align: justify;
 }
+
+div.tags {
+    text-align: left;
+}

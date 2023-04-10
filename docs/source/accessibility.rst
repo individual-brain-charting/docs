@@ -1,5 +1,5 @@
-Accessibility
-=============
+Get the data
+============
 
 All deliverables of the IBC dataset are open access. Their online
 accessibility is described next.
