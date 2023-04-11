@@ -1,1 +1,5 @@
 docs/build
+PAT
+ibc_tasks.tsv
+ibc_conditions.tsv
+all_contrasts.tsv

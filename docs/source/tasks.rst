@@ -14,7 +14,7 @@ ArchiStandard
 
 .. container:: tags
 
-   :bdg-primary:`visual_attention` :bdg-warning:`left_finger_response_execution` :bdg-success:`auditory_sentence_comprehension` :bdg-warning:`right_finger_response_execution` 
+   :bdg-primary:`visual_sentence_comprehension` :bdg-success:`auditory_attention` :bdg-primary:`vertical_checkerboard` :bdg-success:`auditory_sentence_comprehension` :bdg-primary:`visual_word_recognition` 
 
 .. admonition:: Implemented using proprietary software
    :class: attention
@@ -116,7 +116,7 @@ ArchiSpatial
 
 .. container:: tags
 
-   :bdg-primary:`visual_orientation` :bdg-primary:`visual_tracking` :bdg-primary:`visual_body_recognition` :bdg-warning:`right_finger_response_execution` 
+   :bdg-warning:`grasping` :bdg-primary:`visual_tracking` :bdg-light:`hand_chirality_recognition` :bdg-light:`hand_side_recognition` :bdg-warning:`saccadic_eye_movement` 
 
 .. admonition:: Implemented using proprietary software
    :class: attention
@@ -176,7 +176,7 @@ ArchiSocial
 
 .. container:: tags
 
-   :bdg-primary:`visual_imagery` :bdg-success:`auditory_word_recognition` :bdg-light:`mentalization` :bdg-dark:`animacy_decision` 
+   :bdg-dark:`animacy_decision` :bdg-success:`sound_perception` :bdg-primary:`visual_sentence_comprehension` :bdg-light:`mentalization` :bdg-success:`voice_perception` 
 
 .. admonition:: Implemented using proprietary software
    :class: attention
@@ -254,7 +254,7 @@ ArchiEmotional
 
 .. container:: tags
 
-   :bdg-primary:`visual_orientation` :bdg-primary:`visual_pattern_recognition` :bdg-primary:`visual_face_recognition` :bdg-light:`gender_discrimination` 
+   :bdg-primary:`facial_trustworthiness_recognition` :bdg-primary:`visual_representation` :bdg-light:`gender_discrimination` :bdg-primary:`visual_pattern_recognition` :bdg-primary:`visual_orientation` 
 
 .. admonition:: Implemented using proprietary software
    :class: attention
@@ -330,7 +330,7 @@ HcpEmotion
 
 .. container:: tags
 
-   :bdg-primary:`emotional_face_recognition` :bdg-primary:`visual_form_recognition` :bdg-warning:`response_execution` :bdg-warning:`response_selection` 
+   :bdg-primary:`visual_form_recognition` :bdg-light:`feature_comparison` :bdg-primary:`emotional_face_recognition` 
 
 .. admonition:: Implemented using proprietary software
    :class: attention
@@ -378,7 +378,7 @@ HcpGambling
 
 .. container:: tags
 
-   :bdg-dark:`reward_processing` :bdg-warning:`response_selection` :bdg-warning:`response_execution` :bdg-dark:`punishment_processing` 
+   :bdg-dark:`reward_processing` :bdg-dark:`punishment_processing` 
 
 .. admonition:: Implemented using proprietary software
    :class: attention
@@ -426,7 +426,7 @@ HcpMotor
 
 .. container:: tags
 
-   :bdg-warning:`right_hand_response_execution` :bdg-warning:`left_hand_response_execution` :bdg-warning:`tongue_response_execution` :bdg-warning:`right_toe_response_execution` 
+   :bdg-warning:`left_hand_response_execution` :bdg-info:`working_memory` :bdg-warning:`tongue_response_execution` :bdg-warning:`response_selection` :bdg-warning:`left_toe_response_execution` 
 
 .. admonition:: Implemented using proprietary software
    :class: attention
@@ -496,7 +496,7 @@ HcpLanguage
 
 .. container:: tags
 
-   :bdg-success:`auditory_sentence_recognition` :bdg-secondary:`narrative_comprehension` :bdg-success:`auditory_arithmetic_processing` :bdg-warning:`response_execution` 
+   :bdg-secondary:`narrative_comprehension` :bdg-success:`auditory_sentence_recognition` :bdg-success:`auditory_arithmetic_processing` 
 
 .. admonition:: Implemented using proprietary software
    :class: attention
@@ -544,7 +544,7 @@ HcpRelational
 
 .. container:: tags
 
-   :bdg-light:`relational_comparison` :bdg-primary:`visual_form_recognition` :bdg-primary:`visual_pattern_recognition` :bdg-warning:`response_execution` 
+   :bdg-primary:`visual_form_recognition` :bdg-light:`feature_comparison` :bdg-primary:`visual_pattern_recognition` :bdg-light:`relational_comparison` 
 
 .. admonition:: Implemented using proprietary software
    :class: attention
@@ -590,7 +590,7 @@ HcpSocial
 
 .. container:: tags
 
-   :bdg-light:`mentalization` :bdg-dark:`animacy_decision` :bdg-warning:`response_selection` :bdg-light:`animacy_perception` 
+   :bdg-dark:`animacy_decision` :bdg-light:`mentalization` :bdg-light:`animacy_perception` :bdg-warning:`motion_detection` 
 
 .. admonition:: Implemented using proprietary software
    :class: attention
@@ -636,7 +636,7 @@ HcpWm
 
 .. container:: tags
 
-   :bdg-primary:`face_maintenance` :bdg-primary:`visual_body_recognition` :bdg-light:`body_maintenance` :bdg-light:`updating` 
+   :bdg-light:`place_maintenance` :bdg-light:`body_maintenance` :bdg-primary:`visual_face_recognition` :bdg-light:`updating` :bdg-info:`working_memory` 
 
 .. admonition:: Implemented using proprietary software
    :class: attention
@@ -716,7 +716,7 @@ RSVPLanguage
 
 .. container:: tags
 
-   :bdg-primary:`visual_string_recognition` :bdg-light:`recognition` :bdg-primary:`visual_pseudoword_recognition` :bdg-secondary:`syntactic_parsing` 
+   :bdg-secondary:`sentence_comprehension` :bdg-secondary:`combinatorial_semantics` :bdg-primary:`visual_word_recognition` :bdg-info:`working_memory` :bdg-primary:`visual_string_recognition` 
 
 The Rapid-Serial-Visual-Presentation (RSVP) Language task was adapted from the study undertaken by (`Humphries et al., 2006 <Humphries et al., 2006>`__) on syntactic and semantic processing during auditory sentence comprehension. Specifically, the task herein described targeted the same syntactic and semantic modules, but in the context of reading. It thus allowed for capturing further associations with regard to e.g. visual (pseudo) word recognition and sublexical route, among other aspects related to active reading. The paradigm consisted in a block-design presentation strategy of the stimuli. One block was defined as an epoch within a trial and epochs corresponded in turn to experimental conditions. Such conditions stood for the consecutive visual presentation of ten constituents composed by letters. All linguistic content elicited from the conditions except "consonant strings", such as grammar rules, lexicon and phonemes, were part of the french language. In order to ensure continuous engagement during task performance, participants were asked, straight afterwards the visualization of every sentence, to ascertain whether the current constituent displayed on the screen, aka "the probe", was part of the previous sentence or not. The corresponding answer was provided immediately after the probe, by pressing the button in the left hand if "yes" or the one in the right hand if "no". Data were collected in six runs during one single session. Every run was composed by sixty trials, in which subsets of ten trials were dedicated to each condition, respectively. The order of the trials was pseudo-randomized within and between runs, such that there were no repeated trials during a full session. Moreover, a different pseudo-randomized order for the presentation of the trials was always employed across participants. One trial comprised several experimental manipulations, other than a block integrating one specific condition. It was sequentially formed by a period of fixation-cross display (two seconds), another short period of a blank screen (0.5 seconds), a block containing the linguistic stimuli (0.4 seconds x 10 = 4 seconds), a jittered blank screen (varying from one to 1.5 seconds), a period of a second fixation-cross display (0.5 seconds), a period for the probe display (0.5 seconds), and, finally, a response period (varying up to two seconds). The total duration of one single trial was thus ten seconds. Three extra seconds of blank screen were added at the beginning of every run, i.e. before the presentation of the first trial. Two opposite phase-encoding directions were respectively applied during acquisition of each half of the total amount of runs.
 
@@ -799,7 +799,7 @@ MTTWE
 
 .. container:: tags
 
-   :bdg-light:`temporal_cognition` :bdg-light:`cardinal-direction_judgment` :bdg-info:`spatial_working_memory` :bdg-light:`cardinal_orientation` 
+   :bdg-light:`future_time` :bdg-info:`spatial_working_memory` :bdg-light:`past_time` :bdg-dark:`west_cardinal-direction_judgment` :bdg-light:`time_orientation` 
 
 The Mental Time Travel (MTT) task battery was developed following previous studies conducted at the NeuroSpin platform on chronosthesia and mental space navigation (`Gauthier et al., 2016 <https://doi.org/10.1016/j.cognition.2016.05.015>`__, `Gauthier et al., 2016 <https://doi.org/10.1523/JNEUROSCI.1400-16.2016>`__, `Gauthier et al., 2018 <https://doi.org/10.1093/cercor/bhy320>`__). Participants were to judge the ordinality of real historical events in time and space by mentally project oneself, i.e. through egocentric mapping. In contrast, the present task was intended to assess the neural correlates underlying both mental time and space judgment involved in allocentric mapping implemented in narratives. To this end, and in order to remove confounds associated with prior subject-specific mental representations linked to the historical events, fictional scenarios were created with fabricated stories and characters. The stimuli of each task referred to a different island plotting different stories and characters. There were two stories per island and they were created based on a two-dimensional mesh of nodes. Each node corresponded to a specific action. The stories of each island evolved both in time and in one single cardinal direction. The cardinal directions, cued in the MTTWE task, were West-East (WE). In addition, the stories of each island evolved spatially in opposite ways. So, the two stories plotted in the West-East island evolved across time from west to east and east to west, respectively. Prior to each session, participants were to learn the story of the corresponding session. To prevent any retrieval of graphical memories referring to the schematic representation of the stories, they were presented as audio narratives. Additionally, the participants were also instructed to learn the stories chronographically, i.e. as they were progressively referred to in the narrative, and to refrain from doing (visual) notes, which could be encoded as mental judgments. The task was organized as a block-design paradigm, composed of trials with three conditions of audio stimuli: (1) Reference, statement of an action in the story to serve as reference for the time or space judgment in the same trial; (2) Cue, question concerning the type of mental judgment to be performed in the same trial, i.e. "Before or After?" for the time judgment or "West or East?" for the space judgment; and (3) Event, statement of an action to be judged with respect to the Reference and according to the Cue. Every trial started with an audio presentation of the Reference followed by silence, with a duration of two and four seconds, respectively. The audio presentation of the Cue came next, followed by a silence period; they had respectively a duration of two and four seconds. Afterwards, a series of four Events were presented for two seconds each; all of them were interspersed by a Response condition of three seconds. Every trial ended with a silent period of seven seconds, thus lasting thirty nine seconds in total. A black fixation cross was permanently displayed on the screen across conditions and the participants were instructed to never close their eyes. At the very end of each trial, the cross turned to red during half of a second in order to signal the beginning of the next trial; such cue facilitated the identification of the next audio stimulus as the upcoming Reference to be judged. During the Response period, the participants had to press one of the two possible buttons, placed in their respective left and right hand. If the Cue presented in the given trial hinted at time judgment, the participants were to judge whether the previous Event occurred before the Reference, by pressing the button of the left hand, or after the Reference, by pressing the button of the right hand. If the Cue concerned with space judgment, the participants were to judge, in the same way, whether the Event occurred west or east of the Reference in the first session and south or north of the Reference in the second session. One session of data collection comprised three runs; each of them included twenty trials. Half of the trials for a given run were about time navigation and the other half, space navigation. Five different references were shared by both types of navigation and, thus, there were two trials with the same reference for each type of navigation. In turn, these two trials differed in terms of distance in the mesh between the node of the Reference and the node of each Event, i.e. *close* referred to two consecutive nodes whereas *far* referred to two nodes interspersed by another node. Within trials, half of the Events related to past or western actions and the other half to future or eastern actions with respect to the Reference. The order of the trials was shuffled within runs, only to ensure that each run would feature a unique sequence of trials according to type of reference (both in time and space) and cue. No pseudo-randomization criterion was imposed as the trials' characterization was already very rich. Since there were only two types of answers, we also randomized events according to their correct answer within each trial. The same randomized sequence for each run was employed for all participants. The code of this randomization is provided together with the protocol of the task on `Github <https://github.com/hbp-brain-charting/public_protocols/tree/master/mtt/mtt_protocol/randomization>`__. Note that the randomized sequence of trials for all runs is pre-determined and, thus, provided as inputs to the protocol for a specific session.
 
@@ -884,9 +884,9 @@ MTTNS
 
 .. container:: tags
 
-   :bdg-light:`temporal_cognition` :bdg-light:`south_cardinal-direction_judgment` :bdg-light:`cardinal-direction_judgment` :bdg-info:`spatial_working_memory` 
+   :bdg-light:`future_time` :bdg-dark:`north_cardinal-direction_judgment` :bdg-info:`spatial_working_memory` :bdg-dark:`south_cardinal-direction_judgment` :bdg-light:`past_time` 
 
-The Mental Time Travel (MTT) task battery was developed following previous studies conducted at the NeuroSpin platform on chronosthesia and mental space navigation (`Gauthier et al., 2016 <https://doi.org/10.1016/j.cognition.2016.05.015>`__, `Gauthier et al., 2016 <https://doi.org/10.1523/JNEUROSCI.1400-16.2016>`__, `Gauthier et al., 2018 <https://doi.org/10.1093/cercor/bhy320>`__). The MTTNS task is exactly the same as `MTTWE`_ task except that the the cardinal directions, cued in the task, were North-South (NS). In addition, the two stories plotted in the South-North island evolved across time from north to south and south to north. The MTTNS task was performed in a separate session from the `MTTWE task`_.
+The Mental Time Travel (MTT) task battery was developed following previous studies conducted at the NeuroSpin platform on chronosthesia and mental space navigation (`Gauthier et al., 2016 <https://doi.org/10.1016/j.cognition.2016.05.015>`__, `Gauthier et al., 2016 <https://doi.org/10.1523/JNEUROSCI.1400-16.2016>`__, `Gauthier et al., 2018 <https://doi.org/10.1093/cercor/bhy320>`__). The MTTNS task is exactly the same as `MTTWE`_ task except that the the cardinal directions, cued in the task, were North-South (NS). In addition, the two stories plotted in the South-North island evolved across time from north to south and south to north. The MTTNS task was performed in a separate session from the `MTTWE`_ task.
 
 The conditions for this task are described in `this table <condMTTNS_>`__ and the main contrasts derived from those conditions are described in `this table <contMTTNS_>`__.
 
@@ -969,7 +969,7 @@ PreferenceFood
 
 .. container:: tags
 
-   :bdg-light:`food_cue_reactivity` :bdg-dark:`confidence_judgment` :bdg-dark:`reward_valuation` :bdg-light:`judgment` 
+   :bdg-dark:`reward_valuation` :bdg-dark:`incentive_salience` :bdg-dark:`confidence_judgment` :bdg-dark:`judgment` :bdg-light:`food_cue_reactivity` 
 
 The Preference task battery was adapted from the Pleasantness Rating task described in (`Lebreton et al., 2015 <https://doi.org/10.1038/nn.4064>`__), in order to capture the neural correlates underlying the decision-making for potentially rewarding outcomes (aka "positive-incentive value") as well as the level of confidence of such type of action. The whole task battery is composed of four tasks, each of them pertaining to the presentation of items of a certain kind. Therefore, PreferenceFood task was dedicated to "food items". The task was organized as a block-design experiment with one condition per trial. Every trial started with a fixation cross, whose duration was jittered between 0.5 seconds and 4.5 seconds, after which a picture of an item was displayed on the screen together with a rating scale and a cursor. Participants were to indicate how pleasant the presented stimulus was, by sliding the cursor along the scale. Index and ring finger's of the response box were to move respectively with low and high speed to the left whereas the middle and little fingers were to move respectively with low and high speed to the right; thumb's button was used to validate the answer. The scale ranged between 1 and 100. The value 1 corresponded to the choices "unpleasant" or "indifferent"; the middle of the scale corresponded to the choice "pleasant"; and the value 100 corresponded to the choice "very pleasant". Therefore, the ratings related only to the estimation of the positive-incentive value of the items displayed. The task was presented twice in two fully dedicated runs. The stimuli were always different between runs of the same task. As a consequence, no stimulus was ever repeated in any trial and, thus, no item was ever assessed more than once by the participants. Although each trial had a variable duration, according to the time spent by the participant in the assessment, no run lasted longer than eight minutes and sixteen seconds. To avoid any selection bias in the sequence of stimuli, the order of their presentation was shuffled across trials and between runs of the same type. This shuffle is embedded in the code of the protocol and, thus, the sequence was determined upon launching it. Consequently, the sequence of stimuli was also random across subjects.
 
@@ -1012,7 +1012,7 @@ PreferencePaintings
 
 .. container:: tags
 
-   :bdg-primary:`visual_color_discrimination` :bdg-dark:`confidence_judgment` :bdg-dark:`reward_valuation` :bdg-light:`judgment` 
+   :bdg-dark:`reward_valuation` :bdg-dark:`incentive_salience` :bdg-dark:`confidence_judgment` :bdg-primary:`visual_color_discrimination` :bdg-dark:`judgment` 
 
 The Preference task battery was adapted from the Pleasantness Rating task described in (`Lebreton et al., 2015 <https://doi.org/10.1038/nn.4064>`__), in order to capture the neural correlates underlying the decision-making for potentially rewarding outcomes (aka "positive-incentive value") as well as the level of confidence of such type of action. The whole task battery is composed of four tasks, each of them pertaining to the presentation of items of a certain kind. Therefore, PreferencePaintings task was dedicated to "paintings". The task was organized as a block-design experiment with one condition per trial. Every trial started with a fixation cross, whose duration was jittered between 0.5 seconds and 4.5 seconds, after which a picture of an item was displayed on the screen together with a rating scale and a cursor. Participants were to indicate how pleasant the presented stimulus was, by sliding the cursor along the scale. Index and ring finger's of the response box were to move respectively with low and high speed to the left whereas the middle and little fingers were to move respectively with low and high speed to the right; thumb's button was used to validate the answer. The scale ranged between 1 and 100. The value 1 corresponded to the choices "unpleasant" or "indifferent"; the middle of the scale corresponded to the choice "pleasant"; and the value 100 corresponded to the choice "very pleasant". Therefore, the ratings related only to the estimation of the positive-incentive value of the items displayed. The task was presented twice in two fully dedicated runs. The stimuli were always different between runs of the same task. As a consequence, no stimulus was ever repeated in any trial and, thus, no item was ever assessed more than once by the participants. Although each trial had a variable duration, according to the time spent by the participant in the assessment, no run lasted longer than eight minutes and sixteen seconds. To avoid any selection bias in the sequence of stimuli, the order of their presentation was shuffled across trials and between runs of the same type. This shuffle is embedded in the code of the protocol and, thus, the sequence was determined upon launching it. Consequently, the sequence of stimuli was also random across subjects.
 
@@ -1055,7 +1055,7 @@ PreferenceFaces
 
 .. container:: tags
 
-   :bdg-dark:`confidence_judgment` :bdg-primary:`face_perception` :bdg-primary:`visual_face_recognition` :bdg-dark:`reward_valuation` 
+   :bdg-dark:`reward_valuation` :bdg-dark:`incentive_salience` :bdg-dark:`confidence_judgment` :bdg-dark:`judgment` :bdg-primary:`facial_attractiveness_recognition` 
 
 The Preference task battery was adapted from the Pleasantness Rating task described in (`Lebreton et al., 2015 <https://doi.org/10.1038/nn.4064>`__), in order to capture the neural correlates underlying the decision-making for potentially rewarding outcomes (aka "positive-incentive value") as well as the level of confidence of such type of action. The whole task battery is composed of four tasks, each of them pertaining to the presentation of items of a certain kind. Therefore, PreferenceFaces task was dedicated to "human faces". All tasks were organized as a block-design experiment with one condition per trial. Every trial started with a fixation cross, whose duration was jittered between 0.5 seconds and 4.5 seconds, after which a picture of an item was displayed on the screen together with a rating scale and a cursor. Participants were to indicate how pleasant the presented stimulus was, by sliding the cursor along the scale. Index and ring finger's of the response box were to move respectively with low and high speed to the left whereas the middle and little fingers were to move respectively with low and high speed to the right; thumb's button was used to validate the answer. The scale ranged between 1 and 100. The value 1 corresponded to the choices "unpleasant" or "indifferent"; the middle of the scale corresponded to the choice "pleasant"; and the value 100 corresponded to the choice "very pleasant". Therefore, the ratings related only to the estimation of the positive-incentive value of the items displayed. The task was presented twice in two fully dedicated runs. The stimuli were always different between runs of the same task. As a consequence, no stimulus was ever repeated in any trial and, thus, no item was ever assessed more than once by the participants. Although each trial had a variable duration, according to the time spent by the participant in the assessment, no run lasted longer than eight minutes and sixteen seconds. To avoid any selection bias in the sequence of stimuli, the order of their presentation was shuffled across trials and between runs of the same type. This shuffle is embedded in the code of the protocol and, thus, the sequence was determined upon launching it. Consequently, the sequence of stimuli was also random across subjects.
 
@@ -1098,7 +1098,7 @@ PreferenceHouses
 
 .. container:: tags
 
-   :bdg-dark:`confidence_judgment` :bdg-primary:`visual_place_recognition` :bdg-dark:`reward_valuation` :bdg-light:`judgment` 
+   :bdg-dark:`reward_valuation` :bdg-dark:`incentive_salience` :bdg-dark:`confidence_judgment` :bdg-dark:`judgment` :bdg-primary:`visual_place_recognition` 
 
 The Preference task battery was adapted from the Pleasantness Rating task described in (`Lebreton et al., 2015 <https://doi.org/10.1038/nn.4064>`__), in order to capture the neural correlates underlying the decision-making for potentially rewarding outcomes (aka "positive-incentive value") as well as the level of confidence of such type of action. The whole task battery is composed of four tasks, each of them pertaining to the presentation of items of a certain kind. Therefore, PreferenceHouses task was dedicated to "houses". All tasks were organized as a block-design experiment with one condition per trial. Every trial started with a fixation cross, whose duration was jittered between 0.5 seconds and 4.5 seconds, after which a picture of an item was displayed on the screen together with a rating scale and a cursor. Participants were to indicate how pleasant the presented stimulus was, by sliding the cursor along the scale. Index and ring finger's of the response box were to move respectively with low and high speed to the left whereas the middle and little fingers were to move respectively with low and high speed to the right; thumb's button was used to validate the answer. The scale ranged between 1 and 100. The value 1 corresponded to the choices "unpleasant" or "indifferent"; the middle of the scale corresponded to the choice "pleasant"; and the value 100 corresponded to the choice "very pleasant". Therefore, the ratings related only to the estimation of the positive-incentive value of the items displayed. The task was presented twice in two fully dedicated runs. The stimuli were always different between runs of the same task. As a consequence, no stimulus was ever repeated in any trial and, thus, no item was ever assessed more than once by the participants. Although each trial had a variable duration, according to the time spent by the participant in the assessment, no run lasted longer than eight minutes and sixteen seconds. To avoid any selection bias in the sequence of stimuli, the order of their presentation was shuffled across trials and between runs of the same type. This shuffle is embedded in the code of the protocol and, thus, the sequence was determined upon launching it. Consequently, the sequence of stimuli was also random across subjects.
 
@@ -1141,7 +1141,7 @@ TheoryOfMind
 
 .. container:: tags
 
-   :bdg-secondary:`semantic_processing` :bdg-secondary:`narrative_comprehension` :bdg-warning:`response_execution` :bdg-warning:`response_selection` 
+   :bdg-secondary:`narrative_comprehension` :bdg-secondary:`semantic_processing` :bdg-light:`theory-of-mind` 
 
 This battery of tasks was adapted from the original task-fMRI localizers of `Saxe Lab <https://saxelab.mit.edu/localizers>`__, that intended to identify functional regions-of-interest in the Theory-of-Mind network and Pain Matrix regions. Minor changes were employed in the present versions of the tasks herein described. Because the cohort of this dataset is composed solely of native French speakers, the verbal stimuli were thus translated to French. Therefore, the durations of the reading period and the response period within conditions were slightly increased. The TheoryOfMind task was a localizer was intended to identify brain regions involved in theory-of-mind and social cognition, by contrasting activation during two distinct story conditions: belief judgments, reading a false-belief story that portrayed characters with false beliefs about their own reality; and fact judgments, reading a story about a false photograph, map or sign (`Dodell-Feder et al., 2011 <https://doi.org/10.1016/j.neuroimage.2010.12.040>`__). The task was organized as a block-design experiment with one condition per trial. Every trial started with a fixation cross of twelve seconds, followed by the main condition that comprised a reading period of eighteen seconds and a response period of six seconds. During this response period, participants were to judge whether a statement about the story previously displayed is true or false by pressing respectively with the index or middle finger in the corresponding button of the response box. The total duration of the trial amounted to thirty six seconds. There were ten trials in a run, followed by an extraperiod of fixation cross for twelve seconds at the end of the run. Two runs were dedicated to this task in one single session. The designs, i.e. the sequence of conditions across trials, for two possible runs were pre-determined by the authors of the original study and hard-coded in the original protocol. The IBC-adapted protocols contain the exactly same designs. For all subjects, design 1 was employed for the PA-run and design 2 for the AP-run.
 
@@ -1182,7 +1182,7 @@ EmotionalPain
 
 .. container:: tags
 
-   :bdg-danger:`imagined_emotional_pain` :bdg-secondary:`narrative_comprehension` :bdg-warning:`response_execution` :bdg-warning:`response_selection` 
+   :bdg-danger:`imagined_physical_pain` :bdg-danger:`empathy` :bdg-secondary:`narrative_comprehension` :bdg-danger:`imagined_emotional_pain` 
 
 This task also belongs to the battery of tasks was adapted from the original task-fMRI localizers of `Saxe Lab <https://saxelab.mit.edu/localizers>`__, that intended to identify functional regions-of-interest in the Theory-of-Mind network and Pain Matrix regions. The EmotionalPain was an emotional pain localizer that was intended to identify brain regions involved in theory-of-mind and Pain Matrix areas, by contrasting activation during two distinct story conditions: reading a story that portrayed characters suffering from emotional pain and physical pain (`Jacoby et al., 2016 <https://doi.org/10.1016/j.neuroimage.2015.11.02>`__). The experimental design of this task is identical to the one employed for the `TheoryOfMind`_ localizer, except that the reading period lasted twelve seconds instead of eighteen seconds. During the response period, the participant had to the judge the amount of pain experienced by the character(s) portrayed in the previous story. For no pain, they had to press with their thumb on the corresponding button of the response box; for mild pain, they had to press with their index finger; for moderate pain, they had to press with the middle finger; and for a strong pain, they had to press with the ring finger.
 
@@ -1223,7 +1223,7 @@ PainMovie
 
 .. container:: tags
 
-   :bdg-primary:`visual_attention` :bdg-danger:`imagined_emotional_pain` :bdg-light:`mentalization` :bdg-light:`theory-of-mind` 
+   :bdg-light:`mentalization` :bdg-danger:`imagined_physical_pain` :bdg-danger:`empathy` :bdg-primary:`visual_attention` :bdg-danger:`imagined_emotional_pain` 
 
 This task also belongs to the battery of tasks was adapted from the original task-fMRI localizers of `Saxe Lab <https://saxelab.mit.edu/localizers>`__, that intended to identify functional regions-of-interest in the Theory-of-Mind network and Pain Matrix regions. The PainMovie task was a pain movie localizer and consisted displaying "Partly Cloud", a 6 minutes movie from Disney Pixar, in order to study the responses implicated in theory-of-mind and Pain Matrix brain regions (`Jacoby et al., 2016 <https://doi.org/10.1016/j.neuroimage.2015.11.025>`__, `Richardson et al., 2018 <https://doi.org/10.1038/s41467-018-03399-2>`__). Two main conditions were thus hand-coded in the movie, according to (`Richardson et al., 2018 <https://doi.org/10.1038/s41467-018-03399-2>`__), as follows: mental movie, in which characters were "mentalizing"; and physical pain movie, in which characters were experiencing physical pain. Such conditions were intended to evoke brain responses from theory-of-mind and pain-matrix networks, respectively. All moments in the movie not focused on the direct interaction of the main characters were considered as a baseline period.
 
@@ -1264,7 +1264,7 @@ VSTM
 
 .. container:: tags
 
-   :bdg-primary:`visual_orientation` :bdg-light:`shape_recognition` :bdg-light:`numerosity` :bdg-primary:`visual_working_memory` 
+   :bdg-primary:`visual_buffer` :bdg-light:`numerosity` :bdg-info:`visual_working_memory` :bdg-primary:`shape_recognition` :bdg-primary:`visual_orientation` 
 
 This battery of tasks was adapted from the control experiment described in (`Knops et al., 2014 <https://doi.org/10.1523/JNEUROSCI.2758-13.2014>`__). Minor changes were employed for the IBC implementation of this battery which have been described later in this section. In the Visual Short-Term Memory (`VSTM`_) task, participants were presented with a certain number of bars, varying from one to six. Every trial started with the presentation of a black fixation dot in the center of the screen for 0.5 seconds. While still on the screen, the black fixation dot was then displayed together with a certain number of tilted bars - variable between trials from one to six - for 0.15 seconds. Afterwards, a white fixation dot was shown for 1 second. It was next replaced by the presentation of the test stimulus for 1.7 seconds, displaying identical number of tilted bars in identical positions together with a green fixation dot. The participants were to remember the orientation of the bars from the previous sample and answer with one of the two possible button presses, i.e. respectively with the index or middle finger, depending on whether one of the bars in the current display had changed orientation by 90◦ or not, which was the case in half of the trials. The test display was replaced by another black fixation dot for a fixed duration of 3.8 seconds. Thus, the trial was 7.15 seconds long. There were seventy two trials in a run and four runs in one single session. Pairs of runs were launched consecutively. To avoid selection bias in the sequence of stimuli, the order of the trials was shuffled according to numerosity and change of orientation within runs and across participants. Both the response period and the period of the fixation dot at the end of each trial were made constant.
 
@@ -1307,7 +1307,7 @@ Enumeration
 
 .. container:: tags
 
-   :bdg-light:`shape_recognition` :bdg-light:`numerosity` :bdg-primary:`visual_working_memory` :bdg-warning:`response_execution` 
+   :bdg-primary:`visual_buffer` :bdg-light:`numerosity` :bdg-info:`visual_working_memory` :bdg-primary:`shape_recognition` :bdg-light:`enumeration` 
 
 The Enumeration task was also a part of battery of tasks was adapted from the control experiment described in (`Knops et al., 2014 <https://doi.org/10.1523/JNEUROSCI.2758-13.2014>`__). Minor changes were employed for the IBC implementation of this battery which have been described later in this section. In this task, participants were presented with a certain number of tilted dark-gray bars on a light-gray background, varying from one to eight. Every trial started with the presentation of a black fixation dot in the center of the screen for 0.5 seconds. While still on the screen, the black fixation dot was then displayed together with a certain number of tilted bars for 0.15 seconds. It was followed by a response period of 1.7s, in which only a green fixation dot was being displayed on the screen. The participants were to remember the number of the bars that were shown right before and answer accordingly, by pressing the corresponding button: once with the thumb's button for one bar; once with the index finger's button for two bars; once with the middle finger's button for three bars; once with the ring finger's button for four bars; twice with the thumb's button for five bars; twice with the index finger's button for six bars; twice with the middle finger's button for seven bars; twice with the ring finger's button for eight bars. Afterwards, another black fixation dot was displayed for a fixed duration of 7.8 seconds. The trial length was thus 9.95 seconds. There were ninety six trials in a run and two (consecutive) runs in one single session. To avoid selection bias in the sequence of stimuli, the order of the trials was shuffled according to numerosity within runs and across participants. Both the response period and the period of the fixation dot at the end of each trial were made constant. The answers were registered via a button-press response box instead of an audio registration of oral responses as in the original study.
 
@@ -1350,7 +1350,7 @@ Self
 
 .. container:: tags
 
-   :bdg-light:`self-reference_effect` :bdg-light:`recognition` :bdg-info:`episodic_memory` :bdg-light:`other-reference_effect` 
+   :bdg-light:`self-reference_effect` :bdg-info:`episodic_memory` :bdg-light:`memory,reading` :bdg-light:`other-reference_effect` :bdg-dark:`judgment` 
 
 The Self task was adapted from (`Genom et al., 2014 <https://doi.org/10.1016/j.cortex.2013.06.009>`__), originally developed to investigate the Self-Reference Effect in older adults. This effect pertains to the encoding mechanism of information referring to the self, characterized as a memory-advantaged process. Consequently, memory-retrieval performance is also better for information encoded in reference to the self than to other people, objects or concepts. The present task was thus composed of two phases, each of them relying on encoding and recognition procedures. The encoding phase was intended to map brain regions related to the encoding of items in reference to the self, whereas the recognition one was conceived to isolate the memory network specifically involved in the retrieval of those items. The phases were interspersed, so that the recognition phase was always related to the encoding phase presented immediately before. The encoding phase had two blocks. Each block was composed of a set of trials pertaining to the same condition. For both conditions, a different adjective was presented at every trial on the screen. The participants were to judge whether or not the adjective described themselves -- *self-reference encoding* condition-- or another person -- *other-reference encoding* condition-- by pressing with the index finger on the corresponding button of the response box for "yes" and with the middle finger for "no". The other person was a public figure in France around the same age range as the cohort, whose gender matched the gender of every participant. Two public figures were mentioned, one at the time, across all runs; four public figures --two of each gender-- were selected beforehand. By this way, we ensured that all participants were able to successfully characterize the same individuals, holding equal the levels of familiarity and affective attributes with respect to these individuals. In the recognition phase, participants were to remember whether or not the adjectives had also been displayed during the previous encoding phase, by pressing with the index finger on the corresponding button of the response box for "yes" and with the middle finger for "no". This phase was composed of a single block of trials, pertaining to three categories of conditions. *New* adjectives were presented during one half of the trials whereas the other half were in reference to the adjectives displayed in the previous phase. Thus, trials referring to the adjectives from *self-reference encoding* were part of the *self-reference recognition* category and trials referring to the *other-reference encoding* were part of the *other-reference recognition* category. There were four runs in one session. The first three ones had three phases; the fourth and last run had four phases. Their total durations were twelve and 15.97 seconds, respectively. Blocks of both phases started with an *instruction* condition of five seconds, containing a visual cue. The cue was related to the judgment that should be performed next, according to the type of condition featured in that block. A set of trials, showing different adjectives, were presented afterwards. Each trial had a duration of five seconds, in which a response was to be provided by the participant. During the trials of the encoding blocks, participants had to press the button with their left or right hand, depending on whether they believed or not the adjective on display described someone (i.e. self or other, respectively for *self-reference encoding* or *other-reference encoding* conditions). During the trials of the recognition block, participants had to answer in thesame way, depending on whether they believed or not the adjective had been presented before. A fixation cross was always presented between trials, whose duration was jittered between 0.3 seconds and 0.5 seconds. A rest period was introduced between encoding and recognition phases, whose duration was also jittered between ten and fourteen seconds. Long intervals between these two phases, i.e. longer than ten seconds, ensured the measurement of long-term memory processes during the recognition phase, at the age range of the cohort (`Newell et al., 1972 <https://psycnet.apa.org/record/1973-10478-000>`__, `Ericsson et al., 1995 <https://doi.org/10.1037/0033-295x.102.2.211>`__). Fixation-cross periods of three and fifteen seconds were also introduced in the beginning and end of each run, respectively. Lastly, all adjectives were presented in the lexical form according to the gender of the participant. There were also two sets of adjectives. One set was presented as new adjectives during the recognition phase and the other set for all remaining conditions of both phases. To avoid cognitive bias across the cohort, sets were switched for the other half of the participants. Plus, adjectives never repeated across runs but their sequence was fixed for the same runs and across participants from the same set. Yet, pseudo-randomization of the trials for the recognition phase was pre-determined by the authors of the original study, according to their category (i.e. *self-reference recognition*, *other-reference recognition* or *new*), such that no more than three consecutive trials of the same category were presented within a block.
 
@@ -1417,7 +1417,7 @@ Bang
 
 .. container:: tags
 
-   :bdg-light:`social_cognition` :bdg-success:`speech_processing` :bdg-success:`speech_perception` :bdg-light:`_audiovisual_perception` 
+   :bdg-light:`audiovisual_perception` :bdg-success:`auditory_scene_analysis` :bdg-secondary:`_language_processing` :bdg-light:`_audiovisual_perception` :bdg-secondary:`_language_comprehension` 
 
 The Bang task was adapted from the study (`Campbell et al., 2015 <https://doi.org/10.1016/j.neurobiolaging.2015.07.028>`__), dedicated to investigate aging effects on neural responsiveness during naturalistic viewing. The task relies on watching - viewing and listening - of an edited version of the episode "Bang! You're Dead" from the TV series "Alfred Hitchcock Presents". The original black-and-white, 25-minute episode was condensed to seven minutes and fifty five seconds while preserving its narrative. The plot of the final movie includes scenes with characters talking to each other as well as scenes with no verbal communication. This task was performed during a single run in one unique session. Participants were never informed of the title of the movie before the end of the session. Ten seconds of acquisition were added at the end of the run. The total duration of the run was thus eight minutes and five seconds.
 
@@ -1481,7 +1481,7 @@ Wedge
 
 .. container:: tags
 
-   :bdg-primary:`lower-right_vision` :bdg-primary:`visual_color_discrimination` :bdg-primary:`lower-left_vision` :bdg-primary:`upper-left_vision` 
+   :bdg-primary:`lower-left_vision` :bdg-primary:`lower-right_vision` :bdg-primary:`upper-right_vision` :bdg-primary:`upper-left_vision` :bdg-primary:`visual_color_discrimination` 
 
 The Retinotopy tasks refer to the classic retinotopic paradigms - the Wedge and the Ring tasks - consisting of two kinds of visual stimuli as part of the Wedge task: a slowly rotating clockwise or counterclockwise and semicircular checkerboard stimulus. The phase of the periodic response at the rotation or dilation/contraction frequency measured at each voxel relates to the measurement of the perimetric parameters concerning polar angle and eccentricity, respectively (`Sereno et al., 1995 <https://doi.org/10.1126/science.7754376>`__). Under IBC, four runs were devoted to this task (two runs for each direction). Each of them were five-and-a-half minutes long. They were programmed for the same session following the last three "training-data" runs of the `Clips`_ task. Similarly to the Clips task, a point was displayed at the center of the visual stimulus in order to keep constant the perimetric origin in all participants. Participants were thus to fixate continuously this point whose color flickered between red, green, blue and yellow throughout the entire run. To keep the participants engaged in the task, they were instructed that, after each run (i.e. after MRI acquisition was finished), they would be asked which color had most often been presented. Additionally, ten seconds of a non-flickering, red fixation cross were displayed at the end of every run.
 
@@ -1544,7 +1544,7 @@ Ring
 
 .. container:: tags
 
-   :bdg-primary:`mid-peripheral_vision` :bdg-primary:`far-peripheral_vision` :bdg-primary:`visual_color_discrimination` :bdg-primary:`foveal_vision` 
+   :bdg-primary:`mid-peripheral_vision` :bdg-primary:`far-peripheral_vision` :bdg-primary:`foveal_vision` :bdg-primary:`visual_color_discrimination` 
 
 The Retinotopy tasks refer to the classic retinotopic paradigms - the Wedge and the Ring tasks - consisting of two kinds of visual stimuli as part of the Ring task: a thick, dilating or contracting ring. The phase of the periodic response at the rotation or dilation/contraction frequency measured at each voxel relates to the measurement of the perimetric parameters concerning polar angle and eccentricity, respectively (`Sereno et al., 1995 <https://doi.org/10.1126/science.7754376>`__). Under IBC, two runs were devoted to this task (two runs for each direction). Each of them were five-and-a-half minutes long. They were programmed for the same session following the last three "training-data" runs of the `Clips`_ task. Similarly to the Clips task, a point was displayed at the center of the visual stimulus in order to keep constant the perimetric origin in all participants. Participants were thus to fixate continuously this point whose color flickered between red, green, blue and yellow throughout the entire run. To keep the participants engaged in the task, they were instructed that, after each run (i.e. after MRI acquisition was finished), they would be asked which color had most often been presented. Additionally, ten seconds of a non-flickering, red fixation cross were displayed at the end of every run.
 
@@ -1610,7 +1610,7 @@ Lec2
 
 .. container:: tags
 
-   :bdg-light:`inhibition` :bdg-secondary:`language_comprehension` :bdg-secondary:`reading` :bdg-secondary:`word_maintenance` 
+   :bdg-info:`working_memory` :bdg-secondary:`word_maintenance` :bdg-secondary:`reading` :bdg-light:`inhibition` :bdg-secondary:`language_comprehension` 
 
 .. admonition:: Implemented using proprietary software
    :class: attention
@@ -1656,7 +1656,7 @@ Audi
 
 .. container:: tags
 
-   :bdg-success:`speech_processing` :bdg-success:`speech_perception` :bdg-secondary:`semantic_processing` :bdg-secondary:`language_processing` 
+   :bdg-success:`sound_perception` :bdg-success:`auditory_attention` :bdg-success:`listening` :bdg-success:`voice_perception` :bdg-success:`speech_processing` 
 
 .. admonition:: Implemented using proprietary software
    :class: attention
@@ -1768,7 +1768,7 @@ Visu
 
 .. container:: tags
 
-   :bdg-primary:`visual_string_recognition` :bdg-primary:`visual_pseudoword_recognition` :bdg-primary:`visual_scene_perception` :bdg-primary:`visual_tool_recognition` 
+   :bdg-primary:`visual_representation` :bdg-primary:`visual_perception` :bdg-primary:`visual_word_recognition` :bdg-light:`object_recognition` :bdg-primary:`visual_string_recognition` 
 
 .. admonition:: Implemented using proprietary software
    :class: attention
@@ -1854,7 +1854,7 @@ Lec1
 
 .. container:: tags
 
-   :bdg-primary:`visual_string_recognition` :bdg-primary:`visual_pseudoword_recognition` :bdg-secondary:`semantic_processing` :bdg-primary:`visual_word_recognition` 
+   :bdg-secondary:`semantic_processing` :bdg-primary:`visual_word_recognition` :bdg-primary:`visual_string_recognition` :bdg-primary:`visual_pseudoword_recognition` :bdg-secondary:`reading` 
 
 .. admonition:: Implemented using proprietary software
    :class: attention
@@ -1908,7 +1908,7 @@ MVEB
 
 .. container:: tags
 
-   :bdg-primary:`visual_attention` :bdg-light:`string_maintenance` :bdg-light:`numerosity` :bdg-light:`task_difficulty` 
+   :bdg-primary:`visual_buffer` :bdg-light:`numerosity` :bdg-info:`visual_working_memory` :bdg-primary:`visual_attention` :bdg-light:`string_maintenance` 
 
 .. admonition:: Implemented using proprietary software
    :class: attention
@@ -1980,7 +1980,7 @@ MVIS
 
 .. container:: tags
 
-   :bdg-primary:`visual_attention` :bdg-info:`spatial_working_memory` :bdg-light:`numerosity` :bdg-light:`task_difficulty` 
+   :bdg-info:`spatial_working_memory` :bdg-light:`numerosity` :bdg-info:`visual_working_memory` :bdg-primary:`visual_attention` 
 
 .. admonition:: Implemented using proprietary software
    :class: attention
@@ -2042,7 +2042,7 @@ Moto
 
 .. container:: tags
 
-   :bdg-warning:`left_finger_response_execution` :bdg-warning:`right_hand_response_execution` :bdg-warning:`right_finger_response_execution` :bdg-warning:`left_hand_response_execution` 
+   :bdg-warning:`saccadic_eye_movement` :bdg-secondary:`reading` 
 
 .. admonition:: Implemented using proprietary software
    :class: attention
@@ -2118,7 +2118,7 @@ MCSE
 
 .. container:: tags
 
-   :bdg-primary:`lower-right_vision` :bdg-primary:`visual_search` :bdg-primary:`lower-left_vision` :bdg-light:`task_difficulty` 
+   :bdg-primary:`lower-left_vision` :bdg-primary:`lower-right_vision` :bdg-primary:`upper-right_vision` :bdg-primary:`upper-left_vision` :bdg-primary:`visual_localization` 
 
 .. admonition:: Implemented using proprietary software
    :class: attention
@@ -2180,7 +2180,7 @@ Audio
 
 .. container:: tags
 
-   :bdg-success:`speech_perception` :bdg-success:`auditory_perception` :bdg-success:`sound_perception` :bdg-success:`listening` 
+   :bdg-success:`sound_perception` :bdg-success:`auditory_attention` :bdg-success:`listening` :bdg-success:`voice_perception` :bdg-success:`auditory_perception` 
 
 This task, originally described in (`Santoro et al., 2017 <https://doi.org/10.1073/pnas.1617622114>`__), is an auditory localizer. During each run, the participants were presented with sounds from different categories, and were instructed to press a button with the index finger whenever two consecutive sounds were identical. From a group of 288 sounds, divided into 6 different categories, 4 sets were created. Each set contained 72 sounds of each of the categories, and each one was present only in one of the sets. Furthermore, each set was pre-randomized in 3 different orders, and the same sequences were used for all participants. On top of the 72 sounds, each run also included 5 silences and 5 repeated sounds from the original 72. In total, each run consisted of 82 trials of 2 seconds each. It is important to note that the data for this task was acquired using an interrupted acquisition sequence, to minimize the effect that scanner noise can have in the auditory processing targeted by the experiment. To this end, the inter-stimulus interval was programmed in a sequence of 4, 4, and 6 seconds, meaning that the interval between stimuli would be 4s for the first trial, 4s for the second, 6s for the third, and then the sequence repeats until the end of the run. The variability of the ISI and the silence trials avoided stimulus' presentation to be predictable in time.
 
@@ -2265,7 +2265,7 @@ Attention
 
 .. container:: tags
 
-   :bdg-light:`attentional_focusing` :bdg-light:`spatial_attention` :bdg-light:`saccadic_eye_movement` :bdg-light:`selective_attention` 
+   :bdg-light:`spatial_attention` :bdg-light:`attentional_focusing` :bdg-warning:`saccadic_eye_movement` :bdg-light:`selective_attention` :bdg-warning:`saccadic_eye_mocement` 
 
 This task is a part of a battery of several tasks coming from the `experiment factory <https://github.com/expfactory/expfactory-experiments>`__ published in (`Eisenberg et al., 2017 <https://doi.org/10.1016/j.brat.2017.09.014>`__) and presented using `expfactory-python <https://github.com/expfactory/expfactory-python>`__ package. The battery was used to capture several aspects of self-regulation, including behavioral inhibition, decision making and planning abilities, among others. The adjustments concerned the translation to all written stimuli and instructions into french, as well as fixing a total time limit for experimentsthat allowed the participants their own pace for responding. All these modifications were done with extreme care of not altering the psychological state that the original tasks were designed to capture during scanning. The Attention is a version of the classical flanker task (`Eriksen and Eriksen, 1974 <https://doi.org/10.3758/BF03203267>`__), where the participant has to judge the direction the target flanker (an arrow) is pointing to (left/right). The target flanker is surrounded by other 4 flankers that can be congruent or incongruent with the target one, thus capturing selective attention and inhibitory processes. Two different buttons (index and middle fingers' button, respectively) were assigned to left/right responses, and the participant had to indicate the direction of the central arrow from an horizontal group of 5 arrows. In each trial, one or two positional cues were presented above and below the center of the screen. When one cue was given, the flankers would appear centered around it, whereas when two cues where presented, the flankers would appear centered around one of them. The four flankers surrounding the target would always point to the same direction, and can be congruent or incongruent with the direction the target flanker is facing. The task was acquired in two runs, within the same session as other tasks from the battery and using different phase-encoding directions. 
 For the original version of this task, the authors provide a `simulator <https://expfactory.github.io/v1/attention_network_task.html>`__, which contains the original design.
@@ -2325,7 +2325,7 @@ StopSignal
 
 .. container:: tags
 
-   :bdg-light:`shape_recognition` :bdg-light:`proactive_control` :bdg-light:`shape_perception` :bdg-warning:`response_execution` 
+   :bdg-primary:`shape_perception` :bdg-primary:`shape_recognition` :bdg-light:`proactive_control` 
 
 This task is a part of a battery of several tasks coming from the `experiment factory <https://github.com/expfactory/expfactory-experiments>`__ published in (`Eisenberg et al., 2017 <https://doi.org/10.1016/j.brat.2017.09.014>`__) and presented using `expfactory-python <https://github.com/expfactory/expfactory-python>`__ package. The battery was used to capture several aspects of self-regulation, including behavioral inhibition, decision making and planning abilities, among others. The adjustments concerned the translation to all written stimuli and instructions into french, as well as fixing a total time limit for experimentsthat allowed the participants their own pace for responding. All these modifications were done with extreme care of not altering the psychological state that the original tasks were designed to capture during scanning. StopSignal task was originally used to localize activation relative to inhibition of a prominent motor response (`Bissett and Logan, 2011 <https://doi.org/10.1037/a0021800>`__). Four different polygonal shapes composed the set from which one of them was presented in each trial. Two of them were assigned to the button corresponding to the index finger, and two of them to the button corresponding to the middle finger. The participants were instructed to press the correct button as fast as possible, except if a red-colored star appeared on top of the target stimulus. There were 12 practice trials followed by 123 test trials divided in 3 blocks of 41 trials each, with a resting period of 9 seconds in between blocks. During practice, feedback was provided to indicate correct and incorrect responses, as well as to indicate if the responses were too slow. No stop trials (red star) were present during practice, although the instructions pertaining the red star were presented before practice. This was to build a predominant motor response in order to better capture inhibitory processes. There was a jittered delay between the stop signal and the target stimulus in stop trials that ranged from 400 to 1000 ms. The duration of the stop signal was fixed to 500 ms, the duration of the target stimulus was 850 ms and there was a fixation cross between trials centered around 2250 ms. The task was acquired in two runs, within the same session as other tasks from the battery and using different phase-encoding directions. 
 For the original version of this task, the authors provide a `simulator <https://expfactory.github.io/v1/stop_signal.html>`__ which contains the original design.
@@ -2367,7 +2367,7 @@ TwoByTwo
 
 .. container:: tags
 
-   :bdg-primary:`visual_perception` :bdg-warning:`response_execution` :bdg-light:`task_switch` :bdg-warning:`response_selection` 
+   :bdg-primary:`visual_perception` :bdg-light:`cue_switch` 
 
 This task is a part of a battery of several tasks coming from the `Experiment Factory <https://github.com/expfactory/expfactory-experiments>`__ published in (`Eisenberg et al., 2017 <https://doi.org/10.1016/j.brat.2017.09.014>`__) and presented using `expfactory-python <https://github.com/expfactory/expfactory-python>`__ package. The battery was used to capture several aspects of self-regulation, including behavioral inhibition, decision making and planning abilities, among others. The adjustments concerned the translation to all written stimuli and instructions into french, as well as fixing a total time limit for experimentsthat allowed the participants their own pace for responding. All these modifications were done with extreme care of not altering the psychological state that the original tasks were designed to capture during scanning. TwoByTwo protocol aimed to study the responses to task-switching and cue-switching in every trial, with the aim to asses the activity elicted by switching either or both task and cue, and how switching one affects the response to the other. It consisted of presenting colored single-digit numbers from 1 to 9, preceded by a cue string indicating which task must be performed. For each trail, the task could either be to judge if the number is greater or less than 5; or to judge whether the digit shown is colored in blue or orange. For each of the two tasks, two different strings could be used as cue: for the first, the cue could display either 'Magnitude' or 'High/Low', both strings indicating the participant must judge the quantity; for the second task, the subject could read either 'Color' or 'Orange/Blue' as cues, both strings indicating the task is to judge the color. Two different buttons (index/middle finger) were assigned to the orange/high and blue/low options, respectively. The task is composed by 16 practice trials, followed by 240 trials divided in 3 blocks of 80 trials each. The order of cue and task switching was randomized. The task was acquired in two runs, within the same session as other tasks from the battery and using different phase-encoding directions. 
 For the original version of this task, the authors provide a `simulator <https://expfactory.github.io/v1/threebytwo.html>`__, it contains a slightly different version of the task in which they switch between three different tasks instead of two. 
@@ -2435,7 +2435,7 @@ Discount
 
 .. container:: tags
 
-   :bdg-light:`selective_control` :bdg-dark:`incentive_salience` :bdg-warning:`response_conflict` 
+   :bdg-light:`selective_control` :bdg-dark:`incentive_salience` 
 
 This task is a part of a battery of several tasks coming from the `experiment factory <https://github.com/expfactory/expfactory-experiments>`__ published in (`Eisenberg et al., 2017 <https://doi.org/10.1016/j.brat.2017.09.014>`__) and presented using `expfactory-python <https://github.com/expfactory/expfactory-python>`__ package. The battery was used to capture several aspects of self-regulation, including behavioral inhibition, decision making and planning abilities, among others. The adjustments concerned the translation to all written stimuli and instructions into french, as well as fixing a total time limit for experimentsthat allowed the participants their own pace for responding. All these modifications were done with extreme care of not altering the psychological state that the original tasks were designed to capture during scanning. Discount is a a decision-making task, where the participant has to decide whether to take a figurative amount of 20 dollars today or a bigger amount in a set number of days. The task is composed by 1 practice trial, followed by 120 test trials divided in 2 blocks of 60 trials each. The amount of money and the number of days is different for each trial. Each trial lasts for 4 seconds. The task was acquired in two runs, within the same session as other tasks from the battery and using different phase-encoding directions. 
 For the original version of this task, the authors provide a `simulator <https://expfactory.github.io/v1/discount_titrate.html>`__, it contains a slightly different version of the task in which they ask participants to choose between two different amounts on different periods, instead of the set 20-dollars-today set-up.
@@ -2475,7 +2475,7 @@ SelectiveStopSignal
 
 .. container:: tags
 
-   :bdg-light:`shape_recognition` :bdg-light:`proactive_control` :bdg-warning:`response_conflict` :bdg-warning:`response_execution` 
+   :bdg-primary:`shape_perception` :bdg-primary:`shape_recognition` :bdg-light:`proactive_control` 
 
 This task is a part of a battery of several tasks coming from the `experiment factory <https://github.com/expfactory/expfactory-experiments>`__ published in (`Eisenberg et al., 2017 <https://doi.org/10.1016/j.brat.2017.09.014>`__) and presented using `expfactory-python <https://github.com/expfactory/expfactory-python>`__ package. The battery was used to capture several aspects of self-regulation, including behavioral inhibition, decision making and planning abilities, among others. The adjustments concerned the translation to all written stimuli and instructions into french, as well as fixing a total time limit for experimentsthat allowed the participants their own pace for responding. All these modifications were done with extreme care of not altering the psychological state that the original tasks were designed to capture during scanning. Similar to the `StopSignal`_ task, SelectiveStopSignal task required participants to refrain from responding if a red star appears after the target stimulus is presented. In this task, however, the red star only indicates the need to inhibit the motor response in one of the two sides (critical side), while it should be ignored for the other (noncritical side). Motor response is to be given by pressing with the index finger on the corresponding button of the response box. The task is composed by 12 practice trials, followed by 250 test trials divided in 5 blocks of 50 trials each. The task was acquired in two runs, within the same session as other tasks from the battery and using different phase-encoding directions. 
 For the original version of this task, the authors provide a `simulator <https://expfactory.github.io/v1/stim_selective_stop_signal.html>`__ which contains the original design.
@@ -2531,7 +2531,7 @@ Stroop
 
 .. container:: tags
 
-   :bdg-light:`proactive_control` :bdg-primary:`visual_perception` :bdg-light:`conflict_detection` :bdg-warning:`response_execution` 
+   :bdg-primary:`visual_perception` :bdg-light:`proactive_control` :bdg-light:`conflict_detection` 
 
 This task is a part of a battery of several tasks coming from the `experiment factory <https://github.com/expfactory/expfactory-experiments>`__ published in (`Eisenberg et al., 2017 <https://doi.org/10.1016/j.brat.2017.09.014>`__) and presented using `expfactory-python <https://github.com/expfactory/expfactory-python>`__ package. The battery was used to capture several aspects of self-regulation, including behavioral inhibition, decision making and planning abilities, among others. The adjustments concerned the translation to all written stimuli and instructions into french, as well as fixing a total time limit for experimentsthat allowed the participants their own pace for responding. All these modifications were done with extreme care of not altering the psychological state that the original tasks were designed to capture during scanning. In this adaptation of the classic Stroop task (`Stroop, 1935 <https://doi.org/10.1037/h0054651>`__), the participants must press one of three buttons depending on the color of the presented word. In contrast to the classic pen and paper version of the task, the congruent and incongruent trials are intermixed. The three words/colors presented were red, green and blue, whose button presses corresponded on the response box respectively to the index, middle and ring fingers. The amount of money and the number of days is different for each trial. For the original version of this task, the authors provide a `simulator <https://expfactory.github.io/v1/stroop.html>`__ which contains the original design.
 
@@ -2616,7 +2616,7 @@ DotPatterns
 
 .. container:: tags
 
-   :bdg-warning:`response_selection` :bdg-light:`proactive_control` :bdg-warning:`response_execution` :bdg-light:`shape_recognition` 
+   :bdg-primary:`shape_recognition` :bdg-light:`proactive_control` 
 
 This task is a part of a battery of several tasks coming from the `experiment factory <https://github.com/expfactory/expfactory-experiments>`__ published in (`Eisenberg et al., 2017 <https://doi.org/10.1016/j.brat.2017.09.014>`__) and presented using `expfactory-python <https://github.com/expfactory/expfactory-python>`__ package. The battery was used to capture several aspects of self-regulation, including behavioral inhibition, decision making and planning abilities, among others. The adjustments concerned the translation to all written stimuli and instructions into french, as well as fixing a total time limit for experimentsthat allowed the participants their own pace for responding. All these modifications were done with extreme care of not altering the psychological state that the original tasks were designed to capture during scanning. DotPatterns task presents the participant with pairs of stimuli, separated by a fixation cross. The participant has to press a button (index finger) as fast as possible after the presentation of the probe, and only one specific combination of cue-probe is instructed to be responded to differently. This task was designed to capture activation relative to the expectancy of the probe elicited by the correct cue. The task is composed by 160 trials divided in 4 blocks of 40 trials each. Each cue and probe lasted for 500ms, with a fixation cross that separates both lasting for 2000ms. It was acquired in two runs, within the same session as other tasks from the battery and using different phase-encoding directions.
 
@@ -2679,7 +2679,7 @@ WardAndAllport
 
 .. container:: tags
 
-   :bdg-light:`goal_hierarchy` :bdg-primary:`visual_perception` :bdg-light:`planning` :bdg-light:`search_depth` 
+   :bdg-light:`planning` :bdg-light:`goal_hierarchy` :bdg-light:`search_depth` :bdg-primary:`visual_perception` :bdg-info:`working_memory` 
 
 This task is a part of a battery of several tasks coming from the `experiment factory <https://github.com/expfactory/expfactory-experiments>`__ published in (`Eisenberg et al., 2017 <https://doi.org/10.1016/j.brat.2017.09.014>`__) and presented using `expfactory-python <https://github.com/expfactory/expfactory-python>`__ package. The battery was used to capture several aspects of self-regulation, including behavioral inhibition, decision making and planning abilities, among others. The adjustments concerned the translation to all written stimuli and instructions into french, as well as fixing a total time limit for experimentsthat allowed the participants their own pace for responding. All these modifications were done with extreme care of not altering the psychological state that the original tasks were designed to capture during scanning. WardAndAllport task is a digital version of the WATT3 task (`Ward, Allport, 1997 <https://doi.org/10.1080/713755681>`__, `Shallice, 1982 <https://doi.org/10.1098/rstb.1982.0082>`__), and its main purpose is to capture activation related to planning abilities. For this, the task uses a factorial manipulation of 2 task parameters: search depth and goal hierarchy. Search depth involves mentally constructing the steps necessary to reach the goal state, and the interdependecy between steps in order to do so. This is expressed by the presence or absence of intermediate movements necessary for an optimal solution of each problem. Goal hierarchy refers to whether the order in which the three balls have to be put in their goal positions can be completely extracted from looking at the goal state or if it requires the participant to integrate information between goal and starting states (which result in unambiguous or partially ambiguous goal states, respectively). Detailed explanations and examples of each one of the four categories can be found in `Kaller et al., 2011 <https://doi.org/10.1093/cercor/bhq096>`__. The task was divided in 4 practice trials, followed by 48 test trials divided in 3 blocks of 14 trials each, separated by 10 seconds of resting period. Data was only acquired during the test trials, although the practice trials were also performed inside the scanner with its corresponding equipment. In each trial, the participant would see two configurations of the towers: the test towers on the left, and the target towers on the right. The towers of the right showed the final configuration of balls required to complete the trial. Three buttons were assigned to the left (index finger' button), middle (middle finger's button) and right (ring finger's button) columns respectively, and each button press would either take the upper ball of the selected column or drop the ball in hand at the top of the selected column. On the upper left corner, a gray square with the text "Ball in hand" would show the ball currently in hand. All trials could be solved in 3 movements, considering taking a ball and putting it elsewhere as a single movement. The time between the end of one trial and the beginning of the next one was 1000 ms.
 
@@ -2738,7 +2738,7 @@ BiologicalMotion1
 
 .. container:: tags
 
-   :bdg-light:`BiologicalMotion` :bdg-warning:`motion_detection` :bdg-warning:`global_motion_coherence` :bdg-warning:`local_motion_coherence` 
+   :bdg-light:`vertical_flip` :bdg-warning:`biological_motion` :bdg-warning:`motion_detection` :bdg-light:`BiologicalMotion` :bdg-warning:`global_motion_coherence` 
 
 The phenomenon known as "biological motion" was first introduced in (`Johansson, 1973 <https://doi.org/10.3758/BF03212378>`__), and consisted in point-light displays arranged and moving in a way that resembled a person moving. The task that we used was originally developed by (`Chang et al., 2018 <https://doi.org/10.1016/j.neuroimage.2018.03.013>`__). During the task, the participants were shown a point-light "walker", and they had to decide if the walker's orientation was to the left or to the right, by pressing on the response box respectively on the index finger's button or the middle finger's button. The data was acquired in 4 runs. The stimuli was divided in 6 different categories: three types of walkers, as well as their reversed versions. The division of the categories focuses on three types of information that the participant can get from the walker: global information, local information and orientation. Global information refers to the general structure of the body and the spatial relationships between its parts. Local information refers to kinematics, speed of the points and mirror-symmetric motion. Please see `Chang et al., 2018 <https://doi.org/10.1016/j.neuroimage.2018.03.013>`__ for more details about the stimuli. Each run comprises 12 blocks with 8 trials per block. The stimulus duration was 500ms and the inter-stimulus interval 1500ms (total 16s per block). Each of the blocks was followed by a fixation block, that also lasted 16s. Each run contained 4 of the six conditions, repeated 3 times each. Run type 1 contained both global types (natural and inverted) and both local naturals.
 
@@ -2797,7 +2797,7 @@ BiologicalMotion2
 
 .. container:: tags
 
-   :bdg-light:`BiologicalMotion` :bdg-warning:`scrambled_motion` :bdg-warning:`motion_detection` :bdg-warning:`local_motion_coherence` 
+   :bdg-light:`vertical_flip` :bdg-warning:`scrambled_motion` :bdg-warning:`motion_detection` :bdg-light:`BiologicalMotion` :bdg-warning:`local_motion_coherence` 
 
 The phenomenon known as "biological motion" was first introduced in (`Johansson, 1973 <https://doi.org/10.3758/BF03212378>`__), and consisted in point-light displays arranged and moving in a way that resembled a person moving. The task that we used was originally developed by (`Chang et al., 2018 <https://doi.org/10.1016/j.neuroimage.2018.03.013>`__). During the task, the participants were shown a point-light "walker", and they had to decide if the walker's orientation was to the left or to the right, by pressing on the response box respectively on the index finger's button or the middle finger's button. The data was acquired in 4 runs. The stimuli was divided in 6 different categories: three types of walkers, as well as their reversed versions. The division of the categories focuses on three types of information that the participant can get from the walker: global information, local information and orientation. Global information refers to the general structure of the body and the spatial relationships between its parts. Local information refers to kinematics, speed of the points and mirror-symmetric motion. Please see `Chang et al., 2018 <https://doi.org/10.1016/j.neuroimage.2018.03.013>`__ for more details about the stimuli. Each run comprises 12 blocks with 8 trials per block. The stimulus duration was 500ms and the inter-stimulus interval 1500ms (total 16s per block). Each of the blocks was followed by a fixation block, that also lasted 16s. Each run contained 4 of the six conditions, repeated 3 times each. Run type 2 contained both local naturals and both local modified.
 
@@ -2866,7 +2866,7 @@ MathLanguage
 
 .. container:: tags
 
-   :bdg-success:`auditory_sentence_comprehension` :bdg-primary:`visual_imagery` :bdg-success:`auditory_word_recognition` :bdg-success:`auditory_geometric_processing` 
+   :bdg-secondary:`sentence_comprehension` :bdg-primary:`visual_sentence_comprehension` :bdg-secondary:`combinatorial_semantics` :bdg-primary:`visual_imagery` :bdg-success:`auditory_sentence_comprehension` 
 
 The MathLanguage protocol was taken from (`Amalric et al., 2016 <https://doi.org/10.1073/pnas.1603205113>`__). This task aims to comprehensively capture the activation related with several types of mathematical and other types of facts, presented as sentences. During the task, the participants are presented a series of sentences, each one in either of two modalities: auditory or visual. Some of the categories include theory of mind statements, arithmetic facts and geometry facts. After each sentence, the participant has to indicate whether they believe the presented fact to be true or false, by respectively pressing the button in the left or right hand. For each participant, the data was divided in four runs, with an equal number of trials of each category in each run. As previously stated, each stimulus is presented either in auditory or visual form, which was pre-randomized and equal for every participant. A second version of each run (runs "B") was generated reverting the modality for each trial, so those being visual in the original runs (runs "A"), would be auditory in their corresponding B version, and vice-versa.
 
@@ -2989,7 +2989,7 @@ SpatialNavigation
 
 .. container:: tags
 
-   :bdg-info:`spatial_memory` :bdg-info:`spatial_working_memory` :bdg-light:`navigation` :bdg-primary:`visual_search` 
+   :bdg-info:`spatial_working_memory` :bdg-light:`navigation` :bdg-light:`spatial_localization` :bdg-info:`spatial_memory` :bdg-primary:`visual_search` 
 
 .. admonition:: Implemented using proprietary software
    :class: attention
@@ -3067,7 +3067,7 @@ EmoMem
 
 .. container:: tags
 
-   :bdg-danger:`negative_emotion` :bdg-light:`imagination` :bdg-primary:`visual_cue` :bdg-primary:`visual_perception` 
+   :bdg-danger:`positive_emotion` :bdg-danger:`negative_emotion` :bdg-primary:`visual_perception` :bdg-light:`imagination` :bdg-primary:`visual_cue` 
 
 This task is a part of the CamCAN (`Cambridge Centre for Ageing and Neuroscience <https://www.cam-can.org/>`__) battery, designed to understand how individuals can best retain cognitive abilities into old age. The adjustments concerned the translation of all stimuli and instructions into french, replacing Matlab functions with Octave functions as needed, and eliminating the use of a custom Matlab toolbox `mrisync <https://github.com/MRC-CBU/mrisync>`__ that was used to interface with the MRI Scanner (3T Siemens Prisma) over a National Instruments card. All modifications were done taking care to not alter the psychological state that the original tasks were designed to capture. The EmoMem task was designed to provide an assessment of implicit and explicit memory, and how it is affected by emotional valence. At the IBC we only conducted the encoding part of the task the Study phase as mentioned in (`Shafto et al., 2014 <https://doi.org/10.1186/s12883-014-0204-1>`__) but not the Test phase that happened outside the scanner in the original study. On each trial of this task, participants see a background picture for 2 seconds, after which a foreground picture of an object is superimposed. Participants are instructed to imagine a "story" linking the background and foreground picture, and after an 8 second presentation, the next trial begins. The emotional valence manipulation affects only the background image, which is negative, neutral, or positive. In all, 120 trials were presented over 2 runs.
 
@@ -3118,7 +3118,7 @@ EmoReco
 
 .. container:: tags
 
-   :bdg-primary:`face_perception` :bdg-light:`gender_perception` :bdg-danger:`negative_emotion` :bdg-danger:`emotional_expression` 
+   :bdg-danger:`emotional_expression` :bdg-light:`gender_perception` :bdg-primary:`face_perception` :bdg-danger:`negative_emotion` 
 
 .. admonition:: Implemented using proprietary software
    :class: attention
@@ -3182,7 +3182,7 @@ StopNogo
 
 .. container:: tags
 
-   :bdg-light:`shape_recognition` :bdg-light:`proactive_control` :bdg-light:`shape_perception` :bdg-warning:`response_execution` 
+   :bdg-primary:`shape_perception` :bdg-primary:`shape_recognition` :bdg-light:`proactive_control` 
 
 .. admonition:: Implemented using proprietary software
    :class: attention
@@ -3240,7 +3240,7 @@ Catell
 
 .. container:: tags
 
-   :bdg-light:`task_difficulty` :bdg-light:`oddball_detection` :bdg-primary:`visual_form_discrimination` 
+   :bdg-light:`oddball_detection` :bdg-primary:`visual_form_discrimination` 
 
 This task is a part of the CamCAN (`Cambridge Centre for Ageing and Neuroscience <https://www.cam-can.org/>`__) battery, designed to understand how individuals can best retain cognitive abilities into old age. The adjustments concerned the translation of all stimuli and instructions into french, replacing Matlab functions with Octave functions as needed, and eliminating the use of a custom Matlab toolbox `mrisync <https://github.com/MRC-CBU/mrisync>`__ that was used to interface with the MRI Scanner (3T Siemens Prisma) over a National Instruments card. All modifications were done taking care to not alter the psychological state that the original tasks were designed to capture. The Catell task was used to provide a measure of neural activity underpinning fluid intelligence (`Shafto et al., 2014 <https://doi.org/10.1186/s12883-014-0204-1>`__). On each trial, participants were presented with 4 images and had to identify the "odd one out". Some trials were easy with easily identifiable differences between the oddball and other images, while others were difficult and participants had to detect abstract patterns to identify the oddball image. The task employs a block design, where participants solve alternating blocks of easy and difficult trials, lasting 30 seconds each. In all, participants completed four blocks of easy and four blocks of difficult problems. On each trial a stimulus appears and remains on the screen until the participant responds, with the block automatically ending after 30 seconds and the next block beginning immediately. Participants were encouraged take as long as necessary, only responding when they are confident of the correct answer. This design means that the number of trials in a block varies across individuals, but the time spent on each type of problem (easy and difficult) is held constant.
 
@@ -3266,7 +3266,7 @@ FingerTapping
 
 .. container:: tags
 
-   :bdg-warning:`right_finger_response_execution` :bdg-warning:`motor_planning` :bdg-warning:`response_execution` :bdg-warning:`motor_control` 
+   :bdg-warning:`motor_planning` :bdg-warning:`motor_control` 
 
 This task is a part of the CamCAN (`Cambridge Centre for Ageing and Neuroscience <https://www.cam-can.org/>`__) battery, designed to understand how individuals can best retain cognitive abilities into old age. The adjustments concerned the translation of all stimuli and instructions into french, replacing Matlab functions with Octave functions as needed, and eliminating the use of a custom Matlab toolbox `mrisync <https://github.com/MRC-CBU/mrisync>`__ that was used to interface with the MRI Scanner (3T Siemens Prisma) over a National Instruments card. All modifications were done taking care to not alter the psychological state that the original tasks were designed to capture. The FingerTapping task was used to study executive control and action decisions in ageing and neurodegenerative disease (`Shafto et al., 2014 <https://doi.org/10.1186/s12883-014-0204-1>`__). Participants were presented with an image of a right hand and were instructed to press a button with one of their four right hand fingers in response to a cue. The cue was either a "specified" cue in which a single opaque circle indicates which finger to press, or a "chosen" cue in which 3 circles appeared opaque indicating participants must choose on of the 3 opaque fingers to press. The task includes 40 specified trials (10 for each finger) and 40 chosen trials, interspersed with 40 blank trials in which no cue is presented. Cues were presented for 1 second with a stimulus onset asynchrony of 2.5 seconds, and were pseudorandomly ordered so that participants did not see four or more responses of the same condition (action selection, specified or null) in a row.
 
@@ -3317,7 +3317,7 @@ VSTMC
 
 .. container:: tags
 
-   :bdg-primary:`visual_attention` :bdg-info:`spatial_working_memory` :bdg-light:`task_difficulty` :bdg-warning:`response_execution` 
+   :bdg-info:`spatial_working_memory` :bdg-primary:`visual_attention` 
 
 This task is a part of the CamCAN (`Cambridge Centre for Ageing and Neuroscience <https://www.cam-can.org/>`__) battery, designed to understand how individuals can best retain cognitive abilities into old age. The adjustments concerned the translation of all stimuli and instructions into french, replacing Matlab functions with Octave functions as needed, and eliminating the use of a custom Matlab toolbox `mrisync <https://github.com/MRC-CBU/mrisync>`__ that was used to interface with the MRI Scanner (3T Siemens Prisma) over a National Instruments card. All modifications were done taking care to not alter the psychological state that the original tasks were designed to capture. On each trial of the VSTMC (or the Visual short-term memory) task, participants saw three arrays of coloured dots, one red, one yellow, and one blue. The dot displays were presented in quick succession: a 250 ms fixation was followed by a 500 ms dot display. As a manipulation of set size, one, two, or three of the dot displays moved in a single direction, which had to be remembered. The other displays rotated around a central axis, and these rotating distractor displays had be ignored. After the third display, there was an 8 s delay, during which the direction(s) of motion of non-rotating dots had to be remember. This was followed by the probe display, which had a coloured circle to indicate which dot display to recall (red, yellow, or blue). The circle contained a pointer that had to be adjusted to indicate which direction the target dot display had been moving. Participants were given 5 seconds to adjust the pointer to match the direction of the to-be-remembered dot display. On 90% of trials the probed movements were in one of three directions (7, 127, or 247 degrees).
 
@@ -3465,7 +3465,7 @@ NARPS
 
 .. container:: tags
 
-   :bdg-dark:`decision_making` :bdg-dark:`reward_anticipation` :bdg-dark:`reward_valuation` :bdg-dark:`risk_processing` 
+   :bdg-dark:`reward_valuation` :bdg-dark:`reward_anticipation` :bdg-dark:`decision_making` :bdg-dark:`loss_aversion` :bdg-dark:`risk_aversion` 
 
 This protocol is more commonly know as the mixed gambles task and was adapted from the Neuroimaging Analysis Replication and Prediction Study (NARPS) (`Botvinik-Nezer et al., 2019 <https://doi.org/10.1038/s41597-019-0113-7>`__) study, that aimed to estimate the variability of neuroscientific results across analysis teams. The mixed gambles task though, is originally from (`Tom et al., 2007 <https://doi.org/10.1126/science.1134239>`__) that studied the neural basis of loss aversion. Loss aversion is the phenomenon that suggests that people tend to be more sensitive to losses as compared to equal-sized gains. The study therefore, investigated whether potential losses elicit negative emotions, which then drive loss aversion, or rather the same neural systems, encoding subjective value, asymmetrically respond to losses compared to gains.  In each trial of this protocol, the subjects were presented with a mixed gamble where they had a 50% chance of either gaining one amount of symbolic money or losing another amount. The possible gains and losses both ranged between 5-20 units (equal range condition), in increments of 1 unit and all 256 possible combinations of gains and losses were presented to each subject in the same sequence. The subjects were then asked to decide whether or not they would like to accept the gambles presented to them, with four possible responses for each gamble: strongly accept, weakly accept, weakly reject or strongly reject. The stimulus consisted of a circle presented on a grey screen and divided into two halves: on one side the gain amount was presented in green with a plus (+) sign before the number, and on the other side the loss amount was presented in red with a minus (-) sign before the number. The data was acquired in four runs during one scanning session. Each run comprised 64 trials. The gamble was presented on the screen until the participant responded or four seconds have passed, followed by a grey screen until the onset of the next trial. In the aforementioned NARPS study, the same amount of data was also acquired for an equal indifference condition where the possible gains ranged between 10-40 units while losses ranged between 5-20 units. This was not done for the IBC implementation, as no significant differences were observed between the two task designs in the NARPS study.    
 
@@ -3528,7 +3528,7 @@ FaceBody
 
 .. container:: tags
 
-   :bdg-primary:`face_maintenance` :bdg-primary:`visual_object_recognition` :bdg-primary:`visual_body_recognition` :bdg-light:`body_maintenance` 
+   :bdg-primary:`face_maintenance` :bdg-primary:`visual_number_recognition` :bdg-light:`place_maintenance` :bdg-light:`body_maintenance` :bdg-primary:`visual_letter_recognition` 
 
 This protocol was adapted from `Stigliani A 2015 <https://doi.org/10.1523/JNEUROSCI.4822-14.2015>`__), where it was used to define category-selective cortical regions that respond preferentially to faces (e.g., fusiform face area), places (e.g., parahippocampal place area), bodies (e.g., extrastriate body area), or printed characters (e.g., visual word form area). A detailed description and code for the original protocol is available `here <https://github.com/VPNL/fLoc>`__. Each of the five aforementioned stimulus categories were associated with two related subcategories with 144 images per subcategory. The protocol used a mini-block design in which 12 stimuli of the same subcategory were presented in each block. The sequence of the blocks was randomized over the ten subcategories and a blank baseline condition, and each subject was presented with the same sequence. To ensure that the subjects remain alert throughout the experiment, they were asked to press a button when an image repeated as a mirrored image (flipped 1-back task). The data were acquired in four runs during one scanning session. Each run comprised of 76 blocks each associated with the conditions given in `this table <condFaceBody_>`__ that were equally represented. Each block consisted of 12 images and was 6 seconds long (500 ms/image).
 
@@ -3609,7 +3609,7 @@ Scene
 
 .. container:: tags
 
-   :bdg-primary:`lower-right_vision` :bdg-light:`spatial_attention` :bdg-primary:`visual_search` :bdg-primary:`visual_scene_perception` 
+   :bdg-primary:`lower-left_vision` :bdg-primary:`lower-right_vision` :bdg-light:`spatial_attention` :bdg-light:`oddball_detection` :bdg-primary:`upper-right_vision` 
 
 .. admonition:: Implemented using proprietary software
    :class: attention
@@ -3881,7 +3881,7 @@ VisualSearch
 
 .. container:: tags
 
-   :bdg-primary:`visual_attention` :bdg-primary:`visual_search` :bdg-light:`task_difficulty` :bdg-primary:`visual_pattern_recognition` 
+   :bdg-info:`visual_working_memory` :bdg-info:`working_memory_maintenance` :bdg-primary:`visual_attention` :bdg-primary:`visual_pattern_recognition` :bdg-primary:`visual_form_discrimination` 
 
 This protocol was adapted from `Kuo BC et al., 2016 <https://doi.org/10.1162/jocn_a_00352>`__, that aimed to elaborate the neurophysiological mechanism underlying the spatially specific activation of sensory codes while searching for a visual or remembered target. A set of eight stimuli items were selected from a set of 100 novel and difficult to verbalize closed shape contours previously developed by `Endo N et al. 2003 <https://pubmed.ncbi.nlm.nih.gov/14708480/>`__ in the original as well as in the IBC implementation of the study. Each run of the protocol involved two kinds of trials - visual search and working memory search. In visual search trials, the participants were first shown an abstract item (sample item) and then they had to search for that item in a set of two or four items (search array). In the working memory search trials, the participants were first shown a set of two or four items (memory array) and then they had to tell whether a subsequently shown item (probe item) was present in the previously shown set of items. Thus, in addition to the type of search (visual or working memory) and search response (target present or absent), the array load (two or four items) was also varied in each trial. The data was acquired in four runs during one scanning session. Each run comprised forty-eight trials. In the original study, the participants also performed a separate session for a visual localizer task, where they viewed the stimuli passively without making any responses. This session was excluded from the IBC implementation of the protocol. Further, the response period was also increased from 1000 msec to 2000 msec and the stimuli size from 1.72 to 1.80 degrees of visual angle, following the feedback from the pilot sessions. Apart from these changes, the rest of the task design was similar to that of the original study.
 

@@ -159,42 +159,90 @@ def write_section(
     rst.write("   ")
     tag_count = 0
     for tag in tags:
-        if tag_count <= 3:
+        if tag_count <= 4:
             domains = tag.split("_")
-            if not set(['visual', 'vision', 'face', 'facial', 'checkerboard']).isdisjoint(domains):
-                rst.write(f":bdg-primary:`{tag}` ")
-            elif not set(['auditory', 'sound', 'listening', 'voice', 'speech', 'music']).isdisjoint(domains):
+            if not set(["response", "task"]).isdisjoint(domains):
+                if name == "HcpMotor":
+                    rst.write(f":bdg-warning:`{tag}` ")
+                else:
+                    continue
+            elif not set(
+                ["auditory", "sound", "listening", "voice", "speech", "music"]
+            ).isdisjoint(domains):
                 rst.write(f":bdg-success:`{tag}` ")
-            elif not set(['motor', 'response', 'motion', 'grasping']).isdisjoint(domains):
+            elif not set(
+                [
+                    "motor",
+                    "motion",
+                    "grasping",
+                    "saccade",
+                    "saccadic",
+                    "movement",
+                ]
+            ).isdisjoint(domains):
                 rst.write(f":bdg-warning:`{tag}` ")
-            elif 'memory' in domains:
+            elif "memory" in domains:
                 rst.write(f":bdg-info:`{tag}` ")
-            elif not set(['emotion', 'emotional', 'empathy', 'pain']).isdisjoint(domains):
+            elif not set(
+                ["visual", "vision", "face", "facial", "checkerboard", "shape"]
+            ).isdisjoint(domains):
+                rst.write(f":bdg-primary:`{tag}` ")
+            elif not set(
+                ["emotion", "emotional", "empathy", "pain"]
+            ).isdisjoint(domains):
                 rst.write(f":bdg-danger:`{tag}` ")
-            elif not set(['language', 'reading', 'writing', 'comprehension', 'word', 'semantic', 'syntactic', 'sentence', 'semantics']).isdisjoint(domains):
+            elif not set(
+                [
+                    "language",
+                    "reading",
+                    "writing",
+                    "comprehension",
+                    "word",
+                    "semantic",
+                    "syntactic",
+                    "sentence",
+                    "semantics",
+                ]
+            ).isdisjoint(domains):
                 rst.write(f":bdg-secondary:`{tag}` ")
-            elif not set(['reward', 'risk', 'loss', 'decision', 'valuation', 'punishment', 'incentive', 'judgement', 'confidence', 'surprise']).isdisjoint(domains):
+            elif not set(
+                [
+                    "reward",
+                    "risk",
+                    "loss",
+                    "decision",
+                    "valuation",
+                    "punishment",
+                    "incentive",
+                    "judgement",
+                    "confidence",
+                    "surprise",
+                    "judgment",
+                ]
+            ).isdisjoint(domains):
                 rst.write(f":bdg-dark:`{tag}` ")
             else:
                 rst.write(f":bdg-light:`{tag}` ")
             tag_count += 1
     rst.write(f"\n\n")
-    proprietary_software = ['E-Prime', 'Presentation', 'Vizard']
+    proprietary_software = ["E-Prime", "Presentation", "Vizard"]
     software_ = software.split(" ")
     if not set(software_).isdisjoint(proprietary_software):
         rst.write(".. admonition:: Implemented using proprietary software\n")
-        rst.write("   :class: attention\n\n")
+        rst.write("   :class: seealso\n\n")
         rst.write(f"   - Software: {software}\n\n")
     rst.write(f"{description}\n\n")
 
     if len(conditions) != 0:
         rst.write(
-            f"The conditions for this task are described in `this table <cond{name}_>`__"
+            f"The conditions for this task are described in"
+            f" `this table <cond{name}_>`__"
         )
         if len(contrasts) != 0:
             rst.write(
-            f" and the main contrasts derived from those conditions are described in `this table <cont{name}_>`__.\n\n"
-        )
+                f" and the main contrasts derived from those conditions are"
+                f" described in `this table <cont{name}_>`__.\n\n"
+            )
         else:
             rst.write(".\n\n")
         rst.write(f".. dropdown:: Conditions for {name}\n")
@@ -221,7 +269,8 @@ def write_section(
             rst.write(f"        - {value['description']}\n")
     rst.write("\n")
 
-#read tasks_intro.rst and write it to tasks.rst
+
+# read tasks_intro.rst and write it to tasks.rst
 with open("tasks_intro.rst", "r") as intro:
     tasks_intro = intro.read()
 # close the file
