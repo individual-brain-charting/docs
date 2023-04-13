@@ -25,8 +25,11 @@ for _, row in df_tasks.iterrows():
     d["tasks"][row["task"]] = {
         "description": str(row["description"]),
         "software": str(row["software"]),
+        "response_device": str(row["response_device"]),
+        "audio_device": str(row["audio_device"]),
         "screen_res": str(row["screen_res"]),
         "youtube": str(row["youtube"]),
+        "extras": str(row["extras"]),
         "tags": [],
         "conditions": {},
         "contrasts": {},
@@ -144,8 +147,11 @@ def write_section(
     description,
     tags,
     software,
+    response_device,
+    audio_device,
     screen_res,
     youtube,
+    extras,
     conditions,
     contrasts,
 ):
@@ -230,7 +236,20 @@ def write_section(
     if not set(software_).isdisjoint(proprietary_software):
         rst.write(".. admonition:: Implemented using proprietary software\n")
         rst.write("   :class: seealso\n\n")
-        rst.write(f"   - Software: {software}\n\n")
+        rst.write(f"   - Software: {software}\n")
+    else:
+        rst.write(".. admonition:: Implementation \n")
+        rst.write("   :class: seealso\n\n")
+        rst.write(f"   - Software: {software}\n")
+    
+    # Check if the task uses response device and add it
+    if response_device != 'nan':
+        rst.write(f"   - Response device: {response_device}\n\n")
+    if audio_device != 'nan':
+        rst.write(f"   - Audio device: {audio_device}\n\n")
+    if extras != 'nan':
+        rst.write(f"   - {extras}\n\n")
+
     rst.write(f"{description}\n\n")
 
     if len(conditions) != 0:
@@ -287,8 +306,11 @@ with open("docs/source/tasks.rst", "w") as rst:
             d["tasks"][task]["description"],
             d["tasks"][task]["tags"],
             d["tasks"][task]["software"],
+            d["tasks"][task]["response_device"],
+            d["tasks"][task]["audio_device"],
             d["tasks"][task]["screen_res"],
             d["tasks"][task]["youtube"],
+            d["tasks"][task]["extras"],
             d["tasks"][task]["conditions"],
             d["tasks"][task]["contrasts"],
         )
