@@ -4,5 +4,4 @@ The codes and stimuli for all these experiments are openly available on the `ind
 
 Below, you can find the paradigm descriptions, conditions, contrasts as well as the sample `stimulation videos <https://www.youtube.com/@individualbraincharting6314/videos>`__ for each of these tasks. To help you look for relevant tasks, we have also tagged each of them with some of the broad :bdg-primary:`cognitive_domains` they intend to probe. These tags are based on the definitions from `Cognitive Atlas <https://www.cognitiveatlas.org/concepts>`__. 
 
-So :code:`Ctrl+F` for your favorite cognitive domain and implement the task in your own lab.
-
+So :code:`Ctrl+F` for any cognitive domain of relevance.
