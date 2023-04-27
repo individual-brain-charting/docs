@@ -290,7 +290,7 @@ def write_section(
 
 
 # read tasks_intro.rst and write it to tasks.rst
-with open("tasks_intro.rst", "r") as intro:
+with open("docs/tasks_intro.rst", "r") as intro:
     tasks_intro = intro.read()
 # close the file
 intro.close()
