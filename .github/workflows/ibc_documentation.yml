@@ -26,7 +26,7 @@ jobs:
           python docs/create_tasks_rst.py
       - name: Get API repo
         run: |
-          git clone git@github.com:individual-brain-charting/api.git
+          git clone https://github.com/individual-brain-charting/api.git
       - name: Build API reference page
         run: |
           sphinx-apidoc -f -o docs/source api/src/ibc_api -TE -t docs/source/_template
