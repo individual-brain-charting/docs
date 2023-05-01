@@ -17,6 +17,7 @@ jobs:
       - uses: actions/setup-python@v3
       - name: Install dependencies
         run: |
+          pip install --upgrade pip
           pip install sphinx sphinx_rtd_theme furo numpy pandas sphinx_design myst-parser
       - name: Get description files
         run: |
@@ -27,6 +28,7 @@ jobs:
       - name: Get API repo
         run: |
           git clone https://github.com/individual-brain-charting/api.git
+          pip install -e api/
       - name: Build API reference page
         run: |
           sphinx-apidoc -f -o docs/source api/src/ibc_api -TE -t docs/source/_template
