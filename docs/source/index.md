@@ -18,6 +18,7 @@ The Individual Brain Charting (IBC) project has collected a high-resolution mult
 
 accessibility
 tasks
+ibc_api
 ```
 
 ```{toctree}
