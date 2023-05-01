@@ -32,7 +32,7 @@ jobs:
       - name: Build API reference page
         run: |
           sphinx-apidoc -f -o docs/source api/src/ibc_api -TE -t docs/source/_template
-      - name: Sphinx build
+      - name: Build HTML
         run: |
           sphinx-build -b html docs/source/ docs/build/html
       - name: Deploy

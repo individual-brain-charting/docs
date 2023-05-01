@@ -1,26 +1,27 @@
 Tasks
 =====
 
-Apart from the MRI data, IBC is also a great resource for cognitive experiments. We have ran over 80 different experiments - gathered from our fellow researchers in the community - that altogether probe a large variety of cognitive domains in the human brain. The following figure depicts how much of the human brain cortex we have covered with these experiments. 
+Apart from the MRI data, IBC is also a great resource for fMRI tasks. We have ran over 80 different tasks - gathered from our fellow researchers in the community - that altogether probe a large variety of cognitive domains in the human brain. The following figure depicts how much of the human brain cortex we have covered with these experiments. 
 
-The codes and stimuli for all these experiments are openly available on the `individual-brain-charting/public_protocols <https://github.com/individual-brain-charting/public_protocols>`__ repository. Most of the experiments were implemented with Python, MATLAB or Octave and are hence readily usable. However, some of the experiments were originally implemented with proprietary softwares, and that was what we also used and have provided on the repo. You would still need to have access to these softwares to run those experiments. 
+The codes and stimuli for all these tasks are openly available on the `individual-brain-charting/public_protocols <https://github.com/individual-brain-charting/public_protocols>`__ repository. Most of these were implemented with Python, MATLAB or Octave and are hence readily usable. However, some of them were originally implemented with proprietary softwares, and that was what we also used and have provided on the repo. You would still need to have access to these softwares to run those experiments. 
 
-Below, you can find the paradigm descriptions, conditions, contrasts as well as the sample `stimulation videos <https://www.youtube.com/@individualbraincharting6314/videos>`__ for each of these tasks. To help you look for relevant tasks, we have also tagged each of them with some of the broad :bdg-primary:`cognitive_domains` they intend to probe. These tags are based on the definitions from `Cognitive Atlas <https://www.cognitiveatlas.org/concepts>`__. 
+Below, you can find the paradigm descriptions, conditions, contrasts as well as the sample `stimulation videos <https://www.youtube.com/@individualbraincharting6314/videos>`__ for each of these tasks. To help you look for relevant tasks, we have also tagged each of them with some of the broad :bdg-primary:`cognitive_domains` they intend to probe. These tags are based on the definitions from `Cognitive Atlas <https://www.cognitiveatlas.org/concepts>`__.
 
-So :code:`Ctrl+F` for your favorite cognitive domain and implement the task in your own lab.
 
 ArchiStandard
 -------------
 
 .. container:: tags
 
-   :bdg-success:`auditory_attention` :bdg-success:`auditory_sentence_comprehension` :bdg-primary:`visual_sentence_comprehension` :bdg-primary:`visual_orientation` :bdg-primary:`visual_attention` 
+   :bdg-primary:`visual_attention` :bdg-success:`auditory_sentence_comprehension` :bdg-primary:`visual_arithmetic_processing` :bdg-primary:`vertical_checkerboard` :bdg-success:`auditory_arithmetic_processing` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
 
    - Software: E-Prime 2.0 Professional (Psychological Software Tools, Inc.)
    - Response device: In-house custom-made sticks featuring one-top button, each one to be used in each hand
+
+   - Audio device: MRConfon MKII
 
 The ARCHI tasks are a battery of localizers comprising a wide range of psychological domains. The ArchiStandard task, described in (`Pinel et al., 2007 <https://doi.org/10.1186/1471-2202-8-91>`__ probes basic functions, such as button presses with the left or right hand, viewing horizontal and vertical checkerboards, reading and listening to short sentences, and mental computations (subtractions). Visual stimuli were displayed in four 250-ms epochs, separated by 100ms intervals (i.e., 1.3s in total). Auditory stimuli were generated from a recorded male voice (i.e., a total of 1.6s for motor instructions, 1.2-1.7s for sentences, and 1.2-1.3s for subtraction). The auditory or visual stimuli were shown to the participants for passive viewing or button response in event related paradigms. Informal inquiries undertaken after the MRI session confirmed that the experimental tasks were understood and followed correctly.
 
@@ -35,10 +36,6 @@ The conditions for this task are described in `this table <condArchiStandard_>`_
 
       * - Condition
         - Description
-      * - audio_left_button_press
-        - Left-hand three-times button press, indicated by auditory instruction
-      * - audio_right_button_press
-        - Right-hand three-times button press, indicated by auditory instruction
       * - video_left_button_press
         - Left-hand three-times button press, indicated by visual instruction
       * - video_right_button_press
@@ -117,12 +114,14 @@ ArchiSpatial
 
 .. container:: tags
 
-   :bdg-warning:`saccadic_eye_movement` :bdg-light:`hand_side_recognition` :bdg-primary:`visual_orientation` :bdg-light:`hand_chirality_recognition` :bdg-primary:`visual_body_recognition` 
+   :bdg-light:`hand_chirality_recognition` :bdg-primary:`visual_body_recognition` :bdg-warning:`saccadic_eye_movement` :bdg-warning:`grasping` :bdg-primary:`visual_tool_recognition` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
 
    - Software: E-Prime 2.0 Professional (Psychological Software Tools, Inc.)
+   - Audio device: MRConfon MKII
+
 The ARCHI tasks are a battery of localizers comprising a wide range of psychological domains. ArchiSpatial includes the performance of (1) ocular saccade, (2) grasping and (3) orientation judgments on objects (the two different tasks were actually made on the same visual stimuli in order to characterize grasping-specific activity), (4) judging whether a hand photograph was the left or right hand or (5) was displaying the front or back. The same input stimuli were presented twice in order to characterize specific reponse to hand side judgment.
 
 The conditions for this task are described in `this table <condArchiSpatial_>`__ and the main contrasts derived from those conditions are described in `this table <contArchiSpatial_>`__.
@@ -176,12 +175,14 @@ ArchiSocial
 
 .. container:: tags
 
-   :bdg-success:`auditory_word_recognition` :bdg-secondary:`narrative_comprehension` :bdg-success:`auditory_imagery` :bdg-success:`auditory_perception` :bdg-warning:`motion_detection` 
+   :bdg-success:`sound_perception` :bdg-success:`auditory_sentence_recognition` :bdg-primary:`visual_imagery` :bdg-success:`voice_perception` :bdg-secondary:`narrative_comprehension` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
 
    - Software: E-Prime 2.0 Professional (Psychological Software Tools, Inc.)
+   - Audio device: MRConfon MKII
+
 The ARCHI tasks are a battery of localizers comprising a wide range of psychological domains. ArchiSocial relies on (1) the interpretation of short stories involving false beliefs or not, (2) observation of moving objects with or without a putative intention, and (3) listening to speech and non-speech sounds.
 
 The conditions for this task are described in `this table <condArchiSocial_>`__ and the main contrasts derived from those conditions are described in `this table <contArchiSocial_>`__.
@@ -253,12 +254,14 @@ ArchiEmotional
 
 .. container:: tags
 
-   :bdg-primary:`visual_orientation` :bdg-primary:`visual_face_recognition` :bdg-primary:`visual_pattern_recognition` :bdg-light:`gender_discrimination` :bdg-primary:`facial_trustworthiness_recognition` 
+   :bdg-danger:`emotional_expression` :bdg-light:`gender_discrimination` :bdg-primary:`visual_pattern_recognition` :bdg-primary:`visual_representation` :bdg-primary:`visual_orientation` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
 
    - Software: E-Prime 2.0 Professional (Psychological Software Tools, Inc.)
+   - Audio device: MRConfon MKII
+
 The ARCHI tasks are a battery of localizers comprising a wide range of psychological domains. ArchiEmotional includes (1) facial judgments of gender, and (2) trustworthiness plus expression based on complete portraits or photos of eyes' expressions.
 
 The conditions for this task are described in `this table <condArchiEmotional_>`__ and the main contrasts derived from those conditions are described in `this table <contArchiEmotional_>`__.
@@ -275,7 +278,7 @@ The conditions for this task are described in `this table <condArchiEmotional_>`
       * - face_gender
         - Gender evaluation of the presented human faces
       * - face_control
-        - Mental assessment on the slope of a gray-scale grid image (obtained from scrambling a face’s image) that may be tilted or not
+        - Mental assessment on the slope of a gray-scale grid image (obtained from scrambling a face's image) that may be tilted or not
       * - face_trusty
         - Trustworthy evaluation of the presented human faces
       * - expression_intention
@@ -283,7 +286,7 @@ The conditions for this task are described in `this table <condArchiEmotional_>`
       * - expression_gender
         - Gender evaluation of the presented human eye images
       * - expression_control
-        - Mental assessment on the slope of a gray-scale grid image (obtained from scrambling an eyes’ image) that may be tilted or not
+        - Mental assessment on the slope of a gray-scale grid image (obtained from scrambling an eyes' image) that may be tilted or not
 
 .. dropdown:: Contrasts for ArchiEmotional
    :name: contArchiEmotional
@@ -328,7 +331,7 @@ HcpEmotion
 
 .. container:: tags
 
-   :bdg-primary:`emotional_face_recognition` :bdg-primary:`visual_form_recognition` :bdg-light:`feature_comparison` 
+   :bdg-light:`feature_comparison` :bdg-primary:`visual_form_recognition` :bdg-primary:`emotional_face_recognition` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -377,7 +380,7 @@ HcpGambling
 
 .. container:: tags
 
-   :bdg-dark:`punishment_processing` :bdg-dark:`reward_processing` 
+   :bdg-dark:`reward_processing` :bdg-dark:`punishment_processing` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -426,7 +429,7 @@ HcpMotor
 
 .. container:: tags
 
-   :bdg-warning:`tongue_response_execution` :bdg-info:`working_memory` :bdg-warning:`response_execution` :bdg-warning:`right_hand_response_execution` :bdg-warning:`left_hand_response_execution` 
+   :bdg-warning:`right_hand_response_execution` :bdg-warning:`left_hand_response_execution` :bdg-warning:`tongue_response_execution` :bdg-info:`working_memory` :bdg-warning:`response_execution` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -468,13 +471,13 @@ The conditions for this task are described in `this table <condHcpMotor_>`__ and
       * - Contrast
         - Description
       * - left_hand-avg
-        - move left hand vs. right hand, feet and tongue
+        - move left hand vs. right hand	 feet and tongue
       * - right_hand-avg
-        - move right hand vs. left hand, feet and tongue
+        - move right hand vs. left hand	 feet and tongue
       * - left_foot-avg
-        - move left foot vs. right foot, hands and tongue
+        - move left foot vs. right foot	 hands and tongue
       * - right_foot-avg
-        - move right foot vs. left foot, hands and tongue
+        - move right foot vs. left foot	 hands and tongue
       * - tongue-avg
         - move tongue vs. hands and feet
       * - left_hand
@@ -495,7 +498,7 @@ HcpLanguage
 
 .. container:: tags
 
-   :bdg-secondary:`narrative_comprehension` :bdg-success:`auditory_sentence_recognition` :bdg-success:`auditory_arithmetic_processing` 
+   :bdg-success:`auditory_arithmetic_processing` :bdg-success:`auditory_sentence_recognition` :bdg-secondary:`narrative_comprehension` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -544,7 +547,7 @@ HcpRelational
 
 .. container:: tags
 
-   :bdg-primary:`visual_form_recognition` :bdg-primary:`visual_pattern_recognition` :bdg-light:`feature_comparison` :bdg-light:`relational_comparison` 
+   :bdg-light:`feature_comparison` :bdg-primary:`visual_form_recognition` :bdg-primary:`visual_pattern_recognition` :bdg-light:`relational_comparison` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -591,7 +594,7 @@ HcpSocial
 
 .. container:: tags
 
-   :bdg-light:`mentalization` :bdg-light:`animacy_perception` :bdg-dark:`animacy_decision` :bdg-warning:`motion_detection` 
+   :bdg-light:`animacy_perception` :bdg-warning:`motion_detection` :bdg-light:`mentalization` :bdg-dark:`animacy_decision` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -638,7 +641,7 @@ HcpWm
 
 .. container:: tags
 
-   :bdg-light:`updating` :bdg-info:`working_memory` :bdg-light:`body_maintenance` :bdg-light:`place_maintenance` :bdg-primary:`visual_body_recognition` 
+   :bdg-light:`tool_maintenance` :bdg-light:`body_maintenance` :bdg-primary:`visual_place_recognition` :bdg-light:`place_maintenance` :bdg-info:`working_memory` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -688,13 +691,13 @@ The conditions for this task are described in `this table <condHcpWm_>`__ and th
       * - 2back-0back
         - 2-back vs. 0-back
       * - body-avg
-        - body image versus face, place, tool image
+        - body image versus face	 place	 tool image","['visual_body_recognition','body_maintenance']
       * - face-avg
-        - face image versus body, place, tool image
+        - face image versus body	 place	 tool image","['visual_face_recognition','face_maintenance']
       * - place-avg
-        - place image versus face, body, tool image
+        - place image versus face	 body	 tool image","['visual_place_recognition','place_maintenance']
       * - tools-avg
-        - tool image versus face, place, body image
+        - tool image versus face	 place	 body image","['visual_tool_recognition','tool_maintenance']
       * - 0back-2back
         - 0-back vs. 2-back
       * - 0back_body
@@ -719,13 +722,15 @@ RSVPLanguage
 
 .. container:: tags
 
-   :bdg-primary:`visual_string_recognition` :bdg-primary:`visual_word_recognition` :bdg-primary:`visual_pseudoword_recognition` :bdg-secondary:`combinatorial_semantics` :bdg-info:`working_memory` 
+   :bdg-secondary:`word_maintenance` :bdg-primary:`visual_string_recognition` :bdg-info:`working_memory` :bdg-secondary:`syntactic_parsing` :bdg-light:`recognition` 
 
 .. admonition:: Implementation 
    :class: seealso
 
    - Software: Expyriment 0.7.0 (Python 2.7)
    - Response device: In-house custom-made sticks featuring one-top button, each one to be used in each hand
+
+   - Audio device: MRConfon MKII
 
 The Rapid-Serial-Visual-Presentation (RSVP) Language task was adapted from the study undertaken by (`Humphries et al., 2006 <Humphries et al., 2006>`__) on syntactic and semantic processing during auditory sentence comprehension. Specifically, the task herein described targeted the same syntactic and semantic modules, but in the context of reading. It thus allowed for capturing further associations with regard to e.g. visual (pseudo) word recognition and sublexical route, among other aspects related to active reading. The paradigm consisted in a block-design presentation strategy of the stimuli. One block was defined as an epoch within a trial and epochs corresponded in turn to experimental conditions. Such conditions stood for the consecutive visual presentation of ten constituents composed by letters. All linguistic content elicited from the conditions except "consonant strings", such as grammar rules, lexicon and phonemes, were part of the french language. In order to ensure continuous engagement during task performance, participants were asked, straight afterwards the visualization of every sentence, to ascertain whether the current constituent displayed on the screen, aka "the probe", was part of the previous sentence or not. The corresponding answer was provided immediately after the probe, by pressing the button in the left hand if "yes" or the one in the right hand if "no". Data were collected in six runs during one single session. Every run was composed by sixty trials, in which subsets of ten trials were dedicated to each condition, respectively. The order of the trials was pseudo-randomized within and between runs, such that there were no repeated trials during a full session. Moreover, a different pseudo-randomized order for the presentation of the trials was always employed across participants. One trial comprised several experimental manipulations, other than a block integrating one specific condition. It was sequentially formed by a period of fixation-cross display (two seconds), another short period of a blank screen (0.5 seconds), a block containing the linguistic stimuli (0.4 seconds x 10 = 4 seconds), a jittered blank screen (varying from one to 1.5 seconds), a period of a second fixation-cross display (0.5 seconds), a period for the probe display (0.5 seconds), and, finally, a response period (varying up to two seconds). The total duration of one single trial was thus ten seconds. Three extra seconds of blank screen were added at the beginning of every run, i.e. before the presentation of the first trial. Two opposite phase-encoding directions were respectively applied during acquisition of each half of the total amount of runs.
 
@@ -808,7 +813,7 @@ MTTWE
 
 .. container:: tags
 
-   :bdg-light:`future_time` :bdg-dark:`east_cardinal-direction_judgment` :bdg-info:`memory_retrieval` :bdg-light:`temporal_distance` :bdg-dark:`cardinal-direction_judgment` 
+   :bdg-light:`time_orientation` :bdg-secondary:`semantic_categorization` :bdg-info:`spatial_working_memory` :bdg-light:`past_time` :bdg-light:`future_time` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -816,7 +821,10 @@ MTTWE
    - Software: Expyriment 0.7.0 / pygame 1.9.3
    - Response device: In-house custom-made sticks featuring one-top button, each one to be used in each hand
 
-The Mental Time Travel (MTT) task battery was developed following previous studies conducted at the NeuroSpin platform on chronosthesia and mental space navigation (`Gauthier et al., 2016 <https://doi.org/10.1016/j.cognition.2016.05.015>`__, `Gauthier et al., 2016 <https://doi.org/10.1523/JNEUROSCI.1400-16.2016>`__, `Gauthier et al., 2018 <https://doi.org/10.1093/cercor/bhy320>`__). Participants were to judge the ordinality of real historical events in time and space by mentally project oneself, i.e. through egocentric mapping. In contrast, the present task was intended to assess the neural correlates underlying both mental time and space judgment involved in allocentric mapping implemented in narratives. To this end, and in order to remove confounds associated with prior subject-specific mental representations linked to the historical events, fictional scenarios were created with fabricated stories and characters. The stimuli of each task referred to a different island plotting different stories and characters. There were two stories per island and they were created based on a two-dimensional mesh of nodes. Each node corresponded to a specific action. The stories of each island evolved both in time and in one single cardinal direction. The cardinal directions, cued in the MTTWE task, were West-East (WE). In addition, the stories of each island evolved spatially in opposite ways. So, the two stories plotted in the West-East island evolved across time from west to east and east to west, respectively. Prior to each session, participants were to learn the story of the corresponding session. To prevent any retrieval of graphical memories referring to the schematic representation of the stories, they were presented as audio narratives. Additionally, the participants were also instructed to learn the stories chronographically, i.e. as they were progressively referred to in the narrative, and to refrain from doing (visual) notes, which could be encoded as mental judgments. The task was organized as a block-design paradigm, composed of trials with three conditions of audio stimuli: (1) Reference, statement of an action in the story to serve as reference for the time or space judgment in the same trial; (2) Cue, question concerning the type of mental judgment to be performed in the same trial, i.e. "Before or After?" for the time judgment or "West or East?" for the space judgment; and (3) Event, statement of an action to be judged with respect to the Reference and according to the Cue. Every trial started with an audio presentation of the Reference followed by silence, with a duration of two and four seconds, respectively. The audio presentation of the Cue came next, followed by a silence period; they had respectively a duration of two and four seconds. Afterwards, a series of four Events were presented for two seconds each; all of them were interspersed by a Response condition of three seconds. Every trial ended with a silent period of seven seconds, thus lasting thirty nine seconds in total. A black fixation cross was permanently displayed on the screen across conditions and the participants were instructed to never close their eyes. At the very end of each trial, the cross turned to red during half of a second in order to signal the beginning of the next trial; such cue facilitated the identification of the next audio stimulus as the upcoming Reference to be judged. During the Response period, the participants had to press one of the two possible buttons, placed in their respective left and right hand. If the Cue presented in the given trial hinted at time judgment, the participants were to judge whether the previous Event occurred before the Reference, by pressing the button of the left hand, or after the Reference, by pressing the button of the right hand. If the Cue concerned with space judgment, the participants were to judge, in the same way, whether the Event occurred west or east of the Reference in the first session and south or north of the Reference in the second session. One session of data collection comprised three runs; each of them included twenty trials. Half of the trials for a given run were about time navigation and the other half, space navigation. Five different references were shared by both types of navigation and, thus, there were two trials with the same reference for each type of navigation. In turn, these two trials differed in terms of distance in the mesh between the node of the Reference and the node of each Event, i.e. *close* referred to two consecutive nodes whereas *far* referred to two nodes interspersed by another node. Within trials, half of the Events related to past or western actions and the other half to future or eastern actions with respect to the Reference. The order of the trials was shuffled within runs, only to ensure that each run would feature a unique sequence of trials according to type of reference (both in time and space) and cue. No pseudo-randomization criterion was imposed as the trials' characterization was already very rich. Since there were only two types of answers, we also randomized events according to their correct answer within each trial. The same randomized sequence for each run was employed for all participants. The code of this randomization is provided together with the protocol of the task on `Github <https://github.com/hbp-brain-charting/public_protocols/tree/master/mtt/mtt_protocol/randomization>`__. Note that the randomized sequence of trials for all runs is pre-determined and, thus, provided as inputs to the protocol for a specific session.
+The Mental Time Travel (MTT) task battery was developed following previous studies conducted at the NeuroSpin platform on chronosthesia and mental space navigation (`Gauthier et al., 2016 <https://doi.org/10.1016/j.cognition.2016.05.015>`__, `Gauthier et al., 2016 <https://doi.org/10.1523/JNEUROSCI.1400-16.2016>`__, `Gauthier et al., 2018 <https://doi.org/10.1093/cercor/bhy320>`__). Participants were to judge the ordinality of real historical events in time and space by mentally project oneself, i.e. through egocentric mapping. In contrast, the present task was intended to assess the neural correlates underlying both mental time and space judgment involved in allocentric mapping implemented in narratives. To this end, and in order to remove confounds associated with prior subject-specific mental representations linked to the historical events, fictional scenarios were created with fabricated stories and characters. 
+The stimuli of each task referred to a different island plotting different stories and characters. There were two stories per island and they were created based on a two-dimensional mesh of nodes. Each node corresponded to a specific action. The stories of each island evolved both in time and in one single cardinal direction. The cardinal directions, cued in the MTTWE task, were West-East (WE). In addition, the stories of each island evolved spatially in opposite ways. So, the two stories plotted in the West-East island evolved across time from west to east and east to west, respectively. Prior to each session, participants were to learn the story of the corresponding session. To prevent any retrieval of graphical memories referring to the schematic representation of the stories, they were presented as audio narratives. Additionally, the participants were also instructed to learn the stories chronographically, i.e. as they were progressively referred to in the narrative, and to refrain from doing (visual) notes, which could be encoded as mental judgments. 
+The task was organized as a block-design paradigm, composed of trials with three conditions of audio stimuli: (1) Reference, statement of an action in the story to serve as reference for the time or space judgment in the same trial; (2) Cue, question concerning the type of mental judgment to be performed in the same trial, i.e. "Before or After?" for the time judgment or "West or East?" for the space judgment; and (3) Event, statement of an action to be judged with respect to the Reference and according to the Cue. Every trial started with an audio presentation of the Reference followed by silence, with a duration of two and four seconds, respectively. The audio presentation of the Cue came next, followed by a silence period; they had respectively a duration of two and four seconds. Afterwards, a series of four Events were presented for two seconds each; all of them were interspersed by a Response condition of three seconds. Every trial ended with a silent period of seven seconds, thus lasting thirty nine seconds in total. A black fixation cross was permanently displayed on the screen across conditions and the participants were instructed to never close their eyes. At the very end of each trial, the cross turned to red during half of a second in order to signal the beginning of the next trial; such cue facilitated the identification of the next audio stimulus as the upcoming Reference to be judged. During the Response period, the participants had to press one of the two possible buttons, placed in their respective left and right hand. If the Cue presented in the given trial hinted at time judgment, the participants were to judge whether the previous Event occurred before the Reference, by pressing the button of the left hand, or after the Reference, by pressing the button of the right hand. If the Cue concerned with space judgment, the participants were to judge, in the same way, whether the Event occurred west or east of the Reference in the first session and south or north of the Reference in the second session. 
+One session of data collection comprised three runs; each of them included twenty trials. Half of the trials for a given run were about time navigation and the other half, space navigation. Five different references were shared by both types of navigation and, thus, there were two trials with the same reference for each type of navigation. In turn, these two trials differed in terms of distance in the mesh between the node of the Reference and the node of each Event, i.e. *close* referred to two consecutive nodes whereas *far* referred to two nodes interspersed by another node. Within trials, half of the Events related to past or western actions and the other half to future or eastern actions with respect to the Reference. The order of the trials was shuffled within runs, only to ensure that each run would feature a unique sequence of trials according to type of reference (both in time and space) and cue. No pseudo-randomization criterion was imposed as the trials' characterization was already very rich. Since there were only two types of answers, we also randomized events according to their correct answer within each trial. The same randomized sequence for each run was employed for all participants. The code of this randomization is provided together with the protocol of the task on `Github <https://github.com/hbp-brain-charting/public_protocols/tree/master/mtt/mtt_protocol/randomization>`__. Note that the randomized sequence of trials for all runs is pre-determined and, thus, provided as inputs to the protocol for a specific session.
 
 The conditions for this task are described in `this table <condMTTWE_>`__ and the main contrasts derived from those conditions are described in `this table <contMTTWE_>`__.
 
@@ -899,7 +907,7 @@ MTTNS
 
 .. container:: tags
 
-   :bdg-light:`future_time` :bdg-dark:`north_cardinal-direction_judgment` :bdg-info:`memory_retrieval` :bdg-light:`temporal_distance` :bdg-dark:`cardinal-direction_judgment` 
+   :bdg-light:`time_orientation` :bdg-secondary:`semantic_categorization` :bdg-info:`spatial_working_memory` :bdg-dark:`north_cardinal-direction_judgment` :bdg-light:`past_time` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -990,7 +998,7 @@ PreferenceFood
 
 .. container:: tags
 
-   :bdg-dark:`incentive_salience` :bdg-dark:`reward_valuation` :bdg-dark:`confidence_judgment` :bdg-light:`food_cue_reactivity` :bdg-dark:`judgment` 
+   :bdg-dark:`incentive_salience` :bdg-dark:`reward_valuation` :bdg-dark:`judgment` :bdg-light:`food_cue_reactivity` :bdg-dark:`confidence_judgment` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -1039,7 +1047,7 @@ PreferencePaintings
 
 .. container:: tags
 
-   :bdg-primary:`visual_color_discrimination` :bdg-dark:`incentive_salience` :bdg-dark:`reward_valuation` :bdg-dark:`confidence_judgment` :bdg-dark:`judgment` 
+   :bdg-dark:`incentive_salience` :bdg-dark:`reward_valuation` :bdg-dark:`judgment` :bdg-dark:`confidence_judgment` :bdg-primary:`visual_color_discrimination` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -1065,7 +1073,7 @@ The conditions for this task are described in `this table <condPreferencePaintin
       * - painting_linear
         - Classify the level of pleasantness of a painting displayed on the screen in terms of willingness to possess it. this condition captures the linear effect of pleasantness (akin to judgement effects) when formulated as visual preference vs. no preference
       * - painting_quadratic
-        - Classify the level of pleasantness of a painting displayed on the screen in terms of willingness to possess it. this condition captures the quadratic effect of pleasantness (akin to confidence effects) when formulated as  confidence in preference vs. no confidence
+        - Classify the level of pleasantness of a painting displayed on the screen in terms of willingness to possess it. this condition captures the quadratic effect of pleasantness (akin to confidence effects) when formulated as confidence in preference vs. no confidence
 
 .. dropdown:: Contrasts for PreferencePaintings
    :name: contPreferencePaintings
@@ -1088,7 +1096,7 @@ PreferenceFaces
 
 .. container:: tags
 
-   :bdg-primary:`face_perception` :bdg-dark:`incentive_salience` :bdg-dark:`reward_valuation` :bdg-primary:`visual_face_recognition` :bdg-dark:`confidence_judgment` 
+   :bdg-dark:`incentive_salience` :bdg-primary:`facial_attractiveness_recognition` :bdg-dark:`reward_valuation` :bdg-dark:`judgment` :bdg-dark:`confidence_judgment` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -1114,7 +1122,7 @@ The conditions for this task are described in `this table <condPreferenceFaces_>
       * - face_linear
         - Classify the level of pleasantness of a human face displayed on the screen in terms of willingness to meet the person portrayed. this condition captures the linear effect of pleasantness (akin to judgement effects) when formulated as visual preference vs. no preference
       * - face_quadratic
-        - Classify the level of pleasantness of a human face displayed on the screen in terms of willingness to meet the person portrayed. this condition captures the quadratic effect of pleasantness (akin to confidence effects) when formulated as  confidence in preference vs. no confidence
+        - Classify the level of pleasantness of a human face displayed on the screen in terms of willingness to meet the person portrayed. this condition captures the quadratic effect of pleasantness (akin to confidence effects) when formulated as confidence in preference vs. no confidence
 
 .. dropdown:: Contrasts for PreferenceFaces
    :name: contPreferenceFaces
@@ -1137,7 +1145,7 @@ PreferenceHouses
 
 .. container:: tags
 
-   :bdg-dark:`incentive_salience` :bdg-dark:`reward_valuation` :bdg-dark:`confidence_judgment` :bdg-primary:`visual_place_recognition` :bdg-dark:`judgment` 
+   :bdg-dark:`incentive_salience` :bdg-primary:`visual_place_recognition` :bdg-dark:`reward_valuation` :bdg-dark:`judgment` :bdg-dark:`confidence_judgment` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -1163,7 +1171,7 @@ The conditions for this task are described in `this table <condPreferenceHouses_
       * - house_linear
         - Classify the level of pleasantness of a house displayed on the screen in terms of willingness to live in that house. this condition captures the linear effect of pleasantness (akin to judgement effects) when formulated as visual preference vs. no preference
       * - house_quadratic
-        - Classify the level of pleasantness of a house displayed on the screen in terms of willingness to live in that house. this condition captures the quadratic effect of pleasantness (akin to confidence effects) when formulated as  confidence in preference vs. no confidence
+        - Classify the level of pleasantness of a house displayed on the screen in terms of willingness to live in that house. this condition captures the quadratic effect of pleasantness (akin to confidence effects) when formulated as confidence in preference vs. no confidence
 
 .. dropdown:: Contrasts for PreferenceHouses
    :name: contPreferenceHouses
@@ -1186,7 +1194,7 @@ TheoryOfMind
 
 .. container:: tags
 
-   :bdg-secondary:`narrative_comprehension` :bdg-light:`theory-of-mind` :bdg-secondary:`semantic_processing` 
+   :bdg-secondary:`semantic_processing` :bdg-secondary:`narrative_comprehension` :bdg-light:`theory-of-mind` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -1233,7 +1241,7 @@ EmotionalPain
 
 .. container:: tags
 
-   :bdg-danger:`imagined_physical_pain` :bdg-secondary:`narrative_comprehension` :bdg-danger:`imagined_emotional_pain` :bdg-danger:`empathy` 
+   :bdg-danger:`imagined_physical_pain` :bdg-danger:`empathy` :bdg-danger:`imagined_emotional_pain` :bdg-secondary:`narrative_comprehension` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -1280,13 +1288,15 @@ PainMovie
 
 .. container:: tags
 
-   :bdg-danger:`imagined_physical_pain` :bdg-primary:`visual_attention` :bdg-light:`theory-of-mind` :bdg-light:`mentalization` :bdg-danger:`imagined_emotional_pain` 
+   :bdg-primary:`visual_attention` :bdg-danger:`imagined_physical_pain` :bdg-danger:`empathy` :bdg-danger:`imagined_emotional_pain` :bdg-light:`mentalization` 
 
 .. admonition:: Implementation 
    :class: seealso
 
    - Software:  Psychophysics Toolbox Version 3 (PTB-3), aka Psychtoolbox-3, for GNU Octave
-This task also belongs to the battery of tasks was adapted from the original task-fMRI localizers of `Saxe Lab <https://saxelab.mit.edu/localizers>`__, that intended to identify functional regions-of-interest in the Theory-of-Mind network and Pain Matrix regions. The PainMovie task was a pain movie localizer and consisted displaying "Partly Cloud", a 6 minutes movie from Disney Pixar, in order to study the responses implicated in theory-of-mind and Pain Matrix brain regions (`Jacoby et al., 2016 <https://doi.org/10.1016/j.neuroimage.2015.11.025>`__, `Richardson et al., 2018 <https://doi.org/10.1038/s41467-018-03399-2>`__). Two main conditions were thus hand-coded in the movie, according to (`Richardson et al., 2018 <https://doi.org/10.1038/s41467-018-03399-2>`__), as follows: mental movie, in which characters were "mentalizing"; and physical pain movie, in which characters were experiencing physical pain. Such conditions were intended to evoke brain responses from theory-of-mind and pain-matrix networks, respectively. All moments in the movie not focused on the direct interaction of the main characters were considered as a baseline period.
+   - Audio device: MRConfon MKII
+
+This task also belongs to the battery of tasks was adapted from the original task-fMRI localizers of `Saxe Lab <https://saxelab.mit.edu/localizers>`__, that intended to identify functional regions-of-interest in the Theory-of-Mind network and Pain Matrix regions. The PainMovie task was a pain movie localizer and consisted displaying "Partly Cloudy", a 6 minutes movie from Disney Pixar, in order to study the responses implicated in theory-of-mind and Pain Matrix brain regions (`Jacoby et al., 2016 <https://doi.org/10.1016/j.neuroimage.2015.11.025>`__, `Richardson et al., 2018 <https://doi.org/10.1038/s41467-018-03399-2>`__). Two main conditions were thus hand-coded in the movie, according to (`Richardson et al., 2018 <https://doi.org/10.1038/s41467-018-03399-2>`__), as follows: mental movie, in which characters were "mentalizing"; and physical pain movie, in which characters were experiencing physical pain. Such conditions were intended to evoke brain responses from theory-of-mind and pain-matrix networks, respectively. All moments in the movie not focused on the direct interaction of the main characters were considered as a baseline period.
 
 The conditions for this task are described in `this table <condPainMovie_>`__ and the main contrasts derived from those conditions are described in `this table <contPainMovie_>`__.
 
@@ -1316,7 +1326,7 @@ The conditions for this task are described in `this table <condPainMovie_>`__ an
       * - movie_pain
         - movie with physically painful events
       * - movie_mental
-        - movie with events about changes in beliefs, desires and emotions
+        - movie with events about changes in beliefs	 desires and emotions","['visual_attention','empathy','imagined_emotional_pain','mentalization','theory-of-mind']
       * - movie_mental-pain
         - mental events vs. physically painful events
 
@@ -1325,7 +1335,7 @@ VSTM
 
 .. container:: tags
 
-   :bdg-light:`numerosity` :bdg-primary:`visual_orientation` :bdg-primary:`shape_recognition` :bdg-info:`visual_working_memory` :bdg-primary:`visual_buffer` 
+   :bdg-info:`short-term_memory` :bdg-primary:`visual_orientation` :bdg-primary:`visual_form_discrimination` :bdg-primary:`visual_buffer` :bdg-light:`numerosity` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -1374,7 +1384,7 @@ Enumeration
 
 .. container:: tags
 
-   :bdg-light:`numerosity` :bdg-primary:`shape_recognition` :bdg-primary:`visual_buffer` :bdg-light:`enumeration` :bdg-info:`visual_working_memory` 
+   :bdg-light:`numerosity` :bdg-primary:`visual_buffer` :bdg-light:`enumeration` :bdg-info:`visual_working_memory` :bdg-primary:`shape_recognition` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -1423,7 +1433,7 @@ Self
 
 .. container:: tags
 
-   :bdg-info:`episodic_memory` :bdg-secondary:`reading` :bdg-light:`other-reference_effect` :bdg-light:`self-reference_effect` :bdg-light:`recognition` 
+   :bdg-info:`episodic_memory` :bdg-light:`other-reference_effect` :bdg-light:`self-reference_effect` :bdg-light:`memory	reading` :bdg-secondary:`reading` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -1431,7 +1441,9 @@ Self
    - Software: Expyriment 0.7.0 (Python 2.7)
    - Response device: Five-button ergonomic pad (current designs, package 932 with pyka hhsc-1x5-n4)
 
-The Self task was adapted from (`Genom et al., 2014 <https://doi.org/10.1016/j.cortex.2013.06.009>`__), originally developed to investigate the Self-Reference Effect in older adults. This effect pertains to the encoding mechanism of information referring to the self, characterized as a memory-advantaged process. Consequently, memory-retrieval performance is also better for information encoded in reference to the self than to other people, objects or concepts. The present task was thus composed of two phases, each of them relying on encoding and recognition procedures. The encoding phase was intended to map brain regions related to the encoding of items in reference to the self, whereas the recognition one was conceived to isolate the memory network specifically involved in the retrieval of those items. The phases were interspersed, so that the recognition phase was always related to the encoding phase presented immediately before. The encoding phase had two blocks. Each block was composed of a set of trials pertaining to the same condition. For both conditions, a different adjective was presented at every trial on the screen. The participants were to judge whether or not the adjective described themselves -- *self-reference encoding* condition-- or another person -- *other-reference encoding* condition-- by pressing with the index finger on the corresponding button of the response box for "yes" and with the middle finger for "no". The other person was a public figure in France around the same age range as the cohort, whose gender matched the gender of every participant. Two public figures were mentioned, one at the time, across all runs; four public figures --two of each gender-- were selected beforehand. By this way, we ensured that all participants were able to successfully characterize the same individuals, holding equal the levels of familiarity and affective attributes with respect to these individuals. In the recognition phase, participants were to remember whether or not the adjectives had also been displayed during the previous encoding phase, by pressing with the index finger on the corresponding button of the response box for "yes" and with the middle finger for "no". This phase was composed of a single block of trials, pertaining to three categories of conditions. *New* adjectives were presented during one half of the trials whereas the other half were in reference to the adjectives displayed in the previous phase. Thus, trials referring to the adjectives from *self-reference encoding* were part of the *self-reference recognition* category and trials referring to the *other-reference encoding* were part of the *other-reference recognition* category. There were four runs in one session. The first three ones had three phases; the fourth and last run had four phases. Their total durations were twelve and 15.97 seconds, respectively. Blocks of both phases started with an *instruction* condition of five seconds, containing a visual cue. The cue was related to the judgment that should be performed next, according to the type of condition featured in that block. A set of trials, showing different adjectives, were presented afterwards. Each trial had a duration of five seconds, in which a response was to be provided by the participant. During the trials of the encoding blocks, participants had to press the button with their left or right hand, depending on whether they believed or not the adjective on display described someone (i.e. self or other, respectively for *self-reference encoding* or *other-reference encoding* conditions). During the trials of the recognition block, participants had to answer in thesame way, depending on whether they believed or not the adjective had been presented before. A fixation cross was always presented between trials, whose duration was jittered between 0.3 seconds and 0.5 seconds. A rest period was introduced between encoding and recognition phases, whose duration was also jittered between ten and fourteen seconds. Long intervals between these two phases, i.e. longer than ten seconds, ensured the measurement of long-term memory processes during the recognition phase, at the age range of the cohort (`Newell et al., 1972 <https://psycnet.apa.org/record/1973-10478-000>`__, `Ericsson et al., 1995 <https://doi.org/10.1037/0033-295x.102.2.211>`__). Fixation-cross periods of three and fifteen seconds were also introduced in the beginning and end of each run, respectively. Lastly, all adjectives were presented in the lexical form according to the gender of the participant. There were also two sets of adjectives. One set was presented as new adjectives during the recognition phase and the other set for all remaining conditions of both phases. To avoid cognitive bias across the cohort, sets were switched for the other half of the participants. Plus, adjectives never repeated across runs but their sequence was fixed for the same runs and across participants from the same set. Yet, pseudo-randomization of the trials for the recognition phase was pre-determined by the authors of the original study, according to their category (i.e. *self-reference recognition*, *other-reference recognition* or *new*), such that no more than three consecutive trials of the same category were presented within a block.
+The Self task was adapted from (`Genom et al., 2014 <https://doi.org/10.1016/j.cortex.2013.06.009>`__), originally developed to investigate the Self-Reference Effect in older adults. This effect pertains to the encoding mechanism of information referring to the self, characterized as a memory-advantaged process. Consequently, memory-retrieval performance is also better for information encoded in reference to the self than to other people, objects or concepts. The present task was thus composed of two phases, each of them relying on encoding and recognition procedures. The encoding phase was intended to map brain regions related to the encoding of items in reference to the self, whereas the recognition one was conceived to isolate the memory network specifically involved in the retrieval of those items. The phases were interspersed, so that the recognition phase was always related to the encoding phase presented immediately before. The encoding phase had two blocks. Each block was composed of a set of trials pertaining to the same condition. For both conditions, a different adjective was presented at every trial on the screen. The participants were to judge whether or not the adjective described themselves -- *self-reference encoding* condition-- or another person -- *other-reference encoding* condition-- by pressing with the index finger on the corresponding button of the response box for "yes" and with the middle finger for "no". The other person was a public figure in France around the same age range as the cohort, whose gender matched the gender of every participant. Two public figures were mentioned, one at the time, across all runs; four public figures --two of each gender-- were selected beforehand. By this way, we ensured that all participants were able to successfully characterize the same individuals, holding equal the levels of familiarity and affective attributes with respect to these individuals. In the recognition phase, participants were to remember whether or not the adjectives had also been displayed during the previous encoding phase, by pressing with the index finger on the corresponding button of the response box for "yes" and with the middle finger for "no". This phase was composed of a single block of trials, pertaining to three categories of conditions. *New* adjectives were presented during one half of the trials whereas the other half were in reference to the adjectives displayed in the previous phase. Thus, trials referring to the adjectives from *self-reference encoding* were part of the *self-reference recognition* category and trials referring to the *other-reference encoding* were part of the *other-reference recognition* category. 
+
+There were four runs in one session. The first three ones had three phases; the fourth and last run had four phases. Their total durations were twelve and 15.97 seconds, respectively. Blocks of both phases started with an *instruction* condition of five seconds, containing a visual cue. The cue was related to the judgment that should be performed next, according to the type of condition featured in that block. A set of trials, showing different adjectives, were presented afterwards. Each trial had a duration of five seconds, in which a response was to be provided by the participant. During the trials of the encoding blocks, participants had to press the button with their left or right hand, depending on whether they believed or not the adjective on display described someone (i.e. self or other, respectively for *self-reference encoding* or *other-reference encoding* conditions). During the trials of the recognition block, participants had to answer in the same way, depending on whether they believed or not the adjective had been presented before. A fixation cross was always presented between trials, whose duration was jittered between 0.3 seconds and 0.5 seconds. A rest period was introduced between encoding and recognition phases, whose duration was also jittered between ten and fourteen seconds. Long intervals between these two phases, i.e. longer than ten seconds, ensured the measurement of long-term memory processes during the recognition phase, at the age range of the cohort (`Newell et al., 1972 <https://psycnet.apa.org/record/1973-10478-000>`__, `Ericsson et al., 1995 <https://doi.org/10.1037/0033-295x.102.2.211>`__). Fixation-cross periods of three and fifteen seconds were also introduced in the beginning and end of each run, respectively. Lastly, all adjectives were presented in the lexical form according to the gender of the participant. There were also two sets of adjectives. One set was presented as new adjectives during the recognition phase and the other set for all remaining conditions of both phases. To avoid cognitive bias across the cohort, sets were switched for the other half of the participants. Plus, adjectives never repeated across runs but their sequence was fixed for the same runs and across participants from the same set. Yet, pseudo-randomization of the trials for the recognition phase was pre-determined by the authors of the original study, according to their category (i.e. *self-reference recognition*, *other-reference recognition* or *new*), such that no more than three consecutive trials of the same category were presented within a block.
 
 The conditions for this task are described in `this table <condSelf_>`__ and the main contrasts derived from those conditions are described in `this table <contSelf_>`__.
 
@@ -1496,13 +1508,16 @@ Bang
 
 .. container:: tags
 
-   :bdg-light:`_audiovisual_perception` :bdg-success:`speech_perception` :bdg-secondary:`_language_comprehension` :bdg-secondary:`_language_processing` :bdg-success:`_auditory_scene_analysis` 
+   :bdg-secondary:`language_comprehension` :bdg-secondary:`_language_comprehension` :bdg-light:`social_cognition` :bdg-success:`auditory_scene_analysis` :bdg-light:`action_perception` 
 
 .. admonition:: Implementation 
    :class: seealso
 
    - Software: Expyriment 0.9.0 (Python 2.7)
-The Bang task was adapted from the study (`Campbell et al., 2015 <https://doi.org/10.1016/j.neurobiolaging.2015.07.028>`__), dedicated to investigate aging effects on neural responsiveness during naturalistic viewing. The task relies on watching - viewing and listening - of an edited version of the episode "Bang! You're Dead" from the TV series "Alfred Hitchcock Presents". The original black-and-white, 25-minute episode was condensed to seven minutes and fifty five seconds while preserving its narrative. The plot of the final movie includes scenes with characters talking to each other as well as scenes with no verbal communication. This task was performed during a single run in one unique session. Participants were never informed of the title of the movie before the end of the session. Ten seconds of acquisition were added at the end of the run. The total duration of the run was thus eight minutes and five seconds.
+   - Audio device: MagnaCoil (Magnacoustics)
+
+The Bang task was adapted from the study (`Campbell et al., 2015 <https://doi.org/10.1016/j.neurobiolaging.2015.07.028>`__), dedicated to investigate aging effects on neural responsiveness during naturalistic viewing. The task relies on watching - viewing and listening - of an edited version of the episode "Bang! You're Dead" from the TV series "Alfred Hitchcock Presents". The original black-and-white, 25-minute episode was condensed to seven minutes and fifty five seconds while preserving its narrative. The plot of the final movie includes scenes with characters talking to each other as well as scenes with no verbal communication. This task was performed during a single run in one unique session. Participants were never informed of the title of the movie before the end of the session. Ten seconds of acquisition were added at the end of the run. The total duration of the run was thus eight minutes and five seconds. 
+**Note:** We used the MagnaCoil (Magnacoustics) audio device for all subjects except for *subject-08*, for whom we employed MRConfon MKII.
 
 The conditions for this task are described in `this table <condBang_>`__ and the main contrasts derived from those conditions are described in `this table <contBang_>`__.
 
@@ -1547,28 +1562,17 @@ Clips
    :class: seealso
 
    - Software: Python 2.7
+   - Audio device: MRConfon MKII
+
 The Clips battery stands for an adaptation of (`Nishimoto et al., 2011 <https://doi.org/10.1016/j.cub.2011.08.031>`__), in which participants were to visualize naturalistic scenes edited as video clips of ten and a half minutes each. Each run was always dedicated to the data collection of one video clip at a time. As in the original study, runs were grouped in two tasks pertaining to the acquisition of training data and test data, respectively. Scenes from training-clips (ClipsTrn) task were shown only once. Contrariwise, scenes from the test-clips (ClipsVal) task were composed of approximately one-minute-long excerpts extracted from the clips presented during training. Excerpts were concatenated to construct the sequence of every ClipsVal run; each sequence was predetermined by randomly permuting many excerpts that were repeated ten times each across all runs. The same randomized sequences, employed across ClipsVal runs, were used to collect data from all participants. There were twelve and nine runs dedicated to the collection of the ClipsTrn and ClipsVal tasks, respectively. Data from nine runs of each task were interspersedly acquired in three full sessions; the three remaining runs devoted to train-data collection were acquired in half of one last session, before the `Wedge`_ and `Ring`_ tasks. To assure the same topographic reference of the visual field for all participants, a colored fixation point was always presented at the center of the images. Such point was changing three times per second to ensure that it was visible regardless the color of the movie. Ten and twenty extra seconds of acquisition were respectively added at the beginning and end of every run. The total duration of each run was thus ten minutes and fifty seconds.
 
-The conditions for this task are described in `this table <condClips_>`__.
-
-.. dropdown:: Conditions for Clips
-   :name: condClips
-
-   .. list-table::
-      :header-rows: 1
-      :widths: 25 75
-
-      * - Condition
-        - Description
-      * - 
-        - 
 
 Wedge
 -----
 
 .. container:: tags
 
-   :bdg-primary:`upper-left_vision` :bdg-primary:`visual_color_discrimination` :bdg-primary:`upper-right_vision` :bdg-primary:`lower-left_vision` :bdg-primary:`lower-right_vision` 
+   :bdg-primary:`lower-left_vision` :bdg-primary:`upper-left_vision` :bdg-primary:`lower-right_vision` :bdg-primary:`visual_color_discrimination` :bdg-primary:`upper-right_vision` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -1692,28 +1696,17 @@ Raiders
    :class: seealso
 
    - Software: Expyriment 0.9.0 (Python 2.7)
+   - Audio device: MRConfon MKII
+
 The Raiders task was adapted from (`Haxby et al., 2011 <http://doi.org/10.1016/j.neuron.2011.08.026>`__), in which the full-length action movie Raiders of the Lost Ark was presented to the participants. The main goal of the original study was the estimation of the hyperalignment parameters that transform voxel space of functional data into feature space of brain responses, linked to the visual characteristics of the movie displayed. Similarly, herein, the movie was shown to the IBC participants in contiguous runs determined according to the chapters of the movie defined in the DVD. This task was completed in two sessions. In order to use the acquired fMRI data in train-test split and cross-validation experiments, we performed three extra-runs at the end of the second session in which the three first chapters of the movie were repeated. To account for stabilization of the BOLD signal, ten seconds of acquisition were added at the end of the run.
 
-The conditions for this task are described in `this table <condRaiders_>`__.
-
-.. dropdown:: Conditions for Raiders
-   :name: condRaiders
-
-   .. list-table::
-      :header-rows: 1
-      :widths: 25 75
-
-      * - Condition
-        - Description
-      * - Raiders
-        - Raiders
 
 Lec2
 ----
 
 .. container:: tags
 
-   :bdg-info:`working_memory` :bdg-light:`inhibition` :bdg-secondary:`language_comprehension` :bdg-secondary:`word_maintenance` :bdg-secondary:`reading` 
+   :bdg-secondary:`language_comprehension` :bdg-secondary:`word_maintenance` :bdg-secondary:`reading` :bdg-info:`working_memory` :bdg-light:`inhibition` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -1758,12 +1751,14 @@ Audi
 
 .. container:: tags
 
-   :bdg-success:`auditory_attention` :bdg-success:`voice_perception` :bdg-success:`speech_perception` :bdg-success:`speech_processing` :bdg-success:`auditory_sentence_recognition` 
+   :bdg-secondary:`language_comprehension` :bdg-secondary:`semantic_processing` :bdg-success:`sound_perception` :bdg-success:`voice_perception` :bdg-success:`auditory_sentence_recognition` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
 
    - Software: Presentation (Version 20.1, Neurobehavioral Systems, Inc., Berkeley, CA)
+   - Audio device: MagnaCoil (Magnacoustics)
+
 This task was originally described in (`Perrone-Bertolotti et al., 2012 <https://doi.org/10.1523/JNEUROSCI.2982-12.2012>`__) together with the `Lec2`_ localizer. Participants listened to sounds of several categories with the instruction that three of them would be presented again at the end of the task, together with three novel sounds and that they should be able to detect previously played items. There were three speech and speech-like categories, including sentences told by a computerized voice in a language familiar to the participant (French) or unfamiliar (Suomi), and reversed speech, originally in French (the same sentences as the "French" category, played backwards). These categories were compared with nonspeech-like human sounds (coughing and yawning), music, environmental sounds, and animal sounds. Participants were instructed to close their eyes while listening to three sounds of each category, with a duration of 12s each, along with three 12 s intervals with no stimulation, serving as a baseline (Silence). Consecutive sounds were separated by a 3 s silent interval. The sequence was pseudorandom, to ensure that two sounds of the same category did not follow each other.
 
 The conditions for this task are described in `this table <condAudi_>`__ and the main contrasts derived from those conditions are described in `this table <contAudi_>`__.
@@ -1869,7 +1864,7 @@ Visu
 
 .. container:: tags
 
-   :bdg-primary:`visual_perception` :bdg-primary:`visual_string_recognition` :bdg-primary:`face_perception` :bdg-primary:`visual_pseudoword_recognition` :bdg-light:`object_categorization` 
+   :bdg-secondary:`reading` :bdg-primary:`visual_string_recognition` :bdg-light:`object_recognition` :bdg-primary:`visual_scene_perception` :bdg-primary:`visual_representation` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -1954,13 +1949,15 @@ Lec1
 
 .. container:: tags
 
-   :bdg-primary:`visual_string_recognition` :bdg-primary:`visual_pseudoword_recognition` :bdg-secondary:`semantic_processing` :bdg-primary:`visual_word_recognition` :bdg-secondary:`reading` 
+   :bdg-secondary:`semantic_processing` :bdg-secondary:`reading` :bdg-primary:`visual_string_recognition` :bdg-primary:`visual_word_recognition` :bdg-primary:`visual_pseudoword_recognition` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
 
    - Software: Presentation (Version 20.1, Neurobehavioral Systems, Inc., Berkeley, CA)
    - Response device: Five-button ergonomic pad (current designs, package 932 with pyka hhsc-1x5-n4)
+
+   - Audio device: MagnaCoil (Magnacoustics)
 
 This task, described in (`Saignavong et al., 2017 <https://doi.org/10.1142/S0129065717500010>`__), was originally used to test whether brain activity can be deteted in single trials with intracerebral EEG-fMRI recordings. During the task, participants were presented with three vertically-arranged lines, indicated by the presence of two "+" symbols at both sides, and empty space between them. For each row, a different type of verbal stimulli was presented, and the participant was instructed to make a decission depending on the type of stimuli. The top row presented words, and the decision was an animacy decision ("Is it a living entity?"). The middle row presented pseudowords, and the decision was whether the pseudoword had one or two syllabes. Finally, the bottom row presented consonant strings, and participants were instructed to answer if the string was all-uppercase or all-lowercase. First option was selected by pressing with the index finger on the response box whereas second option was given with the middle finger. The trials were presented in blocks, and each block contained a sequence of 5 stimuli for each of the three conditions. The order of this conditions inside each block was randomized across blocks, but fixed for all participants. The "+" symbols for the row corresponding to the next condition turned white to indicate which condition was next. There were two runs with 6 blocks each, each block comprising 15 trials, which were presented for 2000 ms, with an inter-stimulus interval of 500 ms.
 
@@ -2009,7 +2006,7 @@ MVEB
 
 .. container:: tags
 
-   :bdg-light:`numerosity` :bdg-primary:`visual_attention` :bdg-light:`string_maintenance` :bdg-primary:`visual_buffer` :bdg-info:`visual_working_memory` 
+   :bdg-primary:`visual_attention` :bdg-light:`numerosity` :bdg-info:`visual_working_memory` :bdg-primary:`visual_buffer` :bdg-light:`string_maintenance` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -2082,7 +2079,7 @@ MVIS
 
 .. container:: tags
 
-   :bdg-light:`numerosity` :bdg-primary:`visual_attention` :bdg-info:`spatial_working_memory` :bdg-info:`visual_working_memory` 
+   :bdg-primary:`visual_attention` :bdg-info:`spatial_working_memory` :bdg-light:`numerosity` :bdg-info:`visual_working_memory` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -2222,7 +2219,7 @@ MCSE
 
 .. container:: tags
 
-   :bdg-light:`salience` :bdg-primary:`upper-left_vision` :bdg-primary:`visual_search` :bdg-primary:`upper-right_vision` :bdg-primary:`lower-left_vision` 
+   :bdg-light:`salience` :bdg-primary:`lower-left_vision` :bdg-primary:`upper-left_vision` :bdg-primary:`visual_localization` :bdg-primary:`lower-right_vision` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -2285,7 +2282,7 @@ Audio
 
 .. container:: tags
 
-   :bdg-success:`auditory_attention` :bdg-success:`voice_perception` :bdg-success:`speech_perception` :bdg-success:`listening` :bdg-success:`music_perception` 
+   :bdg-success:`sound_perception` :bdg-success:`voice_perception` :bdg-success:`listening` :bdg-success:`speech_perception` :bdg-success:`auditory_attention` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -2293,7 +2290,10 @@ Audio
    - Software: Expyriment 0.9.0 (Python 3.6)
    - Response device: Five-button ergonomic pad (current designs, package 932 with pyka hhsc-1x5-n4)
 
-This task, originally described in (`Santoro et al., 2017 <https://doi.org/10.1073/pnas.1617622114>`__), is an auditory localizer. During each run, the participants were presented with sounds from different categories, and were instructed to press a button with the index finger whenever two consecutive sounds were identical. From a group of 288 sounds, divided into 6 different categories, 4 sets were created. Each set contained 72 sounds of each of the categories, and each one was present only in one of the sets. Furthermore, each set was pre-randomized in 3 different orders, and the same sequences were used for all participants. On top of the 72 sounds, each run also included 5 silences and 5 repeated sounds from the original 72. In total, each run consisted of 82 trials of 2 seconds each. It is important to note that the data for this task was acquired using an interrupted acquisition sequence, to minimize the effect that scanner noise can have in the auditory processing targeted by the experiment. To this end, the inter-stimulus interval was programmed in a sequence of 4, 4, and 6 seconds, meaning that the interval between stimuli would be 4s for the first trial, 4s for the second, 6s for the third, and then the sequence repeats until the end of the run. The variability of the ISI and the silence trials avoided stimulus' presentation to be predictable in time.
+   - Audio device: MagnaCoil (Magnacoustics)
+
+This task, originally described in (`Santoro et al., 2017 <https://doi.org/10.1073/pnas.1617622114>`__), is an auditory localizer. During each run, the participants were presented with sounds from different categories, and were instructed to press a button with the index finger whenever two consecutive sounds were identical. From a group of 288 sounds, divided into 6 different categories, 4 sets were created. Each set contained 72 sounds of each of the categories, and each one was present only in one of the sets. Furthermore, each set was pre-randomized in 3 different orders, and the same sequences were used for all participants. On top of the 72 sounds, each run also included 5 silences and 5 repeated sounds from the original 72. In total, each run consisted of 82 trials of 2 seconds each. It is important to note that the data for this task was acquired using an interrupted acquisition sequence, to minimize the effect that scanner noise can have in the auditory processing targeted by the experiment. To this end, the inter-stimulus interval was programmed in a sequence of 4, 4, and 6 seconds, meaning that the interval between stimuli would be 4s for the first trial, 4s for the second, 6s for the third, and then the sequence repeats until the end of the run. The variability of the ISI and the silence trials avoided stimulus' presentation to be predictable in time. 
+**Note:** We used the MagnaCoil (Magnacoustics) audio device for all subjects except for *subject-08*, for whom we employed Optoacoustics.
 
 The conditions for this task are described in `this table <condAudio_>`__ and the main contrasts derived from those conditions are described in `this table <contAudio_>`__.
 
@@ -2376,7 +2376,7 @@ Attention
 
 .. container:: tags
 
-   :bdg-light:`attentional_focusing` :bdg-light:`spatial_attention` :bdg-warning:`saccadic_eye_mocement` :bdg-warning:`saccadic_eye_movement` :bdg-light:`selective_attention` 
+   :bdg-warning:`saccadic_eye_movement` :bdg-light:`selective_attention` :bdg-light:`spatial_attention` :bdg-light:`attentional_focusing` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -2435,14 +2435,14 @@ The conditions for this task are described in `this table <condAttention_>`__ an
       * - spatial_incongruent
         - cued probe with distractors in the probe
       * - spatial_congruent
-        - cued  probe, no distractors
+        - cued  probe	 no distractors","['spatial_attention','attentional_focusing','saccadic_eye_mocement','response_selection','response_execution']
 
 StopSignal
 ----------
 
 .. container:: tags
 
-   :bdg-light:`proactive_control` :bdg-primary:`shape_perception` :bdg-primary:`shape_recognition` 
+   :bdg-primary:`shape_perception` :bdg-light:`proactive_control` :bdg-primary:`shape_recognition` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -2481,7 +2481,7 @@ The conditions for this task are described in `this table <condStopSignal_>`__ a
       * - go
         - shape recognition
       * - stop
-        - shape recognition, stopped response
+        - shape recognition	 stopped response","['shape_recognition','proactive_control','response_inhibition','response_selection','response_execution']
       * - stop-go
         - response inhibition
 
@@ -2490,7 +2490,7 @@ TwoByTwo
 
 .. container:: tags
 
-   :bdg-primary:`visual_perception` :bdg-light:`cue_switch` 
+   :bdg-light:`cue_switch` :bdg-primary:`visual_perception` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -2545,7 +2545,7 @@ The conditions for this task are described in `this table <condTwoByTwo_>`__ and
       * - cue_taskswitch_cuestay
         - both task and cue switch
       * - cue_taskstay_cueswitch
-        - task repeats, cue switch
+        - task repeats	 cue switch","['visual_perception','response_selection','response_execution','cue_switch']
       * - stim_taskstay_cuestay
         - both task and cue repeats
       * - stim_taskswitch_cueswitch
@@ -2553,7 +2553,7 @@ The conditions for this task are described in `this table <condTwoByTwo_>`__ and
       * - stim_taskswitch_cuestay
         - both task and cue switch
       * - stim_taskstay_cueswitch
-        - task repeats, cue switch
+        - task repeats	 cue switch","['visual_perception','response_selection','response_execution','cue_switch']
       * - task_switch-stay
         - effect of task switch
       * - cue_switch-stay
@@ -2564,7 +2564,7 @@ Discount
 
 .. container:: tags
 
-   :bdg-light:`selective_control` :bdg-dark:`incentive_salience` 
+   :bdg-dark:`incentive_salience` :bdg-light:`selective_control` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -2610,7 +2610,7 @@ SelectiveStopSignal
 
 .. container:: tags
 
-   :bdg-light:`proactive_control` :bdg-primary:`shape_perception` :bdg-primary:`shape_recognition` 
+   :bdg-primary:`shape_perception` :bdg-light:`proactive_control` :bdg-primary:`shape_recognition` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -2672,7 +2672,7 @@ Stroop
 
 .. container:: tags
 
-   :bdg-primary:`visual_perception` :bdg-light:`proactive_control` :bdg-light:`conflict_detection` 
+   :bdg-light:`conflict_detection` :bdg-light:`proactive_control` :bdg-primary:`visual_perception` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -2719,7 +2719,7 @@ ColumbiaCards
 
 .. container:: tags
 
-   :bdg-dark:`risk_processing` :bdg-dark:`risk_aversion` :bdg-dark:`reward_processing` 
+   :bdg-dark:`risk_processing` :bdg-dark:`reward_processing` :bdg-dark:`risk_aversion` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -2815,7 +2815,7 @@ The conditions for this task are described in `this table <condDotPatterns_>`__ 
       * - correct_cue_correct_probe
         - both cue and probe are correct (AX)
       * - correct_cue_incorrect_probe
-        - the cue is correct, but the probe is not (AY)
+        - the cue is correct	 but the probe is not (AY)","['shape_recognition','proactive_control','response_selection','response_execution']
       * - incorrect_cue_correct_probe
         - cue is incorrect but probe is correct (BX)
       * - incorrect_cue_incorrect_probe
@@ -2838,7 +2838,7 @@ WardAndAllport
 
 .. container:: tags
 
-   :bdg-primary:`visual_perception` :bdg-info:`working_memory` :bdg-light:`planning` :bdg-light:`goal_hierarchy` :bdg-light:`search_depth` 
+   :bdg-info:`working_memory` :bdg-light:`goal_hierarchy` :bdg-light:`search_depth` :bdg-light:`planning` :bdg-primary:`visual_perception` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -2903,7 +2903,7 @@ BiologicalMotion1
 
 .. container:: tags
 
-   :bdg-light:`vertical_flip` :bdg-light:`BiologicalMotion` :bdg-warning:`global_motion_coherence` :bdg-warning:`local_motion_coherence` :bdg-warning:`motion_detection` 
+   :bdg-light:`vertical_flip` :bdg-warning:`global_motion_coherence` :bdg-warning:`local_motion_coherence` :bdg-warning:`motion_detection` :bdg-light:`BiologicalMotion` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -2925,7 +2925,7 @@ The conditions for this task are described in `this table <condBiologicalMotion1
       * - Condition
         - Description
       * - global_upright
-        - Structural information is preserved, but individual local trajectories are mirror-symmetric. "Global-only" in the original paper
+        - Structural information is preserved, but individual local trajectories are mirror-symmetric. Global-only in the original paper
       * - global_inverted
         - Global walker, inverted upside-down
       * - natural_upright
@@ -2968,7 +2968,7 @@ BiologicalMotion2
 
 .. container:: tags
 
-   :bdg-light:`vertical_flip` :bdg-light:`BiologicalMotion` :bdg-warning:`local_motion_coherence` :bdg-warning:`motion_detection` :bdg-warning:`scrambled_motion` 
+   :bdg-light:`vertical_flip` :bdg-warning:`scrambled_motion` :bdg-warning:`local_motion_coherence` :bdg-warning:`motion_detection` :bdg-light:`BiologicalMotion` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -3028,8 +3028,8 @@ The conditions for this task are described in `this table <condBiologicalMotion2
       * - inverted-upright
         - effect of orientation on motion perception
 
-Le Petit Prince
----------------
+LePetitPrince
+-------------
 
 .. container:: tags
 
@@ -3039,7 +3039,10 @@ Le Petit Prince
    :class: seealso
 
    - Software: Expyriment 0.9.0 (Python 3.6)
-This experiment is a natural language comprehension protocol, originally implemented by (`Bhattasali et al., 2019 <https://doi.org/10.1080/23273798.2018.1518533>`__, `Hale et al., 2022 <https://doi.org/10.1146/annurev-linguistics-051421-020803>`__). The use of complex naturalistic language stimuli has been used to study other processes, like semantic maps (`Huth et al., 2016 <https://doi.org/10.1038/nature17637>`__). The data was acquired in two different sessions, each one comprising five and four runs, respectively. Each run comprised three chapters of the "Le Petit Prince" story in french. During each run, the participant was presented with the audio of the story. In between runs, the experimenters would ask some multiple choice questions, as well as two or three open ended questions about the contents of the previous run, in order to keep the participants engaged. The length of the runs varied between nine and thirteen minutes. There was also a six-minutes localizer at the end of the second acquisition, in order to accurately map language areas for each participant.
+   - Audio device: OptoACTIVE (Optoacoustics)
+
+This experiment is a natural language comprehension protocol, originally implemented by (`Bhattasali et al., 2019 <https://doi.org/10.1080/23273798.2018.1518533>`__, `Hale et al., 2022 <https://doi.org/10.1146/annurev-linguistics-051421-020803>`__). The use of complex naturalistic language stimuli has been used to study other processes, like semantic maps (`Huth et al., 2016 <https://doi.org/10.1038/nature17637>`__). The data was acquired in two different sessions, each one comprising five and four runs, respectively. Each run comprised three chapters of the "Le Petit Prince" story in french. During each run, the participant was presented with the audio of the story. In between runs, the experimenters would ask some multiple choice questions, as well as two or three open ended questions about the contents of the previous run, in order to keep the participants engaged. The length of the runs varied between nine and thirteen minutes. There was also a six-minutes localizer at the end of the second acquisition, in order to accurately map language areas for each participant. 
+**Note:** We used the OptoACTIVE (Optoacoustics) audio device for all subjects except for *subject-08*, for whom we employed MRConfon MKII.
 
 
 MathLanguage
@@ -3047,7 +3050,7 @@ MathLanguage
 
 .. container:: tags
 
-   :bdg-primary:`visual_perception` :bdg-success:`auditory_sentence_comprehension` :bdg-secondary:`narrative_comprehension` :bdg-success:`auditory_imagery` :bdg-success:`auditory_perception` 
+   :bdg-success:`auditory_sentence_comprehension` :bdg-primary:`visual_arithmetic_processing` :bdg-success:`auditory_geometric_processing` :bdg-success:`auditory_arithmetic_processing` :bdg-success:`auditory_sentence_recognition` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -3055,7 +3058,10 @@ MathLanguage
    - Software: Expyriment 0.9.0 (Python 3.6)
    - Response device: In-house custom-made sticks featuring one-top button, each one to be used in each hand
 
-The MathLanguage protocol was taken from (`Amalric et al., 2016 <https://doi.org/10.1073/pnas.1603205113>`__). This task aims to comprehensively capture the activation related with several types of mathematical and other types of facts, presented as sentences. During the task, the participants are presented a series of sentences, each one in either of two modalities: auditory or visual. Some of the categories include theory of mind statements, arithmetic facts and geometry facts. After each sentence, the participant has to indicate whether they believe the presented fact to be true or false, by respectively pressing the button in the left or right hand. For each participant, the data was divided in four runs, with an equal number of trials of each category in each run. As previously stated, each stimulus is presented either in auditory or visual form, which was pre-randomized and equal for every participant. A second version of each run (runs "B") was generated reverting the modality for each trial, so those being visual in the original runs (runs "A"), would be auditory in their corresponding B version, and vice-versa.
+   - Audio device: OptoACTIVE (Optoacoustics)
+
+The MathLanguage protocol was taken from (`Amalric et al., 2016 <https://doi.org/10.1073/pnas.1603205113>`__). This task aims to comprehensively capture the activation related with several types of mathematical and other types of facts, presented as sentences. During the task, the participants are presented a series of sentences, each one in either of two modalities: auditory or visual. Some of the categories include theory of mind statements, arithmetic facts and geometry facts. After each sentence, the participant has to indicate whether they believe the presented fact to be true or false, by respectively pressing the button in the left or right hand. For each participant, the data was divided in four runs, with an equal number of trials of each category in each run. As previously stated, each stimulus is presented either in auditory or visual form, which was pre-randomized and equal for every participant. A second version of each run (runs "B") was generated reverting the modality for each trial, so those being visual in the original runs (runs "A"), would be auditory in their corresponding B version, and vice-versa. 
+**Note:** We used the OptoACTIVE (Optoacoustics) audio device for all subjects except for *subject-05* and *subject-08*, who completed the session using MRConfon MKII.
 
 The conditions for this task are described in `this table <condMathLanguage_>`__ and the main contrasts derived from those conditions are described in `this table <contMathLanguage_>`__.
 
@@ -3176,7 +3182,7 @@ SpatialNavigation
 
 .. container:: tags
 
-   :bdg-primary:`visual_search` :bdg-info:`spatial_memory` :bdg-info:`spatial_working_memory` :bdg-light:`navigation` :bdg-light:`spatial_localization` 
+   :bdg-info:`spatial_working_memory` :bdg-light:`navigation` :bdg-primary:`visual_search` :bdg-info:`spatial_memory` :bdg-light:`spatial_localization` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -3240,7 +3246,7 @@ The conditions for this task are described in `this table <condSpatialNavigation
       * - pointing_control
         - pointing a landmark
 
-GoodBadEvil
+GoodBadUgly
 -----------
 
 .. container:: tags
@@ -3251,9 +3257,7 @@ GoodBadEvil
    :class: seealso
 
    - Software: Expyriment 0.9.0 (Python 2.7)
-   - Audio device: MRConfon MKII 
-
-GoodBadEvil task was adapted from the study (`Mantini et al., 2012 <https://doi.org/10.1038/nmeth.1868>`__), dedicated to investigate correspondence between monkey and human brains using naturalistic stimuli. The task relies on watching - viewing and listening - of the whole movie "The Good, the Bad and the Ugly" by Sergio Leone. The original, 177-minute movie was cut into 10-minute segments (except the first two and the last ones) to adjust to the segment length of the original study, which presented only three 10-min segments of the middle of the movie. This resulted in a total of 18 segments. For IBC, the French-dubbed version "Le Bon, la Brute et le Truand" was presented. This task was performed during three acquisition sessions with seven segments each, one segment per run. The first three segments were repeated during the last acquisition after the movie was completed. The total duration of the run ten minutes for the majority of segments, around eight minutes for the first two runs, and four minutes and a half for the last run.
+GoodBadUgly task was adapted from the study (`Mantini et al., 2012 <https://doi.org/10.1038/nmeth.1868>`__), dedicated to investigate correspondence between monkey and human brains using naturalistic stimuli. The task relies on watching - viewing and listening - of the whole movie "The Good, the Bad and the Ugly" by Sergio Leone. The original, 177-minute movie was cut into 10-minute segments (except the first two and the last ones) to adjust to the segment length of the original study, which presented only three 10-min segments of the middle of the movie. This resulted in a total of 18 segments. For IBC, the French-dubbed version "Le Bon, la Brute et le Truand" was presented. This task was performed during three acquisition sessions with seven segments each, one segment per run. The first three segments were repeated during the last acquisition after the movie was completed. The total duration of the run ten minutes for the majority of segments, around eight minutes for the first two runs, and four minutes and a half for the last run.
 
 
 EmoMem
@@ -3261,7 +3265,7 @@ EmoMem
 
 .. container:: tags
 
-   :bdg-primary:`visual_perception` :bdg-danger:`negative_emotion` :bdg-light:`imagination` :bdg-danger:`positive_emotion` :bdg-primary:`visual_cue` 
+   :bdg-light:`imagination` :bdg-primary:`visual_cue` :bdg-danger:`negative_emotion` :bdg-danger:`positive_emotion` :bdg-primary:`visual_perception` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -3318,7 +3322,7 @@ EmoReco
 
 .. container:: tags
 
-   :bdg-danger:`negative_emotion` :bdg-danger:`emotional_expression` :bdg-primary:`face_perception` :bdg-light:`gender_perception` 
+   :bdg-primary:`face_perception` :bdg-danger:`emotional_expression` :bdg-danger:`negative_emotion` :bdg-light:`gender_perception` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -3383,7 +3387,7 @@ StopNogo
 
 .. container:: tags
 
-   :bdg-light:`proactive_control` :bdg-primary:`shape_perception` :bdg-primary:`shape_recognition` 
+   :bdg-primary:`shape_perception` :bdg-light:`proactive_control` :bdg-primary:`shape_recognition` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -3433,9 +3437,9 @@ The conditions for this task are described in `this table <condStopNogo_>`__ and
       * - unsuccessful-successful_stop
         - effect of failed inhibition
       * - successful_stop
-        - shape recognition, stopped response
+        - shape recognition	 stopped response","['shape_recognition','proactive_control','response_inhibition','response_selection','response_execution']
       * - unsuccessful_stop
-        - shape recognition, failed stopped response
+        - shape recognition	 failed stopped response","['shape_recognition','proactive_control','response_selection','response_execution']
 
 Catell
 ------
@@ -3474,7 +3478,7 @@ FingerTapping
 
 .. container:: tags
 
-   :bdg-warning:`motor_control` :bdg-warning:`motor_planning` 
+   :bdg-warning:`motor_planning` :bdg-warning:`motor_control` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -3524,7 +3528,7 @@ The conditions for this task are described in `this table <condFingerTapping_>`_
       * - chosen-null
         - uncued vs inhibited finger tapping
       * - fingertap-rest
-        - button-pressing vs rest
+        - button press vs rest
 
 VSTMC
 -----
@@ -3600,7 +3604,7 @@ RewProc
 
 .. container:: tags
 
-   
+   :bdg-primary:`visual_cue` :bdg-dark:`reward_processing` :bdg-dark:`loss_aversion` :bdg-dark:`reward_valuation` :bdg-light:`cue_switch` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -3652,7 +3656,7 @@ The conditions for this task are described in `this table <condRewProc_>`__ and 
       * - Contrast
         - Description
       * - stim
-        - 
+        - appearance of the cue images
       * - minus_20
         - lost 20 units of reward
       * - plus_20
@@ -3678,20 +3682,20 @@ The conditions for this task are described in `this table <condRewProc_>`__ and 
       * - stay-switch
         - selected the same vs different pattern
       * - gain
-        - gained units of reward 
+        - gained 20 or 10 units of reward 
       * - loss
-        - lost units of reward
+        - lost 20 or 10 units of reward
       * - gain-loss
-        - gained vs lost units of reward 
+        - gained vs lost 20 or 10 units of reward 
       * - loss-gain
-        - lost vs gained units of reward
+        - lost vs gained 20 or 10 units of reward
 
 NARPS
 -----
 
 .. container:: tags
 
-   :bdg-dark:`reward_anticipation` :bdg-dark:`reward_processing` :bdg-dark:`reward_valuation` :bdg-dark:`decision_making` :bdg-dark:`loss_aversion` 
+   :bdg-dark:`loss_aversion` :bdg-dark:`reward_processing` :bdg-dark:`reward_valuation` :bdg-dark:`reward_anticipation` :bdg-dark:`risk_aversion` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -3750,7 +3754,7 @@ The conditions for this task are described in `this table <condNARPS_>`__ and th
         - accept the gamble with high confidence
       * - strongly_reject
         - reject the gamble with high confidence
-      * - Reject-accept
+      * - reject-accept
         - gambles rejected vs gambles accepted
       * - accept-reject
         - gambles accepted vs gambles rejected
@@ -3760,7 +3764,7 @@ FaceBody
 
 .. container:: tags
 
-   :bdg-light:`updating` :bdg-light:`object_maintenance` :bdg-info:`working_memory` :bdg-light:`body_maintenance` :bdg-light:`place_maintenance` 
+   :bdg-light:`body_maintenance` :bdg-primary:`visual_place_recognition` :bdg-primary:`visual_number_recognition` :bdg-light:`place_maintenance` :bdg-info:`working_memory` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -3847,7 +3851,7 @@ Scene
 
 .. container:: tags
 
-   :bdg-light:`salience` :bdg-primary:`upper-left_vision` :bdg-primary:`visual_search` :bdg-primary:`visual_scene_perception` :bdg-primary:`upper-right_vision` 
+   :bdg-light:`oddball_detection` :bdg-light:`salience` :bdg-primary:`lower-left_vision` :bdg-primary:`upper-left_vision` :bdg-primary:`visual_scene_perception` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -3922,7 +3926,7 @@ BreathHolding
 
 .. container:: tags
 
-   
+   :bdg-light:`self_monitoring` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -4009,7 +4013,7 @@ The conditions for this task are described in `this table <condCheckerboard_>`__
       * - Contrast
         - Description
       * - checkerboard-fixation
-        - checkerboard block
+        - checkerboard
 
 FingerTap
 ---------
@@ -4047,7 +4051,7 @@ ItemRecognition
 
 .. container:: tags
 
-   
+   :bdg-primary:`visual_attention` :bdg-info:`spatial_working_memory` :bdg-light:`spatial_working_memorytask_difficulty` :bdg-light:`numerosity` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -4115,7 +4119,7 @@ The conditions for this task are described in `this table <condItemRecognition_>
       * - prob-arrow
         - probing digits vs trials of pointing arrows
       * - encode
-        - encoding 1, 3 and 5 items
+        - encoding 1	 3 and 5 items","['visual_attention','spatial_working_memory']
       * - arrow_left-arrow_right
         - identifying a left vs right pointing arrow
 
@@ -4124,7 +4128,7 @@ VisualSearch
 
 .. container:: tags
 
-   :bdg-primary:`visual_search` :bdg-primary:`visual_attention` :bdg-info:`working_memory_maintenance` :bdg-primary:`visual_form_discrimination` :bdg-primary:`visual_pattern_recognition` 
+   :bdg-primary:`visual_attention` :bdg-info:`working_memory_maintenance` :bdg-primary:`visual_pattern_recognition` :bdg-primary:`visual_form_discrimination` :bdg-primary:`visual_search` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -4216,18 +4220,18 @@ The conditions for this task are described in `this table <condVisualSearch_>`__
       * - search_array_two_present
         - array of two items with the sample item
       * - probe_item
-        - probing an item, absent or present
+        - probing an item	 absent or present","['visual_search','visual_pattern_recognition','visual_form_discrimination']
       * - search_array
-        - array of items, four or two
-      * - probe_item_absent–probe_item_present
+        - array of items	 four or two","['visual_pattern_recognition','visual_attention','visual_working_memory','visual_form_discrimination']
+      * - probe_item_absent'probe_item_present
         - probing an absent vs present item
-      * - search_array_absent–search_array_present 
+      * - search_array_absent'search_array_present 
         - array of items without vs with sample item
-      * - probe_item_four–probe_item_two
+      * - probe_item_four'probe_item_two
         - probing an item from an array of four vs two
-      * - search_array_four–search_array_two
+      * - search_array_four'search_array_two
         - array of four vs two items
-      * - delay_vis–delay_wm
+      * - delay_vis'delay_wm
         - delay period on visual search vs on working memory
 
 MonkeyKingdom
@@ -4251,7 +4255,7 @@ Color
 
 .. container:: tags
 
-   
+   :bdg-info:`working_memory` :bdg-light:`color_perception` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -4261,7 +4265,7 @@ Color
 
 This protocol was adapted from `McKeefry et al., 1997 <https://doi.org/10.1093/brain/120.12.2229>`__, that aimed at exploring the position and variability of the colour centre in the human brain. The protocol used a mini-block design, in which 12 stimuli of the same type (either chromatic or achromatic) were presented consecutively. These stimuli were Mondrian patterns - abstract images with no recognizable objects - each composed of 20 cicular blobs of different isoluminant colors. Each run consisted of two kinds of blocks - chromatic and achromatic. During chromatic blocks, colored Mondrian patterns were presented while during achromatic blocks, grayscaled or achromatic versions of those patterns were presented. Both the conditions were equally represented in each run and the same randomized sequence of these conditions alternating with a baseline fixation cross was presented to each subject. To ensure that the subjects remained alert throughout the experiment, they were asked to press a button when an image repeated (1-back task). The data was acquired in four runs during one scanning session. Each run comprised of 36 blocks. Each block consisted of 12 images, was 7.2 seconds long (500 ms/image + 100 ms delay after each image) and was followed by a inter-block fixation cross that stayed on screen for 5 seconds. The images presented were 16 x 16 degrees of visual angle.
 
-The conditions for this task are described in `this table <condColor_>`__.
+The conditions for this task are described in `this table <condColor_>`__ and the main contrasts derived from those conditions are described in `this table <contColor_>`__.
 
 .. dropdown:: Conditions for Color
    :name: condColor
@@ -4279,12 +4283,30 @@ The conditions for this task are described in `this table <condColor_>`__.
       * - response
         - Subject's response to 1-back task i.e. when the same color pattern was presented twice consecutively
 
+.. dropdown:: Contrasts for Color
+   :name: contColor
+
+   .. list-table::
+      :header-rows: 1
+      :widths: 25 75
+
+      * - Contrast
+        - Description
+      * - chromatic
+        - attending to chromatic mondrian patterns
+      * - achromatic
+        - attending to achromatic mondrian patterns
+      * - chromatic-achromatic
+        - chromatic vs achromatic mondrian patterns
+      * - response
+        - response to repeated mondrian patterns
+
 Motion
 ------
 
 .. container:: tags
 
-   
+   :bdg-primary:`lower-left_vision` :bdg-primary:`upper-left_vision` :bdg-light:`color_perception` :bdg-primary:`visual_awareness` :bdg-light:`motion detection` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -4294,7 +4316,7 @@ Motion
 
 This protocol was adapted from `Helfrich et al., 2013 <https://doi.org/10.1007/s10548-012-0226-1>`__, that aimed at delineating areas of the visual cortex that responded to coherent visual motion under conditions of controlled attention and fixation.  In this protocol, the stimulus was composed of a rectangular random dot pattern with white dots on a dark background. Each run consisted of trials with three different conditions, namely: stationary, coherent and incoherent motion. In coherent motion condition, the motion direction was same for all dots, while in incoherent motion condition, the dots moved independently in all possible directions. For both these motion conditions, the motion direction was changed every 2 seconds in steps of 60 degrees. Due to this, the coherent motion condition was further divided into types - one where the motion direction changed clockwise and the other where it changed anti-clockwise. During the stationary condition, which was the baseline, the random dot pattern was presented with a limited dot lifetime of 1000 ms as in the motion conditions. In addition to the motion conditions, the field of presentation of the stimuli was also varied during the experiment. This means that some of the stimuli in a run were presented only on the right, others on the left hand side and the rest on the full screen. During all the runs the subjects were asked to maintain a fixation on the central fixation point. This fixation point changed colors at a rate of 2 Hz selected randomly out of six colors (red, yellow, blue, green, magenta, white). To ensure that the subjects remained alert throughout the experiment, they were asked to press a button when this fixation point turned blue. The conditions were counterbalanced and were presented in the same randomized sequence to each subject. The randomized sequence of the changing colors of the fixation point was also the same for each subject. The data was acquired in four runs during one scanning session. Each run comprised of 32 trials. Each trial was 12 seconds long with changes in motion direction (only in the motion conditions) after every 2 seconds in steps of 60 degrees. Each trial was followed by an inter-trial fixation cross that stayed on the screen for 2 seconds. The fixation point remained on the screen throughout each trial and changed colors randomly at a rate of 2 Hz (i.e. after every 500 ms). The stimuli were extended to 40 degrees in the horizontal and 20 degrees in the vertical direction. The central visual area of 3 x 3 degrees was not stimulated. Each dot (including the fixation dot) had a diameter of 8.6 arc min and moved at 6 degrees/sec. All the dots had a limited lifetime of 1000 ms and dot density was 6 dots/degree^2 throughout all trials.
 
-The conditions for this task are described in `this table <condMotion_>`__.
+The conditions for this task are described in `this table <condMotion_>`__ and the main contrasts derived from those conditions are described in `this table <contMotion_>`__.
 
 .. dropdown:: Conditions for Motion
    :name: condMotion
@@ -4320,12 +4342,44 @@ The conditions for this task are described in `this table <condMotion_>`__.
       * - right
         - Trials where dot pattern was presented only in the right visual field
 
+.. dropdown:: Contrasts for Motion
+   :name: contMotion
+
+   .. list-table::
+      :header-rows: 1
+      :widths: 25 75
+
+      * - Contrast
+        - Description
+      * - incoherent
+        - dots moving incoherently
+      * - coherent
+        - dots moving coherently
+      * - stationary
+        - stationary dots appearing in different locations
+      * - clock
+        - motion in clockwise direction
+      * - anti
+        - anti-clockwise motion
+      * - response
+        - fixation point turning blue
+      * - coherent-incoherent
+        - dots moving coherently vs coherently
+      * - coherent-stationary
+        - dots moving coherently vs staying stationary
+      * - incoherent-stationary
+        - dots moving incoherently vs staying stationary
+      * - clock-anti
+        - clockwise vs anti-clockwise motion
+      * - left-right
+        - dot pattern in left vs right visual field
+
 OptimismBias
 ------------
 
 .. container:: tags
 
-   
+   :bdg-light:`self-reference_effect` :bdg-light:`past_time` :bdg-light:`future_time` :bdg-light:`episodic_future_thinking` :bdg-info:`emotional_memory` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -4335,7 +4389,7 @@ OptimismBias
 
 This protocol was adapted from `Sharot et al. 2007 <https://doi.org/10.1038/nature06280>`__, that aimed at examining the neurobiological basis of optimism. The subjects were presented with a series of events as text that described a life episode alongwith the word "past" or "future" to indicate that the subjects had to think of the given event such that it occurred in the past or might occur in the future. They were instructed to press a button once the memory or projection of that event was beginning to form in their mind. Following that, they had to rate the memory or projection for whether the event was (very, a little or not at all) emotionally arousing and also its valence (whether it was negative or positive). Each event was displayed for 14 seconds on the screen and they had 2 seconds for each rating (emotional arousal and valence) task. In the original study, 80 unique events were presented over 4 runs (20 events in each run). For IBC, we added a fifth run where the events were picked randomly out of the given 80 and the past and future contingencies were reversed. Each run was 10 minutes and 2 seconds long. Each trial was labeled with one of the conditions given in `this table <condOptimismBias_>`__ based on the rating received for emotional arousal and valence from the subjects. Trials were labeled negative when they received high ("very") or medium ("a little") arousal rating and negative valence. Similarly, they were labeled positive when they received high ("very") or medium ("a little") arousal rating and positive valence. In case of all other combinations of responses, trials were labeled neutral and in absence of either or both responses they were labeled inconclusive. Past and future part of the label of course depended upon whether the presented event was that of past or future. 
 
-The conditions for this task are described in `this table <condOptimismBias_>`__.
+The conditions for this task are described in `this table <condOptimismBias_>`__ and the main contrasts derived from those conditions are described in `this table <contOptimismBias_>`__.
 
 .. dropdown:: Conditions for OptimismBias
    :name: condOptimismBias
@@ -4361,6 +4415,30 @@ The conditions for this task are described in `this table <condOptimismBias_>`__
       * - inconclusive
         - Absence of either or both responses
 
+.. dropdown:: Contrasts for OptimismBias
+   :name: contOptimismBias
+
+   .. list-table::
+      :header-rows: 1
+      :widths: 25 75
+
+      * - Contrast
+        - Description
+      * - all_events
+        - all events
+      * - optimism_bias
+        - future negative vs other events
+      * - future_vs_past
+        - future  vs past events
+      * - positive_vs_negative
+        - positive vs negative events
+      * - future_positive_vs_negative
+        - future positive vs negative
+      * - past_positive_vs_negative
+        - past positive vs negative
+      * - interaction
+        - interaction of (future vs past) and (positive vs negative)
+
 MovieAomic
 ----------
 
@@ -4382,7 +4460,7 @@ HarririAomic
 
 .. container:: tags
 
-   
+   :bdg-danger:`emotional_expression` :bdg-primary:`visual_orientation` :bdg-primary:`emotional_face_recognition` :bdg-primary:`face_perception` :bdg-primary:`shape_recognition` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -4392,7 +4470,7 @@ HarririAomic
 
 This protocol is a part of the AOMIC (`Amsterdam Open MRI Collection <https://nilab-uva.github.io/AOMIC.github.io>`__) battery and is published in `Snoek et al., 2021 <https://doi.org/10.1038/s41597-021-00870-6>`__. HarririAomic explores the processes related to (facial) emotion processing. The subjects were shown three images each trial positioned in the form of a triangle - one on the top and two on the bottom. Their task was to say that which one of the two bottom images matched with the top one and respond accordingly. During a shape condition trial, they had to match the shape of the images i.e. whether the oval shape was vertically or horizontally oriented. While during a emotion condition trial, they had to match the emotion/facial expression (either fear or anger) in the images. The stimulus disappeared after 4.8 seconds or as soon as the subject responded and new trial always appeared 5 seconds after the onset of each trial. This task was done for 2 runs and the trials were presented in a block-design with alternating *shape* and *emotion* blocks consisting of six stimuli of 5 seconds each. There were four blocks for each condition, making each run 270 seconds long.
 
-The conditions for this task are described in `this table <condHarririAomic_>`__.
+The conditions for this task are described in `this table <condHarririAomic_>`__ and the main contrasts derived from those conditions are described in `this table <contHarririAomic_>`__.
 
 .. dropdown:: Conditions for HarririAomic
    :name: condHarririAomic
@@ -4412,12 +4490,32 @@ The conditions for this task are described in `this table <condHarririAomic_>`__
       * - middle_response
         - When subject responded with middle finger, meaning the image on right matched with image on top
 
+.. dropdown:: Contrasts for HarririAomic
+   :name: contHarririAomic
+
+   .. list-table::
+      :header-rows: 1
+      :widths: 25 75
+
+      * - Contrast
+        - Description
+      * - emotion
+        - match the facial expression
+      * - shape
+        - match the shape of images
+      * - index_response
+        - matching left image to top cue
+      * - middle_response
+        - matching right image to top cue
+      * - emotion-shape
+        - match facial expression vs the shape of image
+
 FacesAomic
 ----------
 
 .. container:: tags
 
-   
+   :bdg-danger:`negative_emotion` :bdg-light:`feature_integration` :bdg-primary:`facial_expression` :bdg-danger:`emotional_expression` :bdg-light:`gender_perception` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -4427,7 +4525,7 @@ FacesAomic
 
 This protocol is a part of the AOMIC (`Amsterdam Open MRI Collection <https://nilab-uva.github.io/AOMIC.github.io>`__) battery and is published in `Snoek et al., 2021 <https://doi.org/10.1038/s41597-021-00870-6>`__. FacesAomic explores the processes related to (emotional) facial perception. The stimuli here are videos of people's facial expressions, male or female, northern european or mediterranean, where they were expressing certain emotion (pride, contempt, anger, joy or no expression). For IBC, this protocol was implemented slightly differently from what is mentioned in `Snoek et al., 2021 <https://doi.org/10.1038/s41597-021-00870-6>`__. The run duration was extended from about 4 minutes to 6 minutes and an additional run of 6 minutes was done by adding a few more of the said video stimuli from the `Amsterdam Dynamic Facial Expression Set (ADFES) <https://aice.uva.nl/research-tools/adfes-stimulus-set/adfes-stimulus-set.html?cb>`__ (`Schalk et al., 2011 <https://doi.org/10.1037/a0023853>`__). More specifically, in addition to the female models, we also used the videos with male models and added a post-acquisition task to control for attention after each run, instead of just passive viewing as in the original study. The subjects were instructed to try and remember the faces as well as expressions they had seen during the acquisition run and then say post-acquisition whether a given video was presented before. Each video was 4 seconds long, with 5 seconds of inter-trial interval and 8 videos in each run. Each video was associated with three conditions - *emotions*, *sex* and *ethnicity* which were counterbalanced in each and across runs.
 
-The conditions for this task are described in `this table <condFacesAomic_>`__.
+The conditions for this task are described in `this table <condFacesAomic_>`__ and the main contrasts derived from those conditions are described in `this table <contFacesAomic_>`__.
 
 .. dropdown:: Conditions for FacesAomic
    :name: condFacesAomic
@@ -4438,8 +4536,6 @@ The conditions for this task are described in `this table <condFacesAomic_>`__.
 
       * - Condition
         - Description
-      * - ITI
-        - Inter-trial intervals
       * - anger
         - Video of a face expressing anger
       * - contempt
@@ -4459,12 +4555,50 @@ The conditions for this task are described in `this table <condFacesAomic_>`__.
       * - european
         - Video with an european ethnicity model expressing some emotion
 
+.. dropdown:: Contrasts for FacesAomic
+   :name: contFacesAomic
+
+   .. list-table::
+      :header-rows: 1
+      :widths: 25 75
+
+      * - Contrast
+        - Description
+      * - anger
+        - attending to face expressing anger
+      * - contempt
+        - attending to face expressing contempt
+      * - joy
+        - attending to face expressing joy
+      * - neutral
+        - attending to neutral face
+      * - pride
+        - attending to face expressing pride
+      * - all-neutral
+        - attending to expressive vs neutral faces
+      * - anger-neutral
+        - attending to angry vs neutral face
+      * - contempt-neutral
+        - attending to contempt vs neutral face
+      * - joy-neutral
+        - attending to joyful vs neutral face
+      * - pride-neutral
+        - attending to pride vs neutral face
+      * - male-female
+        - attending to male vs female face
+      * - female-male
+        - attending to female vs male face
+      * - mediterranean-european
+        - attending to mediterranean vs european ethnicity face
+      * - european-mediterranean
+        - attending to european vs mediterranean ethnicity face
+
 StroopAomic
 -----------
 
 .. container:: tags
 
-   
+   :bdg-light:`conflict_detection` :bdg-primary:`visual_word_recognition` :bdg-light:`gender_perception` :bdg-primary:`face_perception` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -4474,7 +4608,7 @@ StroopAomic
 
 This protocol is a part of the AOMIC (`Amsterdam Open MRI Collection <https://nilab-uva.github.io/AOMIC.github.io>`__) battery and is published in `Snoek et al., 2021 <https://doi.org/10.1038/s41597-021-00870-6>`__. StroopAomic explores the processes related to cognitive conflict and control. The subjects were presented with images of faces of male and female models in greyscale with certain words associated with each sex in red overlayed on top of these images. The words used were French ones for "man", "sir", "woman", and "lady" in either lower or upper case. Their task was to say whether the image was that of a male or a female model while ignoring the word overlayed on top of the image. Everything was implemented the same way for IBC as in the original study except for the images of faces which were not available. The images were hence taken from `another stimulus set <https://osf.io/g27wf/>`__ used in `Morrison2017 <https://doi.org/10.1371/journal.pone.0185093>`__. In addition, two runs were done instead of just one as in the original study. Each face-word composite stimulus was presented for 0.5 seconds in an event-related design, and was either *congruent* (same sex of face and word) or *incongruent* (different sex of face and word). Total 96 such stimuli were presented making each run 270 seconds long and there were 2 runs. The *congruent* and *incongruent* conditions were counterbalanced in each run. The response condition was inserted for each trial post-run based on subject responses to make the contrasting easier.
 
-The conditions for this task are described in `this table <condStroopAomic_>`__.
+The conditions for this task are described in `this table <condStroopAomic_>`__ and the main contrasts derived from those conditions are described in `this table <contStroopAomic_>`__.
 
 .. dropdown:: Conditions for StroopAomic
    :name: condStroopAomic
@@ -4498,12 +4632,46 @@ The conditions for this task are described in `this table <condStroopAomic_>`__.
       * - word_female
         - The presented word corresponds to a female
 
+.. dropdown:: Contrasts for StroopAomic
+   :name: contStroopAomic
+
+   .. list-table::
+      :header-rows: 1
+      :widths: 25 75
+
+      * - Contrast
+        - Description
+      * - incongruent_word_male_face_female
+        - attending to female face while reading 'male'
+      * - congruent_word_female_face_female
+        - attending to female face while reading 'female'
+      * - congruent_word_male_face_male
+        - attending to male face while reading 'male'
+      * - incongruent_word_female_face_male
+        - attending to male face while reading 'female'
+      * - index_response
+        - identifying a male face
+      * - middle_response
+        - identifying a female face
+      * - congruent-incongruent
+        - word and face matched vs did not match
+      * - incongruent-congruent
+        - word and face did not match vs matched
+      * - face_male-face_female
+        - male vs female face
+      * - word_male-word_female
+        - word 'male' vs 'female'
+      * - index-middle
+        - indicate the face is of male vs of female
+      * - middle-index
+        - indicate the face is of female vs of male
+
 WorkingMemoryAomic
 ------------------
 
 .. container:: tags
 
-   
+   :bdg-primary:`visual_attention` :bdg-primary:`visual_orientation` :bdg-info:`visual_working_memory` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -4513,7 +4681,7 @@ WorkingMemoryAomic
 
 This protocol is a part of the AOMIC (`Amsterdam Open MRI Collection <https://nilab-uva.github.io/AOMIC.github.io>`__) battery and is published in `Snoek et al., 2021 <https://doi.org/10.1038/s41597-021-00870-6>`__. WorkingMemoryAomic explores the processes related to visual working memory. The trials were presented in a fixed event-related in a design and each consisted of six phases: an alert phase (1 second), an encoding phase (1 second), a retention phase (2 seconds), a test phase (1 second), a response phase (1 second) and an inter-stimulus interval (0-4 seconds). In the retention phase, the subjects were shown a set of six white bars arranged in a circle around a fixation cross. Each of these bars had a random orientation (either 0, 45, 90, or 135 degrees). Then in the test phase, one of these six blocks appeared again - either with same orientation or a different one. The subject's task was to say whether or not the bar had the same orientation during response phase and respond accordingly. Each trial was associated with one of three conditions: *active_change*, *active_no_change* or *passive*. In total, there were 8 *passive* trials, 16 *active_change* and *active_no_change* trials, in addition to 20 *null* trials of 6 seconds (which are equivalent to an additional inter-stimulus interval of 6 seconds). Each run was 324 seconds long and there were two runs of this task.
 
-The conditions for this task are described in `this table <condWorkingMemoryAomic_>`__.
+The conditions for this task are described in `this table <condWorkingMemoryAomic_>`__ and the main contrasts derived from those conditions are described in `this table <contWorkingMemoryAomic_>`__.
 
 .. dropdown:: Conditions for WorkingMemoryAomic
    :name: condWorkingMemoryAomic
@@ -4525,20 +4693,127 @@ The conditions for this task are described in `this table <condWorkingMemoryAomi
       * - Condition
         - Description
       * - active_change
-        - Active trials when the probe was present in the search of the simulus
+        - The probe had a different orientation than it had on the array
       * - active_no_change
-        - Active trials when the probe was absent in the search of the simulus
-      * - passive_change
-        - Passive trials when the probe was present in the search of the simulus
-      * - passive_no_change
-        - Passive trials when the probe was absent in the search of the simulus
+        - The probe had the same orientation than it had on the array
+      * - passive
+        - Passive trials, the bars were not displayed
+
+.. dropdown:: Contrasts for WorkingMemoryAomic
+   :name: contWorkingMemoryAomic
+
+   .. list-table::
+      :header-rows: 1
+      :widths: 25 75
+
+      * - Contrast
+        - Description
+      * - active_change
+        - probe did not match previous orientation
+      * - active_no_change
+        - probe matched previous orientation
+      * - passive
+        - null event
+      * - active-passive
+        - assess probe orientation vs null event
+      * - active_change-active_no_change
+        - probe did not match vs matched orientation
+
+AbstractionLocalizer
+--------------------
+
+.. container:: tags
+
+   :bdg-primary:`visual_attention` :bdg-primary:`visual_place_recognition` :bdg-primary:`vertical_checkerboard` :bdg-primary:`visual_number_recognition` :bdg-primary:`horizontal_checkerboard` 
+
+.. admonition:: Implementation 
+   :class: seealso
+
+   - Software: Psychtoolbox-3 (MATLAB 2021b)
+   - Response device: Five-button ergonomic pad (Current Designs, Package 932 with Pyka HHSC-1x5-N4)
+
+This protocol was adapted from an ongoing study from our colleagues at Neurospin, CEA Saclay, France. The goal of the study is to understand the neural representations of  real-world things from different semantic categories at various levels of abstraction/rendering, and with that aim, they encountered the need to have a special run to localize areas or regions specific to different categories before presenting them on different levels of abstraction. The localizer was different from the four runs in that the images were from eight different categories - faces, human body, words, non-sense words, numbers, places, objects and checkerboards. Each category in the localizer was presented in a block of 6 seconds with each image being displayed for 100 ms followed by a 200 ms inter-stimuli interval.
+
+The conditions for this task are described in `this table <condAbstractionLocalizer_>`__ and the main contrasts derived from those conditions are described in `this table <contAbstractionLocalizer_>`__.
+
+.. dropdown:: Conditions for AbstractionLocalizer
+   :name: condAbstractionLocalizer
+
+   .. list-table::
+      :header-rows: 1
+      :widths: 25 75
+
+      * - Condition
+        - Description
+      * - localizer_faces
+        - Face images
+      * - localizer_humanbody
+        - Body images
+      * - localizer_words
+        - Words images
+      * - localizer_nonsensewords
+        - Non-sense words images
+      * - localizer_numbers
+        - Number images
+      * - localizer_places
+        - Place images
+      * - localizer_objects
+        - Object Images
+      * - localizer_checkerboards
+        - Checkerboards images
+      * - response
+        - Subject's button press when they saw a star
+
+.. dropdown:: Contrasts for AbstractionLocalizer
+   :name: contAbstractionLocalizer
+
+   .. list-table::
+      :header-rows: 1
+      :widths: 25 75
+
+      * - Contrast
+        - Description
+      * - localizer_faces
+        - localizer for human faces
+      * - localizer_humanbody
+        - localizer for human bodies
+      * - localizer_words
+        - localizer for words
+      * - localizer_nonsensewords
+        - localizer for nonsense words
+      * - localizer_numbers
+        - localizer for numbers
+      * - localizer_places
+        - localizer for places
+      * - localizer_objects
+        - localizer for objects
+      * - localizer_checkerboards
+        - localizer for checkerboards
+      * - localizer_faces-other
+        - human faces vs other categories
+      * - localizer_humanbody-other
+        - human bodies vs other categories
+      * - localizer_words-other
+        - words vs other categories
+      * - localizer_nonsensewords-other
+        - nonsense words vs other categories
+      * - localizer_numbers-other
+        - numbers vs other categories
+      * - localizer_places-other
+        - places vs other categories
+      * - localizer_objects-other
+        - objects vs other categories
+      * - localizer_checkerboards-other
+        - checkerboards vs other categories
+      * - response
+        - response to star image as control
 
 Abstraction
 -----------
 
 .. container:: tags
 
-   
+   :bdg-primary:`visual_form_recognition` :bdg-primary:`visual_place_recognition` :bdg-secondary:`semantic_categorization` :bdg-light:`mental_representation` :bdg-primary:`visual_body_recognition` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -4548,7 +4823,7 @@ Abstraction
 
 This protocol was adapted from an ongoing study from our colleagues at Neurospin, CEA Saclay, France. The goal of the study is to understand the neural representations of  real-world things from different semantic categories at various levels of abstraction/rendering. So to achieve that, the subjects were presented with images belonging to six different semantic categories - human body, animals, faces, flora, objects and places, all rendered at three different levels of detail namely - geometry, edges and photos (in an ascending order of detail). To control for the attention there were five images of a star and the subjects were required to press a button when they saw them. There were four different examples from each category making a total of (6 categories x 4 examples x 3 renderings = 72 + 5 star probes =) 77 images. Each image was presented twice, for 300 ms with a variable inter-stimulus durations of 4, 6 or 8 seconds. There were 8 such runs and a localizer. The localizer was different from the four runs in that the images were from eight different categories - faces, human body, words, non-sense words, numbers, places, objects and checkerboards. Each category in the localizer was presented in a block of 6 seconds with each image being displayed for 100 ms followed by a 200 ms inter-stimuli interval. Each category block was presented 5 times (8 categories x 5 = 40 blocks) and the inter-block intervals were jittered for 4, 6 and 8 seconds (mean = 6 seconds).
 
-The conditions for this task are described in `this table <condAbstraction_>`__.
+The conditions for this task are described in `this table <condAbstraction_>`__ and the main contrasts derived from those conditions are described in `this table <contAbstraction_>`__.
 
 .. dropdown:: Conditions for Abstraction
    :name: condAbstraction
@@ -4560,7 +4835,7 @@ The conditions for this task are described in `this table <condAbstraction_>`__.
       * - Condition
         - Description
       * - humanbody_standing_geometry
-        - Geometry rendering of standing human 
+        - Geometry rendering of standing human
       * - humanbody_walking_geometry
         - Geometry rendering of walking human
       * - humanbody_hand_geometry
@@ -4580,131 +4855,233 @@ The conditions for this task are described in `this table <condAbstraction_>`__.
       * - humanbody_walking_photo
         - Photo rendering of walking human
       * - humanbody_hand_photo
-        - Photo rendering of hands   
+        - Photo rendering of hands
       * - humanbody_legs_photo
-        - Photo rendering of  legs
+        - Photo rendering of legs
       * - animals_bird_geometry
-        - Images of a bird  presented with the geometry render
+        - Images of a bird presented with the geometry render
       * - animals_fish_geometry
-        - Images of a fish  presented with the geometry render
-      * - animals_girafe_geometry
-        - Images of a girafe  presented with the geometry render
+        - Images of a fish presented with the geometry render
+      * - animals_giraffe_geometry
+        - Images of a giraffe presented with the geometry render
       * - animals_butterfly_geometry
-        - Images of a butterfly  presented with the geometry render
+        - Images of a butterfly presented with the geometry render
       * - animals_bird_edge
-        - Images of a bird  presented with the edge render
+        - Images of a bird presented with the edge render
       * - animals_fish_edge
-        - Images of a fish  presented with the edge render
-      * - animals_girafe_edge
-        - Images of a girafe  presented with the edge render
+        - Images of a fish presented with the edge render
+      * - animals_giraffe_edge
+        - Images of a giraffe presented with the edge render
       * - animals_butterfly_edge
-        - Images of a butterfly  presented with the edge render
+        - Images of a butterfly presented with the edge render
       * - animals_bird_photo
-        - Images of a bird  presented with the photo render
+        - Images of a bird presented with the photo render
       * - animals_fish_photo
-        - Images of a fish  presented with the photo render
-      * - animals_girafe_photo
-        - Images of a girafe  presented with the photo render
+        - Images of a fish presented with the photo render
+      * - animals_giraffe_photo
+        - Images of a giraffe presented with the photo render
       * - animals_butterfly_photo
-        - Images of a butterfly  presented with the photo render
+        - Images of a butterfly presented with the photo render
       * - faces_face_geometry
-        - Image of a face  presented with the geometry render
+        - Image of a face presented with the geometry render
       * - faces_face2_geometry
-        - Image of a diferent face  presented with the geometry render
+        - Image of a different face presented with the geometry render
       * - faces_eyes_geometry
-        - Image of eyes  presented with the geometry render
+        - Image of eyes presented with the geometry render
       * - faces_cat_geometry
-        - Image of a cat face  presented with the geometry render
+        - Image of a cat face presented with the geometry render
       * - faces_face_edge
-        - Image of a face  presented with the edge render
+        - Image of a face presented with the edge render
       * - faces_face2_edge
-        - Image of a different face  presented with the edge render
+        - Image of a different face presented with the edge render
       * - faces_eyes_edge
-        - Image of eyes  presented with the edge render
+        - Image of eyes presented with the edge render
       * - faces_cat_edge
-        - Image of a cat face  presented with the edge render
+        - Image of a cat face presented with the edge render
       * - faces_face_photo
-        - Image of a face  presented with the photo render
+        - Image of a face presented with the photo render
       * - faces_face2_photo
-        - Image of a different face  presented with the photo render
+        - Image of a different face presented with the photo render
       * - faces_eyes_photo
-        - Image of eyes  presented with the photo render
+        - Image of eyes presented with the photo render
       * - faces_cat_photo
-        - Image of a cat face  presented with the photo render
+        - Image of a cat face presented with the photo render
       * - flora_tree_geometry
-        - Image of a tree  presented with the photo render
+        - Image of a tree presented with the photo render
       * - flora_flower_geometry
-        - Image of a flower  presented with the photo render
+        - Image of a flower presented with the photo render
       * - flora_cherry_geometry
-        - Image of a cherry  presented with the photo render
+        - Image of a cherry presented with the photo render
       * - flora_carrot_geometry
-        - Image of a carrot  presented with the photo render
+        - Image of a carrot presented with the photo render
       * - flora_tree_edge
-        - Image of a tree  presented with the photo render
+        - Image of a tree presented with the photo render
       * - flora_flower_edge
-        - Image of a flower  presented with the photo render
+        - Image of a flower presented with the photo render
       * - flora_cherry_edge
-        - Image of a cherry  presented with the photo render
+        - Image of a cherry presented with the photo render
       * - flora_carrot_edge
-        - Image of a carrot  presented with the photo render
+        - Image of a carrot presented with the photo render
       * - flora_tree_photo
-        - Image of a tree  presented with the photo render
+        - Image of a tree presented with the photo render
       * - flora_flower_photo
-        - Image of a flower  presented with the photo render
+        - Image of a flower presented with the photo render
       * - flora_cherry_photo
-        - Image of a cherry  presented with the photo render
+        - Image of a cherry presented with the photo render
       * - flora_carrot_photo
-        - Image of a carrot  presented with the photo render
+        - Image of a carrot presented with the photo render
       * - objects_truck_geometry
-        - Image of a truck  presented with the photo render
+        - Image of a truck presented with the photo render
       * - objects_key_geometry
-        - Image of a key  presented with the photo render
+        - Image of a key presented with the photo render
       * - objects_camera_geometry
-        - Image of a camara  presented with the photo render
+        - Image of a camara presented with the photo render
       * - objects_watch_geometry
-        - Image of a watch  presented with the photo render
+        - Image of a watch presented with the photo render
       * - objects_truck_edge
-        - Image of a truck  presented with the photo render
+        - Image of a truck presented with the photo render
       * - objects_key_edge
-        - Image of a key  presented with the photo render
+        - Image of a key presented with the photo render
       * - objects_camera_edge
-        - Image of a camara  presented with the photo render
+        - Image of a camara presented with the photo render
       * - objects_watch_edge
-        - Image of a watch  presented with the photo render
+        - Image of a watch presented with the photo render
       * - objects_truck_photo
-        - Image of a truck  presented with the photo render
+        - Image of a truck presented with the photo render
       * - objects_key_photo
-        - Image of a key  presented with the photo render
+        - Image of a key presented with the photo render
       * - objects_camera_photo
-        - Image of a camara  presented with the photo render
+        - Image of a camara presented with the photo render
       * - objects_watch_photo
-        - Image of a watch  presented with the photo render
+        - Image of a watch presented with the photo render
       * - places_house_geometry
-        - Image of a house  presented with the photo render
+        - Image of a house presented with the photo render
       * - places_mountain_geometry
-        - Image of a mountain  presented with the photo render
+        - Image of a mountain presented with the photo render
       * - places_road_geometry
-        - Image of a road  presented with the photo render
+        - Image of a road presented with the photo render
       * - places_windmill_geometry
-        - Image of a windmill  presented with the photo render
+        - Image of a windmill presented with the photo render
       * - places_house_edge
-        - Image of a house  presented with the photo render
+        - Image of a house presented with the photo render
       * - places_mountain_edge
-        - Image of a mountain  presented with the photo render
+        - Image of a mountain presented with the photo render
       * - places_road_edge
-        - Image of a road  presented with the photo render
+        - Image of a road presented with the photo render
       * - places_windmill_edge
-        - Image of a windmill  presented with the photo render
+        - Image of a windmill presented with the photo render
       * - places_house_photo
-        - Image of a house  presented with the photo render
+        - Image of a house presented with the photo render
       * - places_mountain_photo
-        - Image of a mountain  presented with the photo render
+        - Image of a mountain presented with the photo render
       * - places_road_photo
-        - Image of a road  presented with the photo render
+        - Image of a road presented with the photo render
       * - places_windmill_photo
-        - Image of a windmill  presented with the photo render
+        - Image of a windmill presented with the photo render
       * - response
         - Subject's button press when they saw a star
+
+.. dropdown:: Contrasts for Abstraction
+   :name: contAbstraction
+
+   .. list-table::
+      :header-rows: 1
+      :widths: 25 75
+
+      * - Contrast
+        - Description
+      * - humanbody_geometry
+        - geometry renders of human bodies
+      * - humanbody_edge
+        - edges renders of human bodies
+      * - humanbody_photo
+        - photos of human bodies
+      * - animals_geometry
+        - geometry renders of animals
+      * - animals_edge
+        - edge renders of an animals
+      * - animals_photo
+        - photo of an animal
+      * - faces_geometry
+        - geometry renders of human faces
+      * - faces_edge
+        - edge renders of human faces
+      * - faces_photo
+        - photos of human faces
+      * - flora_geometry
+        - geometry renders of flora
+      * - flora_edge
+        - edge renders of flora
+      * - flora_photo
+        - photos of flora
+      * - objects_geometry
+        - geometry renders of objects
+      * - objects_edge
+        - edge renders of objects
+      * - objects_photo
+        - photos of objects
+      * - places_geometry
+        - geometry renders of places
+      * - places_edge
+        - edge renders of places
+      * - places_photo
+        - photos of places
+      * - humanbody-other
+        - renders of human bodies vs of rest of categories
+      * - animals-other
+        - renders of animals vs of rest of categories
+      * - faces-other
+        - renders of faces vs of rest of categories
+      * - flora-other
+        - renders of flora vs of rest of categories
+      * - objects-other
+        - renders of objects vs of rest of categories
+      * - places-other
+        - renders of places vs of rest of categories
+      * - geometry-other
+        - geometry vs edge and photo render
+      * - edge-other
+        - edge vs geometry and photo render
+      * - photo-other
+        - photo vs geometry and edge render
+      * - humanbody_geometry-humanbody_other
+        - geometry vs edge and photo render of human bodies
+      * - humanbody_edge-humanbody_other
+        - edge vs geometry and photo render of human bodies
+      * - humanbody_photo-humanbody_other
+        - photo vs geometry and edge render of human bodies
+      * - animals_geometry-animals_other
+        - geometry vs edge and photo render of animals
+      * - animals_edge-animals_other
+        - edge vs geometry and photo render of animals
+      * - animals_photo-animals_other
+        - photo vs geometry and edge render of animals
+      * - faces_geometry-faces_other
+        - geometry vs edge and photo render of faces
+      * - faces_edge-faces_other
+        - edge vs geometry and photo render of faces
+      * - faces_photo-faces_other
+        - photo vs geometry and edge render of faces
+      * - flora_geometry-flora_other
+        - geometry vs edge and photo render of flora
+      * - flora_edge-flora_other
+        - edge vs geometry and photo render of flora
+      * - flora_photo-flora_other
+        - photo vs geometry and edge render of flora
+      * - objects_geometry-objects_other
+        - geometry vs edge and photo render of objects
+      * - objects_edge-objects_other
+        - edge vs geometry and photo render of objects
+      * - objects_photo-objects_other
+        - photo vs geometry and edge render of objects
+      * - places_geometry-places_other
+        - geometry vs edge and photo render of places
+      * - places_edge-places_other
+        - edge vs geometry and photo render of places
+      * - places_photo-places_other
+        - photo vs geometry and edge render of places
+      * - response
+        - button press to star
 
 MDTB
 ----
@@ -4739,7 +5116,7 @@ This protocol was adapted from a study conducted by `King et al., 2019 <https://
 
 **9) Rest:** Short resting-state period, a fixation cross was displayed and subjects were asked to fixate on it and not move.
 
-The conditions for this task are described in `this table <condMDTB_>`__.
+The conditions for this task are described in `this table <condMDTB_>`__ and the main contrasts derived from those conditions are described in `this table <contMDTB_>`__.
 
 .. dropdown:: Conditions for MDTB
    :name: condMDTB
@@ -4776,6 +5153,54 @@ The conditions for this task are described in `this table <condMDTB_>`__.
         - Easy to decide whether the last word fits in the sentence, natural sequence
       * - semantic hard
         - Hard to decide whether the last word fits in the sentence, ambiguous sequence
+
+.. dropdown:: Contrasts for MDTB
+   :name: contMDTB
+
+   .. list-table::
+      :header-rows: 1
+      :widths: 25 75
+
+      * - Contrast
+        - Description
+      * - action_action 
+        - watching hands make a specific knot
+      * - action_control
+        - resulting knot shown from different angles
+      * - finger_simple
+        - easy sequence of button presses
+      * - finger_complex
+        - hard sequence of button presses
+      * - semantic_hard
+        - hard to decide whether the last word fits in a sentence
+      * - semantic_easy
+        - easy to decide whether the last word fits in a sentence
+      * - 2back_easy
+        - easy 2-back
+      * - 2back_hard
+        - hard 2-back
+      * - tom_photo
+        - statement relates to facts from paragraph
+      * - tom_belief
+        - statement relates to character's believes
+      * - search_easy
+        - easy to look for the right-oriented shape
+      * - search_hard
+        - hard to look for the right-oriented shape
+      * - flexion_extension
+        - continuous toes flexion-extension
+      * - action_action-control
+        - hands making specific knot vs resulting knot
+      * - finger_complex-simple
+        - hard vs easy button sequence
+      * - semantic_hard-easy
+        - ambiguous vs natural sequence
+      * - 2back_hard-easy
+        - hard vs easy 2-back
+      * - tom_belief-photo
+        - statement relates to believes vs facts
+      * - search_hard-easy
+        - hard vs easy to look for the correct shape
 
 Emotion
 -------
