@@ -13,7 +13,7 @@ ArchiStandard
 
 .. container:: tags
 
-   :bdg-primary:`visual_attention` :bdg-success:`auditory_sentence_comprehension` :bdg-primary:`visual_arithmetic_processing` :bdg-primary:`vertical_checkerboard` :bdg-success:`auditory_arithmetic_processing` 
+   :bdg-success:`auditory_sentence_comprehension` :bdg-primary:`vertical_checkerboard` :bdg-primary:`visual_attention` :bdg-success:`auditory_attention` :bdg-primary:`visual_arithmetic_processing` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -114,7 +114,7 @@ ArchiSpatial
 
 .. container:: tags
 
-   :bdg-light:`hand_chirality_recognition` :bdg-primary:`visual_body_recognition` :bdg-warning:`saccadic_eye_movement` :bdg-warning:`grasping` :bdg-primary:`visual_tool_recognition` 
+   :bdg-primary:`visual_body_recognition` :bdg-warning:`grasping` :bdg-light:`hand_chirality_recognition` :bdg-primary:`visual_tool_recognition` :bdg-light:`hand_side_recognition` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -175,7 +175,7 @@ ArchiSocial
 
 .. container:: tags
 
-   :bdg-success:`sound_perception` :bdg-success:`auditory_sentence_recognition` :bdg-primary:`visual_imagery` :bdg-success:`voice_perception` :bdg-secondary:`narrative_comprehension` 
+   :bdg-warning:`motion_detection` :bdg-success:`auditory_sentence_recognition` :bdg-success:`auditory_perception` :bdg-light:`animacy_perception` :bdg-dark:`animacy_decision` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -254,7 +254,7 @@ ArchiEmotional
 
 .. container:: tags
 
-   :bdg-danger:`emotional_expression` :bdg-light:`gender_discrimination` :bdg-primary:`visual_pattern_recognition` :bdg-primary:`visual_representation` :bdg-primary:`visual_orientation` 
+   :bdg-primary:`visual_pattern_recognition` :bdg-primary:`visual_representation` :bdg-primary:`facial_trustworthiness_recognition` :bdg-danger:`emotional_expression` :bdg-primary:`visual_orientation` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -331,7 +331,7 @@ HcpEmotion
 
 .. container:: tags
 
-   :bdg-light:`feature_comparison` :bdg-primary:`visual_form_recognition` :bdg-primary:`emotional_face_recognition` 
+   :bdg-primary:`emotional_face_recognition` :bdg-light:`feature_comparison` :bdg-primary:`visual_form_recognition` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -380,7 +380,7 @@ HcpGambling
 
 .. container:: tags
 
-   :bdg-dark:`reward_processing` :bdg-dark:`punishment_processing` 
+   :bdg-dark:`punishment_processing` :bdg-dark:`reward_processing` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -429,7 +429,7 @@ HcpMotor
 
 .. container:: tags
 
-   :bdg-warning:`right_hand_response_execution` :bdg-warning:`left_hand_response_execution` :bdg-warning:`tongue_response_execution` :bdg-info:`working_memory` :bdg-warning:`response_execution` 
+   :bdg-warning:`left_toe_response_execution` :bdg-warning:`right_hand_response_execution` :bdg-warning:`response_selection` :bdg-info:`working_memory` :bdg-warning:`tongue_response_execution` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -498,7 +498,7 @@ HcpLanguage
 
 .. container:: tags
 
-   :bdg-success:`auditory_arithmetic_processing` :bdg-success:`auditory_sentence_recognition` :bdg-secondary:`narrative_comprehension` 
+   :bdg-success:`auditory_sentence_recognition` :bdg-success:`auditory_arithmetic_processing` :bdg-secondary:`narrative_comprehension` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -547,7 +547,7 @@ HcpRelational
 
 .. container:: tags
 
-   :bdg-light:`feature_comparison` :bdg-primary:`visual_form_recognition` :bdg-primary:`visual_pattern_recognition` :bdg-light:`relational_comparison` 
+   :bdg-light:`relational_comparison` :bdg-light:`feature_comparison` :bdg-primary:`visual_form_recognition` :bdg-primary:`visual_pattern_recognition` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -594,7 +594,7 @@ HcpSocial
 
 .. container:: tags
 
-   :bdg-light:`animacy_perception` :bdg-warning:`motion_detection` :bdg-light:`mentalization` :bdg-dark:`animacy_decision` 
+   :bdg-warning:`motion_detection` :bdg-light:`animacy_perception` :bdg-dark:`animacy_decision` :bdg-light:`mentalization` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -641,7 +641,7 @@ HcpWm
 
 .. container:: tags
 
-   :bdg-light:`tool_maintenance` :bdg-light:`body_maintenance` :bdg-primary:`visual_place_recognition` :bdg-light:`place_maintenance` :bdg-info:`working_memory` 
+   :bdg-primary:`face_maintenance` :bdg-primary:`visual_body_recognition` :bdg-light:`updating` :bdg-info:`working_memory` :bdg-primary:`visual_tool_recognition` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -722,7 +722,7 @@ RSVPLanguage
 
 .. container:: tags
 
-   :bdg-secondary:`word_maintenance` :bdg-primary:`visual_string_recognition` :bdg-info:`working_memory` :bdg-secondary:`syntactic_parsing` :bdg-light:`recognition` 
+   :bdg-primary:`visual_pseudoword_recognition` :bdg-secondary:`word_maintenance` :bdg-info:`working_memory` :bdg-secondary:`sentence_comprehension` :bdg-secondary:`syntactic_parsing` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -813,7 +813,7 @@ MTTWE
 
 .. container:: tags
 
-   :bdg-light:`time_orientation` :bdg-secondary:`semantic_categorization` :bdg-info:`spatial_working_memory` :bdg-light:`past_time` :bdg-light:`future_time` 
+   :bdg-light:`temporal_distance` :bdg-success:`auditory_perception` :bdg-light:`spatial_localization` :bdg-light:`spatial_distance` :bdg-info:`memory_retrieval` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -907,7 +907,7 @@ MTTNS
 
 .. container:: tags
 
-   :bdg-light:`time_orientation` :bdg-secondary:`semantic_categorization` :bdg-info:`spatial_working_memory` :bdg-dark:`north_cardinal-direction_judgment` :bdg-light:`past_time` 
+   :bdg-light:`temporal_distance` :bdg-success:`auditory_perception` :bdg-light:`spatial_localization` :bdg-light:`spatial_distance` :bdg-info:`memory_retrieval` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -998,7 +998,7 @@ PreferenceFood
 
 .. container:: tags
 
-   :bdg-dark:`incentive_salience` :bdg-dark:`reward_valuation` :bdg-dark:`judgment` :bdg-light:`food_cue_reactivity` :bdg-dark:`confidence_judgment` 
+   :bdg-light:`food_cue_reactivity` :bdg-dark:`confidence_judgment` :bdg-dark:`judgment` :bdg-dark:`incentive_salience` :bdg-dark:`reward_valuation` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -1047,7 +1047,7 @@ PreferencePaintings
 
 .. container:: tags
 
-   :bdg-dark:`incentive_salience` :bdg-dark:`reward_valuation` :bdg-dark:`judgment` :bdg-dark:`confidence_judgment` :bdg-primary:`visual_color_discrimination` 
+   :bdg-dark:`confidence_judgment` :bdg-primary:`visual_form_discrimination` :bdg-dark:`judgment` :bdg-dark:`incentive_salience` :bdg-dark:`reward_valuation` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -1096,7 +1096,7 @@ PreferenceFaces
 
 .. container:: tags
 
-   :bdg-dark:`incentive_salience` :bdg-primary:`facial_attractiveness_recognition` :bdg-dark:`reward_valuation` :bdg-dark:`judgment` :bdg-dark:`confidence_judgment` 
+   :bdg-primary:`facial_attractiveness_recognition` :bdg-dark:`confidence_judgment` :bdg-primary:`face_perception` :bdg-dark:`judgment` :bdg-dark:`incentive_salience` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -1145,7 +1145,7 @@ PreferenceHouses
 
 .. container:: tags
 
-   :bdg-dark:`incentive_salience` :bdg-primary:`visual_place_recognition` :bdg-dark:`reward_valuation` :bdg-dark:`judgment` :bdg-dark:`confidence_judgment` 
+   :bdg-dark:`confidence_judgment` :bdg-primary:`visual_place_recognition` :bdg-dark:`judgment` :bdg-dark:`incentive_salience` :bdg-dark:`reward_valuation` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -1194,7 +1194,7 @@ TheoryOfMind
 
 .. container:: tags
 
-   :bdg-secondary:`semantic_processing` :bdg-secondary:`narrative_comprehension` :bdg-light:`theory-of-mind` 
+   :bdg-light:`theory-of-mind` :bdg-secondary:`narrative_comprehension` :bdg-secondary:`semantic_processing` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -1241,7 +1241,7 @@ EmotionalPain
 
 .. container:: tags
 
-   :bdg-danger:`imagined_physical_pain` :bdg-danger:`empathy` :bdg-danger:`imagined_emotional_pain` :bdg-secondary:`narrative_comprehension` 
+   :bdg-secondary:`narrative_comprehension` :bdg-danger:`imagined_physical_pain` :bdg-danger:`imagined_emotional_pain` :bdg-danger:`empathy` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -1288,7 +1288,7 @@ PainMovie
 
 .. container:: tags
 
-   :bdg-primary:`visual_attention` :bdg-danger:`imagined_physical_pain` :bdg-danger:`empathy` :bdg-danger:`imagined_emotional_pain` :bdg-light:`mentalization` 
+   :bdg-primary:`visual_attention` :bdg-light:`theory-of-mind` :bdg-danger:`imagined_physical_pain` :bdg-danger:`imagined_emotional_pain` :bdg-danger:`empathy` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -1335,7 +1335,7 @@ VSTM
 
 .. container:: tags
 
-   :bdg-info:`short-term_memory` :bdg-primary:`visual_orientation` :bdg-primary:`visual_form_discrimination` :bdg-primary:`visual_buffer` :bdg-light:`numerosity` 
+   :bdg-info:`short-term_memory` :bdg-primary:`shape_recognition` :bdg-primary:`visual_buffer` :bdg-primary:`visual_form_discrimination` :bdg-light:`numerosity` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -1384,7 +1384,7 @@ Enumeration
 
 .. container:: tags
 
-   :bdg-light:`numerosity` :bdg-primary:`visual_buffer` :bdg-light:`enumeration` :bdg-info:`visual_working_memory` :bdg-primary:`shape_recognition` 
+   :bdg-primary:`shape_recognition` :bdg-primary:`visual_buffer` :bdg-light:`numerosity` :bdg-light:`enumeration` :bdg-info:`visual_working_memory` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -1433,7 +1433,7 @@ Self
 
 .. container:: tags
 
-   :bdg-info:`episodic_memory` :bdg-light:`other-reference_effect` :bdg-light:`self-reference_effect` :bdg-light:`memory	reading` :bdg-secondary:`reading` 
+   :bdg-info:`episodic_memory` :bdg-light:`self-reference_effect` :bdg-secondary:`reading` :bdg-light:`other-reference_effect` :bdg-dark:`judgment` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -1508,7 +1508,7 @@ Bang
 
 .. container:: tags
 
-   :bdg-secondary:`language_comprehension` :bdg-secondary:`_language_comprehension` :bdg-light:`social_cognition` :bdg-success:`auditory_scene_analysis` :bdg-light:`action_perception` 
+   :bdg-light:`action_perception` :bdg-success:`_auditory_scene_analysis` :bdg-secondary:`_language_processing` :bdg-secondary:`language_comprehension` :bdg-secondary:`_language_comprehension` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -1572,7 +1572,7 @@ Wedge
 
 .. container:: tags
 
-   :bdg-primary:`lower-left_vision` :bdg-primary:`upper-left_vision` :bdg-primary:`lower-right_vision` :bdg-primary:`visual_color_discrimination` :bdg-primary:`upper-right_vision` 
+   :bdg-primary:`upper-right_vision` :bdg-primary:`lower-right_vision` :bdg-primary:`lower-left_vision` :bdg-primary:`upper-left_vision` :bdg-primary:`visual_color_discrimination` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -1641,7 +1641,7 @@ Ring
 
 .. container:: tags
 
-   :bdg-primary:`mid-peripheral_vision` :bdg-primary:`visual_color_discrimination` :bdg-primary:`far-peripheral_vision` :bdg-primary:`foveal_vision` 
+   :bdg-primary:`far-peripheral_vision` :bdg-primary:`visual_color_discrimination` :bdg-primary:`foveal_vision` :bdg-primary:`mid-peripheral_vision` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -1706,7 +1706,7 @@ Lec2
 
 .. container:: tags
 
-   :bdg-secondary:`language_comprehension` :bdg-secondary:`word_maintenance` :bdg-secondary:`reading` :bdg-info:`working_memory` :bdg-light:`inhibition` 
+   :bdg-secondary:`word_maintenance` :bdg-info:`working_memory` :bdg-secondary:`reading` :bdg-light:`inhibition` :bdg-secondary:`language_comprehension` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -1751,7 +1751,7 @@ Audi
 
 .. container:: tags
 
-   :bdg-secondary:`language_comprehension` :bdg-secondary:`semantic_processing` :bdg-success:`sound_perception` :bdg-success:`voice_perception` :bdg-success:`auditory_sentence_recognition` 
+   :bdg-success:`auditory_sentence_recognition` :bdg-success:`auditory_perception` :bdg-success:`auditory_attention` :bdg-secondary:`semantic_processing` :bdg-success:`music_perception` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -1864,7 +1864,7 @@ Visu
 
 .. container:: tags
 
-   :bdg-secondary:`reading` :bdg-primary:`visual_string_recognition` :bdg-light:`object_recognition` :bdg-primary:`visual_scene_perception` :bdg-primary:`visual_representation` 
+   :bdg-primary:`visual_pseudoword_recognition` :bdg-light:`object_recognition` :bdg-secondary:`reading` :bdg-primary:`visual_representation` :bdg-primary:`visual_tool_recognition` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -1949,7 +1949,7 @@ Lec1
 
 .. container:: tags
 
-   :bdg-secondary:`semantic_processing` :bdg-secondary:`reading` :bdg-primary:`visual_string_recognition` :bdg-primary:`visual_word_recognition` :bdg-primary:`visual_pseudoword_recognition` 
+   :bdg-primary:`visual_pseudoword_recognition` :bdg-secondary:`reading` :bdg-secondary:`semantic_processing` :bdg-secondary:`language_processing` :bdg-primary:`visual_string_recognition` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -2006,7 +2006,7 @@ MVEB
 
 .. container:: tags
 
-   :bdg-primary:`visual_attention` :bdg-light:`numerosity` :bdg-info:`visual_working_memory` :bdg-primary:`visual_buffer` :bdg-light:`string_maintenance` 
+   :bdg-primary:`visual_attention` :bdg-primary:`visual_buffer` :bdg-light:`numerosity` :bdg-info:`visual_working_memory` :bdg-light:`string_maintenance` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -2219,7 +2219,7 @@ MCSE
 
 .. container:: tags
 
-   :bdg-light:`salience` :bdg-primary:`lower-left_vision` :bdg-primary:`upper-left_vision` :bdg-primary:`visual_localization` :bdg-primary:`lower-right_vision` 
+   :bdg-primary:`upper-right_vision` :bdg-light:`salience` :bdg-primary:`lower-right_vision` :bdg-primary:`visual_search` :bdg-primary:`visual_localization` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -2282,7 +2282,7 @@ Audio
 
 .. container:: tags
 
-   :bdg-success:`sound_perception` :bdg-success:`voice_perception` :bdg-success:`listening` :bdg-success:`speech_perception` :bdg-success:`auditory_attention` 
+   :bdg-success:`auditory_perception` :bdg-success:`auditory_attention` :bdg-success:`music_perception` :bdg-success:`listening` :bdg-secondary:`language_processing` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -2376,7 +2376,7 @@ Attention
 
 .. container:: tags
 
-   :bdg-warning:`saccadic_eye_movement` :bdg-light:`selective_attention` :bdg-light:`spatial_attention` :bdg-light:`attentional_focusing` 
+   :bdg-light:`selective_attention` :bdg-light:`attentional_focusing` :bdg-light:`spatial_attention` :bdg-warning:`saccadic_eye_movement` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -2442,7 +2442,7 @@ StopSignal
 
 .. container:: tags
 
-   :bdg-primary:`shape_perception` :bdg-light:`proactive_control` :bdg-primary:`shape_recognition` 
+   :bdg-primary:`shape_recognition` :bdg-light:`proactive_control` :bdg-primary:`shape_perception` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -2490,7 +2490,7 @@ TwoByTwo
 
 .. container:: tags
 
-   :bdg-light:`cue_switch` :bdg-primary:`visual_perception` 
+   :bdg-primary:`visual_perception` :bdg-light:`cue_switch` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -2610,7 +2610,7 @@ SelectiveStopSignal
 
 .. container:: tags
 
-   :bdg-primary:`shape_perception` :bdg-light:`proactive_control` :bdg-primary:`shape_recognition` 
+   :bdg-primary:`shape_recognition` :bdg-light:`proactive_control` :bdg-primary:`shape_perception` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -2672,7 +2672,7 @@ Stroop
 
 .. container:: tags
 
-   :bdg-light:`conflict_detection` :bdg-light:`proactive_control` :bdg-primary:`visual_perception` 
+   :bdg-light:`conflict_detection` :bdg-primary:`visual_perception` :bdg-light:`proactive_control` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -2719,7 +2719,7 @@ ColumbiaCards
 
 .. container:: tags
 
-   :bdg-dark:`risk_processing` :bdg-dark:`reward_processing` :bdg-dark:`risk_aversion` 
+   :bdg-dark:`risk_aversion` :bdg-dark:`reward_processing` :bdg-dark:`risk_processing` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -2769,7 +2769,7 @@ DotPatterns
 
 .. container:: tags
 
-   :bdg-light:`proactive_control` :bdg-primary:`shape_recognition` 
+   :bdg-primary:`shape_recognition` :bdg-light:`proactive_control` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -2838,7 +2838,7 @@ WardAndAllport
 
 .. container:: tags
 
-   :bdg-info:`working_memory` :bdg-light:`goal_hierarchy` :bdg-light:`search_depth` :bdg-light:`planning` :bdg-primary:`visual_perception` 
+   :bdg-light:`search_depth` :bdg-light:`goal_hierarchy` :bdg-info:`working_memory` :bdg-light:`planning` :bdg-primary:`visual_perception` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -2903,7 +2903,7 @@ BiologicalMotion1
 
 .. container:: tags
 
-   :bdg-light:`vertical_flip` :bdg-warning:`global_motion_coherence` :bdg-warning:`local_motion_coherence` :bdg-warning:`motion_detection` :bdg-light:`BiologicalMotion` 
+   :bdg-warning:`motion_detection` :bdg-light:`BiologicalMotion` :bdg-warning:`global_motion_coherence` :bdg-warning:`local_motion_coherence` :bdg-warning:`biological_motion` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -2968,7 +2968,7 @@ BiologicalMotion2
 
 .. container:: tags
 
-   :bdg-light:`vertical_flip` :bdg-warning:`scrambled_motion` :bdg-warning:`local_motion_coherence` :bdg-warning:`motion_detection` :bdg-light:`BiologicalMotion` 
+   :bdg-warning:`motion_detection` :bdg-warning:`scrambled_motion` :bdg-light:`BiologicalMotion` :bdg-warning:`local_motion_coherence` :bdg-light:`vertical_flip` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -3050,7 +3050,7 @@ MathLanguage
 
 .. container:: tags
 
-   :bdg-success:`auditory_sentence_comprehension` :bdg-primary:`visual_arithmetic_processing` :bdg-success:`auditory_geometric_processing` :bdg-success:`auditory_arithmetic_processing` :bdg-success:`auditory_sentence_recognition` 
+   :bdg-success:`auditory_sentence_comprehension` :bdg-success:`auditory_sentence_recognition` :bdg-success:`auditory_geometric_processing` :bdg-success:`auditory_perception` :bdg-light:`theory-of-mind` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -3182,7 +3182,7 @@ SpatialNavigation
 
 .. container:: tags
 
-   :bdg-info:`spatial_working_memory` :bdg-light:`navigation` :bdg-primary:`visual_search` :bdg-info:`spatial_memory` :bdg-light:`spatial_localization` 
+   :bdg-light:`spatial_localization` :bdg-info:`spatial_memory` :bdg-primary:`visual_search` :bdg-info:`spatial_working_memory` :bdg-light:`navigation` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -3265,7 +3265,7 @@ EmoMem
 
 .. container:: tags
 
-   :bdg-light:`imagination` :bdg-primary:`visual_cue` :bdg-danger:`negative_emotion` :bdg-danger:`positive_emotion` :bdg-primary:`visual_perception` 
+   :bdg-primary:`visual_perception` :bdg-danger:`positive_emotion` :bdg-danger:`negative_emotion` :bdg-primary:`visual_cue` :bdg-light:`imagination` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -3322,7 +3322,7 @@ EmoReco
 
 .. container:: tags
 
-   :bdg-primary:`face_perception` :bdg-danger:`emotional_expression` :bdg-danger:`negative_emotion` :bdg-light:`gender_perception` 
+   :bdg-danger:`negative_emotion` :bdg-primary:`face_perception` :bdg-light:`gender_perception` :bdg-danger:`emotional_expression` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -3387,7 +3387,7 @@ StopNogo
 
 .. container:: tags
 
-   :bdg-primary:`shape_perception` :bdg-light:`proactive_control` :bdg-primary:`shape_recognition` 
+   :bdg-primary:`shape_recognition` :bdg-light:`proactive_control` :bdg-primary:`shape_perception` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -3446,7 +3446,7 @@ Catell
 
 .. container:: tags
 
-   :bdg-light:`oddball_detection` :bdg-primary:`visual_form_discrimination` 
+   :bdg-primary:`visual_form_discrimination` :bdg-light:`oddball_detection` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -3604,7 +3604,7 @@ RewProc
 
 .. container:: tags
 
-   :bdg-primary:`visual_cue` :bdg-dark:`reward_processing` :bdg-dark:`loss_aversion` :bdg-dark:`reward_valuation` :bdg-light:`cue_switch` 
+   :bdg-primary:`upper-right_vision` :bdg-primary:`lower-right_vision` :bdg-dark:`risk_aversion` :bdg-dark:`loss_aversion` :bdg-primary:`visual_perception` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -3695,7 +3695,7 @@ NARPS
 
 .. container:: tags
 
-   :bdg-dark:`loss_aversion` :bdg-dark:`reward_processing` :bdg-dark:`reward_valuation` :bdg-dark:`reward_anticipation` :bdg-dark:`risk_aversion` 
+   :bdg-dark:`risk_aversion` :bdg-dark:`loss_aversion` :bdg-dark:`reward_anticipation` :bdg-dark:`risk_processing` :bdg-dark:`decision_making` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -3764,7 +3764,7 @@ FaceBody
 
 .. container:: tags
 
-   :bdg-light:`body_maintenance` :bdg-primary:`visual_place_recognition` :bdg-primary:`visual_number_recognition` :bdg-light:`place_maintenance` :bdg-info:`working_memory` 
+   :bdg-primary:`face_maintenance` :bdg-primary:`visual_body_recognition` :bdg-primary:`visual_letter_recognition` :bdg-light:`updating` :bdg-info:`working_memory` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -3851,7 +3851,7 @@ Scene
 
 .. container:: tags
 
-   :bdg-light:`oddball_detection` :bdg-light:`salience` :bdg-primary:`lower-left_vision` :bdg-primary:`upper-left_vision` :bdg-primary:`visual_scene_perception` 
+   :bdg-primary:`upper-right_vision` :bdg-light:`salience` :bdg-light:`oddball_detection` :bdg-primary:`lower-right_vision` :bdg-primary:`visual_search` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -4051,7 +4051,7 @@ ItemRecognition
 
 .. container:: tags
 
-   :bdg-primary:`visual_attention` :bdg-info:`spatial_working_memory` :bdg-light:`spatial_working_memorytask_difficulty` :bdg-light:`numerosity` 
+   :bdg-primary:`visual_attention` :bdg-info:`spatial_working_memory` :bdg-light:`numerosity` :bdg-light:`spatial_working_memorytask_difficulty` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -4128,7 +4128,7 @@ VisualSearch
 
 .. container:: tags
 
-   :bdg-primary:`visual_attention` :bdg-info:`working_memory_maintenance` :bdg-primary:`visual_pattern_recognition` :bdg-primary:`visual_form_discrimination` :bdg-primary:`visual_search` 
+   :bdg-info:`working_memory_maintenance` :bdg-primary:`visual_attention` :bdg-primary:`visual_search` :bdg-primary:`visual_form_discrimination` :bdg-info:`visual_working_memory` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -4306,7 +4306,7 @@ Motion
 
 .. container:: tags
 
-   :bdg-primary:`lower-left_vision` :bdg-primary:`upper-left_vision` :bdg-light:`color_perception` :bdg-primary:`visual_awareness` :bdg-light:`motion detection` 
+   :bdg-warning:`random_motion` :bdg-warning:`motion_detection` :bdg-primary:`visual_localization` :bdg-warning:`coherent_motion` :bdg-primary:`lower-left_vision` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -4379,7 +4379,7 @@ OptimismBias
 
 .. container:: tags
 
-   :bdg-light:`self-reference_effect` :bdg-light:`past_time` :bdg-light:`future_time` :bdg-light:`episodic_future_thinking` :bdg-info:`emotional_memory` 
+   :bdg-light:`self-reference_effect` :bdg-info:`emotional_memory` :bdg-light:`episodic_future_thinking` :bdg-info:`memory_retrieval` :bdg-light:`episodic_simulation` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -4460,7 +4460,7 @@ HarririAomic
 
 .. container:: tags
 
-   :bdg-danger:`emotional_expression` :bdg-primary:`visual_orientation` :bdg-primary:`emotional_face_recognition` :bdg-primary:`face_perception` :bdg-primary:`shape_recognition` 
+   :bdg-primary:`emotional_face_recognition` :bdg-primary:`shape_recognition` :bdg-primary:`face_perception` :bdg-danger:`emotional_expression` :bdg-primary:`visual_orientation` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -4515,7 +4515,7 @@ FacesAomic
 
 .. container:: tags
 
-   :bdg-danger:`negative_emotion` :bdg-light:`feature_integration` :bdg-primary:`facial_expression` :bdg-danger:`emotional_expression` :bdg-light:`gender_perception` 
+   :bdg-primary:`facial_expression` :bdg-light:`gender_perception` :bdg-danger:`negative_emotion` :bdg-primary:`face_perception` :bdg-danger:`emotional_expression` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -4598,7 +4598,7 @@ StroopAomic
 
 .. container:: tags
 
-   :bdg-light:`conflict_detection` :bdg-primary:`visual_word_recognition` :bdg-light:`gender_perception` :bdg-primary:`face_perception` 
+   :bdg-light:`conflict_detection` :bdg-light:`gender_perception` :bdg-primary:`face_perception` :bdg-primary:`visual_word_recognition` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -4671,7 +4671,7 @@ WorkingMemoryAomic
 
 .. container:: tags
 
-   :bdg-primary:`visual_attention` :bdg-primary:`visual_orientation` :bdg-info:`visual_working_memory` 
+   :bdg-primary:`visual_orientation` :bdg-primary:`visual_attention` :bdg-info:`visual_working_memory` 
 
 .. admonition:: Implemented using proprietary software
    :class: seealso
@@ -4724,7 +4724,7 @@ AbstractionLocalizer
 
 .. container:: tags
 
-   :bdg-primary:`visual_attention` :bdg-primary:`visual_place_recognition` :bdg-primary:`vertical_checkerboard` :bdg-primary:`visual_number_recognition` :bdg-primary:`horizontal_checkerboard` 
+   :bdg-primary:`visual_body_recognition` :bdg-primary:`visual_attention` :bdg-primary:`visual_pseudoword_recognition` :bdg-primary:`vertical_checkerboard` :bdg-primary:`visual_recognition` 
 
 .. admonition:: Implementation 
    :class: seealso
@@ -4813,7 +4813,7 @@ Abstraction
 
 .. container:: tags
 
-   :bdg-primary:`visual_form_recognition` :bdg-primary:`visual_place_recognition` :bdg-secondary:`semantic_categorization` :bdg-light:`mental_representation` :bdg-primary:`visual_body_recognition` 
+   :bdg-primary:`visual_body_recognition` :bdg-light:`edge_detection` :bdg-light:`animacy_perception` :bdg-light:`mental_representation` :bdg-primary:`visual_representation` 
 
 .. admonition:: Implementation 
    :class: seealso

@@ -68,3 +68,9 @@ html_favicon = "logos/ibc/ibc3.png"
 html_static_path = ["_static"]
 
 html_css_files = ["custom.css"]
+
+nbsphinx_prolog = """
+.. nbinfo::
+
+    Download this notebook `here <https://github.com/individual-brain-charting/api/blob/main/examples/get_data.ipynb>`_.
+"""
