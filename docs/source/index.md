@@ -18,6 +18,11 @@ The Individual Brain Charting (IBC) project has collected a high-resolution mult
 
 get_data
 ibc_api
+```
+
+```{toctree}
+:caption: Tasks
+:hidden:
 tasks
 ```
 
