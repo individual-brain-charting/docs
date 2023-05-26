@@ -16,6 +16,7 @@ The Individual Brain Charting (IBC) project has collected a high-resolution mult
 :caption: Quickstart
 :hidden:
 
+api_install
 get_data
 ibc_api
 ```
@@ -23,6 +24,7 @@ ibc_api
 ```{toctree}
 :caption: Tasks
 :hidden:
+
 tasks
 ```
 
