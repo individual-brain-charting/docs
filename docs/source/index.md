@@ -37,6 +37,5 @@ participants
 mri_acquisitions
 mridata_organization
 experimentaldesign_diagrams
-section8
 references
 ```
