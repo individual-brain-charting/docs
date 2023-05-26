@@ -13,7 +13,7 @@ To install the package containing the API, execute the following command:
 
     pip install git+https://github.com/individual-brain-charting/api.git#egg=ibc_api
 
-This api is under active development, so make sure to update it regularly
+This api is under active development, so make sure to update it regularly:
 
 .. code-block:: python
     :name: quick_update
