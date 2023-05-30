@@ -296,7 +296,7 @@ with open("docs/tasks_intro.rst", "r") as intro:
 intro.close()
 
 with open("docs/source/tasks.rst", "w") as rst:
-    rst.write("Tasks\n")
+    rst.write("All tasks\n")
     rst.write("=" * 5 + "\n\n")
     rst.write(tasks_intro)
     for task in d["tasks"].keys():

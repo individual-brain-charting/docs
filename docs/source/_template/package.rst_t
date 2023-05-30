@@ -16,7 +16,7 @@
 {%- if is_namespace %}
 {{- [pkgname, "namespace"] | join(" ") | e | heading }}
 {% else %}
-{{- ["API Reference"] | join(" ") | e | heading }}
+{{- ["API references"] | join(" ") | e | heading }}
 {% endif %}
 
 {%- if is_namespace %}

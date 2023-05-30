@@ -22,7 +22,7 @@ ibc_api
 ```
 
 ```{toctree}
-:caption: Tasks
+:caption: Task Descriptions
 :hidden:
 
 tasks

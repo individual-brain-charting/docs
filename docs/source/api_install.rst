@@ -1,5 +1,8 @@
-API Installation
+Initial setup
 ================
+
+API Installation
+----------------
 
 To facilitate data fetching with minimal coding, we've integrated powerful tools into
 this `API <https://github.com/individual-brain-charting/api>`__.
