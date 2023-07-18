@@ -16,6 +16,7 @@ The Individual Brain Charting (IBC) project has collected a high-resolution mult
 :caption: Quickstart
 :hidden:
 
+data_hosting
 api_install
 get_data
 ibc_api
