@@ -40,3 +40,10 @@ mridata_organization
 experimentaldesign_diagrams
 references
 ```
+
+```{toctree}
+:caption: Contact
+:hidden:
+
+contact
+```
