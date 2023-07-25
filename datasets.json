@@ -2,13 +2,13 @@
     "volume_maps": [
         {
             "version": 1,
-            "db_file": "stat_volume_v1.csv",
+            "db_file": "volume_maps_v1.csv",
             "id": "07ab1665-73b0-40c5-800e-557bc319109d",
             "root": "resulting_smooth_maps"
         },
         {
             "version": 2,
-            "db_file": "stat_volume_v2.csv",
+            "db_file": "volume_maps_v2.csv",
             "id": "ad04f919-7dcc-48d9-864a-d7b62af3d49d",
             "root": "resulting_smooth_maps"
         }
@@ -16,7 +16,7 @@
     "surface_maps": [
         {
             "version": 1,
-            "db_file": "stat_surface_v1.csv",
+            "db_file": "surface_maps_v1.csv",
             "id": "ad04f919-7dcc-48d9-864a-d7b62af3d49d",
             "root": "resulting_smooth_maps_surface"
         }
