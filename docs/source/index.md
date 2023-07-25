@@ -42,7 +42,7 @@ references
 ```
 
 ```{toctree}
-:caption: Contact
+:caption: Miscellaneous
 :hidden:
 
 contact

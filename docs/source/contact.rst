@@ -1,14 +1,14 @@
 Contact Us
 ==========
 
-If you have any questions, comments, or concerns regarding tasks, code, implementation details, etc, or if you have ideas for collaborations, please contact us, we would appreciate your feedback and we will be happy to help or collaborate with you.
+If you have any questions, comments, or concerns regarding tasks, code, implementation details, etc, or if you have ideas for collaborations, please contact us. We appreciate all feedback and we will be happy to help and collaborate.
 
 
 Get in touch with the IBC team
 --------------------------------
 
 `Bertrand Thirion <https://pages.saclay.inria.fr/bertrand.thirion/>`__  is the leader of the IBC project. 
-Send an email for any general question about the project: bertrand.thirion@inria.fr
+Send an email for any general question about the project: firstname.lastname@inria.fr
 
 Questions on IBC protocols?
 ----------------------------
