@@ -24,7 +24,7 @@
     "preprocessed": [
         {
             "version": 1,
-            "db_file": "",
+            "db_file": "preprocessed.csv",
             "id": "3ca4f5a1-647b-4829-8107-588a699763c1",
             "root": "PreprocessedData_v1.0"
         }
