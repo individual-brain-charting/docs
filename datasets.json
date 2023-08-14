@@ -8,7 +8,7 @@
         },
         {
             "version": 2,
-            "db_file": "volume_maps_v2.csv",
+            "db_file": "volume_maps.csv",
             "id": "ad04f919-7dcc-48d9-864a-d7b62af3d49d",
             "root": "resulting_smooth_maps"
         }
@@ -16,7 +16,7 @@
     "surface_maps": [
         {
             "version": 1,
-            "db_file": "surface_maps_v1.csv",
+            "db_file": "surface_maps.csv",
             "id": "ad04f919-7dcc-48d9-864a-d7b62af3d49d",
             "root": "resulting_smooth_maps_surface"
         }
@@ -26,7 +26,7 @@
             "version": 1,
             "db_file": "",
             "id": "3ca4f5a1-647b-4829-8107-588a699763c1",
-            "root": ""
+            "root": "PreprocessedData_v1.0"
         }
     ],
     "raw": [
@@ -44,9 +44,9 @@
         },
         {
             "version": 3,
-            "db_file": "",
+            "db_file": "raw.csv",
             "id": "8ddf749f-fb1d-4d16-acc3-fbde91b90e24",
-            "root": ""
+            "root": "v3.0"
         }
     ]
 }
