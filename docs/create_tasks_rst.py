@@ -47,6 +47,9 @@ for _, row in df_conditions.iterrows():
         d["tasks"][row["task"]]["conditions"][row["condition"]] = {
             "description": str(row["description"])
         }
+        d["tasks"][row["task"]]["conditions"] = dict(sorted(
+            d["tasks"][row["task"]]["conditions"].items()
+        ))
     else:
         missing_task.append(row["task"])
 
@@ -112,6 +115,9 @@ for task in d["tasks"].keys():
             "tags": tags,
             "conditions": {},
         }
+        d["tasks"][task]["contrasts"] = dict(sorted(
+            d["tasks"][task]["contrasts"].items()
+        ))
         if matrix_available:
             for i, condition in enumerate(conditions):
                 weight = row[i]
