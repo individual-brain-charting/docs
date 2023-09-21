@@ -44,7 +44,7 @@ df_conditions = pd.read_csv(
 missing_task = []
 for _, row in df_conditions.iterrows():
     if row["task"] in d["tasks"]:
-        d["tasks"][row["task"]]["conditions"][row["condition"]] = {
+        d["tasks"][row["task"]]["conditions"][row["contrast"]] = {
             "description": str(row["description"])
         }
         d["tasks"][row["task"]]["conditions"] = dict(sorted(
