@@ -23,21 +23,30 @@ ibc_api
 ```
 
 ```{toctree}
-:caption: Task Descriptions
+:caption: fMRI Data
 :hidden:
 
 tasks
+processing_pipelines
+```
+
+```{toctree}
+:caption: DWI Data
+:hidden:
+
+dwi_acquisitions
+dwi_processing
 ```
 
 ```{toctree}
 :caption: Details
 :hidden:
 
-processing_pipelines
 participants
 mri_acquisitions
 mridata_organization
 experimentaldesign_diagrams
+behavioral_data
 references
 ```
 
