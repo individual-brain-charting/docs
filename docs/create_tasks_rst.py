@@ -164,7 +164,7 @@ def write_section(
     """
     Helper function to write a section to the RST file
     """
-    description = description.replace(":raw-html:`<br />` ", "\n")
+    description = description.replace(":raw-html:`<br />` ", "\n\n")
     rst.write(f"{name}\n")
     rst.write("-" * len(name) + "\n\n")
     rst.write(".. container:: tags\n\n")
