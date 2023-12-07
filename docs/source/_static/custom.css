@@ -5,3 +5,8 @@ div.main {
 div.tags {
     text-align: left;
 }
+
+.icon-container {
+    display: flex;
+    justify-content: space-between;
+}

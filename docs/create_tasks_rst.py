@@ -29,6 +29,7 @@ for _, row in df_tasks.iterrows():
         "audio_device": str(row["audio_device"]),
         "screen_res": str(row["screen_res"]),
         "youtube": str(row["youtube"]),
+        "repo": str(row["repo"]),
         "extras": str(row["extras"]),
         "tags": [],
         "conditions": {},
@@ -157,6 +158,7 @@ def write_section(
     audio_device,
     screen_res,
     youtube,
+    repo,
     extras,
     conditions,
     contrasts,
@@ -167,6 +169,7 @@ def write_section(
     description = description.replace(":raw-html:`<br />` ", "\n\n")
     rst.write(f"{name}\n")
     rst.write("-" * len(name) + "\n\n")
+    
     rst.write(".. container:: tags\n\n")
     rst.write("   ")
     tag_count = 0
@@ -237,6 +240,7 @@ def write_section(
                 rst.write(f":bdg-light:`{tag}` ")
             tag_count += 1
     rst.write(f"\n\n")
+
     proprietary_software = ["E-Prime", "Presentation", "Vizard"]
     software_ = software.split(" ")
     if not set(software_).isdisjoint(proprietary_software):
@@ -253,6 +257,10 @@ def write_section(
         rst.write(f"   - Response device: {response_device}\n\n")
     if audio_device != 'nan':
         rst.write(f"   - Audio device: {audio_device}\n\n")
+    if repo != 'nan':
+        rst.write(f"   - :octicon:`mark-github;1em;` {repo}\n\n")
+    if youtube != 'nan':
+        rst.write(f"   - :octicon:`video;1em;` {youtube}\n\n")
     if extras != 'nan':
         rst.write(f"   - {extras}\n\n")
 
@@ -316,6 +324,7 @@ with open("docs/source/tasks.rst", "w") as rst:
             d["tasks"][task]["audio_device"],
             d["tasks"][task]["screen_res"],
             d["tasks"][task]["youtube"],
+            d["tasks"][task]["repo"],
             d["tasks"][task]["extras"],
             d["tasks"][task]["conditions"],
             d["tasks"][task]["contrasts"],
