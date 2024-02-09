@@ -47,6 +47,7 @@ mri_acquisitions
 mridata_organization
 experimentaldesign_diagrams
 behavioral_data
+movie_protocols_data
 references
 ```
 

@@ -1,7 +1,7 @@
-DWI Preprocessing Pipeline
+DWI preprocessing pipeline
 ==========================
 
-DWI Preprocessing 
+DWI preprocessing 
 -----------------
 
 The DWI data were preprocessed using *MRtrix3* (`Tournier et al., 2019 <https://doi.org/10.1016/j.neuroimage.2019.116137>`__)
@@ -21,7 +21,7 @@ No bias field correction was done.
 
 .. _subsubsec:fodtract:
 
-Fiber Orientation Density Estimation and Tractography
+Fiber orientation density estimation and tractography
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 From this preprocessed data, the response functions (required for fiber
@@ -47,7 +47,7 @@ and the fiber orientation density amplitude cut-off set at 0.6.
 
 .. _subsubsec:strucconn:
 
-Structural Connectivity Estimation
+Structural connectivity estimation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 These streamlines were then warped into the MNI152 space using *ANTs*

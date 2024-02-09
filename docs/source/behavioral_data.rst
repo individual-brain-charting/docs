@@ -1,10 +1,10 @@
-Behavioral Data 
+Behavioral data 
 ===============
 
 For most of the tasks we collect participants' responses, in order to asses their engagement and performance.
 We calculate the accuracy of the subjects' responses and we present a brief description of what this accuracy represents.
 
-MTTWE Behavioral Data
+MTTWE behavioral data
 ---------------------
 
 If the Cue presented in the given trial hinted at time judgment, participants were to 
@@ -18,7 +18,7 @@ considering the answers provided during the Event+Response conditions.
    :file: behavioral_data/mttwe_behavioral.csv
    :header-rows: 1
 
-MTTNS Behavioral Data
+MTTNS behavioral data
 ---------------------
 
 If the Cue presented in the given trial hinted at time judgment, participants were to 
@@ -35,7 +35,7 @@ in MTTWE and MTTNS tasks.
    :file: behavioral_data/mttns_behavioral.csv
    :header-rows: 1
 
-TheoryOfMind Behavioral Data
+TheoryOfMind behavioral data
 ----------------------------
 
 Participants were to judge whether a statement about the story previously displayed is 
@@ -46,7 +46,7 @@ level was 50%.
    :file: behavioral_data/tom_behavioral.csv
    :header-rows: 1
 
-VSTM Behavioral Data
+VSTM behavioral data
 --------------------
 
 Participants were to remember the orientation of the bars from the previous sample 
@@ -60,7 +60,7 @@ level was 50%.
    :file: behavioral_data/vstm_behavioral.csv
    :header-rows: 1
 
-Enumeration Behavioral Data
+Enumeration behavioral data
 ---------------------------
 
 Participants had to remember the number of the bars that were shown right before and 
@@ -73,7 +73,7 @@ numerosity. The chance level was 12.5%.
    :file: behavioral_data/enumeration_behavioral.csv
    :header-rows: 1
 
-Self Behavioral Data
+Self behavioral data
 --------------------
 
 During the trials of the *encoding blocks*, participants had to press a specific button 
@@ -91,7 +91,7 @@ therefore greater. The chance level was 50%.
    :file: behavioral_data/self_behavioral.csv
    :header-rows: 1
 
-MathLanguage Behavioral Data
+MathLanguage behavioral data
 ----------------------------
 
 Subjects were presented with a series of facts (geometrical, arithmetical,
@@ -106,7 +106,7 @@ answered more than once per trial, the first answer was considered. Since this i
    :file: behavioral_data/mathlang_behavioral.csv
    :header-rows: 1
 
-SpatialNavigation Behavioral Data
+SpatialNavigation behavioral data
 ---------------------------------
 
 Subjects were positioned in an given intersection on a virtual city and were asked to 
@@ -121,7 +121,7 @@ the location of the building, but there was no explicit precision requirement.
    :file: behavioral_data/spatialnavigation_behavioral.csv
    :header-rows: 1
 
-EmoMem Behavioral Data
+EmoMem behavioral data
 ----------------------
 
 Subjects were asked to press a button when they though of a link or "story" between 
@@ -132,7 +132,7 @@ subject was attentive, should be equal to the number of trials. The chance level
    :file: behavioral_data/emomem_behavioral.csv
    :header-rows: 1
 
-EmoReco Behavioral Data
+EmoReco behavioral data
 -----------------------
 
 Participants were instructed to press a specific button when the face corresponded to a 
@@ -144,7 +144,7 @@ Missed responses were considered incorrect.
    :file: behavioral_data/emoreco_behavioral.csv
    :header-rows: 1
 
-StopNogo Behavioral Data
+StopNogo behavioral data
 ------------------------
 
 Participants were presented with color-coded arrows. If the arrow was green, they were 
@@ -157,7 +157,7 @@ of trials in which they succeeded in withholding their response.
    :file: behavioral_data/stopnogo_behavioral.csv
    :header-rows: 1
 
-Catell Behavioral Data
+Catell behavioral data
 ----------------------
 
 Subjects were presented with four images in a row, and were asked to identify the 
@@ -168,7 +168,7 @@ correct responses, with a chance level of 25%.
    :file: behavioral_data/catell_behavioral.csv
    :header-rows: 1
 
-FingerTapping Behavioral Data
+FingerTapping behavioral data
 --------------------------------------
 
 Subjects were asked to press a button with their right hand, either a specific finger 
@@ -181,7 +181,7 @@ within the selected fingers on chosen trials. The chance level was 25%.
    :file: behavioral_data/fingertapping_behavioral.csv
    :header-rows: 1
 
-VSTMC Behavioral Data
+VSTMC behavioral data
 ------------------------------
 
 Participants had to indicate the direction of motion of a set of dots by pointing a 
@@ -194,7 +194,7 @@ correct responses.
    :file: behavioral_data/vstmc_behavioral.csv
    :header-rows: 1
 
-RewProc Behavioral Data
+RewProc behavioral data
 -----------------------
 
 Participants were tasked with choosing between two presented figures. Depending on 
@@ -206,7 +206,7 @@ level of attentiveness. The chance level is set at 50\%
    :file: behavioral_data/rewproc_behavioral.csv
    :header-rows: 1
 
-NARPS Behavioral Data
+NARPS behavioral data
 ---------------------
 
 Subjects were instructed to either accept or reject a gamble, indicating high or low 
@@ -218,7 +218,7 @@ run, excluding any missed responses. The chance level is set at 50%.
    :file: behavioral_data/narps_behavioral.csv
    :header-rows: 1
 
-FaceBody Behavioral Data
+FaceBody behavioral data
 ------------------------
 
 Subjects were instructed to press a button every time an image repeated as a mirrored 
@@ -229,7 +229,7 @@ responses. Missed responses were counted as incorrect.
    :file: behavioral_data/facebody_behavioral.csv
    :header-rows: 1
 
-Scene Behavioral Data
+Scene behavioral data
 ---------------------
 
 Subjects had to judge whether Escher-like scenes were possible or impossible. 
@@ -242,8 +242,8 @@ Missing responses were counted as incorrect, with a chance level of 50%.
    :file: behavioral_data/scene_behavioral.csv
    :header-rows: 1
 
-ItemRecognition Behavioral Data
----------------------------------------
+ItemRecognition behavioral data
+-------------------------------
 
 Participants were tasked to memorize a target and then indicate whether a probe was the 
 same as the target. The score was calculated as the number of correct decisions. 
@@ -253,7 +253,7 @@ Missed responses were marked as incorrect, and the chance level was 50%.
    :file: behavioral_data/itemreco_behavioral.csv
    :header-rows: 1
 
-VisualSearch Behavioral Data
+VisualSearch behavioral data
 ----------------------------
 
 In the VisualSearch task there were two trials. On the *visual search* trials, 

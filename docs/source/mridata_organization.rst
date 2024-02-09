@@ -2,7 +2,7 @@ MRI-data organization
 =====================
 
 The tree structure of the IBC dataset follows BIDS Specification
-(`http://bids.neuroimaging.io/ <http://bids.neuroimaging.io/>`__.), as in the `figure below <bids_>`__.
+(`http://bids.neuroimaging.io/ <http://bids.neuroimaging.io/>`__), as in the `figure below <bids_>`__.
 
 -  The identifiers of the 13 participants are "sub-01", "sub-02",
    "sub-04", ..., "sub-15".

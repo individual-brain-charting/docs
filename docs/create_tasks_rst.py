@@ -36,6 +36,30 @@ for _, row in df_tasks.iterrows():
         "contrasts": {},
     }
 
+# Add little note for Raiders about lags
+d["tasks"]["Raiders"]["description"] += (
+    " **Note:** there was some lag between the onset of each run and "
+    "the initiation  of the stimuli (movie), which might vary between runs "
+    "and subjects. This lag should probably be considered when analyzing the data. "
+    "Find more details in the section :ref:`Lags in Raiders movie`."
+)
+
+# Add little note for GoodBadUgly about lags
+d["tasks"]["GoodBadUgly"]["description"] += (
+    " **Note:** there was some lag between the onset of each run and "
+    "the initiation  of the stimuli (movie), which might vary between runs "
+    "and subjects. This lag should probably be considered when analyzing the data. "
+    "Find more details in the section :ref:`Lags in GoodBadUgly movie`."
+)
+
+# Add little note for MonkeyKingdom about lags
+d["tasks"]["MonkeyKingdom"]["description"] += (
+    " **Note:** there was some lag between the onset of each run and "
+    "the initiation  of the stimuli (movie), which might vary between runs "
+    "and subjects. This lag should probably be considered when analyzing the data. "
+    "Find more details in the section :ref:`Lags in MonkeyKingdom movie`."
+)
+
 # %%
 # Add descriptions for all conditions
 df_conditions = pd.read_csv(
@@ -64,7 +88,7 @@ warnings.warn(
 )
 
 # %%
-# Add descriptions for all constrasts.
+# Add descriptions for all contrasts.
 # This includes contrast string description
 # but also a list of all conditions used to compute this contrast
 df_all_contrasts = pd.read_csv(

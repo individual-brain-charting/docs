@@ -1,7 +1,7 @@
-fMRI Processing Pipelines
+fMRI processing pipelines
 =========================
 
-fMRI Preprocessing
+fMRI preprocessing
 ------------------
 
 Source data were preprocessed using *PyPreprocess*. This library offers
@@ -37,7 +37,7 @@ T1-weighted MPRAGE images and 1.5 mm for the EPI images.
 
 .. _subsubsec:modelspec:
 
-Model Specification
+Model specification
 ~~~~~~~~~~~~~~~~~~~
 
 The fMRI data were analyzed using the *General Linear Model* (GLM).
@@ -70,7 +70,7 @@ In addition, a discrete-cosine transform set was applied for high-pass filtering
 
 .. _subsubsec:modelest:
 
-Model Estimation
+Model estimation
 ~~~~~~~~~~~~~~~~
 
 In order to restrict GLM parameters estimation to voxels inside
