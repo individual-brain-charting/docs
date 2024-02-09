@@ -13,7 +13,7 @@ varied between runs and subjects.
 
 When synchrony between the movie and acquisition times is required, this lag must be considered.
 We provide here the exact lag for each run and each subject. Note that this table can also be 
-download as a *csv* file `here <https://github.com/individual-brain-charting/public_analysis_code/blob/master/ibc_data/movie_protocols_data/lags_raiders.csv>`__.
+download as a *csv* file `here <https://github.com/individual-brain-charting/docs/blob/main/movie_protocols_data/lags_raiders.csv>`__.
 
 The *lag* represents the time between the acquisition onset and the stimuli onset, in milliseconds.
 The *run* column includes the video file name corresponding to the movie section shown during each run, along with the respective run number.
@@ -31,7 +31,7 @@ Similar to the Raiders movie, there was a lag between the acquisition onset and 
 This lag could vary across runs and subjects, and should be considered when synchrony between the movie and acquisition times is required.
 
 We provide here the exact lag for each run and each subject. Note that this table can also be
-download as a *csv* file `here <https://github.com/individual-brain-charting/public_analysis_code/blob/master/ibc_data/movie_protocols_data/lags_raiders.csv>`__.
+download as a *csv* file `here <https://github.com/individual-brain-charting/docs/blob/main/movie_protocols_data/lags_goodbadugly.csv>`__.
 
 The *lag* represents the time between the acquisition onset and the stimuli onset, in milliseconds.
 The *run* column includes the video file name corresponding to the movie section shown during each run, along with the respective run number.
@@ -48,7 +48,7 @@ Lags in MonkeyKingdom movie
 We report here the exact lags for each run across subjects for the Monkey Kingdom movie. 
 The *lag* represents the time between the acquisition onset and the stimuli onset, and could vary across runs and subjects.
 
-This table can be downloaded `here <https://github.com/individual-brain-charting/public_analysis_code/blob/master/ibc_data/movie_protocols_data/lags_raiders.csv>`__.
+This table can be downloaded `here <https://github.com/individual-brain-charting/docs/blob/main/movie_protocols_data/lags_monkeykingdom.csv>`__.
 
 The *lags* are reported in milliseconds.
 
