@@ -17,6 +17,9 @@ download as a *csv* file `here <https://github.com/individual-brain-charting/doc
 
 The *lag* represents the time between the acquisition onset and the stimuli onset, in milliseconds.
 The *run* column includes the video file name corresponding to the movie section shown during each run, along with the respective run number.
+Please note that the first three sections of the movie (movie clips displayed during the first three runs) were presented to the participants 
+again at the end of the last session. As a result, the *run* column includes the video file name and the run number for the first three, 
+along with the *test* legend.
 
 .. dropdown:: Lags in Raiders movie
 
@@ -35,6 +38,9 @@ download as a *csv* file `here <https://github.com/individual-brain-charting/doc
 
 The *lag* represents the time between the acquisition onset and the stimuli onset, in milliseconds.
 The *run* column includes the video file name corresponding to the movie section shown during each run, along with the respective run number.
+Please note that the first three sections of the movie (movie clips displayed during the first three runs) were presented to the participants 
+again at the end of the last session. As a result, the *run* column includes the video file name and the run number for the first three, 
+along with the *test* legend.
 
 .. dropdown:: Lags in GoodBadUgly movie
 
