@@ -335,7 +335,7 @@ intro.close()
 
 with open("docs/source/tasks.rst", "w") as rst:
     rst.write("All tasks\n")
-    rst.write("=" * 5 + "\n\n")
+    rst.write("=" * 9 + "\n\n")
     rst.write(tasks_intro)
     for task in d["tasks"].keys():
         write_section(
