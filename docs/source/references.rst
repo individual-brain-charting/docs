@@ -531,6 +531,24 @@ References
       https://doi.org/10.1186/1471-2202-8-91.
 
    .. container::
+      :name: ref-Pinho2024
+
+      Pinho, Ana Luísa, Hugo Richard, Ana Fernanda Ponce,
+      Michael Eickenberg, Alexis Amadon, Elvis Dohmatob, Isabelle Denghien,
+      et al. 2024. “Individual Brain Charting dataset extension,
+      third release for movie watching and retinotopy data” *Sci Data* 11: 590.
+      https://doi.org/10.1038/s41597-024-03390-1.
+
+   .. container::
+      :name: ref-Pinho2021
+
+      Pinho, Ana Luísa, Alexis Amadon, Murielle Fabre, Elvis Dohmatob,
+      Isabelle Denghien, Juan Jes{\'u}s Torre, Chantal Ginisty, et al. 2021.
+      “Subject-specific segregation of functional territories based on deep
+      phenotyping” *Hum Brain Mapp* 42(4): 841-870.
+      https://doi.org/10.1002/hbm.25189.
+
+   .. container::
       :name: ref-Pinho2020
 
       Pinho, Ana Luísa, Alexis Amadon, Baptiste Gauthier, Nicolas

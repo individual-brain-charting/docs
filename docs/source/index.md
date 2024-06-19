@@ -8,6 +8,8 @@ The Individual Brain Charting (IBC) project has collected a high-resolution mult
 
 # Cite
 
+- Pinho, A.L. *et al.* (2024) Individual Brain Charting dataset extension, third release for movie watching and retinotopy data. *Sci Data* **11**(1), 590. DOI: [10.1038/s41597-024-03390-1](https://doi.org/10.1038/s41597-024-03390-1).
+
 - Pinho, A.L. *et al.* (2020) Individual Brain Charting dataset extension, second release of high-resolution fMRI data for cognitive mapping. *Sci Data* **7**, 353. DOI: [10.1038/s41597-020-00670-4](https://doi.org/10.1038/s41597-020-00670-4).
 
 - Pinho, A. L. *et al.* (2018) Individual Brain Charting, a high-resolution fMRI dataset for cognitive mapping. *Sci Data* **5**, 180105. DOI: [10.1038/sdata.2018.105](https://doi.org/10.1038/sdata.2018.105).
