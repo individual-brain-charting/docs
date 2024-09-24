@@ -1,0 +1,25 @@
+ibc\_api package
+================
+
+Submodules
+----------
+
+
+.. automodule:: ibc_api.metadata
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+.. automodule:: ibc_api.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: ibc_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
