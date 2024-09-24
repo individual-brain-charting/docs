@@ -10,3 +10,7 @@ div.tags {
     display: flex;
     justify-content: space-between;
 }
+
+figcaption, .figure .caption {
+    text-align: justify;
+}

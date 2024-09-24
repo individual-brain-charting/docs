@@ -32,9 +32,7 @@ runs in terms of MRI sequences within sessions:
    the right side of the corresponding row.
 
 Besides, a plan of the MRI sessions undertaken per participant can be
-found in Table `[table:acqplan_appendix] <#table:acqplan_appendix>`__.
-and a summary of the fMRI-data anomalies over sessions and participants
-can be found in Table `[table:dataanomalies_appendix] <#table:dataanomalies_appendix>`__.
+found in :ref:`this figure <tasksubdiagram>`.
 
 Parameters of the MRI sequences
 -------------------------------

@@ -35,3 +35,16 @@ consult (Pinho et al. 2018).
    *sub-14*   2016                28.3 M   0.7
    *sub-15*   2017                30.3 M   0.9
    ========== =================== ==== === ================
+
+Tasks performed by each participant
+-----------------------------------
+
+The figure below illustrates the tasks completed by each participant, highlighting the variation in task participation across individuals. While some participants completed all tasks, others only performed a subset of them.
+
+.. _tasksubdiagram:
+
+.. figure:: misc_figures/who_did_what.png
+   :alt: Tasks performed by each participant.
+   :scale: 20 %
+
+   **Tasks performed by each participant.** Each row corresponds to a different task, and each column represents a participant. Cells are highlighted in green if the participant completed the task; otherwise, the cell remains uncolored.
