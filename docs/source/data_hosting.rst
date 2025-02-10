@@ -20,13 +20,16 @@ Additionally, task-specific details are provided for each task within the datase
 Preprocessed fMRI data
 ----------------------
 
-The preprocessed fMRI data repository can be accessed by this `link <https://search.kg.ebrains.eu/instances/3ca4f5a1-647b-4829-8107-588a699763c1>`__.
+The preprocessed fMRI data repository can be accessed on this `link <https://search.kg.ebrains.eu/instances/44214176-0e8c-48de-8cff-4b6f9593415d>`__.
 This collection also contains task-specific information and subject-specific confounds and event-related log files.
+
+Along with this, we provide a version of the preprocessed data that have been resampled at 3-millimeter isotropic resolution.
+This version can be accessed by following this `link <https://search.kg.ebrains.eu/instances/ed615ee5-fdaa-4f1d-8fcd-8c55d05a4e2d>`__.
 
 Statistical contrast maps
 -------------------------
 
-Derived statistical contrast maps have been released `here <https://search.kg.ebrains.eu/instances/ad04f919-7dcc-48d9-864a-d7b62af3d49d>`__.
+Derived statistical contrast maps have been released `here <https://search.kg.ebrains.eu/instances/131add71-e838-4dab-b953-7b7a69ac5d8f>`__.
 These maps are provided in both volume and surface space formats, with contrast labels corresponding to those outlined in the documentation.
 
 Other platforms
