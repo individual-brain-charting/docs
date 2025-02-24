@@ -13,7 +13,7 @@ The IBC dataset is available in the Knowledge Graph as a collection of instances
 Raw fMRI data
 -------------
 
-The most recent version of the raw fMRI data can be accessed by following this `link <https://search.kg.ebrains.eu/instances/8ddf749f-fb1d-4d16-acc3-fbde91b90e24>`__.
+The most recent version of the raw fMRI data can be accessed by following this `link <https://search.kg.ebrains.eu/instances/462d8b9c-1c02-442c-9b95-2241f46ee586>`__.
 This collection contains high resolution raw fMRI data, along with Diffusion Weighted Imaging (DWI) and various structural MRI data (T1-weighted, T2-weighted and FLAIR imaging).
 Additionally, task-specific details are provided for each task within the dataset.
 
