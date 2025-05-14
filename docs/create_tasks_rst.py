@@ -7,7 +7,6 @@
 
 # %%
 import warnings
-
 from pathlib import Path
 
 import numpy as np
@@ -19,7 +18,7 @@ d = {"tasks": {}}
 
 # %%
 # Add descriptions for all tasks
-df_tasks = pd.read_csv("ibc_tasks.tsv", delimiter="\t")
+df_tasks = pd.read_csv("ibc_tasks.tsv", delimiter="\t", encoding="utf-8")
 
 for _, row in df_tasks.iterrows():
     d["tasks"][row["task"]] = {
@@ -333,7 +332,8 @@ with open("docs/tasks_intro.rst", "r") as intro:
 # close the file
 intro.close()
 
-with open("docs/source/tasks.rst", "w") as rst:
+with open("docs/source/tasks.rst", "w", encoding="utf-8") as rst:
+    rst.write(".. coding: utf-8\n\n")
     rst.write("All tasks\n")
     rst.write("=" * 9 + "\n\n")
     rst.write(tasks_intro)
