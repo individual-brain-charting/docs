@@ -332,6 +332,7 @@ with open("docs/tasks_intro.rst", "r") as intro:
 # close the file
 intro.close()
 
+# dummy commit
 with open("docs/source/tasks.rst", "w", encoding="utf-8") as rst:
     rst.write(".. coding: utf-8\n\n")
     rst.write("All tasks\n")
