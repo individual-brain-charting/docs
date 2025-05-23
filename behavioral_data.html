@@ -1,0 +1,2806 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="./">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Movie protocols implementation" href="movie_protocols_data.html" /><link rel="prev" title="Experimental-design diagrams" href="experimentaldesign_diagrams.html" />
+
+    <link rel="shortcut icon" href="_static/ibc3.png"/><!-- Generated with Sphinx 8.1.3 and Furo 2024.08.06 -->
+        <title>Behavioral data - Individual Brain Charting documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=302659d7" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c80d620e" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">Individual Brain Charting  documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="_static/ibc3.png" alt="Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Individual Brain Charting  documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Quickstart</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data_hosting.html">Data hosting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api_install.html">Install data fetcher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_data.html">Get the data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ibc_api.html">API references</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">fMRI Data</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tasks.html">All tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="processing_pipelines.html">fMRI processing pipelines</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DWI Data</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dwi_acquisitions.html">Diffusion-weighted Imaging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dwi_processing.html">DWI preprocessing pipeline</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Details</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="participants.html">Participants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mri_acquisitions.html">MRI acquisitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mridata_organization.html">MRI-data organization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="experimentaldesign_diagrams.html">Experimental-design diagrams</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Behavioral data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="movie_protocols_data.html">Movie protocols implementation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact Us</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="_sources/behavioral_data.rst.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="behavioral-data">
+<h1>Behavioral data<a class="headerlink" href="#behavioral-data" title="Link to this heading">¶</a></h1>
+<p>For most of the tasks we collect participants’ responses, in order to asses their engagement and performance.
+We calculate the accuracy of the subjects’ responses and we present a brief description of what this accuracy represents.</p>
+<section id="mttwe-behavioral-data">
+<h2>MTTWE behavioral data<a class="headerlink" href="#mttwe-behavioral-data" title="Link to this heading">¶</a></h2>
+<p>If the Cue presented in the given trial hinted at time judgment, participants were to
+judge whether the previous Event occurred before the Reference, by pressing the button
+of the left hand, or after the Reference, by pressing the button  of the right hand. If
+the Cue concerned with space judgment, the participants were to judge, in the same way,
+whether the Event occurred west or east of the Reference. These scores were estimated
+considering the answers provided during the Event+Response conditions.</p>
+<div class="table-wrapper docutils container" id="id1">
+<table class="docutils align-default" id="id1">
+<caption><span class="caption-text">Response accuracy (%) of performance for the MTTWE task</span><a class="headerlink" href="#id1" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Run</p></th>
+<th class="head"><p>sub-01</p></th>
+<th class="head"><p>sub-04</p></th>
+<th class="head"><p>sub-05</p></th>
+<th class="head"><p>sub-06</p></th>
+<th class="head"><p>sub-07</p></th>
+<th class="head"><p>sub-09</p></th>
+<th class="head"><p>sub-11</p></th>
+<th class="head"><p>sub-12</p></th>
+<th class="head"><p>sub-13</p></th>
+<th class="head"><p>sub-14</p></th>
+<th class="head"><p>sub-15</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>81</p></td>
+<td><p>83</p></td>
+<td><p>76</p></td>
+<td><p>71</p></td>
+<td><p>57</p></td>
+<td><p>82</p></td>
+<td><p>42</p></td>
+<td><p>76</p></td>
+<td><p>57</p></td>
+<td><p>70</p></td>
+<td><p>n/a</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>81</p></td>
+<td><p>92</p></td>
+<td><p>78</p></td>
+<td><p>83</p></td>
+<td><p>60</p></td>
+<td><p>90</p></td>
+<td><p>51</p></td>
+<td><p>76</p></td>
+<td><p>58</p></td>
+<td><p>78</p></td>
+<td><p>95</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>91</p></td>
+<td><p>100</p></td>
+<td><p>68</p></td>
+<td><p>80</p></td>
+<td><p>63</p></td>
+<td><p>86</p></td>
+<td><p>55</p></td>
+<td><p>77</p></td>
+<td><p>63</p></td>
+<td><p>76</p></td>
+<td><p>98</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mean</p></td>
+<td><p>85</p></td>
+<td><p>92</p></td>
+<td><p>75</p></td>
+<td><p>78</p></td>
+<td><p>60</p></td>
+<td><p>86</p></td>
+<td><p>50</p></td>
+<td><p>77</p></td>
+<td><p>60</p></td>
+<td><p>75</p></td>
+<td><p>97</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="mttns-behavioral-data">
+<h2>MTTNS behavioral data<a class="headerlink" href="#mttns-behavioral-data" title="Link to this heading">¶</a></h2>
+<p>If the Cue presented in the given trial hinted at time judgment, participants were to
+judge whether the previous Event occurred before the Reference, by pressing the button
+of the left hand, or after the Reference, by pressing the button  of the right hand. If
+the Cue concerned with space judgment, the participants were to judge, in the same way,
+whether the Event occurred north or south of the Reference. These scores were estimated
+considering the answers provided during the Event+Response conditions. Chance level was
+set at 50%.
+<em>Note:</em> Low scores for sub-15 relate to loss of behavioral data during acquisition time
+in MTTWE and MTTNS tasks.</p>
+<div class="table-wrapper docutils container" id="id2">
+<table class="docutils align-default" id="id2">
+<caption><span class="caption-text">Response accuracy (%) of performance for the MTTNS task</span><a class="headerlink" href="#id2" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Run</p></th>
+<th class="head"><p>sub-01</p></th>
+<th class="head"><p>sub-04</p></th>
+<th class="head"><p>sub-05</p></th>
+<th class="head"><p>sub-06</p></th>
+<th class="head"><p>sub-07</p></th>
+<th class="head"><p>sub-09</p></th>
+<th class="head"><p>sub-11</p></th>
+<th class="head"><p>sub-12</p></th>
+<th class="head"><p>sub-13</p></th>
+<th class="head"><p>sub-14</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>86</p></td>
+<td><p>93</p></td>
+<td><p>76</p></td>
+<td><p>73</p></td>
+<td><p>62</p></td>
+<td><p>83</p></td>
+<td><p>65</p></td>
+<td><p>71</p></td>
+<td><p>65</p></td>
+<td><p>73</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>88</p></td>
+<td><p>96</p></td>
+<td><p>80</p></td>
+<td><p>73</p></td>
+<td><p>72</p></td>
+<td><p>92</p></td>
+<td><p>67</p></td>
+<td><p>76</p></td>
+<td><p>53</p></td>
+<td><p>68</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>91</p></td>
+<td><p>100</p></td>
+<td><p>56</p></td>
+<td><p>82</p></td>
+<td><p>68</p></td>
+<td><p>87</p></td>
+<td><p>70</p></td>
+<td><p>70</p></td>
+<td><p>57</p></td>
+<td><p>72</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mean</p></td>
+<td><p>89</p></td>
+<td><p>97</p></td>
+<td><p>71</p></td>
+<td><p>77</p></td>
+<td><p>68</p></td>
+<td><p>88</p></td>
+<td><p>68</p></td>
+<td><p>72</p></td>
+<td><p>59</p></td>
+<td><p>72</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="theoryofmind-behavioral-data">
+<h2>TheoryOfMind behavioral data<a class="headerlink" href="#theoryofmind-behavioral-data" title="Link to this heading">¶</a></h2>
+<p>Participants were to judge whether a statement about the story previously displayed is
+true or false by pressing respectively with the index or middle finger. The chance
+level was 50%.</p>
+<div class="table-wrapper docutils container" id="id3">
+<table class="docutils align-default" id="id3">
+<caption><span class="caption-text">Response accuracy (%) of performance for the TheoryOfMind task</span><a class="headerlink" href="#id3" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Run</p></th>
+<th class="head"><p>sub-01</p></th>
+<th class="head"><p>sub-04</p></th>
+<th class="head"><p>sub-05</p></th>
+<th class="head"><p>sub-06</p></th>
+<th class="head"><p>sub-07</p></th>
+<th class="head"><p>sub-09</p></th>
+<th class="head"><p>sub-11</p></th>
+<th class="head"><p>sub-12</p></th>
+<th class="head"><p>sub-13</p></th>
+<th class="head"><p>sub-14</p></th>
+<th class="head"><p>sub-15</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>90</p></td>
+<td><p>90</p></td>
+<td><p>70</p></td>
+<td><p>70</p></td>
+<td><p>80</p></td>
+<td><p>n/a</p></td>
+<td><p>90</p></td>
+<td><p>70</p></td>
+<td><p>90</p></td>
+<td><p>80</p></td>
+<td><p>90</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>80</p></td>
+<td><p>80</p></td>
+<td><p>80</p></td>
+<td><p>90</p></td>
+<td><p>60</p></td>
+<td><p>50</p></td>
+<td><p>70</p></td>
+<td><p>80</p></td>
+<td><p>70</p></td>
+<td><p>70</p></td>
+<td><p>70</p></td>
+</tr>
+<tr class="row-even"><td><p>Mean</p></td>
+<td><p>85</p></td>
+<td><p>85</p></td>
+<td><p>75</p></td>
+<td><p>80</p></td>
+<td><p>70</p></td>
+<td><p>50</p></td>
+<td><p>80</p></td>
+<td><p>75</p></td>
+<td><p>80</p></td>
+<td><p>75</p></td>
+<td><p>80</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="vstm-behavioral-data">
+<h2>VSTM behavioral data<a class="headerlink" href="#vstm-behavioral-data" title="Link to this heading">¶</a></h2>
+<p>Participants were to remember the orientation of the bars from the previous sample
+and answer with one of the two possible button presses depending on whether one of the
+bars in the current display had changed orientation by 90◦ or not, which was the case
+in half of the trials. For each level of numerosity, scores in every run are related to
+the trials referring to visual stimuli matching the specified numerosity. The chance
+level was 50%.</p>
+<div class="table-wrapper docutils container" id="id4">
+<table class="docutils align-default" id="id4">
+<caption><span class="caption-text">Response accuracy (%) of performance for the VSTM task</span><a class="headerlink" href="#id4" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Numerosity</p></th>
+<th class="head"><p>Run</p></th>
+<th class="head"><p>sub-01</p></th>
+<th class="head"><p>sub-04</p></th>
+<th class="head"><p>sub-05</p></th>
+<th class="head"><p>sub-06</p></th>
+<th class="head"><p>sub-07</p></th>
+<th class="head"><p>sub-09</p></th>
+<th class="head"><p>sub-11</p></th>
+<th class="head"><p>sub-12</p></th>
+<th class="head"><p>sub-13</p></th>
+<th class="head"><p>sub-14</p></th>
+<th class="head"><p>sub-15</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>All numerosities</p></td>
+<td><p>1</p></td>
+<td><p>36</p></td>
+<td><p>51</p></td>
+<td><p>28</p></td>
+<td><p>53</p></td>
+<td><p>44</p></td>
+<td><p>49</p></td>
+<td><p>58</p></td>
+<td><p>35</p></td>
+<td><p>29</p></td>
+<td><p>33</p></td>
+<td><p>40</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>2</p></td>
+<td><p>49</p></td>
+<td><p>49</p></td>
+<td><p>12</p></td>
+<td><p>57</p></td>
+<td><p>36</p></td>
+<td><p>56</p></td>
+<td><p>50</p></td>
+<td><p>40</p></td>
+<td><p>35</p></td>
+<td><p>18</p></td>
+<td><p>38</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>3</p></td>
+<td><p>40</p></td>
+<td><p>49</p></td>
+<td><p>42</p></td>
+<td><p>58</p></td>
+<td><p>46</p></td>
+<td><p>44</p></td>
+<td><p>56</p></td>
+<td><p>49</p></td>
+<td><p>42</p></td>
+<td><p>39</p></td>
+<td><p>42</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>4</p></td>
+<td><p>43</p></td>
+<td><p>58</p></td>
+<td><p>39</p></td>
+<td><p>57</p></td>
+<td><p>39</p></td>
+<td><p>56</p></td>
+<td><p>57</p></td>
+<td><p>47</p></td>
+<td><p>43</p></td>
+<td><p>43</p></td>
+<td><p>44</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Mean</p></td>
+<td><p>42</p></td>
+<td><p>52</p></td>
+<td><p>30</p></td>
+<td><p>56</p></td>
+<td><p>41</p></td>
+<td><p>51</p></td>
+<td><p>55</p></td>
+<td><p>43</p></td>
+<td><p>37</p></td>
+<td><p>33</p></td>
+<td><p>41</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>33</p></td>
+<td><p>57</p></td>
+<td><p>38</p></td>
+<td><p>56</p></td>
+<td><p>45</p></td>
+<td><p>78</p></td>
+<td><p>77</p></td>
+<td><p>38</p></td>
+<td><p>36</p></td>
+<td><p>54</p></td>
+<td><p>60</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>2</p></td>
+<td><p>60</p></td>
+<td><p>59</p></td>
+<td><p>6</p></td>
+<td><p>60</p></td>
+<td><p>31</p></td>
+<td><p>60</p></td>
+<td><p>64</p></td>
+<td><p>55</p></td>
+<td><p>31</p></td>
+<td><p>18</p></td>
+<td><p>56</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>3</p></td>
+<td><p>43</p></td>
+<td><p>62</p></td>
+<td><p>36</p></td>
+<td><p>64</p></td>
+<td><p>58</p></td>
+<td><p>29</p></td>
+<td><p>83</p></td>
+<td><p>44</p></td>
+<td><p>62</p></td>
+<td><p>33</p></td>
+<td><p>25</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>4</p></td>
+<td><p>70</p></td>
+<td><p>73</p></td>
+<td><p>54</p></td>
+<td><p>60</p></td>
+<td><p>50</p></td>
+<td><p>71</p></td>
+<td><p>58</p></td>
+<td><p>88</p></td>
+<td><p>62</p></td>
+<td><p>42</p></td>
+<td><p>50</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Mean</p></td>
+<td><p>52</p></td>
+<td><p>63</p></td>
+<td><p>34</p></td>
+<td><p>60</p></td>
+<td><p>46</p></td>
+<td><p>60</p></td>
+<td><p>70</p></td>
+<td><p>56</p></td>
+<td><p>48</p></td>
+<td><p>37</p></td>
+<td><p>48</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>1</p></td>
+<td><p>50</p></td>
+<td><p>82</p></td>
+<td><p>54</p></td>
+<td><p>54</p></td>
+<td><p>80</p></td>
+<td><p>58</p></td>
+<td><p>59</p></td>
+<td><p>36</p></td>
+<td><p>38</p></td>
+<td><p>43</p></td>
+<td><p>31</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>2</p></td>
+<td><p>58</p></td>
+<td><p>38</p></td>
+<td><p>18</p></td>
+<td><p>55</p></td>
+<td><p>29</p></td>
+<td><p>75</p></td>
+<td><p>57</p></td>
+<td><p>40</p></td>
+<td><p>27</p></td>
+<td><p>40</p></td>
+<td><p>27</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>3</p></td>
+<td><p>27</p></td>
+<td><p>50</p></td>
+<td><p>58</p></td>
+<td><p>73</p></td>
+<td><p>67</p></td>
+<td><p>41</p></td>
+<td><p>58</p></td>
+<td><p>54</p></td>
+<td><p>31</p></td>
+<td><p>38</p></td>
+<td><p>20</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>4</p></td>
+<td><p>31</p></td>
+<td><p>83</p></td>
+<td><p>17</p></td>
+<td><p>77</p></td>
+<td><p>58</p></td>
+<td><p>43</p></td>
+<td><p>67</p></td>
+<td><p>55</p></td>
+<td><p>45</p></td>
+<td><p>45</p></td>
+<td><p>56</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Mean</p></td>
+<td><p>42</p></td>
+<td><p>63</p></td>
+<td><p>37</p></td>
+<td><p>65</p></td>
+<td><p>58</p></td>
+<td><p>54</p></td>
+<td><p>60</p></td>
+<td><p>46</p></td>
+<td><p>35</p></td>
+<td><p>42</p></td>
+<td><p>34</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>1</p></td>
+<td><p>27</p></td>
+<td><p>50</p></td>
+<td><p>36</p></td>
+<td><p>100</p></td>
+<td><p>64</p></td>
+<td><p>38</p></td>
+<td><p>17</p></td>
+<td><p>46</p></td>
+<td><p>42</p></td>
+<td><p>50</p></td>
+<td><p>50</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>2</p></td>
+<td><p>44</p></td>
+<td><p>64</p></td>
+<td><p>23</p></td>
+<td><p>60</p></td>
+<td><p>54</p></td>
+<td><p>55</p></td>
+<td><p>42</p></td>
+<td><p>82</p></td>
+<td><p>42</p></td>
+<td><p>12</p></td>
+<td><p>42</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>3</p></td>
+<td><p>42</p></td>
+<td><p>45</p></td>
+<td><p>40</p></td>
+<td><p>62</p></td>
+<td><p>58</p></td>
+<td><p>44</p></td>
+<td><p>75</p></td>
+<td><p>85</p></td>
+<td><p>62</p></td>
+<td><p>33</p></td>
+<td><p>50</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>4</p></td>
+<td><p>58</p></td>
+<td><p>38</p></td>
+<td><p>71</p></td>
+<td><p>45</p></td>
+<td><p>33</p></td>
+<td><p>47</p></td>
+<td><p>50</p></td>
+<td><p>45</p></td>
+<td><p>27</p></td>
+<td><p>27</p></td>
+<td><p>36</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Mean</p></td>
+<td><p>43</p></td>
+<td><p>49</p></td>
+<td><p>42</p></td>
+<td><p>67</p></td>
+<td><p>52</p></td>
+<td><p>46</p></td>
+<td><p>46</p></td>
+<td><p>64</p></td>
+<td><p>43</p></td>
+<td><p>30</p></td>
+<td><p>44</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>1</p></td>
+<td><p>30</p></td>
+<td><p>31</p></td>
+<td><p>20</p></td>
+<td><p>61</p></td>
+<td><p>36</p></td>
+<td><p>25</p></td>
+<td><p>100</p></td>
+<td><p>25</p></td>
+<td><p>20</p></td>
+<td><p>14</p></td>
+<td><p>20</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>2</p></td>
+<td><p>50</p></td>
+<td><p>88</p></td>
+<td><p>11</p></td>
+<td><p>50</p></td>
+<td><p>40</p></td>
+<td><p>67</p></td>
+<td><p>60</p></td>
+<td><p>31</p></td>
+<td><p>21</p></td>
+<td><p>20</p></td>
+<td><p>36</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>3</p></td>
+<td><p>23</p></td>
+<td><p>42</p></td>
+<td><p>29</p></td>
+<td><p>75</p></td>
+<td><p>22</p></td>
+<td><p>64</p></td>
+<td><p>27</p></td>
+<td><p>50</p></td>
+<td><p>38</p></td>
+<td><p>36</p></td>
+<td><p>38</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>4</p></td>
+<td><p>9</p></td>
+<td><p>67</p></td>
+<td><p>40</p></td>
+<td><p>62</p></td>
+<td><p>27</p></td>
+<td><p>54</p></td>
+<td><p>56</p></td>
+<td><p>43</p></td>
+<td><p>45</p></td>
+<td><p>50</p></td>
+<td><p>45</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Mean</p></td>
+<td><p>28</p></td>
+<td><p>57</p></td>
+<td><p>25</p></td>
+<td><p>62</p></td>
+<td><p>31</p></td>
+<td><p>52</p></td>
+<td><p>61</p></td>
+<td><p>37</p></td>
+<td><p>31</p></td>
+<td><p>30</p></td>
+<td><p>35</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>1</p></td>
+<td><p>50</p></td>
+<td><p>58</p></td>
+<td><p>17</p></td>
+<td><p>33</p></td>
+<td><p>50</p></td>
+<td><p>46</p></td>
+<td><p>62</p></td>
+<td><p>40</p></td>
+<td><p>18</p></td>
+<td><p>14</p></td>
+<td><p>62</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>2</p></td>
+<td><p>42</p></td>
+<td><p>8</p></td>
+<td><p>8</p></td>
+<td><p>50</p></td>
+<td><p>31</p></td>
+<td><p>36</p></td>
+<td><p>55</p></td>
+<td><p>7</p></td>
+<td><p>46</p></td>
+<td><p>0</p></td>
+<td><p>44</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>3</p></td>
+<td><p>62</p></td>
+<td><p>54</p></td>
+<td><p>33</p></td>
+<td><p>46</p></td>
+<td><p>40</p></td>
+<td><p>40</p></td>
+<td><p>40</p></td>
+<td><p>11</p></td>
+<td><p>23</p></td>
+<td><p>42</p></td>
+<td><p>62</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>4</p></td>
+<td><p>45</p></td>
+<td><p>45</p></td>
+<td><p>33</p></td>
+<td><p>55</p></td>
+<td><p>33</p></td>
+<td><p>67</p></td>
+<td><p>64</p></td>
+<td><p>33</p></td>
+<td><p>36</p></td>
+<td><p>50</p></td>
+<td><p>36</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Mean</p></td>
+<td><p>50</p></td>
+<td><p>41</p></td>
+<td><p>23</p></td>
+<td><p>46</p></td>
+<td><p>38</p></td>
+<td><p>47</p></td>
+<td><p>55</p></td>
+<td><p>23</p></td>
+<td><p>31</p></td>
+<td><p>26</p></td>
+<td><p>51</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>1</p></td>
+<td><p>29</p></td>
+<td><p>44</p></td>
+<td><p>8</p></td>
+<td><p>18</p></td>
+<td><p>17</p></td>
+<td><p>54</p></td>
+<td><p>38</p></td>
+<td><p>21</p></td>
+<td><p>20</p></td>
+<td><p>33</p></td>
+<td><p>21</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>2</p></td>
+<td><p>30</p></td>
+<td><p>38</p></td>
+<td><p>9</p></td>
+<td><p>62</p></td>
+<td><p>33</p></td>
+<td><p>36</p></td>
+<td><p>31</p></td>
+<td><p>40</p></td>
+<td><p>44</p></td>
+<td><p>20</p></td>
+<td><p>20</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>3</p></td>
+<td><p>44</p></td>
+<td><p>36</p></td>
+<td><p>54</p></td>
+<td><p>38</p></td>
+<td><p>25</p></td>
+<td><p>46</p></td>
+<td><p>55</p></td>
+<td><p>36</p></td>
+<td><p>42</p></td>
+<td><p>50</p></td>
+<td><p>67</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>4</p></td>
+<td><p>47</p></td>
+<td><p>46</p></td>
+<td><p>9</p></td>
+<td><p>36</p></td>
+<td><p>33</p></td>
+<td><p>45</p></td>
+<td><p>46</p></td>
+<td><p>38</p></td>
+<td><p>33</p></td>
+<td><p>50</p></td>
+<td><p>47</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Mean</p></td>
+<td><p>38</p></td>
+<td><p>41</p></td>
+<td><p>20</p></td>
+<td><p>38</p></td>
+<td><p>27</p></td>
+<td><p>45</p></td>
+<td><p>42</p></td>
+<td><p>34</p></td>
+<td><p>35</p></td>
+<td><p>38</p></td>
+<td><p>39</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="enumeration-behavioral-data">
+<h2>Enumeration behavioral data<a class="headerlink" href="#enumeration-behavioral-data" title="Link to this heading">¶</a></h2>
+<p>Participants had to remember the number of the bars that were shown right before and
+answer accordingly, by pressing the corresponding button. The number of bars presented
+in the visual stimuli ranged from 1 to 8. For each level of numerosity, scores in every
+run are related to the trials referring to visual stimuli matching the specified
+numerosity. The chance level was 12.5%.</p>
+<div class="table-wrapper docutils container" id="id5">
+<table class="docutils align-default" id="id5">
+<caption><span class="caption-text">Response accuracy (%) of performance for the Enumeration task</span><a class="headerlink" href="#id5" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Numerosity</p></th>
+<th class="head"><p>Run</p></th>
+<th class="head"><p>sub-01</p></th>
+<th class="head"><p>sub-04</p></th>
+<th class="head"><p>sub-05</p></th>
+<th class="head"><p>sub-06</p></th>
+<th class="head"><p>sub-07</p></th>
+<th class="head"><p>sub-09</p></th>
+<th class="head"><p>sub-11</p></th>
+<th class="head"><p>sub-12</p></th>
+<th class="head"><p>sub-13</p></th>
+<th class="head"><p>sub-14</p></th>
+<th class="head"><p>sub-15</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>All numerosities</p></td>
+<td><p>1</p></td>
+<td><p>72</p></td>
+<td><p>67</p></td>
+<td><p>49</p></td>
+<td><p>58</p></td>
+<td><p>69</p></td>
+<td><p>69</p></td>
+<td><p>58</p></td>
+<td><p>69</p></td>
+<td><p>65</p></td>
+<td><p>34</p></td>
+<td><p>54</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>2</p></td>
+<td><p>70</p></td>
+<td><p>71</p></td>
+<td><p>47</p></td>
+<td><p>69</p></td>
+<td><p>73</p></td>
+<td><p>69</p></td>
+<td><p>51</p></td>
+<td><p>66</p></td>
+<td><p>64</p></td>
+<td><p>48</p></td>
+<td><p>50</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Mean</p></td>
+<td><p>71</p></td>
+<td><p>69</p></td>
+<td><p>48</p></td>
+<td><p>64</p></td>
+<td><p>71</p></td>
+<td><p>69</p></td>
+<td><p>54</p></td>
+<td><p>68</p></td>
+<td><p>64</p></td>
+<td><p>41</p></td>
+<td><p>52</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>100</p></td>
+<td><p>77</p></td>
+<td><p>93</p></td>
+<td><p>89</p></td>
+<td><p>100</p></td>
+<td><p>93</p></td>
+<td><p>100</p></td>
+<td><p>86</p></td>
+<td><p>100</p></td>
+<td><p>82</p></td>
+<td><p>75</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>2</p></td>
+<td><p>92</p></td>
+<td><p>100</p></td>
+<td><p>60</p></td>
+<td><p>100</p></td>
+<td><p>92</p></td>
+<td><p>70</p></td>
+<td><p>100</p></td>
+<td><p>100</p></td>
+<td><p>100</p></td>
+<td><p>82</p></td>
+<td><p>83</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Mean</p></td>
+<td><p>96</p></td>
+<td><p>88</p></td>
+<td><p>76</p></td>
+<td><p>94</p></td>
+<td><p>96</p></td>
+<td><p>82</p></td>
+<td><p>100</p></td>
+<td><p>93</p></td>
+<td><p>100</p></td>
+<td><p>82</p></td>
+<td><p>79</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>1</p></td>
+<td><p>100</p></td>
+<td><p>93</p></td>
+<td><p>83</p></td>
+<td><p>80</p></td>
+<td><p>100</p></td>
+<td><p>73</p></td>
+<td><p>92</p></td>
+<td><p>85</p></td>
+<td><p>90</p></td>
+<td><p>80</p></td>
+<td><p>88</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>2</p></td>
+<td><p>100</p></td>
+<td><p>85</p></td>
+<td><p>92</p></td>
+<td><p>100</p></td>
+<td><p>94</p></td>
+<td><p>78</p></td>
+<td><p>94</p></td>
+<td><p>100</p></td>
+<td><p>100</p></td>
+<td><p>56</p></td>
+<td><p>100</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Mean</p></td>
+<td><p>100</p></td>
+<td><p>89</p></td>
+<td><p>88</p></td>
+<td><p>90</p></td>
+<td><p>97</p></td>
+<td><p>76</p></td>
+<td><p>93</p></td>
+<td><p>92</p></td>
+<td><p>95</p></td>
+<td><p>68</p></td>
+<td><p>94</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>1</p></td>
+<td><p>100</p></td>
+<td><p>78</p></td>
+<td><p>100</p></td>
+<td><p>69</p></td>
+<td><p>83</p></td>
+<td><p>100</p></td>
+<td><p>69</p></td>
+<td><p>92</p></td>
+<td><p>87</p></td>
+<td><p>25</p></td>
+<td><p>77</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>2</p></td>
+<td><p>100</p></td>
+<td><p>100</p></td>
+<td><p>64</p></td>
+<td><p>73</p></td>
+<td><p>100</p></td>
+<td><p>100</p></td>
+<td><p>42</p></td>
+<td><p>91</p></td>
+<td><p>89</p></td>
+<td><p>80</p></td>
+<td><p>64</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Mean</p></td>
+<td><p>100</p></td>
+<td><p>89</p></td>
+<td><p>82</p></td>
+<td><p>71</p></td>
+<td><p>92</p></td>
+<td><p>100</p></td>
+<td><p>56</p></td>
+<td><p>92</p></td>
+<td><p>88</p></td>
+<td><p>52</p></td>
+<td><p>70</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>1</p></td>
+<td><p>100</p></td>
+<td><p>87</p></td>
+<td><p>33</p></td>
+<td><p>47</p></td>
+<td><p>62</p></td>
+<td><p>90</p></td>
+<td><p>0</p></td>
+<td><p>92</p></td>
+<td><p>89</p></td>
+<td><p>18</p></td>
+<td><p>40</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>2</p></td>
+<td><p>92</p></td>
+<td><p>89</p></td>
+<td><p>33</p></td>
+<td><p>67</p></td>
+<td><p>88</p></td>
+<td><p>79</p></td>
+<td><p>0</p></td>
+<td><p>83</p></td>
+<td><p>100</p></td>
+<td><p>36</p></td>
+<td><p>64</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Mean</p></td>
+<td><p>96</p></td>
+<td><p>88</p></td>
+<td><p>33</p></td>
+<td><p>57</p></td>
+<td><p>75</p></td>
+<td><p>84</p></td>
+<td><p>0</p></td>
+<td><p>88</p></td>
+<td><p>94</p></td>
+<td><p>27</p></td>
+<td><p>52</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>1</p></td>
+<td><p>17</p></td>
+<td><p>27</p></td>
+<td><p>18</p></td>
+<td><p>23</p></td>
+<td><p>58</p></td>
+<td><p>64</p></td>
+<td><p>45</p></td>
+<td><p>36</p></td>
+<td><p>0</p></td>
+<td><p>18</p></td>
+<td><p>14</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>2</p></td>
+<td><p>42</p></td>
+<td><p>47</p></td>
+<td><p>31</p></td>
+<td><p>45</p></td>
+<td><p>58</p></td>
+<td><p>80</p></td>
+<td><p>20</p></td>
+<td><p>38</p></td>
+<td><p>17</p></td>
+<td><p>33</p></td>
+<td><p>30</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Mean</p></td>
+<td><p>30</p></td>
+<td><p>37</p></td>
+<td><p>24</p></td>
+<td><p>34</p></td>
+<td><p>58</p></td>
+<td><p>72</p></td>
+<td><p>32</p></td>
+<td><p>37</p></td>
+<td><p>8</p></td>
+<td><p>26</p></td>
+<td><p>22</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>1</p></td>
+<td><p>18</p></td>
+<td><p>31</p></td>
+<td><p>8</p></td>
+<td><p>29</p></td>
+<td><p>54</p></td>
+<td><p>18</p></td>
+<td><p>60</p></td>
+<td><p>45</p></td>
+<td><p>44</p></td>
+<td><p>0</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>2</p></td>
+<td><p>23</p></td>
+<td><p>62</p></td>
+<td><p>17</p></td>
+<td><p>20</p></td>
+<td><p>64</p></td>
+<td><p>38</p></td>
+<td><p>44</p></td>
+<td><p>62</p></td>
+<td><p>20</p></td>
+<td><p>27</p></td>
+<td><p>33</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Mean</p></td>
+<td><p>20</p></td>
+<td><p>46</p></td>
+<td><p>12</p></td>
+<td><p>24</p></td>
+<td><p>59</p></td>
+<td><p>28</p></td>
+<td><p>52</p></td>
+<td><p>54</p></td>
+<td><p>32</p></td>
+<td><p>14</p></td>
+<td><p>22</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>1</p></td>
+<td><p>50</p></td>
+<td><p>58</p></td>
+<td><p>13</p></td>
+<td><p>80</p></td>
+<td><p>71</p></td>
+<td><p>55</p></td>
+<td><p>55</p></td>
+<td><p>50</p></td>
+<td><p>69</p></td>
+<td><p>12</p></td>
+<td><p>36</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>2</p></td>
+<td><p>36</p></td>
+<td><p>60</p></td>
+<td><p>22</p></td>
+<td><p>89</p></td>
+<td><p>60</p></td>
+<td><p>69</p></td>
+<td><p>67</p></td>
+<td><p>36</p></td>
+<td><p>73</p></td>
+<td><p>36</p></td>
+<td><p>8</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Mean</p></td>
+<td><p>43</p></td>
+<td><p>59</p></td>
+<td><p>18</p></td>
+<td><p>84</p></td>
+<td><p>66</p></td>
+<td><p>62</p></td>
+<td><p>61</p></td>
+<td><p>43</p></td>
+<td><p>71</p></td>
+<td><p>24</p></td>
+<td><p>22</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>1</p></td>
+<td><p>67</p></td>
+<td><p>78</p></td>
+<td><p>50</p></td>
+<td><p>71</p></td>
+<td><p>30</p></td>
+<td><p>44</p></td>
+<td><p>38</p></td>
+<td><p>50</p></td>
+<td><p>36</p></td>
+<td><p>50</p></td>
+<td><p>73</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>2</p></td>
+<td><p>93</p></td>
+<td><p>56</p></td>
+<td><p>50</p></td>
+<td><p>47</p></td>
+<td><p>29</p></td>
+<td><p>47</p></td>
+<td><p>33</p></td>
+<td><p>33</p></td>
+<td><p>10</p></td>
+<td><p>47</p></td>
+<td><p>38</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Mean</p></td>
+<td><p>80</p></td>
+<td><p>67</p></td>
+<td><p>50</p></td>
+<td><p>59</p></td>
+<td><p>30</p></td>
+<td><p>46</p></td>
+<td><p>36</p></td>
+<td><p>42</p></td>
+<td><p>23</p></td>
+<td><p>48</p></td>
+<td><p>56</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="self-behavioral-data">
+<h2>Self behavioral data<a class="headerlink" href="#self-behavioral-data" title="Link to this heading">¶</a></h2>
+<p>During the trials of the <em>encoding blocks</em>, participants had to press a specific button
+depending on whether they believed or not the adjective on display described someone
+(i.e. self or other, respectively for self-reference encoding or other-reference
+encoding conditions). During the trials of the <em>recognition block</em>, participants had
+to answer in the same way, depending on whether they believed or not the adjective had
+been presented before.
+<em>No. of trials</em> refers to the number of trialsonly for the recognition phase in the
+specified run and, thus, not to the total number of trials in the run. Because run 3
+was longer than the remainder ones, the number of trials for the recognition phase was
+therefore greater. The chance level was 50%.</p>
+<div class="table-wrapper docutils container" id="id6">
+<table class="docutils align-default" id="id6">
+<caption><span class="caption-text">Response accuracy (%) of performance for the Self task</span><a class="headerlink" href="#id6" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Run</p></th>
+<th class="head"><p>sub-01</p></th>
+<th class="head"><p>sub-04</p></th>
+<th class="head"><p>sub-05</p></th>
+<th class="head"><p>sub-06</p></th>
+<th class="head"><p>sub-07</p></th>
+<th class="head"><p>sub-09</p></th>
+<th class="head"><p>sub-11</p></th>
+<th class="head"><p>sub-12</p></th>
+<th class="head"><p>sub-13</p></th>
+<th class="head"><p>sub-14</p></th>
+<th class="head"><p>sub-15</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>100</p></td>
+<td><p>91</p></td>
+<td><p>47</p></td>
+<td><p>91</p></td>
+<td><p>91</p></td>
+<td><p>94</p></td>
+<td><p>87</p></td>
+<td><p>86</p></td>
+<td><p>81</p></td>
+<td><p>87</p></td>
+<td><p>90</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>90</p></td>
+<td><p>84</p></td>
+<td><p>50</p></td>
+<td><p>84</p></td>
+<td><p>91</p></td>
+<td><p>90</p></td>
+<td><p>88</p></td>
+<td><p>90</p></td>
+<td><p>72</p></td>
+<td><p>73</p></td>
+<td><p>84</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>94</p></td>
+<td><p>87</p></td>
+<td><p>81</p></td>
+<td><p>90</p></td>
+<td><p>90</p></td>
+<td><p>86</p></td>
+<td><p>81</p></td>
+<td><p>84</p></td>
+<td><p>76</p></td>
+<td><p>80</p></td>
+<td><p>83</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>2</p></td>
+<td><p>90</p></td>
+<td><p>88</p></td>
+<td><p>79</p></td>
+<td><p>93</p></td>
+<td><p>98</p></td>
+<td><p>82</p></td>
+<td><p>82</p></td>
+<td><p>76</p></td>
+<td><p>81</p></td>
+<td><p>94</p></td>
+</tr>
+<tr class="row-even"><td><p>Mean</p></td>
+<td><p>72</p></td>
+<td><p>89</p></td>
+<td><p>67</p></td>
+<td><p>86</p></td>
+<td><p>92</p></td>
+<td><p>92</p></td>
+<td><p>85</p></td>
+<td><p>86</p></td>
+<td><p>77</p></td>
+<td><p>81</p></td>
+<td><p>88</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="mathlanguage-behavioral-data">
+<h2>MathLanguage behavioral data<a class="headerlink" href="#mathlanguage-behavioral-data" title="Link to this heading">¶</a></h2>
+<p>Subjects were presented with a series of facts (geometrical, arithmetical,
+general knowledge, nonsense sentences, etc) and were asked to indicate whether the
+presented fact was true or false. Subjects were instructed to consider nonsense as false.
+Scores were calculated based on the number of correct responses. When there was no
+answer for a given trial, it was considered a wrong answer, and where the subject
+answered more than once per trial, the first answer was considered. Since this is
+“true or false” task, the chance level was 50%.</p>
+<div class="table-wrapper docutils container" id="id7">
+<table class="docutils align-default" id="id7">
+<caption><span class="caption-text">Response accuracy (%) of performance for the MathLanguage task</span><a class="headerlink" href="#id7" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Run</p></th>
+<th class="head"><p>sub-01</p></th>
+<th class="head"><p>sub-04</p></th>
+<th class="head"><p>sub-06</p></th>
+<th class="head"><p>sub-07</p></th>
+<th class="head"><p>sub-08</p></th>
+<th class="head"><p>sub-09</p></th>
+<th class="head"><p>sub-11</p></th>
+<th class="head"><p>sub-12</p></th>
+<th class="head"><p>sub-13</p></th>
+<th class="head"><p>sub-14</p></th>
+<th class="head"><p>sub-15</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1a</p></td>
+<td><p>92</p></td>
+<td><p>95</p></td>
+<td><p>88</p></td>
+<td><p>78</p></td>
+<td><p>83</p></td>
+<td><p>88</p></td>
+<td><p>84</p></td>
+<td><p>84</p></td>
+<td><p>59</p></td>
+<td><p>75</p></td>
+<td><p>81</p></td>
+</tr>
+<tr class="row-odd"><td><p>2a</p></td>
+<td><p>94</p></td>
+<td><p>89</p></td>
+<td><p>89</p></td>
+<td><p>91</p></td>
+<td><p>92</p></td>
+<td><p>89</p></td>
+<td><p>83</p></td>
+<td><p>81</p></td>
+<td><p>83</p></td>
+<td><p>64</p></td>
+<td><p>81</p></td>
+</tr>
+<tr class="row-even"><td><p>3a</p></td>
+<td><p>92</p></td>
+<td><p>91</p></td>
+<td><p>91</p></td>
+<td><p>86</p></td>
+<td><p>92</p></td>
+<td><p>92</p></td>
+<td><p>89</p></td>
+<td><p>88</p></td>
+<td><p>63</p></td>
+<td><p>53</p></td>
+<td><p>91</p></td>
+</tr>
+<tr class="row-odd"><td><p>4a</p></td>
+<td><p>88</p></td>
+<td><p>94</p></td>
+<td><p>92</p></td>
+<td><p>89</p></td>
+<td><p>91</p></td>
+<td><p>86</p></td>
+<td><p>88</p></td>
+<td><p>88</p></td>
+<td><p>77</p></td>
+<td><p>50</p></td>
+<td><p>92</p></td>
+</tr>
+<tr class="row-even"><td><p>1b</p></td>
+<td><p>92</p></td>
+<td><p>97</p></td>
+<td><p>88</p></td>
+<td><p>89</p></td>
+<td><p>89</p></td>
+<td><p>91</p></td>
+<td><p>88</p></td>
+<td><p>92</p></td>
+<td><p>73</p></td>
+<td><p>63</p></td>
+<td><p>89</p></td>
+</tr>
+<tr class="row-odd"><td><p>2b</p></td>
+<td><p>94</p></td>
+<td><p>88</p></td>
+<td><p>84</p></td>
+<td><p>91</p></td>
+<td><p>91</p></td>
+<td><p>91</p></td>
+<td><p>86</p></td>
+<td><p>80</p></td>
+<td><p>86</p></td>
+<td><p>70</p></td>
+<td><p>91</p></td>
+</tr>
+<tr class="row-even"><td><p>3b</p></td>
+<td><p>91</p></td>
+<td><p>95</p></td>
+<td><p>92</p></td>
+<td><p>89</p></td>
+<td><p>92</p></td>
+<td><p>94</p></td>
+<td><p>75</p></td>
+<td><p>83</p></td>
+<td><p>84</p></td>
+<td><p>81</p></td>
+<td><p>88</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mean</p></td>
+<td><p>92</p></td>
+<td><p>93</p></td>
+<td><p>89</p></td>
+<td><p>88</p></td>
+<td><p>90</p></td>
+<td><p>90</p></td>
+<td><p>85</p></td>
+<td><p>85</p></td>
+<td><p>75</p></td>
+<td><p>65</p></td>
+<td><p>88</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="spatialnavigation-behavioral-data">
+<h2>SpatialNavigation behavioral data<a class="headerlink" href="#spatialnavigation-behavioral-data" title="Link to this heading">¶</a></h2>
+<p>Subjects were positioned in an given intersection on a virtual city and were asked to
+point in the direction of a key building by rotating their point of view on a 360
+degrees panorama. Scores were narrowed down to whether the subject pointed to the
+correct cardinal direction, as if their error was within 45 absolute degrees of the
+correct direction, and the number of correct responses was counted. The chance level
+then was 25%. This was decided due to the the premise was just instructed to point to
+the location of the building, but there was no explicit precision requirement.</p>
+<div class="table-wrapper docutils container" id="id8">
+<table class="docutils align-default" id="id8">
+<caption><span class="caption-text">Response accuracy (%) of performance for the SpatialNavigation task</span><a class="headerlink" href="#id8" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Run</p></th>
+<th class="head"><p>sub-04</p></th>
+<th class="head"><p>sub-06</p></th>
+<th class="head"><p>sub-07</p></th>
+<th class="head"><p>sub-08</p></th>
+<th class="head"><p>sub-09</p></th>
+<th class="head"><p>sub-11</p></th>
+<th class="head"><p>sub-12</p></th>
+<th class="head"><p>sub-13</p></th>
+<th class="head"><p>sub-15</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>42</p></td>
+<td><p>50</p></td>
+<td><p>42</p></td>
+<td><p>64</p></td>
+<td><p>50</p></td>
+<td><p>58</p></td>
+<td><p>58</p></td>
+<td><p>50</p></td>
+<td><p>82</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>92</p></td>
+<td><p>50</p></td>
+<td><p>33</p></td>
+<td><p>33</p></td>
+<td><p>41</p></td>
+<td><p>67</p></td>
+<td><p>42</p></td>
+<td><p>58</p></td>
+<td><p>100</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>92</p></td>
+<td><p>75</p></td>
+<td><p>50</p></td>
+<td><p>58</p></td>
+<td><p>50</p></td>
+<td><p>50</p></td>
+<td><p>33</p></td>
+<td><p>42</p></td>
+<td><p>100</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>100</p></td>
+<td><p>83</p></td>
+<td><p>42</p></td>
+<td><p>75</p></td>
+<td><p>58</p></td>
+<td><p>55</p></td>
+<td><p>50</p></td>
+<td><p>50</p></td>
+<td><p>92</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>100</p></td>
+<td><p>100</p></td>
+<td><p>75</p></td>
+<td><p>75</p></td>
+<td><p>58</p></td>
+<td><p>58</p></td>
+<td><p>42</p></td>
+<td><p>33</p></td>
+<td><p>100</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>100</p></td>
+<td><p>83</p></td>
+<td><p>67</p></td>
+<td><p>67</p></td>
+<td><p>58</p></td>
+<td><p>42</p></td>
+<td><p>50</p></td>
+<td><p>58</p></td>
+<td><p>92</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>100</p></td>
+<td><p>100</p></td>
+<td><p>58</p></td>
+<td><p>75</p></td>
+<td><p>58</p></td>
+<td><p>58</p></td>
+<td><p>58</p></td>
+<td><p>50</p></td>
+<td><p>92</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>100</p></td>
+<td><p>100</p></td>
+<td><p>83</p></td>
+<td><p>82</p></td>
+<td><p>73</p></td>
+<td><p>58</p></td>
+<td><p>58</p></td>
+<td><p>75</p></td>
+<td><p>92</p></td>
+</tr>
+<tr class="row-even"><td><p>Mean</p></td>
+<td><p>91</p></td>
+<td><p>80</p></td>
+<td><p>56</p></td>
+<td><p>66</p></td>
+<td><p>56</p></td>
+<td><p>56</p></td>
+<td><p>49</p></td>
+<td><p>52</p></td>
+<td><p>94</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="emomem-behavioral-data">
+<h2>EmoMem behavioral data<a class="headerlink" href="#emomem-behavioral-data" title="Link to this heading">¶</a></h2>
+<p>Subjects were asked to press a button when they though of a link or “story” between
+two images. The score is calculated as the amount of responses on a run, which if the
+subject was attentive, should be equal to the number of trials. The chance level is 50%.</p>
+<div class="table-wrapper docutils container" id="id9">
+<table class="docutils align-default" id="id9">
+<caption><span class="caption-text">Response accuracy (%) of performance for the EmoMem task</span><a class="headerlink" href="#id9" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Run</p></th>
+<th class="head"><p>sub-04</p></th>
+<th class="head"><p>sub-05</p></th>
+<th class="head"><p>sub-06</p></th>
+<th class="head"><p>sub-07</p></th>
+<th class="head"><p>sub-08</p></th>
+<th class="head"><p>sub-09</p></th>
+<th class="head"><p>sub-11</p></th>
+<th class="head"><p>sub-12</p></th>
+<th class="head"><p>sub-13</p></th>
+<th class="head"><p>sub-14</p></th>
+<th class="head"><p>sub-15</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>98</p></td>
+<td><p>95</p></td>
+<td><p>98</p></td>
+<td><p>87</p></td>
+<td><p>97</p></td>
+<td><p>95</p></td>
+<td><p>100</p></td>
+<td><p>97</p></td>
+<td><p>90</p></td>
+<td><p>88</p></td>
+<td><p>100</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>98</p></td>
+<td><p>92</p></td>
+<td><p>98</p></td>
+<td><p>85</p></td>
+<td><p>92</p></td>
+<td><p>95</p></td>
+<td><p>93</p></td>
+<td><p>98</p></td>
+<td><p>90</p></td>
+<td><p>85</p></td>
+<td><p>100</p></td>
+</tr>
+<tr class="row-even"><td><p>Mean</p></td>
+<td><p>98</p></td>
+<td><p>93</p></td>
+<td><p>98</p></td>
+<td><p>86</p></td>
+<td><p>95</p></td>
+<td><p>95</p></td>
+<td><p>97</p></td>
+<td><p>98</p></td>
+<td><p>90</p></td>
+<td><p>87</p></td>
+<td><p>100</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="emoreco-behavioral-data">
+<h2>EmoReco behavioral data<a class="headerlink" href="#emoreco-behavioral-data" title="Link to this heading">¶</a></h2>
+<p>Participants were instructed to press a specific button when the face corresponded to a
+man, and a different one  when it did to a female. Their responses were collected and
+the score was calculated as the number of correct responses, with a chance level of 50%.
+Missed responses were considered incorrect.</p>
+<div class="table-wrapper docutils container" id="id10">
+<table class="docutils align-default" id="id10">
+<caption><span class="caption-text">Response accuracy (%) of performance for the EmoReco task</span><a class="headerlink" href="#id10" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Run</p></th>
+<th class="head"><p>sub-04</p></th>
+<th class="head"><p>sub-05</p></th>
+<th class="head"><p>sub-06</p></th>
+<th class="head"><p>sub-07</p></th>
+<th class="head"><p>sub-08</p></th>
+<th class="head"><p>sub-09</p></th>
+<th class="head"><p>sub-11</p></th>
+<th class="head"><p>sub-12</p></th>
+<th class="head"><p>sub-13</p></th>
+<th class="head"><p>sub-14</p></th>
+<th class="head"><p>sub-15</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>93</p></td>
+<td><p>88</p></td>
+<td><p>77</p></td>
+<td><p>87</p></td>
+<td><p>83</p></td>
+<td><p>93</p></td>
+<td><p>89</p></td>
+<td><p>42</p></td>
+<td><p>60</p></td>
+<td><p>58</p></td>
+<td><p>79</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>88</p></td>
+<td><p>90</p></td>
+<td><p>80</p></td>
+<td><p>91</p></td>
+<td><p>73</p></td>
+<td><p>93</p></td>
+<td><p>91</p></td>
+<td><p>42</p></td>
+<td><p>80</p></td>
+<td><p>72</p></td>
+<td><p>75</p></td>
+</tr>
+<tr class="row-even"><td><p>Mean</p></td>
+<td><p>91</p></td>
+<td><p>89</p></td>
+<td><p>79</p></td>
+<td><p>89</p></td>
+<td><p>78</p></td>
+<td><p>93</p></td>
+<td><p>90</p></td>
+<td><p>42</p></td>
+<td><p>70</p></td>
+<td><p>65</p></td>
+<td><p>77</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="stopnogo-behavioral-data">
+<h2>StopNogo behavioral data<a class="headerlink" href="#stopnogo-behavioral-data" title="Link to this heading">¶</a></h2>
+<p>Participants were presented with color-coded arrows. If the arrow was green, they were
+instructed to press a button, and if it was red, they were instructed to not respond.
+The trick came when the arrow started out green but turned red after a few milliseconds,
+and the subject had to withhold their response. The score was calculated as the number
+of trials in which they succeeded in withholding their response.</p>
+<div class="table-wrapper docutils container" id="id11">
+<table class="docutils align-default" id="id11">
+<caption><span class="caption-text">Response accuracy (%) of performance for the StopNogo task</span><a class="headerlink" href="#id11" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Run</p></th>
+<th class="head"><p>sub-04</p></th>
+<th class="head"><p>sub-05</p></th>
+<th class="head"><p>sub-06</p></th>
+<th class="head"><p>sub-07</p></th>
+<th class="head"><p>sub-08</p></th>
+<th class="head"><p>sub-09</p></th>
+<th class="head"><p>sub-11</p></th>
+<th class="head"><p>sub-12</p></th>
+<th class="head"><p>sub-13</p></th>
+<th class="head"><p>sub-14</p></th>
+<th class="head"><p>sub-15</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>35</p></td>
+<td><p>33</p></td>
+<td><p>38</p></td>
+<td><p>35</p></td>
+<td><p>35</p></td>
+<td><p>50</p></td>
+<td><p>35</p></td>
+<td><p>48</p></td>
+<td><p>38</p></td>
+<td><p>68</p></td>
+<td><p>38</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>53</p></td>
+<td><p>38</p></td>
+<td><p>35</p></td>
+<td><p>35</p></td>
+<td><p>33</p></td>
+<td><p>48</p></td>
+<td><p>38</p></td>
+<td><p>60</p></td>
+<td><p>33</p></td>
+<td><p>38</p></td>
+<td><p>35</p></td>
+</tr>
+<tr class="row-even"><td><p>Mean</p></td>
+<td><p>44</p></td>
+<td><p>36</p></td>
+<td><p>37</p></td>
+<td><p>35</p></td>
+<td><p>34</p></td>
+<td><p>49</p></td>
+<td><p>37</p></td>
+<td><p>54</p></td>
+<td><p>36</p></td>
+<td><p>53</p></td>
+<td><p>37</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="catell-behavioral-data">
+<h2>Catell behavioral data<a class="headerlink" href="#catell-behavioral-data" title="Link to this heading">¶</a></h2>
+<p>Subjects were presented with four images in a row, and were asked to identify the
+oddball by pressing the corresponding button. The score was calculated as the number of
+correct responses, with a chance level of 25%.</p>
+<div class="table-wrapper docutils container" id="id12">
+<table class="docutils align-default" id="id12">
+<caption><span class="caption-text">Response accuracy (%) of performance for the Catell task</span><a class="headerlink" href="#id12" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Run</p></th>
+<th class="head"><p>sub-01</p></th>
+<th class="head"><p>sub-04</p></th>
+<th class="head"><p>sub-05</p></th>
+<th class="head"><p>sub-06</p></th>
+<th class="head"><p>sub-07</p></th>
+<th class="head"><p>sub-08</p></th>
+<th class="head"><p>sub-09</p></th>
+<th class="head"><p>sub-11</p></th>
+<th class="head"><p>sub-12</p></th>
+<th class="head"><p>sub-13</p></th>
+<th class="head"><p>sub-14</p></th>
+<th class="head"><p>sub-15</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>73</p></td>
+<td><p>87</p></td>
+<td><p>83</p></td>
+<td><p>89</p></td>
+<td><p>90</p></td>
+<td><p>79</p></td>
+<td><p>88</p></td>
+<td><p>83</p></td>
+<td><p>83</p></td>
+<td><p>74</p></td>
+<td><p>83</p></td>
+<td><p>95</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>83</p></td>
+<td><p>92</p></td>
+<td><p>81</p></td>
+<td><p>85</p></td>
+<td><p>80</p></td>
+<td><p>76</p></td>
+<td><p>97</p></td>
+<td><p>79</p></td>
+<td><p>80</p></td>
+<td><p>65</p></td>
+<td><p>88</p></td>
+<td><p>93</p></td>
+</tr>
+<tr class="row-even"><td><p>Mean</p></td>
+<td><p>78</p></td>
+<td><p>89</p></td>
+<td><p>82</p></td>
+<td><p>87</p></td>
+<td><p>85</p></td>
+<td><p>77</p></td>
+<td><p>93</p></td>
+<td><p>81</p></td>
+<td><p>82</p></td>
+<td><p>69</p></td>
+<td><p>85</p></td>
+<td><p>94</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="fingertapping-behavioral-data">
+<h2>FingerTapping behavioral data<a class="headerlink" href="#fingertapping-behavioral-data" title="Link to this heading">¶</a></h2>
+<p>Subjects were asked to press a button with their right hand, either a specific finger
+or the one they chose  themselves within a set of selected fingers. The score was
+calculated as the number of correct responses, meaning the number of times the subject
+pressed the correct button on specified trials plus the times they pressed a button
+within the selected fingers on chosen trials. The chance level was 25%.</p>
+<div class="table-wrapper docutils container" id="id13">
+<table class="docutils align-default" id="id13">
+<caption><span class="caption-text">Response accuracy (%) of behavioral for the FingerTapping task</span><a class="headerlink" href="#id13" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Run</p></th>
+<th class="head"><p>sub-04</p></th>
+<th class="head"><p>sub-05</p></th>
+<th class="head"><p>sub-06</p></th>
+<th class="head"><p>sub-07</p></th>
+<th class="head"><p>sub-08</p></th>
+<th class="head"><p>sub-09</p></th>
+<th class="head"><p>sub-11</p></th>
+<th class="head"><p>sub-12</p></th>
+<th class="head"><p>sub-13</p></th>
+<th class="head"><p>sub-14</p></th>
+<th class="head"><p>sub-15</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>99</p></td>
+<td><p>67</p></td>
+<td><p>77</p></td>
+<td><p>80</p></td>
+<td><p>95</p></td>
+<td><p>98</p></td>
+<td><p>95</p></td>
+<td><p>79</p></td>
+<td><p>98</p></td>
+<td><p>93</p></td>
+<td><p>93</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>93</p></td>
+<td><p>95</p></td>
+<td><p>90</p></td>
+<td><p>76</p></td>
+<td><p>99</p></td>
+<td><p>96</p></td>
+<td><p>95</p></td>
+<td><p>96</p></td>
+<td><p>98</p></td>
+<td><p>70</p></td>
+<td><p>80</p></td>
+</tr>
+<tr class="row-even"><td><p>Mean</p></td>
+<td><p>96</p></td>
+<td><p>81</p></td>
+<td><p>84</p></td>
+<td><p>78</p></td>
+<td><p>97</p></td>
+<td><p>97</p></td>
+<td><p>95</p></td>
+<td><p>88</p></td>
+<td><p>98</p></td>
+<td><p>82</p></td>
+<td><p>87</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="vstmc-behavioral-data">
+<h2>VSTMC behavioral data<a class="headerlink" href="#vstmc-behavioral-data" title="Link to this heading">¶</a></h2>
+<p>Participants had to indicate the direction of motion of a set of dots by pointing a
+probe in the corresponding direction. Subjects could make 360 degrees rotations of the
+probe, and a response would be considered correct of the final angle would be within 45
+absolute degrees of the correct direction. The score was calculated as the number of
+correct responses.</p>
+<div class="table-wrapper docutils container" id="id14">
+<table class="docutils align-default" id="id14">
+<caption><span class="caption-text">Response accuracy (%) of performance for the VSTMC task</span><a class="headerlink" href="#id14" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Run</p></th>
+<th class="head"><p>sub-04</p></th>
+<th class="head"><p>sub-05</p></th>
+<th class="head"><p>sub-06</p></th>
+<th class="head"><p>sub-07</p></th>
+<th class="head"><p>sub-08</p></th>
+<th class="head"><p>sub-09</p></th>
+<th class="head"><p>sub-11</p></th>
+<th class="head"><p>sub-12</p></th>
+<th class="head"><p>sub-13</p></th>
+<th class="head"><p>sub-14</p></th>
+<th class="head"><p>sub-15</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>52</p></td>
+<td><p>74</p></td>
+<td><p>65</p></td>
+<td><p>57</p></td>
+<td><p>70</p></td>
+<td><p>74</p></td>
+<td><p>83</p></td>
+<td><p>61</p></td>
+<td><p>30</p></td>
+<td><p>43</p></td>
+<td><p>83</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>57</p></td>
+<td><p>65</p></td>
+<td><p>48</p></td>
+<td><p>78</p></td>
+<td><p>74</p></td>
+<td><p>96</p></td>
+<td><p>74</p></td>
+<td><p>65</p></td>
+<td><p>70</p></td>
+<td><p>43</p></td>
+<td><p>78</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>61</p></td>
+<td><p>83</p></td>
+<td><p>70</p></td>
+<td><p>78</p></td>
+<td><p>87</p></td>
+<td><p>83</p></td>
+<td><p>78</p></td>
+<td><p>78</p></td>
+<td><p>43</p></td>
+<td><p>70</p></td>
+<td><p>87</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>70</p></td>
+<td><p>78</p></td>
+<td><p>61</p></td>
+<td><p>78</p></td>
+<td><p>100</p></td>
+<td><p>96</p></td>
+<td><p>70</p></td>
+<td><p>70</p></td>
+<td><p>65</p></td>
+<td><p>65</p></td>
+<td><p>91</p></td>
+</tr>
+<tr class="row-even"><td><p>Mean</p></td>
+<td><p>60</p></td>
+<td><p>75</p></td>
+<td><p>61</p></td>
+<td><p>73</p></td>
+<td><p>83</p></td>
+<td><p>87</p></td>
+<td><p>76</p></td>
+<td><p>68</p></td>
+<td><p>52</p></td>
+<td><p>55</p></td>
+<td><p>85</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="rewproc-behavioral-data">
+<h2>RewProc behavioral data<a class="headerlink" href="#rewproc-behavioral-data" title="Link to this heading">¶</a></h2>
+<p>Participants were tasked with choosing between two presented figures. Depending on
+their choice, they wold have higher or lower probability of increasing their virtual
+reward. The score was determined by the number of responses in a run, reflecting their
+level of attentiveness. The chance level is set at 50%</p>
+<div class="table-wrapper docutils container" id="id15">
+<table class="docutils align-default" id="id15">
+<caption><span class="caption-text">Response accuracy (%) of performance for the RewProc task</span><a class="headerlink" href="#id15" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Run</p></th>
+<th class="head"><p>sub-04</p></th>
+<th class="head"><p>sub-05</p></th>
+<th class="head"><p>sub-06</p></th>
+<th class="head"><p>sub-08</p></th>
+<th class="head"><p>sub-09</p></th>
+<th class="head"><p>sub-11</p></th>
+<th class="head"><p>sub-12</p></th>
+<th class="head"><p>sub-14</p></th>
+<th class="head"><p>sub-15</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>100</p></td>
+<td><p>99</p></td>
+<td><p>100</p></td>
+<td><p>100</p></td>
+<td><p>100</p></td>
+<td><p>100</p></td>
+<td><p>100</p></td>
+<td><p>93</p></td>
+<td><p>100</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>100</p></td>
+<td><p>99</p></td>
+<td><p>100</p></td>
+<td><p>100</p></td>
+<td><p>99</p></td>
+<td><p>100</p></td>
+<td><p>100</p></td>
+<td><p>92</p></td>
+<td><p>100</p></td>
+</tr>
+<tr class="row-even"><td><p>Mean</p></td>
+<td><p>100</p></td>
+<td><p>99</p></td>
+<td><p>100</p></td>
+<td><p>100</p></td>
+<td><p>100</p></td>
+<td><p>100</p></td>
+<td><p>100</p></td>
+<td><p>93</p></td>
+<td><p>100</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="narps-behavioral-data">
+<h2>NARPS behavioral data<a class="headerlink" href="#narps-behavioral-data" title="Link to this heading">¶</a></h2>
+<p>Subjects were instructed to either accept or reject a gamble, indicating high or low
+confidence by pressing the corresponding button. The score reflects the level of
+attention of the subject and was calculated as the number of responses made during a
+run, excluding any missed responses. The chance level is set at 50%.</p>
+<div class="table-wrapper docutils container" id="id16">
+<table class="docutils align-default" id="id16">
+<caption><span class="caption-text">Response accuracy (%) of performance for the NARPS task</span><a class="headerlink" href="#id16" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Run</p></th>
+<th class="head"><p>sub-04</p></th>
+<th class="head"><p>sub-05</p></th>
+<th class="head"><p>sub-06</p></th>
+<th class="head"><p>sub-08</p></th>
+<th class="head"><p>sub-09</p></th>
+<th class="head"><p>sub-11</p></th>
+<th class="head"><p>sub-12</p></th>
+<th class="head"><p>sub-14</p></th>
+<th class="head"><p>sub-15</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>100</p></td>
+<td><p>97</p></td>
+<td><p>100</p></td>
+<td><p>100</p></td>
+<td><p>100</p></td>
+<td><p>100</p></td>
+<td><p>100</p></td>
+<td><p>77</p></td>
+<td><p>100</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>100</p></td>
+<td><p>97</p></td>
+<td><p>100</p></td>
+<td><p>100</p></td>
+<td><p>100</p></td>
+<td><p>90</p></td>
+<td><p>100</p></td>
+<td><p>61</p></td>
+<td><p>94</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>100</p></td>
+<td><p>89</p></td>
+<td><p>100</p></td>
+<td><p>100</p></td>
+<td><p>100</p></td>
+<td><p>72</p></td>
+<td><p>100</p></td>
+<td><p>65</p></td>
+<td><p>100</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>100</p></td>
+<td><p>88</p></td>
+<td><p>97</p></td>
+<td><p>97</p></td>
+<td><p>100</p></td>
+<td><p>97</p></td>
+<td><p>100</p></td>
+<td><p>84</p></td>
+<td><p>100</p></td>
+</tr>
+<tr class="row-even"><td><p>Mean</p></td>
+<td><p>100</p></td>
+<td><p>93</p></td>
+<td><p>99</p></td>
+<td><p>99</p></td>
+<td><p>100</p></td>
+<td><p>90</p></td>
+<td><p>100</p></td>
+<td><p>72</p></td>
+<td><p>99</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="facebody-behavioral-data">
+<h2>FaceBody behavioral data<a class="headerlink" href="#facebody-behavioral-data" title="Link to this heading">¶</a></h2>
+<p>Subjects were instructed to press a button every time an image repeated as a mirrored
+image (a flipped 1-back task). The score was calculated based on the number of correct
+responses. Missed responses were counted as incorrect.</p>
+<div class="table-wrapper docutils container" id="id17">
+<table class="docutils align-default" id="id17">
+<caption><span class="caption-text">Response accuracy (%) of performance for the FaceBody task</span><a class="headerlink" href="#id17" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Run</p></th>
+<th class="head"><p>sub-04</p></th>
+<th class="head"><p>sub-05</p></th>
+<th class="head"><p>sub-06</p></th>
+<th class="head"><p>sub-08</p></th>
+<th class="head"><p>sub-09</p></th>
+<th class="head"><p>sub-11</p></th>
+<th class="head"><p>sub-12</p></th>
+<th class="head"><p>sub-14</p></th>
+<th class="head"><p>sub-15</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>83</p></td>
+<td><p>64</p></td>
+<td><p>89</p></td>
+<td><p>89</p></td>
+<td><p>78</p></td>
+<td><p>83</p></td>
+<td><p>67</p></td>
+<td><p>67</p></td>
+<td><p>61</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>83</p></td>
+<td><p>86</p></td>
+<td><p>61</p></td>
+<td><p>83</p></td>
+<td><p>83</p></td>
+<td><p>92</p></td>
+<td><p>44</p></td>
+<td><p>61</p></td>
+<td><p>53</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>83</p></td>
+<td><p>61</p></td>
+<td><p>75</p></td>
+<td><p>81</p></td>
+<td><p>75</p></td>
+<td><p>81</p></td>
+<td><p>50</p></td>
+<td><p>83</p></td>
+<td><p>56</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>92</p></td>
+<td><p>75</p></td>
+<td><p>69</p></td>
+<td><p>86</p></td>
+<td><p>83</p></td>
+<td><p>97</p></td>
+<td><p>44</p></td>
+<td><p>64</p></td>
+<td><p>67</p></td>
+</tr>
+<tr class="row-even"><td><p>Mean</p></td>
+<td><p>85</p></td>
+<td><p>72</p></td>
+<td><p>74</p></td>
+<td><p>85</p></td>
+<td><p>80</p></td>
+<td><p>88</p></td>
+<td><p>51</p></td>
+<td><p>69</p></td>
+<td><p>59</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="scene-behavioral-data">
+<h2>Scene behavioral data<a class="headerlink" href="#scene-behavioral-data" title="Link to this heading">¶</a></h2>
+<p>Subjects had to judge whether Escher-like scenes were possible or impossible.
+Additionally, there were “dot” trials, where they had to indicate whether the dot
+appeared on the right or left side of the screen. The score was determined by the
+number of scenes they judged correctly, plus the number of dots correctly located.
+Missing responses were counted as incorrect, with a chance level of 50%.</p>
+<div class="table-wrapper docutils container" id="id18">
+<table class="docutils align-default" id="id18">
+<caption><span class="caption-text">Response accuracy (%) of performance for the Scene task</span><a class="headerlink" href="#id18" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Run</p></th>
+<th class="head"><p>sub-04</p></th>
+<th class="head"><p>sub-05</p></th>
+<th class="head"><p>sub-06</p></th>
+<th class="head"><p>sub-08</p></th>
+<th class="head"><p>sub-09</p></th>
+<th class="head"><p>sub-11</p></th>
+<th class="head"><p>sub-12</p></th>
+<th class="head"><p>sub-14</p></th>
+<th class="head"><p>sub-15</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>73</p></td>
+<td><p>55</p></td>
+<td><p>79</p></td>
+<td><p>73</p></td>
+<td><p>79</p></td>
+<td><p>64</p></td>
+<td><p>75</p></td>
+<td><p>54</p></td>
+<td><p>80</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>63</p></td>
+<td><p>71</p></td>
+<td><p>77</p></td>
+<td><p>71</p></td>
+<td><p>68</p></td>
+<td><p>75</p></td>
+<td><p>80</p></td>
+<td><p>55</p></td>
+<td><p>75</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>68</p></td>
+<td><p>68</p></td>
+<td><p>79</p></td>
+<td><p>79</p></td>
+<td><p>64</p></td>
+<td><p>79</p></td>
+<td><p>75</p></td>
+<td><p>55</p></td>
+<td><p>75</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>63</p></td>
+<td><p>61</p></td>
+<td><p>77</p></td>
+<td><p>80</p></td>
+<td><p>80</p></td>
+<td><p>82</p></td>
+<td><p>79</p></td>
+<td><p>59</p></td>
+<td><p>70</p></td>
+</tr>
+<tr class="row-even"><td><p>Mean</p></td>
+<td><p>67</p></td>
+<td><p>64</p></td>
+<td><p>78</p></td>
+<td><p>76</p></td>
+<td><p>73</p></td>
+<td><p>75</p></td>
+<td><p>77</p></td>
+<td><p>56</p></td>
+<td><p>75</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="itemrecognition-behavioral-data">
+<h2>ItemRecognition behavioral data<a class="headerlink" href="#itemrecognition-behavioral-data" title="Link to this heading">¶</a></h2>
+<p>Participants were tasked to memorize a target and then indicate whether a probe was the
+same as the target. The score was calculated as the number of correct decisions.
+Missed responses were marked as incorrect, and the chance level was 50%.</p>
+<div class="table-wrapper docutils container" id="id19">
+<table class="docutils align-default" id="id19">
+<caption><span class="caption-text">Response accuracy (%) of performance for the ItemRecognition task</span><a class="headerlink" href="#id19" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Run</p></th>
+<th class="head"><p>sub-01</p></th>
+<th class="head"><p>sub-04</p></th>
+<th class="head"><p>sub-05</p></th>
+<th class="head"><p>sub-06</p></th>
+<th class="head"><p>sub-07</p></th>
+<th class="head"><p>sub-08</p></th>
+<th class="head"><p>sub-09</p></th>
+<th class="head"><p>sub-11</p></th>
+<th class="head"><p>sub-12</p></th>
+<th class="head"><p>sub-13</p></th>
+<th class="head"><p>sub-14</p></th>
+<th class="head"><p>sub-15</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>71</p></td>
+<td><p>79</p></td>
+<td><p>74</p></td>
+<td><p>72</p></td>
+<td><p>76</p></td>
+<td><p>80</p></td>
+<td><p>74</p></td>
+<td><p>76</p></td>
+<td><p>78</p></td>
+<td><p>61</p></td>
+<td><p>55</p></td>
+<td><p>76</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>73</p></td>
+<td><p>79</p></td>
+<td><p>70</p></td>
+<td><p>67</p></td>
+<td><p>78</p></td>
+<td><p>78</p></td>
+<td><p>79</p></td>
+<td><p>81</p></td>
+<td><p>78</p></td>
+<td><p>70</p></td>
+<td><p>56</p></td>
+<td><p>72</p></td>
+</tr>
+<tr class="row-even"><td><p>Mean</p></td>
+<td><p>72</p></td>
+<td><p>79</p></td>
+<td><p>72</p></td>
+<td><p>70</p></td>
+<td><p>77</p></td>
+<td><p>79</p></td>
+<td><p>77</p></td>
+<td><p>79</p></td>
+<td><p>78</p></td>
+<td><p>65</p></td>
+<td><p>56</p></td>
+<td><p>74</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="visualsearch-behavioral-data">
+<h2>VisualSearch behavioral data<a class="headerlink" href="#visualsearch-behavioral-data" title="Link to this heading">¶</a></h2>
+<p>In the VisualSearch task there were two trials. On the <em>visual search</em> trials,
+participants had to indicate whether the target was present or absent in an array of
+items. On the <em>working memory</em> trials, they had to indicate whether a probe was present
+in a previously shown set of items. The score was calculated as the sum of correct
+responses in both types of trials. Missing responses were marked as incorrect, and the
+chance level was 50%.</p>
+<div class="table-wrapper docutils container" id="id20">
+<table class="docutils align-default" id="id20">
+<caption><span class="caption-text">Response accuracy (%) of performance for the VisualSearch task</span><a class="headerlink" href="#id20" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Run</p></th>
+<th class="head"><p>sub-04</p></th>
+<th class="head"><p>sub-05</p></th>
+<th class="head"><p>sub-06</p></th>
+<th class="head"><p>sub-08</p></th>
+<th class="head"><p>sub-09</p></th>
+<th class="head"><p>sub-11</p></th>
+<th class="head"><p>sub-12</p></th>
+<th class="head"><p>sub-14</p></th>
+<th class="head"><p>sub-15</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>63</p></td>
+<td><p>73</p></td>
+<td><p>69</p></td>
+<td><p>71</p></td>
+<td><p>79</p></td>
+<td><p>83</p></td>
+<td><p>60</p></td>
+<td><p>58</p></td>
+<td><p>73</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>69</p></td>
+<td><p>73</p></td>
+<td><p>66</p></td>
+<td><p>77</p></td>
+<td><p>74</p></td>
+<td><p>72</p></td>
+<td><p>58</p></td>
+<td><p>52</p></td>
+<td><p>69</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>72</p></td>
+<td><p>70</p></td>
+<td><p>81</p></td>
+<td><p>77</p></td>
+<td><p>73</p></td>
+<td><p>71</p></td>
+<td><p>69</p></td>
+<td><p>61</p></td>
+<td><p>71</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>59</p></td>
+<td><p>80</p></td>
+<td><p>72</p></td>
+<td><p>85</p></td>
+<td><p>81</p></td>
+<td><p>62</p></td>
+<td><p>62</p></td>
+<td><p>62</p></td>
+<td><p>77</p></td>
+</tr>
+<tr class="row-even"><td><p>Mean</p></td>
+<td><p>66</p></td>
+<td><p>74</p></td>
+<td><p>72</p></td>
+<td><p>78</p></td>
+<td><p>77</p></td>
+<td><p>72</p></td>
+<td><p>62</p></td>
+<td><p>58</p></td>
+<td><p>73</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="movie_protocols_data.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Movie protocols implementation</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="experimentaldesign_diagrams.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Experimental-design diagrams</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2023, The IBC team
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Behavioral data</a><ul>
+<li><a class="reference internal" href="#mttwe-behavioral-data">MTTWE behavioral data</a></li>
+<li><a class="reference internal" href="#mttns-behavioral-data">MTTNS behavioral data</a></li>
+<li><a class="reference internal" href="#theoryofmind-behavioral-data">TheoryOfMind behavioral data</a></li>
+<li><a class="reference internal" href="#vstm-behavioral-data">VSTM behavioral data</a></li>
+<li><a class="reference internal" href="#enumeration-behavioral-data">Enumeration behavioral data</a></li>
+<li><a class="reference internal" href="#self-behavioral-data">Self behavioral data</a></li>
+<li><a class="reference internal" href="#mathlanguage-behavioral-data">MathLanguage behavioral data</a></li>
+<li><a class="reference internal" href="#spatialnavigation-behavioral-data">SpatialNavigation behavioral data</a></li>
+<li><a class="reference internal" href="#emomem-behavioral-data">EmoMem behavioral data</a></li>
+<li><a class="reference internal" href="#emoreco-behavioral-data">EmoReco behavioral data</a></li>
+<li><a class="reference internal" href="#stopnogo-behavioral-data">StopNogo behavioral data</a></li>
+<li><a class="reference internal" href="#catell-behavioral-data">Catell behavioral data</a></li>
+<li><a class="reference internal" href="#fingertapping-behavioral-data">FingerTapping behavioral data</a></li>
+<li><a class="reference internal" href="#vstmc-behavioral-data">VSTMC behavioral data</a></li>
+<li><a class="reference internal" href="#rewproc-behavioral-data">RewProc behavioral data</a></li>
+<li><a class="reference internal" href="#narps-behavioral-data">NARPS behavioral data</a></li>
+<li><a class="reference internal" href="#facebody-behavioral-data">FaceBody behavioral data</a></li>
+<li><a class="reference internal" href="#scene-behavioral-data">Scene behavioral data</a></li>
+<li><a class="reference internal" href="#itemrecognition-behavioral-data">ItemRecognition behavioral data</a></li>
+<li><a class="reference internal" href="#visualsearch-behavioral-data">VisualSearch behavioral data</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    </body>
+</html>

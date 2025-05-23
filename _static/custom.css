@@ -1,0 +1,16 @@
+div.main {
+    text-align: justify;
+}
+
+div.tags {
+    text-align: left;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+figcaption, .figure .caption {
+    text-align: justify;
+}

@@ -1,0 +1,2151 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="./">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="References" href="references.html" /><link rel="prev" title="Behavioral data" href="behavioral_data.html" />
+
+    <link rel="shortcut icon" href="_static/ibc3.png"/><!-- Generated with Sphinx 8.1.3 and Furo 2024.08.06 -->
+        <title>Movie protocols implementation - Individual Brain Charting documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=302659d7" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c80d620e" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">Individual Brain Charting  documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="_static/ibc3.png" alt="Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Individual Brain Charting  documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Quickstart</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data_hosting.html">Data hosting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api_install.html">Install data fetcher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_data.html">Get the data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ibc_api.html">API references</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">fMRI Data</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tasks.html">All tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="processing_pipelines.html">fMRI processing pipelines</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DWI Data</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dwi_acquisitions.html">Diffusion-weighted Imaging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dwi_processing.html">DWI preprocessing pipeline</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Details</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="participants.html">Participants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mri_acquisitions.html">MRI acquisitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mridata_organization.html">MRI-data organization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="experimentaldesign_diagrams.html">Experimental-design diagrams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="behavioral_data.html">Behavioral data</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Movie protocols implementation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact Us</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="_sources/movie_protocols_data.rst.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="movie-protocols-implementation">
+<h1>Movie protocols implementation<a class="headerlink" href="#movie-protocols-implementation" title="Link to this heading">¶</a></h1>
+<p>In this section, we provide details of the movie protocols used in the IBC project as some might be relevant
+for the analysis of the data and reproduction of the protocols.</p>
+<section id="lags-in-raiders-movie">
+<h2>Lags in Raiders movie<a class="headerlink" href="#lags-in-raiders-movie" title="Link to this heading">¶</a></h2>
+<p>It has been noted that there was a lag between the acquisition onset and the stimuli onset. In other words,
+the presentation of the movie didn’t start immediately when the acquisition started, but with a delay that
+varied between runs and subjects.</p>
+<p>When synchrony between the movie and acquisition times is required, this lag must be considered.
+We provide here the exact lag for each run and each subject. Note that this table can also be
+download as a <em>csv</em> file <a class="reference external" href="https://github.com/individual-brain-charting/docs/blob/main/movie_protocols_data/lags_raiders.csv">here</a>.</p>
+<p>The <em>lag</em> represents the time between the acquisition onset and the stimuli onset, in milliseconds.
+The <em>run</em> column includes the video file name corresponding to the movie section shown during each run, along with the respective run number.
+Please note that the first three sections of the movie (movie clips displayed during the first three runs) were presented to the participants
+again at the end of the last session. As a result, the <em>run</em> column includes the video file name and the run number for the first three,
+along with the <em>test</em> legend.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Lags in Raiders movie</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="table-wrapper docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">sub</p></th>
+<th class="head"><p class="sd-card-text">run</p></th>
+<th class="head"><p class="sd-card-text">lag</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text">sub-01</p></td>
+<td><p class="sd-card-text">raiders01</p></td>
+<td><p class="sd-card-text">1643</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-01</p></td>
+<td><p class="sd-card-text">raiders02</p></td>
+<td><p class="sd-card-text">1351</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-01</p></td>
+<td><p class="sd-card-text">raiders03</p></td>
+<td><p class="sd-card-text">1320</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-01</p></td>
+<td><p class="sd-card-text">raiders04</p></td>
+<td><p class="sd-card-text">1350</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-01</p></td>
+<td><p class="sd-card-text">raiders05</p></td>
+<td><p class="sd-card-text">1260</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-01</p></td>
+<td><p class="sd-card-text">raiders06</p></td>
+<td><p class="sd-card-text">1350</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-01</p></td>
+<td><p class="sd-card-text">raiders07</p></td>
+<td><p class="sd-card-text">1693</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-01</p></td>
+<td><p class="sd-card-text">raiders08</p></td>
+<td><p class="sd-card-text">1327</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-01</p></td>
+<td><p class="sd-card-text">raiders09</p></td>
+<td><p class="sd-card-text">1306</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-01</p></td>
+<td><p class="sd-card-text">raiders10</p></td>
+<td><p class="sd-card-text">1277</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-01</p></td>
+<td><p class="sd-card-text">raiders01_test</p></td>
+<td><p class="sd-card-text">1248</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-01</p></td>
+<td><p class="sd-card-text">raiders02_test</p></td>
+<td><p class="sd-card-text">1362</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-01</p></td>
+<td><p class="sd-card-text">raiders03_test</p></td>
+<td><p class="sd-card-text">1367</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-04</p></td>
+<td><p class="sd-card-text">raiders01</p></td>
+<td><p class="sd-card-text">1642</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-04</p></td>
+<td><p class="sd-card-text">raiders02</p></td>
+<td><p class="sd-card-text">1353</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-04</p></td>
+<td><p class="sd-card-text">raiders03</p></td>
+<td><p class="sd-card-text">1321</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-04</p></td>
+<td><p class="sd-card-text">raiders04</p></td>
+<td><p class="sd-card-text">1339</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-04</p></td>
+<td><p class="sd-card-text">raiders05</p></td>
+<td><p class="sd-card-text">1302</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-04</p></td>
+<td><p class="sd-card-text">raiders06</p></td>
+<td><p class="sd-card-text">1370</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-04</p></td>
+<td><p class="sd-card-text">raiders07</p></td>
+<td><p class="sd-card-text">1676</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-04</p></td>
+<td><p class="sd-card-text">raiders08</p></td>
+<td><p class="sd-card-text">1345</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-04</p></td>
+<td><p class="sd-card-text">raiders09</p></td>
+<td><p class="sd-card-text">1306</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-04</p></td>
+<td><p class="sd-card-text">raiders10</p></td>
+<td><p class="sd-card-text">1274</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-04</p></td>
+<td><p class="sd-card-text">raiders01_test</p></td>
+<td><p class="sd-card-text">1263</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-04</p></td>
+<td><p class="sd-card-text">raiders02_test</p></td>
+<td><p class="sd-card-text">1362</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-04</p></td>
+<td><p class="sd-card-text">raiders03_test</p></td>
+<td><p class="sd-card-text">1356</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-05</p></td>
+<td><p class="sd-card-text">raiders01</p></td>
+<td><p class="sd-card-text">1650</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-05</p></td>
+<td><p class="sd-card-text">raiders02</p></td>
+<td><p class="sd-card-text">1747</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-05</p></td>
+<td><p class="sd-card-text">raiders03</p></td>
+<td><p class="sd-card-text">1319</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-05</p></td>
+<td><p class="sd-card-text">raiders04</p></td>
+<td><p class="sd-card-text">1376</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-05</p></td>
+<td><p class="sd-card-text">raiders05</p></td>
+<td><p class="sd-card-text">1282</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-05</p></td>
+<td><p class="sd-card-text">raiders06</p></td>
+<td><p class="sd-card-text">1373</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-05</p></td>
+<td><p class="sd-card-text">raiders07</p></td>
+<td><p class="sd-card-text">1680</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-05</p></td>
+<td><p class="sd-card-text">raiders08</p></td>
+<td><p class="sd-card-text">1348</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-05</p></td>
+<td><p class="sd-card-text">raiders09</p></td>
+<td><p class="sd-card-text">1331</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-05</p></td>
+<td><p class="sd-card-text">raiders10</p></td>
+<td><p class="sd-card-text">1302</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-05</p></td>
+<td><p class="sd-card-text">raiders01_test</p></td>
+<td><p class="sd-card-text">1267</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-05</p></td>
+<td><p class="sd-card-text">raiders02_test</p></td>
+<td><p class="sd-card-text">1359</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-05</p></td>
+<td><p class="sd-card-text">raiders03_test</p></td>
+<td><p class="sd-card-text">1354</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-06</p></td>
+<td><p class="sd-card-text">raiders01</p></td>
+<td><p class="sd-card-text">1623</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-06</p></td>
+<td><p class="sd-card-text">raiders02</p></td>
+<td><p class="sd-card-text">1315</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-06</p></td>
+<td><p class="sd-card-text">raiders03</p></td>
+<td><p class="sd-card-text">1325</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-06</p></td>
+<td><p class="sd-card-text">raiders04</p></td>
+<td><p class="sd-card-text">1310</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-06</p></td>
+<td><p class="sd-card-text">raiders05</p></td>
+<td><p class="sd-card-text">1263</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-06</p></td>
+<td><p class="sd-card-text">raiders06</p></td>
+<td><p class="sd-card-text">1319</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-06</p></td>
+<td><p class="sd-card-text">raiders07</p></td>
+<td><p class="sd-card-text">1672</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-06</p></td>
+<td><p class="sd-card-text">raiders08</p></td>
+<td><p class="sd-card-text">1310</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-06</p></td>
+<td><p class="sd-card-text">raiders09</p></td>
+<td><p class="sd-card-text">1356</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-06</p></td>
+<td><p class="sd-card-text">raiders10</p></td>
+<td><p class="sd-card-text">1284</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-06</p></td>
+<td><p class="sd-card-text">raiders01_test</p></td>
+<td><p class="sd-card-text">1266</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-06</p></td>
+<td><p class="sd-card-text">raiders02_test</p></td>
+<td><p class="sd-card-text">1385</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-06</p></td>
+<td><p class="sd-card-text">raiders03_test</p></td>
+<td><p class="sd-card-text">1387</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-07</p></td>
+<td><p class="sd-card-text">raiders01</p></td>
+<td><p class="sd-card-text">2010</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-07</p></td>
+<td><p class="sd-card-text">raiders02</p></td>
+<td><p class="sd-card-text">2068</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-07</p></td>
+<td><p class="sd-card-text">raiders03</p></td>
+<td><p class="sd-card-text">1307</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-07</p></td>
+<td><p class="sd-card-text">raiders04</p></td>
+<td><p class="sd-card-text">1679</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-07</p></td>
+<td><p class="sd-card-text">raiders05</p></td>
+<td><p class="sd-card-text">1675</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-07</p></td>
+<td><p class="sd-card-text">raiders06</p></td>
+<td><p class="sd-card-text">1702</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-07</p></td>
+<td><p class="sd-card-text">raiders07</p></td>
+<td><p class="sd-card-text">1659</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-07</p></td>
+<td><p class="sd-card-text">raiders08</p></td>
+<td><p class="sd-card-text">1360</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-07</p></td>
+<td><p class="sd-card-text">raiders09</p></td>
+<td><p class="sd-card-text">1367</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-07</p></td>
+<td><p class="sd-card-text">raiders10</p></td>
+<td><p class="sd-card-text">1285</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-07</p></td>
+<td><p class="sd-card-text">raiders01_test</p></td>
+<td><p class="sd-card-text">1262</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-07</p></td>
+<td><p class="sd-card-text">raiders02_test</p></td>
+<td><p class="sd-card-text">1374</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-07</p></td>
+<td><p class="sd-card-text">raiders03_test</p></td>
+<td><p class="sd-card-text">1362</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-08</p></td>
+<td><p class="sd-card-text">raiders01</p></td>
+<td><p class="sd-card-text">482</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-08</p></td>
+<td><p class="sd-card-text">raiders02</p></td>
+<td><p class="sd-card-text">475</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-08</p></td>
+<td><p class="sd-card-text">raiders03</p></td>
+<td><p class="sd-card-text">488</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-08</p></td>
+<td><p class="sd-card-text">raiders04</p></td>
+<td><p class="sd-card-text">467</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-08</p></td>
+<td><p class="sd-card-text">raiders05</p></td>
+<td><p class="sd-card-text">460</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-08</p></td>
+<td><p class="sd-card-text">raiders06</p></td>
+<td><p class="sd-card-text">474</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-08</p></td>
+<td><p class="sd-card-text">raiders07</p></td>
+<td><p class="sd-card-text">616</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-08</p></td>
+<td><p class="sd-card-text">raiders08</p></td>
+<td><p class="sd-card-text">504</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-08</p></td>
+<td><p class="sd-card-text">raiders09</p></td>
+<td><p class="sd-card-text">487</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-08</p></td>
+<td><p class="sd-card-text">raiders10</p></td>
+<td><p class="sd-card-text">464</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-08</p></td>
+<td><p class="sd-card-text">raiders01_test</p></td>
+<td><p class="sd-card-text">458</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-08</p></td>
+<td><p class="sd-card-text">raiders02_test</p></td>
+<td><p class="sd-card-text">485</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-08</p></td>
+<td><p class="sd-card-text">raiders03_test</p></td>
+<td><p class="sd-card-text">1135</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-09</p></td>
+<td><p class="sd-card-text">raiders01</p></td>
+<td><p class="sd-card-text">1651</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-09</p></td>
+<td><p class="sd-card-text">raiders02</p></td>
+<td><p class="sd-card-text">1351</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-09</p></td>
+<td><p class="sd-card-text">raiders03</p></td>
+<td><p class="sd-card-text">1305</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-09</p></td>
+<td><p class="sd-card-text">raiders04</p></td>
+<td><p class="sd-card-text">1342</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-09</p></td>
+<td><p class="sd-card-text">raiders05</p></td>
+<td><p class="sd-card-text">1272</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-09</p></td>
+<td><p class="sd-card-text">raiders06</p></td>
+<td><p class="sd-card-text">1349</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-09</p></td>
+<td><p class="sd-card-text">raiders07</p></td>
+<td><p class="sd-card-text">1712</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-09</p></td>
+<td><p class="sd-card-text">raiders08</p></td>
+<td><p class="sd-card-text">1349</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-09</p></td>
+<td><p class="sd-card-text">raiders09</p></td>
+<td><p class="sd-card-text">1324</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-09</p></td>
+<td><p class="sd-card-text">raiders10</p></td>
+<td><p class="sd-card-text">1260</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-09</p></td>
+<td><p class="sd-card-text">raiders01_test</p></td>
+<td><p class="sd-card-text">1276</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-09</p></td>
+<td><p class="sd-card-text">raiders02_test</p></td>
+<td><p class="sd-card-text">1395</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-09</p></td>
+<td><p class="sd-card-text">raiders03_test</p></td>
+<td><p class="sd-card-text">1379</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-11</p></td>
+<td><p class="sd-card-text">raiders01</p></td>
+<td><p class="sd-card-text">1602</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-11</p></td>
+<td><p class="sd-card-text">raiders02</p></td>
+<td><p class="sd-card-text">1344</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-11</p></td>
+<td><p class="sd-card-text">raiders03</p></td>
+<td><p class="sd-card-text">1310</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-11</p></td>
+<td><p class="sd-card-text">raiders04</p></td>
+<td><p class="sd-card-text">1349</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-11</p></td>
+<td><p class="sd-card-text">raiders05</p></td>
+<td><p class="sd-card-text">1295</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-11</p></td>
+<td><p class="sd-card-text">raiders06</p></td>
+<td><p class="sd-card-text">1370</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-11</p></td>
+<td><p class="sd-card-text">raiders07</p></td>
+<td><p class="sd-card-text">1678</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-11</p></td>
+<td><p class="sd-card-text">raiders08</p></td>
+<td><p class="sd-card-text">1317</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-11</p></td>
+<td><p class="sd-card-text">raiders09</p></td>
+<td><p class="sd-card-text">1366</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-11</p></td>
+<td><p class="sd-card-text">raiders10</p></td>
+<td><p class="sd-card-text">1304</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-11</p></td>
+<td><p class="sd-card-text">raiders01_test</p></td>
+<td><p class="sd-card-text">1611</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-11</p></td>
+<td><p class="sd-card-text">raiders02_test</p></td>
+<td><p class="sd-card-text">1359</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-11</p></td>
+<td><p class="sd-card-text">raiders03_test</p></td>
+<td><p class="sd-card-text">1369</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-12</p></td>
+<td><p class="sd-card-text">raiders01</p></td>
+<td><p class="sd-card-text">1646</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-12</p></td>
+<td><p class="sd-card-text">raiders02</p></td>
+<td><p class="sd-card-text">1338</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-12</p></td>
+<td><p class="sd-card-text">raiders03</p></td>
+<td><p class="sd-card-text">1324</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-12</p></td>
+<td><p class="sd-card-text">raiders04</p></td>
+<td><p class="sd-card-text">1356</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-12</p></td>
+<td><p class="sd-card-text">raiders05</p></td>
+<td><p class="sd-card-text">1296</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-12</p></td>
+<td><p class="sd-card-text">raiders06</p></td>
+<td><p class="sd-card-text">1347</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-12</p></td>
+<td><p class="sd-card-text">raiders07</p></td>
+<td><p class="sd-card-text">1688</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-12</p></td>
+<td><p class="sd-card-text">raiders08</p></td>
+<td><p class="sd-card-text">1339</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-12</p></td>
+<td><p class="sd-card-text">raiders09</p></td>
+<td><p class="sd-card-text">1321</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-12</p></td>
+<td><p class="sd-card-text">raiders10</p></td>
+<td><p class="sd-card-text">1283</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-12</p></td>
+<td><p class="sd-card-text">raiders01_test</p></td>
+<td><p class="sd-card-text">1253</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-12</p></td>
+<td><p class="sd-card-text">raiders02_test</p></td>
+<td><p class="sd-card-text">1399</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-12</p></td>
+<td><p class="sd-card-text">raiders03_test</p></td>
+<td><p class="sd-card-text">1363</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-13</p></td>
+<td><p class="sd-card-text">raiders01</p></td>
+<td><p class="sd-card-text">1649</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-13</p></td>
+<td><p class="sd-card-text">raiders02</p></td>
+<td><p class="sd-card-text">1358</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-13</p></td>
+<td><p class="sd-card-text">raiders03</p></td>
+<td><p class="sd-card-text">1316</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-13</p></td>
+<td><p class="sd-card-text">raiders04</p></td>
+<td><p class="sd-card-text">1343</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-13</p></td>
+<td><p class="sd-card-text">raiders05</p></td>
+<td><p class="sd-card-text">1298</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-13</p></td>
+<td><p class="sd-card-text">raiders06</p></td>
+<td><p class="sd-card-text">1355</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-13</p></td>
+<td><p class="sd-card-text">raiders07</p></td>
+<td><p class="sd-card-text">1684</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-13</p></td>
+<td><p class="sd-card-text">raiders08</p></td>
+<td><p class="sd-card-text">1337</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-13</p></td>
+<td><p class="sd-card-text">raiders09</p></td>
+<td><p class="sd-card-text">1300</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-13</p></td>
+<td><p class="sd-card-text">raiders10</p></td>
+<td><p class="sd-card-text">1283</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-13</p></td>
+<td><p class="sd-card-text">raiders01_test</p></td>
+<td><p class="sd-card-text">1262</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-13</p></td>
+<td><p class="sd-card-text">raiders02_test</p></td>
+<td><p class="sd-card-text">1361</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-13</p></td>
+<td><p class="sd-card-text">raiders03_test</p></td>
+<td><p class="sd-card-text">1356</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-14</p></td>
+<td><p class="sd-card-text">raiders01</p></td>
+<td><p class="sd-card-text">1631</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-14</p></td>
+<td><p class="sd-card-text">raiders02</p></td>
+<td><p class="sd-card-text">1351</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-14</p></td>
+<td><p class="sd-card-text">raiders03</p></td>
+<td><p class="sd-card-text">1346</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-14</p></td>
+<td><p class="sd-card-text">raiders04</p></td>
+<td><p class="sd-card-text">1380</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-14</p></td>
+<td><p class="sd-card-text">raiders05</p></td>
+<td><p class="sd-card-text">1295</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-14</p></td>
+<td><p class="sd-card-text">raiders06</p></td>
+<td><p class="sd-card-text">1345</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-14</p></td>
+<td><p class="sd-card-text">raiders07</p></td>
+<td><p class="sd-card-text">1691</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-14</p></td>
+<td><p class="sd-card-text">raiders08</p></td>
+<td><p class="sd-card-text">1339</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-14</p></td>
+<td><p class="sd-card-text">raiders09</p></td>
+<td><p class="sd-card-text">1332</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-14</p></td>
+<td><p class="sd-card-text">raiders10</p></td>
+<td><p class="sd-card-text">1268</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-14</p></td>
+<td><p class="sd-card-text">raiders01_test</p></td>
+<td><p class="sd-card-text">1260</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-14</p></td>
+<td><p class="sd-card-text">raiders02_test</p></td>
+<td><p class="sd-card-text">1367</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-14</p></td>
+<td><p class="sd-card-text">raiders03_test</p></td>
+<td><p class="sd-card-text">1339</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-15</p></td>
+<td><p class="sd-card-text">raiders01</p></td>
+<td><p class="sd-card-text">2068</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-15</p></td>
+<td><p class="sd-card-text">raiders02</p></td>
+<td><p class="sd-card-text">2079</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-15</p></td>
+<td><p class="sd-card-text">raiders03</p></td>
+<td><p class="sd-card-text">2006</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-15</p></td>
+<td><p class="sd-card-text">raiders04</p></td>
+<td><p class="sd-card-text">2060</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-15</p></td>
+<td><p class="sd-card-text">raiders05</p></td>
+<td><p class="sd-card-text">2051</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-15</p></td>
+<td><p class="sd-card-text">raiders06</p></td>
+<td><p class="sd-card-text">2051</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-15</p></td>
+<td><p class="sd-card-text">raiders07</p></td>
+<td><p class="sd-card-text">2149</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-15</p></td>
+<td><p class="sd-card-text">raiders08</p></td>
+<td><p class="sd-card-text">2087</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-15</p></td>
+<td><p class="sd-card-text">raiders09</p></td>
+<td><p class="sd-card-text">2074</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-15</p></td>
+<td><p class="sd-card-text">raiders10</p></td>
+<td><p class="sd-card-text">2057</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-15</p></td>
+<td><p class="sd-card-text">raiders01_test</p></td>
+<td><p class="sd-card-text">2059</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-15</p></td>
+<td><p class="sd-card-text">raiders02_test</p></td>
+<td><p class="sd-card-text">2074</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-15</p></td>
+<td><p class="sd-card-text">raiders03_test</p></td>
+<td><p class="sd-card-text">2070</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</details></section>
+<section id="lags-in-goodbadugly-movie">
+<h2>Lags in GoodBadUgly movie<a class="headerlink" href="#lags-in-goodbadugly-movie" title="Link to this heading">¶</a></h2>
+<p>Similar to the Raiders movie, there was a lag between the acquisition onset and the stimuli onset along the runs of the GoodBadUgly movie.
+This lag could vary across runs and subjects, and should be considered when synchrony between the movie and acquisition times is required.</p>
+<p>We provide here the exact lag for each run and each subject. Note that this table can also be
+download as a <em>csv</em> file <a class="reference external" href="https://github.com/individual-brain-charting/docs/blob/main/movie_protocols_data/lags_goodbadugly.csv">here</a>.</p>
+<p>The <em>lag</em> represents the time between the acquisition onset and the stimuli onset, in milliseconds.
+The <em>run</em> column includes the video file name corresponding to the movie section shown during each run, along with the respective run number.
+Please note that the first three sections of the movie (movie clips displayed during the first three runs) were presented to the participants
+again at the end of the last session. As a result, the <em>run</em> column includes the video file name and the run number for the first three,
+along with the <em>test</em> legend.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Lags in GoodBadUgly movie</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="table-wrapper docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">sub</p></th>
+<th class="head"><p class="sd-card-text">run</p></th>
+<th class="head"><p class="sd-card-text">lag</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text">sub-04</p></td>
+<td><p class="sd-card-text">tgbu_movie01</p></td>
+<td><p class="sd-card-text">2383</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-04</p></td>
+<td><p class="sd-card-text">tgbu_movie02</p></td>
+<td><p class="sd-card-text">2372</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-04</p></td>
+<td><p class="sd-card-text">tgbu_movie03</p></td>
+<td><p class="sd-card-text">2417</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-04</p></td>
+<td><p class="sd-card-text">tgbu_movie04</p></td>
+<td><p class="sd-card-text">2302</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-04</p></td>
+<td><p class="sd-card-text">tgbu_movie05</p></td>
+<td><p class="sd-card-text">2367</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-04</p></td>
+<td><p class="sd-card-text">tgbu_movie06</p></td>
+<td><p class="sd-card-text">2353</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-04</p></td>
+<td><p class="sd-card-text">tgbu_movie07</p></td>
+<td><p class="sd-card-text">2383</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-04</p></td>
+<td><p class="sd-card-text">tgbu_movie08</p></td>
+<td><p class="sd-card-text">2480</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-04</p></td>
+<td><p class="sd-card-text">tgbu_movie09</p></td>
+<td><p class="sd-card-text">2232</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-04</p></td>
+<td><p class="sd-card-text">tgbu_movie10</p></td>
+<td><p class="sd-card-text">2264</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-04</p></td>
+<td><p class="sd-card-text">tgbu_movie11</p></td>
+<td><p class="sd-card-text">2256</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-04</p></td>
+<td><p class="sd-card-text">tgbu_movie12</p></td>
+<td><p class="sd-card-text">2261</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-04</p></td>
+<td><p class="sd-card-text">tgbu_movie13</p></td>
+<td><p class="sd-card-text">2259</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-04</p></td>
+<td><p class="sd-card-text">tgbu_movie14</p></td>
+<td><p class="sd-card-text">2262</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-04</p></td>
+<td><p class="sd-card-text">tgbu_movie15</p></td>
+<td><p class="sd-card-text">2536</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-04</p></td>
+<td><p class="sd-card-text">tgbu_movie16</p></td>
+<td><p class="sd-card-text">2405</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-04</p></td>
+<td><p class="sd-card-text">tgbu_movie17</p></td>
+<td><p class="sd-card-text">2371</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-04</p></td>
+<td><p class="sd-card-text">tgbu_movie18</p></td>
+<td><p class="sd-card-text">2327</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-04</p></td>
+<td><p class="sd-card-text">tgbu_movie01_test</p></td>
+<td><p class="sd-card-text">2292</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-04</p></td>
+<td><p class="sd-card-text">tgbu_movie02_test</p></td>
+<td><p class="sd-card-text">2342</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-04</p></td>
+<td><p class="sd-card-text">tgbu_movie03_test</p></td>
+<td><p class="sd-card-text">2353</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-05</p></td>
+<td><p class="sd-card-text">tgbu_movie01</p></td>
+<td><p class="sd-card-text">1113</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-05</p></td>
+<td><p class="sd-card-text">tgbu_movie02</p></td>
+<td><p class="sd-card-text">1005</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-05</p></td>
+<td><p class="sd-card-text">tgbu_movie03</p></td>
+<td><p class="sd-card-text">1017</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-05</p></td>
+<td><p class="sd-card-text">tgbu_movie04</p></td>
+<td><p class="sd-card-text">1011</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-05</p></td>
+<td><p class="sd-card-text">tgbu_movie05</p></td>
+<td><p class="sd-card-text">968</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-05</p></td>
+<td><p class="sd-card-text">tgbu_movie06</p></td>
+<td><p class="sd-card-text">997</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-05</p></td>
+<td><p class="sd-card-text">tgbu_movie07</p></td>
+<td><p class="sd-card-text">1029</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-05</p></td>
+<td><p class="sd-card-text">tgbu_movie08</p></td>
+<td><p class="sd-card-text">488</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-05</p></td>
+<td><p class="sd-card-text">tgbu_movie09</p></td>
+<td><p class="sd-card-text">463</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-05</p></td>
+<td><p class="sd-card-text">tgbu_movie10</p></td>
+<td><p class="sd-card-text">1006</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-05</p></td>
+<td><p class="sd-card-text">tgbu_movie11</p></td>
+<td><p class="sd-card-text">992</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-05</p></td>
+<td><p class="sd-card-text">tgbu_movie12</p></td>
+<td><p class="sd-card-text">1041</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-05</p></td>
+<td><p class="sd-card-text">tgbu_movie13</p></td>
+<td><p class="sd-card-text">1000</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-05</p></td>
+<td><p class="sd-card-text">tgbu_movie14</p></td>
+<td><p class="sd-card-text">1068</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-05</p></td>
+<td><p class="sd-card-text">tgbu_movie15</p></td>
+<td><p class="sd-card-text">2386</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-05</p></td>
+<td><p class="sd-card-text">tgbu_movie16</p></td>
+<td><p class="sd-card-text">2364</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-05</p></td>
+<td><p class="sd-card-text">tgbu_movie17</p></td>
+<td><p class="sd-card-text">2393</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-05</p></td>
+<td><p class="sd-card-text">tgbu_movie18</p></td>
+<td><p class="sd-card-text">2513</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-05</p></td>
+<td><p class="sd-card-text">tgbu_movie01_test</p></td>
+<td><p class="sd-card-text">2356</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-05</p></td>
+<td><p class="sd-card-text">tgbu_movie02_test</p></td>
+<td><p class="sd-card-text">2343</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-05</p></td>
+<td><p class="sd-card-text">tgbu_movie03_test</p></td>
+<td><p class="sd-card-text">2420</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-06</p></td>
+<td><p class="sd-card-text">tgbu_movie01</p></td>
+<td><p class="sd-card-text">2413</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-06</p></td>
+<td><p class="sd-card-text">tgbu_movie02</p></td>
+<td><p class="sd-card-text">2392</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-06</p></td>
+<td><p class="sd-card-text">tgbu_movie03</p></td>
+<td><p class="sd-card-text">2353</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-06</p></td>
+<td><p class="sd-card-text">tgbu_movie04</p></td>
+<td><p class="sd-card-text">2341</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-06</p></td>
+<td><p class="sd-card-text">tgbu_movie05</p></td>
+<td><p class="sd-card-text">2321</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-06</p></td>
+<td><p class="sd-card-text">tgbu_movie06</p></td>
+<td><p class="sd-card-text">2382</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-06</p></td>
+<td><p class="sd-card-text">tgbu_movie07</p></td>
+<td><p class="sd-card-text">2348</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-06</p></td>
+<td><p class="sd-card-text">tgbu_movie08</p></td>
+<td><p class="sd-card-text">2548</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-06</p></td>
+<td><p class="sd-card-text">tgbu_movie09</p></td>
+<td><p class="sd-card-text">2372</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-06</p></td>
+<td><p class="sd-card-text">tgbu_movie10</p></td>
+<td><p class="sd-card-text">2379</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-06</p></td>
+<td><p class="sd-card-text">tgbu_movie11</p></td>
+<td><p class="sd-card-text">2390</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-06</p></td>
+<td><p class="sd-card-text">tgbu_movie12</p></td>
+<td><p class="sd-card-text">2344</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-06</p></td>
+<td><p class="sd-card-text">tgbu_movie13</p></td>
+<td><p class="sd-card-text">2414</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-06</p></td>
+<td><p class="sd-card-text">tgbu_movie14</p></td>
+<td><p class="sd-card-text">2421</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-06</p></td>
+<td><p class="sd-card-text">tgbu_movie15</p></td>
+<td><p class="sd-card-text">2483</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-06</p></td>
+<td><p class="sd-card-text">tgbu_movie16</p></td>
+<td><p class="sd-card-text">2323</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-06</p></td>
+<td><p class="sd-card-text">tgbu_movie17</p></td>
+<td><p class="sd-card-text">2420</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-06</p></td>
+<td><p class="sd-card-text">tgbu_movie18</p></td>
+<td><p class="sd-card-text">2402</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-06</p></td>
+<td><p class="sd-card-text">tgbu_movie01_test</p></td>
+<td><p class="sd-card-text">2340</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-06</p></td>
+<td><p class="sd-card-text">tgbu_movie02_test</p></td>
+<td><p class="sd-card-text">2333</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-06</p></td>
+<td><p class="sd-card-text">tgbu_movie03_test</p></td>
+<td><p class="sd-card-text">2354</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-07</p></td>
+<td><p class="sd-card-text">tgbu_movie01</p></td>
+<td><p class="sd-card-text">2156</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-07</p></td>
+<td><p class="sd-card-text">tgbu_movie02</p></td>
+<td><p class="sd-card-text">2138</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-07</p></td>
+<td><p class="sd-card-text">tgbu_movie03</p></td>
+<td><p class="sd-card-text">2125</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-07</p></td>
+<td><p class="sd-card-text">tgbu_movie04</p></td>
+<td><p class="sd-card-text">2105</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-07</p></td>
+<td><p class="sd-card-text">tgbu_movie05</p></td>
+<td><p class="sd-card-text">2138</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-07</p></td>
+<td><p class="sd-card-text">tgbu_movie06</p></td>
+<td><p class="sd-card-text">2115</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-07</p></td>
+<td><p class="sd-card-text">tgbu_movie07</p></td>
+<td><p class="sd-card-text">2136</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-07</p></td>
+<td><p class="sd-card-text">tgbu_movie08</p></td>
+<td><p class="sd-card-text">911</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-07</p></td>
+<td><p class="sd-card-text">tgbu_movie09</p></td>
+<td><p class="sd-card-text">887</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-07</p></td>
+<td><p class="sd-card-text">tgbu_movie10</p></td>
+<td><p class="sd-card-text">890</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-07</p></td>
+<td><p class="sd-card-text">tgbu_movie11</p></td>
+<td><p class="sd-card-text">871</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-07</p></td>
+<td><p class="sd-card-text">tgbu_movie12</p></td>
+<td><p class="sd-card-text">895</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-07</p></td>
+<td><p class="sd-card-text">tgbu_movie13</p></td>
+<td><p class="sd-card-text">870</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-07</p></td>
+<td><p class="sd-card-text">tgbu_movie14</p></td>
+<td><p class="sd-card-text">909</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-07</p></td>
+<td><p class="sd-card-text">tgbu_movie15</p></td>
+<td><p class="sd-card-text">509</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-07</p></td>
+<td><p class="sd-card-text">tgbu_movie16</p></td>
+<td><p class="sd-card-text">495</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-07</p></td>
+<td><p class="sd-card-text">tgbu_movie17</p></td>
+<td><p class="sd-card-text">490</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-07</p></td>
+<td><p class="sd-card-text">tgbu_movie18</p></td>
+<td><p class="sd-card-text">470</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-07</p></td>
+<td><p class="sd-card-text">tgbu_movie01_test</p></td>
+<td><p class="sd-card-text">445</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-07</p></td>
+<td><p class="sd-card-text">tgbu_movie02_test</p></td>
+<td><p class="sd-card-text">468</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-07</p></td>
+<td><p class="sd-card-text">tgbu_movie03_test</p></td>
+<td><p class="sd-card-text">466</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-08</p></td>
+<td><p class="sd-card-text">tgbu_movie01</p></td>
+<td><p class="sd-card-text">2431</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-08</p></td>
+<td><p class="sd-card-text">tgbu_movie02</p></td>
+<td><p class="sd-card-text">2405</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-08</p></td>
+<td><p class="sd-card-text">tgbu_movie03</p></td>
+<td><p class="sd-card-text">2437</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-08</p></td>
+<td><p class="sd-card-text">tgbu_movie04</p></td>
+<td><p class="sd-card-text">2416</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-08</p></td>
+<td><p class="sd-card-text">tgbu_movie05</p></td>
+<td><p class="sd-card-text">2484</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-08</p></td>
+<td><p class="sd-card-text">tgbu_movie06</p></td>
+<td><p class="sd-card-text">2403</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-08</p></td>
+<td><p class="sd-card-text">tgbu_movie07</p></td>
+<td><p class="sd-card-text">2392</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-08</p></td>
+<td><p class="sd-card-text">tgbu_movie08</p></td>
+<td><p class="sd-card-text">2261</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-08</p></td>
+<td><p class="sd-card-text">tgbu_movie09</p></td>
+<td><p class="sd-card-text">2424</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-08</p></td>
+<td><p class="sd-card-text">tgbu_movie10</p></td>
+<td><p class="sd-card-text">2243</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-08</p></td>
+<td><p class="sd-card-text">tgbu_movie11</p></td>
+<td><p class="sd-card-text">2282</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-08</p></td>
+<td><p class="sd-card-text">tgbu_movie12</p></td>
+<td><p class="sd-card-text">2290</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-08</p></td>
+<td><p class="sd-card-text">tgbu_movie13</p></td>
+<td><p class="sd-card-text">2277</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-08</p></td>
+<td><p class="sd-card-text">tgbu_movie14</p></td>
+<td><p class="sd-card-text">2326</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-08</p></td>
+<td><p class="sd-card-text">tgbu_movie15</p></td>
+<td><p class="sd-card-text">2607</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-08</p></td>
+<td><p class="sd-card-text">tgbu_movie16</p></td>
+<td><p class="sd-card-text">2439</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-08</p></td>
+<td><p class="sd-card-text">tgbu_movie17</p></td>
+<td><p class="sd-card-text">2451</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-08</p></td>
+<td><p class="sd-card-text">tgbu_movie18</p></td>
+<td><p class="sd-card-text">2428</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-08</p></td>
+<td><p class="sd-card-text">tgbu_movie01_test</p></td>
+<td><p class="sd-card-text">2435</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-08</p></td>
+<td><p class="sd-card-text">tgbu_movie02_test</p></td>
+<td><p class="sd-card-text">2439</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-08</p></td>
+<td><p class="sd-card-text">tgbu_movie03_test</p></td>
+<td><p class="sd-card-text">2465</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-09</p></td>
+<td><p class="sd-card-text">tgbu_movie01</p></td>
+<td><p class="sd-card-text">1004</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-09</p></td>
+<td><p class="sd-card-text">tgbu_movie02</p></td>
+<td><p class="sd-card-text">981</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-09</p></td>
+<td><p class="sd-card-text">tgbu_movie03</p></td>
+<td><p class="sd-card-text">995</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-09</p></td>
+<td><p class="sd-card-text">tgbu_movie04</p></td>
+<td><p class="sd-card-text">954</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-09</p></td>
+<td><p class="sd-card-text">tgbu_movie05</p></td>
+<td><p class="sd-card-text">1005</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-09</p></td>
+<td><p class="sd-card-text">tgbu_movie06</p></td>
+<td><p class="sd-card-text">995</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-09</p></td>
+<td><p class="sd-card-text">tgbu_movie07</p></td>
+<td><p class="sd-card-text">1003</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-09</p></td>
+<td><p class="sd-card-text">tgbu_movie08</p></td>
+<td><p class="sd-card-text">994</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-09</p></td>
+<td><p class="sd-card-text">tgbu_movie09</p></td>
+<td><p class="sd-card-text">958</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-09</p></td>
+<td><p class="sd-card-text">tgbu_movie10</p></td>
+<td><p class="sd-card-text">943</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-09</p></td>
+<td><p class="sd-card-text">tgbu_movie11</p></td>
+<td><p class="sd-card-text">951</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-09</p></td>
+<td><p class="sd-card-text">tgbu_movie12</p></td>
+<td><p class="sd-card-text">969</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-09</p></td>
+<td><p class="sd-card-text">tgbu_movie13</p></td>
+<td><p class="sd-card-text">910</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-09</p></td>
+<td><p class="sd-card-text">tgbu_movie14</p></td>
+<td><p class="sd-card-text">988</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-09</p></td>
+<td><p class="sd-card-text">tgbu_movie15</p></td>
+<td><p class="sd-card-text">1014</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-09</p></td>
+<td><p class="sd-card-text">tgbu_movie16</p></td>
+<td><p class="sd-card-text">1012</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-09</p></td>
+<td><p class="sd-card-text">tgbu_movie17</p></td>
+<td><p class="sd-card-text">1035</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-09</p></td>
+<td><p class="sd-card-text">tgbu_movie18</p></td>
+<td><p class="sd-card-text">971</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-09</p></td>
+<td><p class="sd-card-text">tgbu_movie01_test</p></td>
+<td><p class="sd-card-text">986</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-09</p></td>
+<td><p class="sd-card-text">tgbu_movie02_test</p></td>
+<td><p class="sd-card-text">986</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-09</p></td>
+<td><p class="sd-card-text">tgbu_movie03_test</p></td>
+<td><p class="sd-card-text">1020</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-11</p></td>
+<td><p class="sd-card-text">tgbu_movie01</p></td>
+<td><p class="sd-card-text">2140</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-11</p></td>
+<td><p class="sd-card-text">tgbu_movie02</p></td>
+<td><p class="sd-card-text">2115</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-11</p></td>
+<td><p class="sd-card-text">tgbu_movie03</p></td>
+<td><p class="sd-card-text">2161</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-11</p></td>
+<td><p class="sd-card-text">tgbu_movie04</p></td>
+<td><p class="sd-card-text">2121</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-11</p></td>
+<td><p class="sd-card-text">tgbu_movie05</p></td>
+<td><p class="sd-card-text">2145</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-11</p></td>
+<td><p class="sd-card-text">tgbu_movie06</p></td>
+<td><p class="sd-card-text">2131</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-11</p></td>
+<td><p class="sd-card-text">tgbu_movie07</p></td>
+<td><p class="sd-card-text">2161</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-11</p></td>
+<td><p class="sd-card-text">tgbu_movie08</p></td>
+<td><p class="sd-card-text">595</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-11</p></td>
+<td><p class="sd-card-text">tgbu_movie09</p></td>
+<td><p class="sd-card-text">472</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-11</p></td>
+<td><p class="sd-card-text">tgbu_movie10</p></td>
+<td><p class="sd-card-text">444</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-11</p></td>
+<td><p class="sd-card-text">tgbu_movie11</p></td>
+<td><p class="sd-card-text">447</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-11</p></td>
+<td><p class="sd-card-text">tgbu_movie12</p></td>
+<td><p class="sd-card-text">462</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-11</p></td>
+<td><p class="sd-card-text">tgbu_movie13</p></td>
+<td><p class="sd-card-text">457</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-11</p></td>
+<td><p class="sd-card-text">tgbu_movie14</p></td>
+<td><p class="sd-card-text">512</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-11</p></td>
+<td><p class="sd-card-text">tgbu_movie15</p></td>
+<td><p class="sd-card-text">522</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-11</p></td>
+<td><p class="sd-card-text">tgbu_movie16</p></td>
+<td><p class="sd-card-text">478</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-11</p></td>
+<td><p class="sd-card-text">tgbu_movie17</p></td>
+<td><p class="sd-card-text">492</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-11</p></td>
+<td><p class="sd-card-text">tgbu_movie18</p></td>
+<td><p class="sd-card-text">452</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-11</p></td>
+<td><p class="sd-card-text">tgbu_movie01_test</p></td>
+<td><p class="sd-card-text">447</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-11</p></td>
+<td><p class="sd-card-text">tgbu_movie02_test</p></td>
+<td><p class="sd-card-text">475</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-11</p></td>
+<td><p class="sd-card-text">tgbu_movie03_test</p></td>
+<td><p class="sd-card-text">498</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-12</p></td>
+<td><p class="sd-card-text">tgbu_movie01</p></td>
+<td><p class="sd-card-text">2407</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-12</p></td>
+<td><p class="sd-card-text">tgbu_movie02</p></td>
+<td><p class="sd-card-text">2395</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-12</p></td>
+<td><p class="sd-card-text">tgbu_movie03</p></td>
+<td><p class="sd-card-text">2412</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-12</p></td>
+<td><p class="sd-card-text">tgbu_movie04</p></td>
+<td><p class="sd-card-text">2402</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-12</p></td>
+<td><p class="sd-card-text">tgbu_movie05</p></td>
+<td><p class="sd-card-text">2396</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-12</p></td>
+<td><p class="sd-card-text">tgbu_movie06</p></td>
+<td><p class="sd-card-text">2379</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-12</p></td>
+<td><p class="sd-card-text">tgbu_movie07</p></td>
+<td><p class="sd-card-text">2396</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-12</p></td>
+<td><p class="sd-card-text">tgbu_movie08</p></td>
+<td><p class="sd-card-text">2462</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-12</p></td>
+<td><p class="sd-card-text">tgbu_movie09</p></td>
+<td><p class="sd-card-text">2286</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-12</p></td>
+<td><p class="sd-card-text">tgbu_movie10</p></td>
+<td><p class="sd-card-text">2281</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-12</p></td>
+<td><p class="sd-card-text">tgbu_movie11</p></td>
+<td><p class="sd-card-text">2264</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-12</p></td>
+<td><p class="sd-card-text">tgbu_movie12</p></td>
+<td><p class="sd-card-text">2278</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-12</p></td>
+<td><p class="sd-card-text">tgbu_movie13</p></td>
+<td><p class="sd-card-text">2255</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-12</p></td>
+<td><p class="sd-card-text">tgbu_movie14</p></td>
+<td><p class="sd-card-text">2323</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-12</p></td>
+<td><p class="sd-card-text">tgbu_movie15</p></td>
+<td><p class="sd-card-text">2517</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-12</p></td>
+<td><p class="sd-card-text">tgbu_movie16</p></td>
+<td><p class="sd-card-text">2397</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-12</p></td>
+<td><p class="sd-card-text">tgbu_movie17</p></td>
+<td><p class="sd-card-text">2381</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-12</p></td>
+<td><p class="sd-card-text">tgbu_movie18</p></td>
+<td><p class="sd-card-text">2359</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-12</p></td>
+<td><p class="sd-card-text">tgbu_movie01_test</p></td>
+<td><p class="sd-card-text">2373</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-12</p></td>
+<td><p class="sd-card-text">tgbu_movie02_test</p></td>
+<td><p class="sd-card-text">2334</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-12</p></td>
+<td><p class="sd-card-text">tgbu_movie03_test</p></td>
+<td><p class="sd-card-text">2373</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-13</p></td>
+<td><p class="sd-card-text">tgbu_movie01</p></td>
+<td><p class="sd-card-text">2357</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-13</p></td>
+<td><p class="sd-card-text">tgbu_movie02</p></td>
+<td><p class="sd-card-text">2441</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-13</p></td>
+<td><p class="sd-card-text">tgbu_movie03</p></td>
+<td><p class="sd-card-text">2383</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-13</p></td>
+<td><p class="sd-card-text">tgbu_movie04</p></td>
+<td><p class="sd-card-text">2363</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-13</p></td>
+<td><p class="sd-card-text">tgbu_movie05</p></td>
+<td><p class="sd-card-text">2386</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-13</p></td>
+<td><p class="sd-card-text">tgbu_movie06</p></td>
+<td><p class="sd-card-text">2377</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-13</p></td>
+<td><p class="sd-card-text">tgbu_movie07</p></td>
+<td><p class="sd-card-text">2398</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-13</p></td>
+<td><p class="sd-card-text">tgbu_movie08</p></td>
+<td><p class="sd-card-text">2568</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-13</p></td>
+<td><p class="sd-card-text">tgbu_movie09</p></td>
+<td><p class="sd-card-text">2360</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-13</p></td>
+<td><p class="sd-card-text">tgbu_movie10</p></td>
+<td><p class="sd-card-text">2310</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-13</p></td>
+<td><p class="sd-card-text">tgbu_movie11</p></td>
+<td><p class="sd-card-text">2329</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-13</p></td>
+<td><p class="sd-card-text">tgbu_movie12</p></td>
+<td><p class="sd-card-text">2368</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-13</p></td>
+<td><p class="sd-card-text">tgbu_movie13</p></td>
+<td><p class="sd-card-text">2344</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-13</p></td>
+<td><p class="sd-card-text">tgbu_movie14</p></td>
+<td><p class="sd-card-text">2406</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-13</p></td>
+<td><p class="sd-card-text">tgbu_movie15</p></td>
+<td><p class="sd-card-text">2533</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-13</p></td>
+<td><p class="sd-card-text">tgbu_movie16</p></td>
+<td><p class="sd-card-text">2347</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-13</p></td>
+<td><p class="sd-card-text">tgbu_movie17</p></td>
+<td><p class="sd-card-text">2365</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-13</p></td>
+<td><p class="sd-card-text">tgbu_movie18</p></td>
+<td><p class="sd-card-text">2381</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-13</p></td>
+<td><p class="sd-card-text">tgbu_movie01_test</p></td>
+<td><p class="sd-card-text">2339</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-13</p></td>
+<td><p class="sd-card-text">tgbu_movie02_test</p></td>
+<td><p class="sd-card-text">2353</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-13</p></td>
+<td><p class="sd-card-text">tgbu_movie03_test</p></td>
+<td><p class="sd-card-text">2351</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-14</p></td>
+<td><p class="sd-card-text">tgbu_movie01</p></td>
+<td><p class="sd-card-text">2224</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-14</p></td>
+<td><p class="sd-card-text">tgbu_movie02</p></td>
+<td><p class="sd-card-text">2097</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-14</p></td>
+<td><p class="sd-card-text">tgbu_movie03</p></td>
+<td><p class="sd-card-text">2073</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-14</p></td>
+<td><p class="sd-card-text">tgbu_movie04</p></td>
+<td><p class="sd-card-text">2083</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-14</p></td>
+<td><p class="sd-card-text">tgbu_movie05</p></td>
+<td><p class="sd-card-text">2095</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-14</p></td>
+<td><p class="sd-card-text">tgbu_movie06</p></td>
+<td><p class="sd-card-text">2088</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-14</p></td>
+<td><p class="sd-card-text">tgbu_movie07</p></td>
+<td><p class="sd-card-text">2118</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-14</p></td>
+<td><p class="sd-card-text">tgbu_movie08</p></td>
+<td><p class="sd-card-text">2168</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-14</p></td>
+<td><p class="sd-card-text">tgbu_movie09</p></td>
+<td><p class="sd-card-text">2152</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-14</p></td>
+<td><p class="sd-card-text">tgbu_movie10</p></td>
+<td><p class="sd-card-text">2120</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-14</p></td>
+<td><p class="sd-card-text">tgbu_movie11</p></td>
+<td><p class="sd-card-text">2138</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-14</p></td>
+<td><p class="sd-card-text">tgbu_movie12</p></td>
+<td><p class="sd-card-text">2117</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-14</p></td>
+<td><p class="sd-card-text">tgbu_movie13</p></td>
+<td><p class="sd-card-text">2152</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-14</p></td>
+<td><p class="sd-card-text">tgbu_movie14</p></td>
+<td><p class="sd-card-text">2191</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-14</p></td>
+<td><p class="sd-card-text">tgbu_movie15</p></td>
+<td><p class="sd-card-text">2159</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-14</p></td>
+<td><p class="sd-card-text">tgbu_movie16</p></td>
+<td><p class="sd-card-text">2141</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-14</p></td>
+<td><p class="sd-card-text">tgbu_movie17</p></td>
+<td><p class="sd-card-text">2159</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-14</p></td>
+<td><p class="sd-card-text">tgbu_movie18</p></td>
+<td><p class="sd-card-text">2125</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-14</p></td>
+<td><p class="sd-card-text">tgbu_movie01_test</p></td>
+<td><p class="sd-card-text">2123</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-14</p></td>
+<td><p class="sd-card-text">tgbu_movie02_test</p></td>
+<td><p class="sd-card-text">2170</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-14</p></td>
+<td><p class="sd-card-text">tgbu_movie03_test</p></td>
+<td><p class="sd-card-text">2148</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-15</p></td>
+<td><p class="sd-card-text">tgbu_movie01</p></td>
+<td><p class="sd-card-text">973</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-15</p></td>
+<td><p class="sd-card-text">tgbu_movie02</p></td>
+<td><p class="sd-card-text">921</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-15</p></td>
+<td><p class="sd-card-text">tgbu_movie03</p></td>
+<td><p class="sd-card-text">971</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-15</p></td>
+<td><p class="sd-card-text">tgbu_movie04</p></td>
+<td><p class="sd-card-text">909</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-15</p></td>
+<td><p class="sd-card-text">tgbu_movie05</p></td>
+<td><p class="sd-card-text">948</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-15</p></td>
+<td><p class="sd-card-text">tgbu_movie06</p></td>
+<td><p class="sd-card-text">944</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-15</p></td>
+<td><p class="sd-card-text">tgbu_movie07</p></td>
+<td><p class="sd-card-text">936</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-15</p></td>
+<td><p class="sd-card-text">tgbu_movie08</p></td>
+<td><p class="sd-card-text">2340</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-15</p></td>
+<td><p class="sd-card-text">tgbu_movie09</p></td>
+<td><p class="sd-card-text">2281</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-15</p></td>
+<td><p class="sd-card-text">tgbu_movie10</p></td>
+<td><p class="sd-card-text">2278</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-15</p></td>
+<td><p class="sd-card-text">tgbu_movie11</p></td>
+<td><p class="sd-card-text">2222</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-15</p></td>
+<td><p class="sd-card-text">tgbu_movie12</p></td>
+<td><p class="sd-card-text">2268</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-15</p></td>
+<td><p class="sd-card-text">tgbu_movie13</p></td>
+<td><p class="sd-card-text">2231</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-15</p></td>
+<td><p class="sd-card-text">tgbu_movie14</p></td>
+<td><p class="sd-card-text">2290</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-15</p></td>
+<td><p class="sd-card-text">tgbu_movie15</p></td>
+<td><p class="sd-card-text">2330</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-15</p></td>
+<td><p class="sd-card-text">tgbu_movie16</p></td>
+<td><p class="sd-card-text">2318</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-15</p></td>
+<td><p class="sd-card-text">tgbu_movie17</p></td>
+<td><p class="sd-card-text">2284</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-15</p></td>
+<td><p class="sd-card-text">tgbu_movie18</p></td>
+<td><p class="sd-card-text">2267</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-15</p></td>
+<td><p class="sd-card-text">tgbu_movie01_test</p></td>
+<td><p class="sd-card-text">2262</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-15</p></td>
+<td><p class="sd-card-text">tgbu_movie02_test</p></td>
+<td><p class="sd-card-text">2244</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-15</p></td>
+<td><p class="sd-card-text">tgbu_movie03_test</p></td>
+<td><p class="sd-card-text">2256</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</details></section>
+<section id="lags-in-monkeykingdom-movie">
+<h2>Lags in MonkeyKingdom movie<a class="headerlink" href="#lags-in-monkeykingdom-movie" title="Link to this heading">¶</a></h2>
+<p>We report here the exact lags for each run across subjects for the Monkey Kingdom movie.
+The <em>lag</em> represents the time between the acquisition onset and the stimuli onset, and could vary across runs and subjects.</p>
+<p>This table can be downloaded <a class="reference external" href="https://github.com/individual-brain-charting/docs/blob/main/movie_protocols_data/lags_monkeykingdom.csv">here</a>.</p>
+<p>The <em>lags</em> are reported in milliseconds.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Lags in MonkeyKingdom movie</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="table-wrapper docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">sub</p></th>
+<th class="head"><p class="sd-card-text">run</p></th>
+<th class="head"><p class="sd-card-text">lag</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text">sub-04</p></td>
+<td><p class="sd-card-text">run1</p></td>
+<td><p class="sd-card-text">461</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-04</p></td>
+<td><p class="sd-card-text">run2</p></td>
+<td><p class="sd-card-text">452</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-04</p></td>
+<td><p class="sd-card-text">run3</p></td>
+<td><p class="sd-card-text">422</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-04</p></td>
+<td><p class="sd-card-text">run4</p></td>
+<td><p class="sd-card-text">444</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-04</p></td>
+<td><p class="sd-card-text">run5</p></td>
+<td><p class="sd-card-text">445</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-06</p></td>
+<td><p class="sd-card-text">run1</p></td>
+<td><p class="sd-card-text">456</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-06</p></td>
+<td><p class="sd-card-text">run2</p></td>
+<td><p class="sd-card-text">445</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-06</p></td>
+<td><p class="sd-card-text">run3</p></td>
+<td><p class="sd-card-text">442</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-06</p></td>
+<td><p class="sd-card-text">run4</p></td>
+<td><p class="sd-card-text">432</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-06</p></td>
+<td><p class="sd-card-text">run5</p></td>
+<td><p class="sd-card-text">449</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-08</p></td>
+<td><p class="sd-card-text">run1</p></td>
+<td><p class="sd-card-text">3038</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-08</p></td>
+<td><p class="sd-card-text">run2</p></td>
+<td><p class="sd-card-text">2826</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-08</p></td>
+<td><p class="sd-card-text">run3</p></td>
+<td><p class="sd-card-text">2679</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-08</p></td>
+<td><p class="sd-card-text">run4</p></td>
+<td><p class="sd-card-text">2668</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-08</p></td>
+<td><p class="sd-card-text">run5</p></td>
+<td><p class="sd-card-text">2656</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-09</p></td>
+<td><p class="sd-card-text">run1</p></td>
+<td><p class="sd-card-text">489</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-09</p></td>
+<td><p class="sd-card-text">run2</p></td>
+<td><p class="sd-card-text">452</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-09</p></td>
+<td><p class="sd-card-text">run3</p></td>
+<td><p class="sd-card-text">465</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-09</p></td>
+<td><p class="sd-card-text">run4</p></td>
+<td><p class="sd-card-text">440</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-09</p></td>
+<td><p class="sd-card-text">run5</p></td>
+<td><p class="sd-card-text">444</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-11</p></td>
+<td><p class="sd-card-text">run1</p></td>
+<td><p class="sd-card-text">1151</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-11</p></td>
+<td><p class="sd-card-text">run2</p></td>
+<td><p class="sd-card-text">1131</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-11</p></td>
+<td><p class="sd-card-text">run3</p></td>
+<td><p class="sd-card-text">1160</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-11</p></td>
+<td><p class="sd-card-text">run4</p></td>
+<td><p class="sd-card-text">1162</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-11</p></td>
+<td><p class="sd-card-text">run5</p></td>
+<td><p class="sd-card-text">1190</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-12</p></td>
+<td><p class="sd-card-text">run1</p></td>
+<td><p class="sd-card-text">426</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-12</p></td>
+<td><p class="sd-card-text">run2</p></td>
+<td><p class="sd-card-text">388</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-12</p></td>
+<td><p class="sd-card-text">run3</p></td>
+<td><p class="sd-card-text">382</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-12</p></td>
+<td><p class="sd-card-text">run4</p></td>
+<td><p class="sd-card-text">405</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-12</p></td>
+<td><p class="sd-card-text">run5</p></td>
+<td><p class="sd-card-text">394</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-14</p></td>
+<td><p class="sd-card-text">run1</p></td>
+<td><p class="sd-card-text">2546</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-14</p></td>
+<td><p class="sd-card-text">run2</p></td>
+<td><p class="sd-card-text">2371</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-14</p></td>
+<td><p class="sd-card-text">run3</p></td>
+<td><p class="sd-card-text">2394</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-14</p></td>
+<td><p class="sd-card-text">run4</p></td>
+<td><p class="sd-card-text">2369</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-14</p></td>
+<td><p class="sd-card-text">run5</p></td>
+<td><p class="sd-card-text">2346</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-15</p></td>
+<td><p class="sd-card-text">run1</p></td>
+<td><p class="sd-card-text">414</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-15</p></td>
+<td><p class="sd-card-text">run2</p></td>
+<td><p class="sd-card-text">427</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-15</p></td>
+<td><p class="sd-card-text">run3</p></td>
+<td><p class="sd-card-text">376</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sub-15</p></td>
+<td><p class="sd-card-text">run4</p></td>
+<td><p class="sd-card-text">375</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sub-15</p></td>
+<td><p class="sd-card-text">run5</p></td>
+<td><p class="sd-card-text">377</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</details></section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="references.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">References</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="behavioral_data.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Behavioral data</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2023, The IBC team
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Movie protocols implementation</a><ul>
+<li><a class="reference internal" href="#lags-in-raiders-movie">Lags in Raiders movie</a></li>
+<li><a class="reference internal" href="#lags-in-goodbadugly-movie">Lags in GoodBadUgly movie</a></li>
+<li><a class="reference internal" href="#lags-in-monkeykingdom-movie">Lags in MonkeyKingdom movie</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    </body>
+</html>
