@@ -3,8 +3,8 @@ Participants
 
 The cohort of the IBC dataset consists in a permanent group of twelve
 adults with neither psychiatric and neurologic disorders nor specific
-psychometric profile. Participants are numbered from 1 to 15, by which
-participants 3 and 10 are not part of the group.
+psychometric profile. Participants are numbered 1 to 15, with IDs 
+*sub-03* and *sub-10* unassigned and therefore not part of the dataset.
 
 `This table <demographics_>`__ contains demographic information of
 the participants. Data from *sub-02* were only acquired for the ARCHI
